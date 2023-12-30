@@ -5,65 +5,100 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png">
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" asp-append-version="true">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" asp-append-version="true">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/all.min.css">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
     <!-- owl carousel -->
-    <link rel="stylesheet" href="~/css/owl.carousel.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
     <!-- magnific popup -->
-    <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
     <!-- animate css -->
-    <link rel="stylesheet" href="~/css/animate.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/animate.css">
     <!-- mean menu css -->
-    <link rel="stylesheet" href="~/css/meanmenu.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/meanmenu.min.css">
     <!-- main style -->
-    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true">
-    <!-- responsive -->
-    <link rel="stylesheet" href="~/css/responsive.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/main.css">
 
 </head>
 <body>
-    <header>
-
-        
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index">Settings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+    <div class="top-header-area" id="sticker">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 text-center">
+                    <div class="main-menu-wrap">
+                        <!-- logo -->
+                        <div class="site-logo">
+                            <a href="index.html">
+                                <img src="~/img/logo.png" alt="">
+                            </a>
+                        </div>
+                        <!-- logo -->
+                        <!-- menu start -->
+                        <nav class="main-menu">
+                            <ul>
+                                <li class="current-list-item">
+                                    <a href="#">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Static Home</a></li>
+                                        <li><a href="index_2.html">Slider Home</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li>
+                                    <a href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404 page</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="checkout.html">Check Out</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="news.html">News</a></li>
+                                        <li><a href="shop.html">Shop</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="news.html">News</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="news.html">News</a></li>
+                                        <li><a href="single-news.html">Single News</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li>
+                                    <a href="shop.html">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="checkout.html">Check Out</a></li>
+                                        <li><a href="single-product.html">Single Product</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="header-icons">
+                                        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                        <div class="mobile-menu"></div>
+                        <!-- menu end -->
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @this.RenderBody()
-        </main>
+        </div>
     </div>
+    
+            @this.RenderBody()
 
     <!-- footer -->
     <div class="footer-area">
@@ -111,35 +146,26 @@
         </div>
     </div>
     <!-- end footer -->
-
-
-   @* <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; @DateTime.Now.Year - @GlobalConstants.SystemName - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>*@
-
-  
     <!-- jquery -->
-    <script src="~/js/jquery-1.11.3.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-1.11.3.min.js"></script>
     <!-- bootstrap -->
-    <script src="~/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- count down -->
-    <script src="~/js/jquery.countdown.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.countdown.js"></script>
     <!-- isotope -->
-    <script src="~/js/jquery.isotope-3.0.6.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.isotope-3.0.6.min.js"></script>
     <!-- waypoints -->
-    <script src="~/js/waypoints.js" asp-append-version="true"></script>
+    <script src="~/js/waypoints.js"></script>
     <!-- owl carousel -->
-    <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
     <!-- magnific popup -->
-    <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
     <!-- mean menu -->
-    <script src="~/js/jquery.meanmenu.min.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.meanmenu.min.js"></script>
     <!-- sticker js -->
-    <script src="~/js/sticker.js" asp-append-version="true"></script>
+    <script src="~/js/sticker.js"></script>
     <!-- main js -->
-    <script src="~/js/main.js" asp-append-version="true"></script>
+    <script src="~/js/main.js"></script>
 
     @await this.RenderSectionAsync("Scripts", required: false)
 </body>

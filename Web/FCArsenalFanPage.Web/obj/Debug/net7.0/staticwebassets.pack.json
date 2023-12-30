@@ -1,86 +1,6 @@
 {
   "Files": [
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js.map"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\bootstrap\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js.map"
-    },
-    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\all.min.css",
       "PackagePath": "staticwebassets\\css\\all.min.css"
     },
@@ -109,88 +29,16 @@
       "PackagePath": "staticwebassets\\css\\responsive.css"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\base\\_mixins.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\base\\_mixins.scss"
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\base\\_typography.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\base\\_typography.scss"
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\site.min.css",
+      "PackagePath": "staticwebassets\\css\\site.min.css"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\base\\_variables.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\base\\_variables.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\common\\_common.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\common\\_common.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\common\\_footer.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\common\\_footer.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\common\\_header.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\common\\_header.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\common\\_hover.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\common\\_hover.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\main.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\main.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\pages\\_404.css",
-      "PackagePath": "staticwebassets\\css\\scss\\pages\\_404.css"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\pages\\_404.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\pages\\_404.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\pages\\_about.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\pages\\_about.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\pages\\_contact.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\pages\\_contact.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\pages\\_shop.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\pages\\_shop.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\prepros-6.config",
-      "PackagePath": "staticwebassets\\css\\scss\\prepros-6.config"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_about.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_about.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_cart-banner.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_cart-banner.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_hero.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_hero.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_list.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_list.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_news.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_news.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_shop-banner.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_shop-banner.scss"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\scss\\sections\\_testimonials.scss",
-      "PackagePath": "staticwebassets\\css\\scss\\sections\\_testimonials.scss"
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\1.jpg",
@@ -373,20 +221,84 @@
       "PackagePath": "staticwebassets\\js\\waypoints.js"
     },
     {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js",
