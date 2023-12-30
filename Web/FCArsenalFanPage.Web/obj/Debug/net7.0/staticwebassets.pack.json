@@ -37,10 +37,6 @@
       "PackagePath": "staticwebassets\\css\\site.min.css"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\1.jpg",
       "PackagePath": "staticwebassets\\img\\1.jpg"
     },
@@ -93,8 +89,8 @@
       "PackagePath": "staticwebassets\\img\\dd.jpg"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\favicon.png",
-      "PackagePath": "staticwebassets\\img\\favicon.png"
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\favicon.ico"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\feature-bg.jpg",

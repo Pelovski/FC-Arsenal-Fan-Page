@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q1xf/iUFPjTjO+nZbf121Aq6FiQOC0xb/26azpu7UZg=",
+  "Hash": "tXVSOjz3vW/RLoa8TWGUoRl/tdkXpO63aUIXntNF/LI=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -1190,23 +1190,6 @@
       "OriginalItemSpec": "wwwroot\\css\\site.min.css"
     },
     {
-      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\favicon.ico",
-      "SourceId": "FCArsenalFanPage.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
-      "BasePath": "_content/FCArsenalFanPage.Web",
-      "RelativePath": "favicon.ico",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\1.jpg",
       "SourceId": "FCArsenalFanPage.Web",
       "SourceType": "Discovered",
@@ -1428,12 +1411,12 @@
       "OriginalItemSpec": "wwwroot\\img\\dd.jpg"
     },
     {
-      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\favicon.png",
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\favicon.ico",
       "SourceId": "FCArsenalFanPage.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
       "BasePath": "_content/FCArsenalFanPage.Web",
-      "RelativePath": "img/favicon.png",
+      "RelativePath": "img/favicon.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1442,7 +1425,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\favicon.png"
+      "OriginalItemSpec": "wwwroot\\img\\favicon.ico"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\feature-bg.jpg",
