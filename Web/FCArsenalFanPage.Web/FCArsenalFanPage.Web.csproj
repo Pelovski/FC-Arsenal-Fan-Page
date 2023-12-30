@@ -40,4 +40,10 @@
     <ProjectReference Include="..\FCArsenalFanPage.Web.Infrastructure\FCArsenalFanPage.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\FCArsenalFanPage.Web.ViewModels\FCArsenalFanPage.Web.ViewModels.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

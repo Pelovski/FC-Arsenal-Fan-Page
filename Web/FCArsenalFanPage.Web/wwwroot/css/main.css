@@ -428,6 +428,7 @@ a.read-more-btn {
   font-weight: 700;
 }
 
+
 a.read-more-btn:hover {
   color: #F28123;
 }
@@ -2747,4 +2748,4 @@ table.order-details tbody td {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-}
+}.logo {    max-width: 33%}.nav-item{    color: #fff;}

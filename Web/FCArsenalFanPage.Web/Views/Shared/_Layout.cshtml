@@ -8,24 +8,24 @@
 
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.ico" asp-append-version="true">
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="~/css/all.min.css">
+    <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true">
     <!-- owl carousel -->
-    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css" asp-append-version="true">
     <!-- magnific popup -->
-    <link rel="stylesheet" href="~/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
     <!-- animate css -->
-    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/animate.css" asp-append-version="true">
     <!-- mean menu css -->
-    <link rel="stylesheet" href="~/css/meanmenu.min.css">
+    <link rel="stylesheet" href="~/css/meanmenu.min.css" asp-append-version="true">
     <!-- main style -->
-    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true">
 
 </head>
 <body>
@@ -36,8 +36,8 @@
                     <div class="main-menu-wrap">
                         <!-- logo -->
                         <div class="site-logo">
-                            <a href="index.html">
-                                <img src="~/img/logo.png" alt="">
+                            <a asp-controller="Home" asp-action="Index">
+                                <img class="logo" src="~/img/favicon.ico" alt="">
                             </a>
                         </div>
                         <!-- logo -->
@@ -45,24 +45,8 @@
                         <nav class="main-menu">
                             <ul>
                                 <li class="current-list-item">
-                                    <a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Static Home</a></li>
-                                        <li><a href="index_2.html">Slider Home</a></li>
-                                    </ul>
+                                    <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                <li><a href="about.html">About</a></li>
-                                <li>
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="404.html">404 page</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Check Out</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="news.html">News</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="news.html">News</a>
@@ -74,19 +58,19 @@
                                 <li><a href="contact.html">Contact</a></li>
                                 <li>
                                     <a href="shop.html">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="checkout.html">Check Out</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                    </ul>
+    
                                 </li>
                                 <li>
                                     <div class="header-icons">
-                                        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                        <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                         <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                        }
+                                        <a class="navi-item">Login</a>
+                                        <a class="navi-item">Register</a>
                                     </div>
                                 </li>
+                                    
                             </ul>
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
@@ -147,25 +131,25 @@
     </div>
     <!-- end footer -->
     <!-- jquery -->
-    <script src="~/js/jquery-1.11.3.min.js"></script>
+    <script src="~/js/jquery-1.11.3.min.js" asp-append-version="true"></script>
     <!-- bootstrap -->
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
     <!-- count down -->
     <script src="~/js/jquery.countdown.js"></script>
     <!-- isotope -->
-    <script src="~/js/jquery.isotope-3.0.6.min.js"></script>
+    <script src="~/js/jquery.isotope-3.0.6.min.js" asp-append-version="true"></script>
     <!-- waypoints -->
-    <script src="~/js/waypoints.js"></script>
+    <script src="~/js/waypoints.js" asp-append-version="true"></script>
     <!-- owl carousel -->
-    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
     <!-- magnific popup -->
-    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
     <!-- mean menu -->
-    <script src="~/js/jquery.meanmenu.min.js"></script>
+    <script src="~/js/jquery.meanmenu.min.js" asp-append-version="true"></script>
     <!-- sticker js -->
-    <script src="~/js/sticker.js"></script>
+    <script src="~/js/sticker.js" asp-append-version="true"></script>
     <!-- main js -->
-    <script src="~/js/main.js"></script>
+    <script src="~/js/main.js" asp-append-version="true"></script>
 
     @await this.RenderSectionAsync("Scripts", required: false)
 </body>
