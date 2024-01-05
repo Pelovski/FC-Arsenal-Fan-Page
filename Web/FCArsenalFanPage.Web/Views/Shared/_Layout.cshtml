@@ -49,15 +49,15 @@
                                 </li>
                                 </li>
                                 <li>
-                                    <a href="news.html">News</a>
-                                    <ul class="sub-menu">
+                                    <a asp-controller="News" asp-action="All">News</a>
+                                    @*<ul class="sub-menu">
                                         <li><a href="news.html">News</a></li>
                                         <li><a href="single-news.html">Single News</a></li>
-                                    </ul>
+                                    </ul>*@
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li>
-                                    <a href="shop.html">Shop</a>
+                                    <a asp-controller="Shop" asp-action="All">Shop</a>
     
                                 </li>
                                 <li>
@@ -66,9 +66,15 @@
                                         {
                                          <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                         }
-                                        <a class="navi-item">Login</a>
-                                        <a class="navi-item">Register</a>
+                                
+                                    <a class="navi-item" asp-area="Identity" asp-page="/Account/Register">Register</a>
+                                
+                                
+                                    <a class="navi-item" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                                
+                                      
                                     </div>
+                                        
                                 </li>
                                     
                             </ul>
