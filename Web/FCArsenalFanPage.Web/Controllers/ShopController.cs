@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace FCArsenalFanPage.Web.Controllers
+﻿namespace FCArsenalFanPage.Web.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     public class ShopController : Controller
     {
         public IActionResult All()
