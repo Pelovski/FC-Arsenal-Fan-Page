@@ -10,3 +10,12 @@ D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debu
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debug\net7.0\refint\FCArsenalFanPage.Services.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debug\net7.0\FCArsenalFanPage.Services.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debug\net7.0\ref\FCArsenalFanPage.Services.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Services.Mapping.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Web.ViewModels.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Web.ViewModels.pdb
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Services.Mapping.pdb
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debug\net7.0\FCArsenalFanPage.Services.csproj.CopyComplete

@@ -532,7 +532,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -678,6 +682,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",

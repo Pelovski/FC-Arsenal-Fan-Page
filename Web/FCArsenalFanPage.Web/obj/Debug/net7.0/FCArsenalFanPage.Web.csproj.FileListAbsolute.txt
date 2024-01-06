@@ -601,3 +601,10 @@ D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\r
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\FCArsenalFanPage.Web.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\FCArsenalFanPage.Web.genruntimeconfig.cache
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\ref\FCArsenalFanPage.Web.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.Mvc.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.Razor.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.Helpers.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Web.WebPages.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
