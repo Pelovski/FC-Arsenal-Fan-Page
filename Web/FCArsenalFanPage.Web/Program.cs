@@ -8,7 +8,6 @@
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Data.Repositories;
     using FCArsenalFanPage.Data.Seeding;
-    using FCArsenalFanPage.Services.Data;
     using FCArsenalFanPage.Services.Mapping;
     using FCArsenalFanPage.Services.Messaging;
     using FCArsenalFanPage.Web.ViewModels;
@@ -64,7 +63,6 @@
 
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
-            services.AddTransient<ISettingsService, SettingsService>();
         }
 
         private static void Configure(WebApplication app)
