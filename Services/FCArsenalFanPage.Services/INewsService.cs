@@ -1,8 +1,7 @@
-﻿using System.Runtime.InteropServices;
-using FCArsenalFanPage.Web.ViewModels;
-
-namespace FCArsenalFanPage.Services
+﻿namespace FCArsenalFanPage.Services
 {
+    using FCArsenalFanPage.Web.ViewModels;
+
     public interface INewsService
     {
         CreateNewsInputModel Create();
