@@ -24,6 +24,22 @@
         {
         }
 
+        public DbSet<News> News { get; set; }
+
+        public DbSet<Image> Images { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<Comment> Comments { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+
         public DbSet<Setting> Settings { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
@@ -47,6 +63,21 @@
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Image>()
+               .HasOne<News>(i => i.News)
+               .WithOne(n => n.Image)
+               .HasForeignKey<News>(n => n.ImageId);
+
+            builder.Entity<Image>()
+                .HasOne<Product>(i => i.Product)
+                .WithOne(n => n.Image)
+                .HasForeignKey<Product>(n => n.ImageId);
+
+            builder.Entity<OrderStatus>()
+               .HasMany(x => x.Orders)
+               .WithOne(x => x.Status)
+               .HasForeignKey(x => x.OrderStatusId);
+
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 
