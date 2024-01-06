@@ -47,7 +47,6 @@
                                 <li class="current-list-item">
                                     <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                </li>
                                 <li>
                                     <a asp-controller="News" asp-action="All">News</a>
                                     @*<ul class="sub-menu">
@@ -55,7 +54,7 @@
                                         <li><a href="single-news.html">Single News</a></li>
                                     </ul>*@
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a asp-controller="News" asp-action="Create">Create News</a></li>
                                 <li>
                                     <a asp-controller="Shop" asp-action="All">Shop</a>
     

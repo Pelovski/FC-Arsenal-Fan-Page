@@ -1,9 +1,9 @@
-﻿using FCArsenalFanPage.Data.Common.Repositories;
-using FCArsenalFanPage.Data.Models;
-using FCArsenalFanPage.Web.ViewModels;
-
-namespace FCArsenalFanPage.Services
+﻿namespace FCArsenalFanPage.Services
 {
+    using FCArsenalFanPage.Data.Common.Repositories;
+    using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.ViewModels;
+
     public class NewsService : INewsService
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
