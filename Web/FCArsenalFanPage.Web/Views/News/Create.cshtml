@@ -2,6 +2,7 @@
 
 @{
     this.ViewData["Title"] = "Create News";
+    var categoryItems = Model.CategoriesItems;
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -17,7 +18,8 @@
 </div>
 
 
-<div class="billing-address-form">
+<div class="row justify-content-center my-5">
+    <div class="create-news-form col-lg-8">
         <form method="post" asp-action="Create" enctype="multipart/form-data">
 
         <div class="form-group">
@@ -26,11 +28,11 @@
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
 
-        @*  <div>
-        <label style="color:white" asp-for="CategoryId"></label>
-        <select asp-for="CategoryId" asp-items="CategoryId" class="form-control"></select>
+        <div>
+        <label asp-for="CategoryId"></label>
+         <select asp-for="CategoryId" asp-items="categoryItems" class="form-control"></select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
-        </div>*@
+        </div>
 
         <div class="form-group">
             <label asp-for="Content"></label>
@@ -46,4 +48,7 @@
 
         <button style="color:white" type="submit" class="btn btn-primary mt-5 mb-3 p-3">Create News</button>
     </form>
+
+</div>
+
 </div>
