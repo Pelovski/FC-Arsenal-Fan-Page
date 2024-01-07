@@ -3081,6 +3081,19 @@
         "runtime": {
           "bin/placeholder/FCArsenalFanPage.Services.Mapping.dll": {}
         }
+      },
+      "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -8602,12 +8615,18 @@
       "type": "project",
       "path": "../../Services/FCArsenalFanPage.Services.Mapping/FCArsenalFanPage.Services.Mapping.csproj",
       "msbuildProject": "../../Services/FCArsenalFanPage.Services.Mapping/FCArsenalFanPage.Services.Mapping.csproj"
+    },
+    "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../FCArsenalFanPage.Web.Infrastructure/FCArsenalFanPage.Web.Infrastructure.csproj",
+      "msbuildProject": "../FCArsenalFanPage.Web.Infrastructure/FCArsenalFanPage.Web.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "FCArsenalFanPage.Data.Models >= 1.0.0",
       "FCArsenalFanPage.Services.Mapping >= 1.0.0",
+      "FCArsenalFanPage.Web.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17",
       "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "StyleCop.Analyzers >= 1.2.0-beta.435"
@@ -8645,6 +8664,9 @@
             },
             "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
               "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+            },
+            "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+              "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
             }
           }
         }

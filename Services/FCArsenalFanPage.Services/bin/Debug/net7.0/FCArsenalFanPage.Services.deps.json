@@ -1833,10 +1833,19 @@
           "FCArsenalFanPage.Services.Mapping.dll": {}
         }
       },
+      "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "runtime": {
+          "FCArsenalFanPage.Web.Infrastructure.dll": {}
+        }
+      },
       "FCArsenalFanPage.Web.ViewModels/1.0.0": {
         "dependencies": {
           "FCArsenalFanPage.Data.Models": "1.0.0",
           "FCArsenalFanPage.Services.Mapping": "1.0.0",
+          "FCArsenalFanPage.Web.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
@@ -3074,6 +3083,11 @@
       "sha512": ""
     },
     "FCArsenalFanPage.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -17,3 +17,5 @@ D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\obj\Deb
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\obj\Debug\net7.0\refint\FCArsenalFanPage.Web.ViewModels.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\obj\Debug\net7.0\FCArsenalFanPage.Web.ViewModels.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\obj\Debug\net7.0\ref\FCArsenalFanPage.Web.ViewModels.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\bin\Debug\net7.0\FCArsenalFanPage.Web.Infrastructure.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web.ViewModels\bin\Debug\net7.0\FCArsenalFanPage.Web.Infrastructure.pdb

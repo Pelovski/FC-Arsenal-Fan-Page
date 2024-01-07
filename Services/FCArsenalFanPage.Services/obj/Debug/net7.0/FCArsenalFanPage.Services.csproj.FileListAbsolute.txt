@@ -19,3 +19,5 @@ D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debu
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Services.Mapping.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\obj\Debug\net7.0\FCArsenalFanPage.Services.csproj.CopyComplete
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Web.Infrastructure.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services\bin\Debug\net7.0\FCArsenalFanPage.Web.Infrastructure.pdb

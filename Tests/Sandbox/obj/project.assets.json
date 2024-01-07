@@ -3962,12 +3962,26 @@
           "bin/placeholder/FCArsenalFanPage.Services.Messaging.dll": {}
         }
       },
+      "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}
+        }
+      },
       "FCArsenalFanPage.Web.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "FCArsenalFanPage.Data.Models": "1.0.0",
           "FCArsenalFanPage.Services.Mapping": "1.0.0",
+          "FCArsenalFanPage.Web.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
@@ -10840,6 +10854,11 @@
       "type": "project",
       "path": "../../Services/FCArsenalFanPage.Services.Messaging/FCArsenalFanPage.Services.Messaging.csproj",
       "msbuildProject": "../../Services/FCArsenalFanPage.Services.Messaging/FCArsenalFanPage.Services.Messaging.csproj"
+    },
+    "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Web/FCArsenalFanPage.Web.Infrastructure/FCArsenalFanPage.Web.Infrastructure.csproj",
+      "msbuildProject": "../../Web/FCArsenalFanPage.Web.Infrastructure/FCArsenalFanPage.Web.Infrastructure.csproj"
     },
     "FCArsenalFanPage.Web.ViewModels/1.0.0": {
       "type": "project",
