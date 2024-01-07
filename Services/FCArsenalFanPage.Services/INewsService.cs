@@ -5,5 +5,6 @@
     public interface INewsService
     {
         CreateNewsInputModel Create();
+
     }
 }

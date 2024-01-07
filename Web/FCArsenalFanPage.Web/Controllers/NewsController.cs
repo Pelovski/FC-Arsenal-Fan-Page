@@ -38,5 +38,10 @@
 
             return this.RedirectToAction("All");
         }
+
+        public IActionResult SingleNews()
+        {
+            return this.View();
+        }
     }
 }

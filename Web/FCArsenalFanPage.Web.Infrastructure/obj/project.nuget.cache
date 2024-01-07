@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "DnSz+bmPI9N2drdq0E8QmWDNoR4kYgdbdR/f5EJavi5OUHQopzpEPR8jRjmzcDP/vZJR4YQsJgptqVucTGH/fA==",
+  "dgSpecHash": "xe/p+2aviC8x2qcA6/aCDuRCnTlmdIdpUMt02CSfjl7k0S2aMOUJPHF3bII1fm42KCsz99LQWJHwyLN0X1xNiQ==",
   "success": true,
   "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\herrp\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
-    "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
+    "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
+    "C:\\Users\\herrp\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }
