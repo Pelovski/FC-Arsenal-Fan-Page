@@ -4970,6 +4970,9 @@
       "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+        },
         "compile": {
           "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}
         },
@@ -4983,6 +4986,7 @@
         "dependencies": {
           "FCArsenalFanPage.Data.Models": "1.0.0",
           "FCArsenalFanPage.Services.Mapping": "1.0.0",
+          "FCArsenalFanPage.Web.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
