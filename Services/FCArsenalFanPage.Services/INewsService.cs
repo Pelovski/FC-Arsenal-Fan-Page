@@ -1,10 +1,12 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System.Threading.Tasks;
+
     using FCArsenalFanPage.Web.ViewModels;
 
     public interface INewsService
     {
-        CreateNewsInputModel Create();
+        Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath);
 
     }
 }
