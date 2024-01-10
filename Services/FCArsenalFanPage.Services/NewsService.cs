@@ -1,5 +1,9 @@
-﻿namespace FCArsenalFanPage.Services
+﻿
+namespace FCArsenalFanPage.Services
 {
+    using System;
+    using System.Threading.Tasks;
+
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels;
@@ -7,15 +11,19 @@
     public class NewsService : INewsService
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
+        private readonly IDeletableEntityRepository<Image> imageRepositoy;
 
-        public NewsService(IDeletableEntityRepository<News> newsRepository)
+        public NewsService(
+            IDeletableEntityRepository<News> newsRepository,
+            IDeletableEntityRepository<Image> imageRepositoy)
         {
             this.newsRepository = newsRepository;
+            this.imageRepositoy = imageRepositoy;
         }
 
-        public CreateNewsInputModel Create()
+        public async Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
         {
-            throw new System.NotImplementedException();
+           // TODO: Implement create news
         }
     }
 }
