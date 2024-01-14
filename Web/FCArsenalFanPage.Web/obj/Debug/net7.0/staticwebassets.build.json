@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PjjIRS6xmYlhc/Pb1Whs90+xfeiDM9kYSYhFJdumt8k=",
+  "Hash": "u1by9rIzhJtFnkGNnQvsODAUlD5ti2nHqIW7PSrXYrw=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -1188,6 +1188,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.min.css"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\6fb22716-bc44-4d90-bd67-266d98b929bf.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/News/6fb22716-bc44-4d90-bd67-266d98b929bf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\News\\6fb22716-bc44-4d90-bd67-266d98b929bf.png"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/News/8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\News\\8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\1.jpg",
