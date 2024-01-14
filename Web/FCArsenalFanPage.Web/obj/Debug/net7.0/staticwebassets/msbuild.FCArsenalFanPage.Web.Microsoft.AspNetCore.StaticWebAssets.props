@@ -144,12 +144,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\site.min.css))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\6fb22716-bc44-4d90-bd67-266d98b929bf.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\9d13a670-9b7a-452d-b5e0-6d4ce2a98d67.png))">
       <SourceType>Package</SourceType>
       <SourceId>FCArsenalFanPage.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/FCArsenalFanPage.Web</BasePath>
-      <RelativePath>Images/News/6fb22716-bc44-4d90-bd67-266d98b929bf.png</RelativePath>
+      <RelativePath>Images/News/9d13a670-9b7a-452d-b5e0-6d4ce2a98d67.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -158,14 +158,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\6fb22716-bc44-4d90-bd67-266d98b929bf.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\9d13a670-9b7a-452d-b5e0-6d4ce2a98d67.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\ad8b9955-b7cc-4917-b66f-f1ad2c6d9e7f.png))">
       <SourceType>Package</SourceType>
       <SourceId>FCArsenalFanPage.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/FCArsenalFanPage.Web</BasePath>
-      <RelativePath>Images/News/8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png</RelativePath>
+      <RelativePath>Images/News/ad8b9955-b7cc-4917-b66f-f1ad2c6d9e7f.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -174,7 +174,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\8b08a2d9-6728-42f0-9b98-1fd0e4a0d5f0.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\News\ad8b9955-b7cc-4917-b66f-f1ad2c6d9e7f.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\1.jpg))">
       <SourceType>Package</SourceType>
