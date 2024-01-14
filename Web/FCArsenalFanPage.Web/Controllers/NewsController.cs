@@ -1,6 +1,5 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-    using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -17,13 +16,13 @@
         private readonly ICategoriesService categoriesService;
         private readonly INewsService newsService;
         private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
-        private readonly IHostingEnvironment environment;
+        private readonly IWebHostEnvironment environment;
 
         public NewsController(
             ICategoriesService categoriesService,
             INewsService newsService,
             IDeletableEntityRepository<ApplicationUser> userRepository,
-            IHostingEnvironment environment)
+            IWebHostEnvironment environment)
         {
             this.categoriesService = categoriesService;
             this.newsService = newsService;
@@ -31,9 +30,14 @@
             this.environment = environment;
         }
 
-        public IActionResult All()
+        public IActionResult All(int id)
         {
-            return this.View();
+            var viewModel = new NewsListViewModel
+            {
+                PageNumber = id,
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Create()

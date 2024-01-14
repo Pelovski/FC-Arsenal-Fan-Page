@@ -1,26 +1,20 @@
-﻿
-namespace FCArsenalFanPage.Services
+﻿namespace FCArsenalFanPage.Services
 {
-    using System;
     using System.IO;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels;
-    using Microsoft.AspNetCore.Http;
 
     public class NewsService : INewsService
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
-        private readonly IDeletableEntityRepository<Image> imageRepositoy;
 
         public NewsService(
-            IDeletableEntityRepository<News> newsRepository,
-            IDeletableEntityRepository<Image> imageRepositoy)
+            IDeletableEntityRepository<News> newsRepository)
         {
             this.newsRepository = newsRepository;
-            this.imageRepositoy = imageRepositoy;
         }
 
         public async Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
