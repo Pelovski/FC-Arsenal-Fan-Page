@@ -1,16 +1,29 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
+    using System.Linq;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+    using FCArsenalFanPage.Data.Common.Repositories;
+    using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class NewsController : Controller
     {
         private readonly ICategoriesService categoriesService;
+        private readonly INewsService newsService;
+        private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
 
-        public NewsController(ICategoriesService categoriesService)
+        public NewsController(
+            ICategoriesService categoriesService,
+            INewsService newsService,
+            IDeletableEntityRepository<ApplicationUser> userRepository)
         {
             this.categoriesService = categoriesService;
+            this.newsService = newsService;
+            this.userRepository = userRepository;
         }
 
         public IActionResult All()
@@ -27,7 +40,8 @@
         }
 
         [HttpPost]
-        public IActionResult Create(CreateNewsInputModel input)
+        [Authorize]
+        public async Task<IActionResult> Create(CreateNewsInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
@@ -35,6 +49,10 @@
 
                 return this.View(input);
             }
+
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            await this.newsService.CreateAsync(input, userId, "");
 
             return this.RedirectToAction("All");
         }

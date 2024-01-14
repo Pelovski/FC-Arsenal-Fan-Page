@@ -21,9 +21,15 @@ namespace FCArsenalFanPage.Services
             this.imageRepositoy = imageRepositoy;
         }
 
-        public async Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
+        public Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
         {
-           // TODO: Implement create news
+
+            //Content
+            //CategoryId
+            //Title
+
+
+            return Task.CompletedTask;
         }
     }
 }
