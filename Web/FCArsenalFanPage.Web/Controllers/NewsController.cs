@@ -32,10 +32,15 @@
 
         public IActionResult All(int id)
         {
+            var news = newsService.GetAll(1);
+
             var viewModel = new NewsListViewModel
             {
+                News = news,
                 PageNumber = id,
             };
+
+
 
             return this.View(viewModel);
         }

@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Services
 {
-    using System.Threading.Tasks;
+	using System.Collections.Generic;
+	using System.Threading.Tasks;
 
     using FCArsenalFanPage.Web.ViewModels;
 
@@ -8,5 +9,6 @@
     {
         Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath);
 
+        IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 12);
     }
 }

@@ -1,7 +1,9 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System.Collections.Generic;
     using System.IO;
-    using System.Threading.Tasks;
+	using System.Linq;
+	using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
@@ -25,7 +27,7 @@
             {
                 Title = input.Title,
                 Content = input.Content,
-                CreatedByUserId = userId,
+                UserId = userId,
                 CategoryId = input.CategoryId,
             };
 
@@ -48,6 +50,29 @@
 
             await this.newsRepository.AddAsync(news);
             await this.newsRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 12)
+        {
+            var news = this.newsRepository
+                .AllAsNoTracking()
+                .OrderByDescending(x => x.Id)
+                .Skip((page - 1) * itemsPerPage)
+                .Take(itemsPerPage)
+                .Select(x => new NewsInListViewModel
+                {
+                    Title = x.Title,
+                    UserName = x.User.UserName,
+                    CategoryId = x.CategoryId,
+                    CreatedOn = x.CreatedOn.ToString(),
+                    Content = x.Content,
+                    ImageUrl = x.Image.RemoteImageUrl != null ?
+                               x.Image.RemoteImageUrl :
+                              "/Images/News/" + x.Image.Id + "." + x.Image.Extension,
+                })
+                .ToList();
+
+            return news;
         }
     }
 }
