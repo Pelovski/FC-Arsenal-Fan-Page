@@ -1,7 +1,7 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
-
-    using FCArsenalFanPage.Data.Common.Models;
+	using System.ComponentModel.DataAnnotations.Schema;
+	using FCArsenalFanPage.Data.Common.Models;
 
     public class News : BaseDeletableModel<int>
     {
@@ -9,13 +9,13 @@
 
         public string Content { get; set; }
 
-        public string CreatedByUserId { get; set; }
+        public string UserId { get; set; }
 
         public virtual ApplicationUser User { get; set; }
 
         public int CategoryId { get; set; }
 
-        public virtual Category Category{ get; set; }
+        public virtual Category Category { get; set; }
 
         public string ImageId { get; set; }
 

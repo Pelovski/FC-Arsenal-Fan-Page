@@ -16,17 +16,35 @@
 <!-- end breadcrumb section -->
 
 
+
 <!-- latest news -->
 <div class="latest-news mt-150 mb-150">
 	<div class="container">
 		<div class="row">
 
-			
+			@foreach (var news in Model.News)
+			{
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+							<img class="card-img-top" src="@news.ImageUrl" alt="Card image cap">
+						    <div class="news-text-box">
+							<h3><a href="single-news.html">@news.Title</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="fas fa-user"></i> Admin</span>
+								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
+							</p>
+							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
+							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+						    </div>
+					</div>
+				</div>
+			}
+
 
 			
 			<div class="col-lg-4 col-md-6">
 				<div class="single-latest-news">
-					<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
+					<a href="single-news.html"><div class="latest-news-bg news-bg-6"></div></a>
 					<div class="news-text-box">
 						<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
 						<p class="blog-meta">
