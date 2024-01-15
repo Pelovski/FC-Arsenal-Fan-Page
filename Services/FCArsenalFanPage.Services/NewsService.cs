@@ -1,8 +1,11 @@
 ﻿namespace FCArsenalFanPage.Services
 {
-    using System.Collections.Generic;
-    using System.IO;
+	using System;
+	using System.Collections.Generic;
+	using System.Globalization;
+	using System.IO;
 	using System.Linq;
+	using System.Text.RegularExpressions;
 	using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -61,18 +64,38 @@
                 .Take(itemsPerPage)
                 .Select(x => new NewsInListViewModel
                 {
+                    Id = x.Id,
                     Title = x.Title,
                     UserName = x.User.UserName,
                     CategoryId = x.CategoryId,
-                    CreatedOn = x.CreatedOn.ToString(),
+                    CreatedOn = x.CreatedOn.ToString("dd MMMM, yyyy", CultureInfo.InvariantCulture),
                     Content = x.Content,
                     ImageUrl = x.Image.RemoteImageUrl != null ?
                                x.Image.RemoteImageUrl :
                               "/Images/News/" + x.Image.Id + "." + x.Image.Extension,
+                    Details = GetFirstThreeSentencesLimited(x.Content, 200),
                 })
                 .ToList();
 
             return news;
+        }
+
+        private static string GetFirstThreeSentencesLimited(string text, int maxLength)
+        {
+            string[] sentences = Regex.Split(text, @"(?<=[.!?])\s+");
+
+            int numberOfSentencesToTake = Math.Min(3, sentences.Length);
+            string[] selectedSentences = new string[numberOfSentencesToTake];
+
+            int currentLength = 0;
+            for (int i = 0; i < numberOfSentencesToTake && currentLength + sentences[i].Length <= maxLength; i++)
+            {
+                selectedSentences[i] = sentences[i];
+                currentLength += sentences[i].Length;
+            }
+
+            string result = string.Join(" ", selectedSentences);
+            return result;
         }
     }
 }
