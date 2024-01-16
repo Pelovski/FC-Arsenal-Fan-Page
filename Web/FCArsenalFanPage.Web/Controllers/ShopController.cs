@@ -6,7 +6,19 @@
     {
         public IActionResult All()
         {
-            return View();
+            return this.View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return this.View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(int id)
+        {
+            return this.RedirectToAction("All");
         }
     }
 }

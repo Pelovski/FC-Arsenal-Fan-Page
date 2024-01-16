@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Images\\News\\63af87c8-7df9-406d-96ec-4b117996ce86.png"
     },
     {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\8b5cc516-793b-424c-98d4-1d03e7d2e479.png",
+      "PackagePath": "staticwebassets\\Images\\News\\8b5cc516-793b-424c-98d4-1d03e7d2e479.png"
+    },
+    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\all.min.css",
       "PackagePath": "staticwebassets\\css\\all.min.css"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\abt.jpg",
       "PackagePath": "staticwebassets\\img\\abt.jpg"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\arsenal-background2jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\arsenal-background2jpg.jpg"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\avaters\\avatar1.png",
