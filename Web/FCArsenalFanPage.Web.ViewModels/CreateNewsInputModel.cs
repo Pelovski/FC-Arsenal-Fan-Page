@@ -13,7 +13,7 @@
         [MaxLength(100, ErrorMessage = $"{nameof(Title)} cannot exceed 100 characters.")]
         public string Title { get; set; }
 
-        [MinLength(10, ErrorMessage = $"{nameof(Title)} cannot be less than 50 characters.")]
+        [MinLength(200, ErrorMessage = $"{nameof(Content)} cannot be less than 200 characters.")]
         [Required(ErrorMessage = $"{nameof(Content)} is required.")]
         public string Content { get; set; }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+    <title>Arsenal FC Website | @this.ViewData["Title"] | </title>
 
 
     <!-- favicon -->
@@ -59,19 +59,27 @@
                                     <a asp-controller="Shop" asp-action="All">Shop</a>
     
                                 </li>
+
+                                <li>
+                                    <a asp-controller="Shop" asp-action="Create">Create Product</a>
+
+                                </li>
                                 <li>
                                     <div class="header-icons">
                                         @if (User.Identity.IsAuthenticated)
                                         {
-                                         <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                            <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                            <a class="shopping-cart" href="cart.html"> Logout</a>
                                         }
-                                
-                                    <a class="navi-item" asp-area="Identity" asp-page="/Account/Register">Register</a>
-                                
-                                
-                                    <a class="navi-item" asp-area="Identity" asp-page="/Account/Login">Login</a>
-                                
-                                      
+                                        else
+                                        {
+
+                                            <a class="navi-item" asp-area="Identity" asp-page="/Account/Register">Register</a>
+
+
+                                            <a class="navi-item" asp-area="Identity" asp-page="/Account/Login">Login</a>
+
+                                        }
                                     </div>
                                         
                                 </li>
