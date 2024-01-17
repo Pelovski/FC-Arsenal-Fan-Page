@@ -2,6 +2,7 @@
 
 @{
 	this.ViewData["Title"] = "Create Product";
+	var productItems = Model.ProductsItems;
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -28,11 +29,11 @@
 				<span asp-validation-for="Quantity" class="text-danger"></span>
 			</div>
 
-			@*<div>
+			<div>
 				<label asp-for="ProductCategoryId"></label>
-				<select asp-for="ProductCategoryId" asp-items="categoryItems" class="form-control"></select>
+				<select asp-for="ProductCategoryId" asp-items="productItems" class="form-control"></select>
 				<span asp-validation-for="ProductCategoryId" class="text-danger"></span>
-			</div>*@
+			</div>
 
 			<div class="form-group">
 				<label asp-for="Description"></label>
