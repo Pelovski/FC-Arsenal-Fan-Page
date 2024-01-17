@@ -44,23 +44,25 @@
                         <!-- menu start -->
                         <nav class="main-menu">
                             <ul>
-                                <li class="current-list-item">
+                                <li class="navi-item">
                                     <a asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                <li>
+                                <li class="navi-item">
                                     <a asp-controller="News" asp-action="All">News</a>
                                     @*<ul class="sub-menu">
                                         <li><a href="news.html">News</a></li>
                                         <li><a href="single-news.html">Single News</a></li>
                                     </ul>*@
-                                </li>
-                                <li><a asp-controller="News" asp-action="Create">Create News</a></li>
-                                <li>
+                                </li >
+                                <li class="navi-item">
+                                    <a asp-controller="News" asp-action="Create">Create News</a>
+                                    </li>
+                                <li class="navi-item">
                                     <a asp-controller="Shop" asp-action="All">Shop</a>
     
                                 </li>
 
-                                <li>
+                                <li class="navi-item">
                                     <a asp-controller="Shop" asp-action="Create">Create Product</a>
 
                                 </li>
@@ -68,7 +70,7 @@
                                     <div class="header-icons">
                                         @if (User.Identity.IsAuthenticated)
                                         {
-                                            <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                                            <a class="navi-item shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                                             <a class="shopping-cart" href="cart.html"> Logout</a>
                                         }
                                         else

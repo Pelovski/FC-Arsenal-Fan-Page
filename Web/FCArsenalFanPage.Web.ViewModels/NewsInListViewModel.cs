@@ -1,7 +1,8 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
+    using AutoMapper;
+    using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services.Mapping;
 
     public class NewsInListViewModel
     {
