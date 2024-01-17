@@ -36,6 +36,7 @@
                 input.ProductsItems = this.productCategoriesService.GetAll();
                 return this.View(input);
             }
+
             return this.RedirectToAction("All");
         }
     }

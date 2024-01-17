@@ -8,7 +8,8 @@
         public NewsListViewModel()
         {
             this.News = new List<NewsInListViewModel>();
-		}
+        }
+
         public IEnumerable<NewsInListViewModel> News { get; set; }
 
         public int PageNumber { get; set; }

@@ -85,6 +85,15 @@
          });
         }
 
+        // Active links navi 
+        var currentUrl = window.location.pathname;
+        $(".navi-item a").each(function () {
+            var linkUrl = $(this).attr('href');
+            if (linkUrl === currentUrl) {
+                $(this).parent().addClass("current-list-item");
+            }
+        });
+
         // projects filters isotop
         $(".product-filters li").on('click', function () {
             

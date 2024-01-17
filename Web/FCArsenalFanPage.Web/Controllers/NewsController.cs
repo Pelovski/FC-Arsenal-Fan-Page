@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-    using System.Security.Claims;
+	using System.Linq;
+	using System.Security.Claims;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -33,14 +34,11 @@
         public IActionResult All(int id)
         {
             var news = this.newsService.GetAll(1);
-
             var viewModel = new NewsListViewModel
             {
                 News = news,
                 PageNumber = id,
             };
-
-
 
             return this.View(viewModel);
         }
