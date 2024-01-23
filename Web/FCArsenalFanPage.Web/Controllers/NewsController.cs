@@ -1,7 +1,6 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-	using System.Linq;
-	using System.Security.Claims;
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -31,13 +30,15 @@
             this.environment = environment;
         }
 
-        public IActionResult All(int id)
+        public IActionResult All(int id = 1)
         {
-            var news = this.newsService.GetAll(1);
+            const int itemsPerPage = 6;
             var viewModel = new NewsListViewModel
             {
-                News = news,
                 PageNumber = id,
+                News = this.newsService.GetAll(id, itemsPerPage),
+                NewsCount = this.newsService.GetCount(),
+                ItemsPerPage = itemsPerPage,
             };
 
             return this.View(viewModel);

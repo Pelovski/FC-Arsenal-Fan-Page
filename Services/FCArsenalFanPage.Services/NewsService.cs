@@ -55,7 +55,7 @@
             await this.newsRepository.SaveChangesAsync();
         }
 
-        public IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 12)
+        public IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 6)
         {
             var news = this.newsRepository
                 .AllAsNoTracking()
@@ -96,6 +96,11 @@
 
             string result = string.Join(" ", selectedSentences);
             return result;
+        }
+
+        public int GetCount()
+        {
+            return this.newsRepository.All().Count();
         }
     }
 }

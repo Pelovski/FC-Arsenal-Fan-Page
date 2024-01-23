@@ -2781,3 +2781,8 @@ table.order-details {
 .form-group {
     margin-bottom: 1rem;
 }
+
+.disabled-page {
+    pointer-events: none;
+    cursor: default;
+}

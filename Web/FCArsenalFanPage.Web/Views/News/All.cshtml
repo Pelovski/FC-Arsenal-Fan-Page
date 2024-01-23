@@ -2,6 +2,7 @@
 
 @{
 	this.ViewData["Title"] = "News";
+	int test = Model.PagesCount;
 }
 
 <!-- breadcrumb-section -->
@@ -40,17 +41,39 @@
 					<div class="col-lg-12 text-center">
 						<div class="pagination-wrap">
 							<ul>
-								<li><a href="#">Prev</a></li>
-								<li><a href="#">1</a></li>
-								<li><a class="active" href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">Next</a></li>
+									<li class="@if(!Model.HasPreviousPage) {<text>disabled-page</text>}">
+										<a asp-action="All" asp-route-id="@Model.PreviousPageNumber">Prev</a>
+									</li>
+
+									@for (int i = Model.PageNumber -3; i < Model.PageNumber; i++)
+									{
+										if(i > 0)
+										{
+											<li><a asp-action="All" asp-route-id="@i">@i</a></li>
+
+										}
+									}
+									
+									<li><a class="active" href="#">@Model.PageNumber</a></li>
+									
+									@for(int i = Model.PageNumber + 1; i < Model.PageNumber +4; i++)
+									{
+										if (i <= Model.PagesCount)
+										{
+											<li><a asp-action="All" asp-route-id="@i">@i</a></li>
+										}	
+									}
+
+								<li class="@if(!Model.HasNextPage) {<text>disabled-page</text>}">
+									<a asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
+								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>
 <!-- end latest news -->
