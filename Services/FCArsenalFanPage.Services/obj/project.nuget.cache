@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U26B+ngyNxtjPG+3sCcDmLTgopT1aStfRA3XNGrqqGEJ/ps/E6fCGJb5UABYdkav78ZTknEPobS4++Ucy0TsAw==",
+  "dgSpecHash": "TbKeM52jG8fl819caXClPQFzfFAIQnwaS7z8x6hAp7OhTcQIqREpjgrT+QAlq8aoXNVLePX1gJkbrJ5J/gBSRg==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

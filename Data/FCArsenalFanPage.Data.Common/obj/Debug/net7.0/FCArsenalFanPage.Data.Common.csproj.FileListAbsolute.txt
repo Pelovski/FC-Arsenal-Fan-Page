@@ -10,3 +10,15 @@ D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Common\obj\Debug
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\refint\FCArsenalFanPage.Data.Common.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\ref\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.deps.json
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.csproj.AssemblyReference.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.AssemblyInfoInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.AssemblyInfo.cs
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.csproj.CoreCompileInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\refint\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Common\obj\Debug\net7.0\ref\FCArsenalFanPage.Data.Common.dll

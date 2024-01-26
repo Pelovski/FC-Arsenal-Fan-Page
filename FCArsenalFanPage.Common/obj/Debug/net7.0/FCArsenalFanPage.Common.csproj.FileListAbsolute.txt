@@ -10,3 +10,15 @@ D:\Pavel\Project\FC Arsenal Fan Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FC
 D:\Pavel\Project\FC Arsenal Fan Page\FCArsenalFanPage.Common\obj\Debug\net7.0\refint\FCArsenalFanPage.Common.dll
 D:\Pavel\Project\FC Arsenal Fan Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\FCArsenalFanPage.Common\obj\Debug\net7.0\ref\FCArsenalFanPage.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\bin\Debug\net7.0\FCArsenalFanPage.Common.deps.json
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\bin\Debug\net7.0\FCArsenalFanPage.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\bin\Debug\net7.0\FCArsenalFanPage.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.csproj.AssemblyReference.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.AssemblyInfoInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.AssemblyInfo.cs
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.csproj.CoreCompileInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\refint\FCArsenalFanPage.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\FCArsenalFanPage.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\FCArsenalFanPage.Common\obj\Debug\net7.0\ref\FCArsenalFanPage.Common.dll

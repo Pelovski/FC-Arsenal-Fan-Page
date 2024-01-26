@@ -171,11 +171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+      "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
       "projectName": "FCArsenalFanPage.Services.Messaging",
-      "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+      "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
       "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-      "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
+      "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",

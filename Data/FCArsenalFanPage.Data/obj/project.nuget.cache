@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ksMQWZZ9cHT9Vhjn8cuL4fi7JUXZNehfJLGksrW3K7RE8oOU6cZzSyFXvzeu7PqkHWGcakGdYiaRD4K0BQxyTg==",
+  "dgSpecHash": "yC6qp2L3SS2CNUgE/ryBAkZtjWOtRw005vNBv2ikDNLHoRVCzcqV0C91oTzans0oyOF6mc76va6c/C/rFdny1g==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

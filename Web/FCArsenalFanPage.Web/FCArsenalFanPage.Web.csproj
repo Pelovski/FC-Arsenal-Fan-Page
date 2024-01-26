@@ -30,9 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Data\FCArsenalFanPage.Data\FCArsenalFanPage.Data.csproj" />
     <ProjectReference Include="..\..\FCArsenalFanPage.Common\FCArsenalFanPage.Common.csproj" />
     <ProjectReference Include="..\..\Data\FCArsenalFanPage.Data.Models\FCArsenalFanPage.Data.Models.csproj" />
-    <ProjectReference Include="..\..\Data\FCArsenalFanPage.Data\FCArsenalFanPage.Data.csproj" />
     <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services.Data\FCArsenalFanPage.Services.Data.csproj" />
     <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services.Mapping\FCArsenalFanPage.Services.Mapping.csproj" />
     <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services.Messaging\FCArsenalFanPage.Services.Messaging.csproj" />

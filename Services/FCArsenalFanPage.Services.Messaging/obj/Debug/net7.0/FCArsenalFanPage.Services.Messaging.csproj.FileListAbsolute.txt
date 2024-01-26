@@ -10,3 +10,15 @@ D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Messagin
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\refint\FCArsenalFanPage.Services.Messaging.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\ref\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Debug\net7.0\FCArsenalFanPage.Services.Messaging.deps.json
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Debug\net7.0\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Debug\net7.0\FCArsenalFanPage.Services.Messaging.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.csproj.AssemblyReference.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.AssemblyInfoInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.AssemblyInfo.cs
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.csproj.CoreCompileInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\refint\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\FCArsenalFanPage.Services.Messaging.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Debug\net7.0\ref\FCArsenalFanPage.Services.Messaging.dll

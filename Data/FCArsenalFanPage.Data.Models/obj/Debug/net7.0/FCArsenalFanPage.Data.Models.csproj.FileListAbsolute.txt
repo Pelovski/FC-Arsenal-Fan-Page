@@ -13,3 +13,18 @@ D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Models\obj\Debug
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\refint\FCArsenalFanPage.Data.Models.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\ref\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.deps.json
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.csproj.AssemblyReference.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.AssemblyInfoInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.AssemblyInfo.cs
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.csproj.CoreCompileInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.csproj.CopyComplete
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\refint\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data.Models\obj\Debug\net7.0\ref\FCArsenalFanPage.Data.Models.dll
