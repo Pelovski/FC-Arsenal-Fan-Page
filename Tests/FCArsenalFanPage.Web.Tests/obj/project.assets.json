@@ -14852,11 +14852,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
+      "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
       "projectName": "FCArsenalFanPage.Web.Tests",
-      "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
+      "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
       "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-      "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\obj\\",
+      "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -14874,8 +14874,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
-              "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj"
+            "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
+              "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "01XuFUb7aCATNYLQxPmzxKy8GRYAa8kpi65pWxDEW0v7o+9fey/3BBbGdSCoY9i6rbw4NnjiuTmLmrOu+Jvn1g==",
+  "dgSpecHash": "eCMHR+nR+CKwUuMnMDyJyRkrzqGKWSHhd3K+7fu6Xg23YbO/qCYhga41xF8gRvJ5KNigk6mAL6SkOGNQ6tg1Wg==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

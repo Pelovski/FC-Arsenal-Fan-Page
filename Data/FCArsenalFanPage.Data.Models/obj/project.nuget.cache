@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2E5bOsHwfJPnfkR00/TMthY5r4cPjwVP+FR1Va6Uatw6czwGo0asV/EuYBFlXURvrSskEPVrf/DnTiVpq9sQ8g==",
+  "dgSpecHash": "f0Ube0ig937O1ztGDBXyG7omJ4+YNF5jj5T0ygCgjbziS+fitY8QmCgAZUnvA7Bi/DS2JXn4aZcKjgvK0v2r0w==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.3\\microsoft.aspnetcore.cryptography.internal.7.0.3.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.3\\microsoft.aspnetcore.cryptography.keyderivation.7.0.3.nupkg.sha512",

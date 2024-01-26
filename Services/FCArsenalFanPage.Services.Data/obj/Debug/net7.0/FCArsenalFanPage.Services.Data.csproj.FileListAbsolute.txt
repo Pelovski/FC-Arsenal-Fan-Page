@@ -17,3 +17,22 @@ D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Data\obj
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\refint\FCArsenalFanPage.Services.Data.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.pdb
 D:\Pavel\Project\FC Arsenal Fan Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\ref\FCArsenalFanPage.Services.Data.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Services.Data.deps.json
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Services.Data.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Services.Data.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Services.Mapping.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.Common.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.Models.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\bin\Debug\net7.0\FCArsenalFanPage.Services.Mapping.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.csproj.AssemblyReference.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.AssemblyInfoInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.AssemblyInfo.cs
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.csproj.CoreCompileInputs.cache
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.csproj.CopyComplete
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\refint\FCArsenalFanPage.Services.Data.dll
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\FCArsenalFanPage.Services.Data.pdb
+D:\Pavel\Project\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Data\obj\Debug\net7.0\ref\FCArsenalFanPage.Services.Data.dll
