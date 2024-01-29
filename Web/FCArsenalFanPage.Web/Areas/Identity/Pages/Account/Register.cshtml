@@ -4,65 +4,87 @@
     ViewData["Title"] = "Register";
 }
 
+
+<head>
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true">
+</head>
+
 <!-- breadcrumb-section -->
 <div class="breadcrumb-section breadcrumb-bg mb-2">
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img class="image" src="~/img/Hello-Dragon.png"
+                     class="img-fluid" alt="Sample image">
             </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+
                     <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="lead fw-normal mb-0 me-3">
+                                Use another service to register.
+
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Facebook" title="Log in using your Facebook account">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Google" title="Log in using your Google account">
+                                    <i class="fab fa-google"></i>
+                                </button>
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Twitter" title="Log in using your Twitter account">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
                             </p>
                         </div>
                     </form>
-                }
-            }
-        </section>
+                </div>
+
+
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0"></p>
+                        </div>
+
+                        <h2>Create a new account.</h2>
+                        <hr />
+                        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            <label asp-for="Input.Email">Email</label>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                            <label asp-for="Input.Password">Password</label>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                            <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <button id="registerSubmit" type="submit" class="login-btn w-100 btn btn-lg btn-primary">Register</button>
+
+                        <p class="small fw-bold mt-2 pt-1 mb-0">
+                        Already have an account?
+                        <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in here.</a>
+                        </p>
+                    </>
+                    </form>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
