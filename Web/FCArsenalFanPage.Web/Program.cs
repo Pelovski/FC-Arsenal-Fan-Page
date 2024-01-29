@@ -78,6 +78,11 @@
             {
                 opt.ClientId = configuration["Google:ClientId"];
                 opt.ClientSecret = configuration["Google:ClientSecret"];
+            })
+            .AddTwitter(opt =>
+            {
+                opt.ConsumerKey = configuration["Twitter:ConsumerKey"];
+                opt.ConsumerSecret = configuration["Twitter:ConsumerSecret"];
             });
         }
 
