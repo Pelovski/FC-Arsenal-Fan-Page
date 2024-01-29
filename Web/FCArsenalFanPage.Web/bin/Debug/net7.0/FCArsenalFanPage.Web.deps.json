@@ -46,6 +46,7 @@
           "FCArsenalFanPage.Web.Infrastructure": "1.0.0",
           "FCArsenalFanPage.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Authentication.Facebook": "7.0.1",
+          "Microsoft.AspNetCore.Authentication.Google": "7.0.2",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "7.0.3",
           "Microsoft.AspNetCore.Identity.UI": "7.0.3",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "7.0.3",
@@ -451,6 +452,17 @@
         },
         "compile": {
           "lib/net7.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/7.0.2": {
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "7.0.2.0",
+            "fileVersion": "7.0.222.60606"
+          }
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/2.2.0": {
@@ -5341,6 +5353,13 @@
       "sha512": "sha512-HZuJLpb21d1Mm6raClEcDN8yo417Xl7uxlvDwcKFBcDGgN1bULoQqTFU8jlKb0fvDA0ya58Cm44Y+Dehl3w6xw==",
       "path": "microsoft.aspnetcore.authentication.facebook/7.0.1",
       "hashPath": "microsoft.aspnetcore.authentication.facebook.7.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hy75fIrN83ElrgnsbX5OjFUBOm0ySPqYYHm1GuZ+KfW+V2MlDJ3zDqflAUe1stv780k/EgNsmBH1J+xuQhEtEg==",
+      "path": "microsoft.aspnetcore.authentication.google/7.0.2",
+      "hashPath": "microsoft.aspnetcore.authentication.google.7.0.2.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.2.0": {
       "type": "package",

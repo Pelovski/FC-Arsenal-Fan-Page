@@ -28,14 +28,20 @@
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                             <p class="lead fw-normal mb-0 me-3">
                                 Sign in with
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    string displayClass = "fa-" + provider.DisplayName.ToLower();
-                                    <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
-                                        <i class="fab @if(provider.DisplayName.ToLower() == "facebook") {
-                                            <text>fa-facebook-f</text>}"></i>
+
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Facebook" title="Log in using your Facebook account">
+                                        <i class="fab fa-facebook-f"></i>
                                     </button>
-                                }
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Google" title="Log in using your Google account">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+
+                                <button type="submit" class="btn login-btn btn-floating mx-1" name="provider" value="Twitter" title="Log in using your Twitter account">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                
                             </p>
                         </div>
                     </form>

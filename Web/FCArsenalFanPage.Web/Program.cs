@@ -71,8 +71,13 @@
 
             services.AddAuthentication().AddFacebook(opt =>
             {
-                opt.ClientId = "1786252601871298";
-                opt.ClientSecret = "db5c358a07fe3135cef62e098b6d238e";
+                opt.ClientId = configuration["Facebook:ClientId"];
+                opt.ClientSecret = configuration["Facebook:ClientSecret"];
+            })
+            .AddGoogle(opt =>
+            {
+                opt.ClientId = configuration["Google:ClientId"];
+                opt.ClientSecret = configuration["Google:ClientSecret"];
             });
         }
 
@@ -98,7 +103,6 @@
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
