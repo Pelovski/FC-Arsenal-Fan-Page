@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iR/wv2eRMd0JQd230aEhWBwMhISayJrkM0Q3vHSXB4aPsmRDeJlxlMHSTlfDl8ZPqdAwBkuHCp+rqdllD0qpyg==",
+  "dgSpecHash": "2o5NUf8R+XeuDQkNAZ/XBRQHVQ58Rn0XcWmFWgDMe+SdfG4868wISuF2nl+I6sM4IApmdfpMof56+eYEaJwszA==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",

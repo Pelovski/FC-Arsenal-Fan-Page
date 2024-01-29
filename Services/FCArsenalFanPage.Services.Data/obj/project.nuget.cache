@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/uK9Sf2FAYnFk7i1bQhZQU6gXY2NCGSuWLKSTVQK6j884AkUVbmjs6wtXhhh/tUojzh+UKqVcDoITS8HE/mMGQ==",
+  "dgSpecHash": "hpWb6m2Co8YQdrHvWuqi7gVrXCPIeb1e62bC+U4EXtbs6bslaLuktkfg1uj7X9jY1xwO6PAJ7wX2AVnNa0xS8w==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.3\\microsoft.aspnetcore.cryptography.internal.7.0.3.nupkg.sha512",
