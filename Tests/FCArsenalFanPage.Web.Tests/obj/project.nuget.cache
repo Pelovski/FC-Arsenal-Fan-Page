@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VRuYn58LxN9oPwAjdrFw+CGQFyzZGGnAmIpjI0YCCxZ+8vJReAcgY1WpbimB1nrGRE6/frjuS43IwFeVei3sQg==",
+  "dgSpecHash": "xL53ARY1moJOpaqpV830GXZQkuQPIfyb9e1TWMNHeZnX6pSUZwHr+j/lnAthfXDSeItLqFnASJBgQiazEh/y8g==",
   "success": true,
   "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\7.0.1\\microsoft.aspnetcore.authentication.facebook.7.0.1.nupkg.sha512",
+    "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.2\\microsoft.aspnetcore.authentication.google.7.0.2.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
