@@ -19,3 +19,16 @@
 .image {
     border-radius: 30px;
 }
+
+.login-btn {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #ee0000;
+    color:#fff;
+}
+
+.login-btn:hover {
+    background-color: #051922;
+    color: #ee0000;
+}

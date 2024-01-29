@@ -1208,3 +1208,4 @@ D:\Pavel\Project\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\r
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\FCArsenalFanPage.Web.pdb
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\FCArsenalFanPage.Web.genruntimeconfig.cache
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\ref\FCArsenalFanPage.Web.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Facebook.dll

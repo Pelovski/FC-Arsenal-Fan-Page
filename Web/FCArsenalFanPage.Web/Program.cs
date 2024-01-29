@@ -68,6 +68,12 @@
             services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IProductCategoriesService, ProductCategoriesService>();
+
+            services.AddAuthentication().AddFacebook(opt =>
+            {
+                opt.ClientId = "1786252601871298";
+                opt.ClientSecret = "db5c358a07fe3135cef62e098b6d238e";
+            });
         }
 
         private static void Configure(WebApplication app)
@@ -92,6 +98,7 @@
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
