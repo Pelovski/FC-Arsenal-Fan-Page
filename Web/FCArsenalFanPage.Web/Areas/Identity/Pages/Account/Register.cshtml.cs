@@ -76,6 +76,12 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
+            /// 
+            [Required]
+            [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 5)]
+            [Display(Name = "Username")]
+            public string UserName { get; set; }
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -115,7 +121,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             {
                 var user = this.CreateUser();
 
-                await this.userStore.SetUserNameAsync(user, this.Input.Email, CancellationToken.None);
+                await this.userStore.SetUserNameAsync(user, this.Input.UserName, CancellationToken.None);
                 await this.emailStore.SetEmailAsync(user, this.Input.Email, CancellationToken.None);
                 var result = await this.userManager.CreateAsync(user, this.Input.Password);
 

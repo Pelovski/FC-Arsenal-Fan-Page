@@ -51,12 +51,18 @@
                     <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
 
                         <div class="divider d-flex align-items-center my-4">
-                            <p class="text-center fw-bold mx-3 mb-0"></p>
+                            <p class="text-center fw-bolder mx-3 mb-0"></p>
                         </div>
 
                         <h2>Create a new account.</h2>
                         <hr />
                         <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.UserName" class="form-control" autocomplete="username" aria-required="true" placeholder="Arsenal Mega fen" />
+                        <label asp-for="Input.UserName">User Name</label>
+                        <span asp-validation-for="Input.UserName" class="text-danger"></span>
+                    </div>
 
                         <div class="form-floating mb-3">
                             <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />

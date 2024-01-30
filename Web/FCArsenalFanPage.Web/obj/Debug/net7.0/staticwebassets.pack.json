@@ -121,8 +121,16 @@
       "PackagePath": "staticwebassets\\css\\site.min.css"
     },
     {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\3d-square-with-twitter-logo.zip",
+      "PackagePath": "staticwebassets\\img\\3d-square-with-twitter-logo.zip"
+    },
+    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\Arsenal-Dragon.png",
       "PackagePath": "staticwebassets\\img\\Arsenal-Dragon.png"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\Hello-Dragon.png",
+      "PackagePath": "staticwebassets\\img\\Hello-Dragon.png"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\abt.jpg",
@@ -255,6 +263,10 @@
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\team\\team-3.jpg",
       "PackagePath": "staticwebassets\\img\\team\\team-3.jpg"
+    },
+    {
+      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\twitter.png",
+      "PackagePath": "staticwebassets\\img\\twitter.png"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\js\\form-validate.js",

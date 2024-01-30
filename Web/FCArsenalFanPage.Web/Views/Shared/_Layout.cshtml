@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true">
+
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true">
     <!-- bootstrap -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true">
     <!-- owl carousel -->
@@ -71,7 +73,9 @@
                                         @if (User.Identity.IsAuthenticated)
                                         {
                                             <a class="navi-item shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-                                            <a class="shopping-cart"> Logout</a>
+
+ 
+                                            <a class="nav-link" asp-area="Identity" asp-controller="Account" asp-action="Logout">Logout2</a>
                                         }
                                         else
                                         {
@@ -87,6 +91,7 @@
                                 </li>
                                     
                             </ul>
+                          
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div>
