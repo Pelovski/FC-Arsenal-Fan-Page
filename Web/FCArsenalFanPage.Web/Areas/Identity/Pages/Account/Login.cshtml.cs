@@ -120,7 +120,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
 
                 if (result.RequiresTwoFactor)
                 {
-                    return this.RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+                    return this.RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = this.Input.RememberMe });
                 }
 
                 if (result.IsLockedOut)
