@@ -23,7 +23,7 @@
 					<div class="single-latest-news">
 							<img class="card-img-top" src="@news.ImageUrl" alt="Card image cap">
 						    <div class="news-text-box">
-							<h3><a asp-controller="News" asp-action="SingleNews">@news.Title</a></h3>
+							<h3><a asp-action="SingleNews" asp-route-id="@news.Id">@news.Title</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> @news.UserName</span>
 								<span class="date"><i class="fas fa-calendar"></i>@news.CreatedOn</span>

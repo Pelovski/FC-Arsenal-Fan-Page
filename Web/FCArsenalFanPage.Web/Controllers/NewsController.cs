@@ -72,9 +72,11 @@
             return this.RedirectToAction("All");
         }
 
-        public IActionResult SingleNews()
+        public IActionResult SingleNews(int id)
         {
-            return this.View();
+            var news = this.newsService.GetById<SingleNewsViewModel>(id);
+
+            return this.View(news);
         }
     }
 }
