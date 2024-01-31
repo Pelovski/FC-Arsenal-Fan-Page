@@ -1,4 +1,4 @@
-﻿@using FCArsenalFanPage.Common
+﻿﻿@using FCArsenalFanPage.Common
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,16 +52,16 @@
                                 <li class="navi-item">
                                     <a asp-controller="News" asp-action="All">News</a>
                                     @*<ul class="sub-menu">
-                                        <li><a href="news.html">News</a></li>
-                                        <li><a href="single-news.html">Single News</a></li>
+                                    <li><a href="news.html">News</a></li>
+                                    <li><a href="single-news.html">Single News</a></li>
                                     </ul>*@
-                                </li >
+                                </li>
                                 <li class="navi-item">
                                     <a asp-controller="News" asp-action="Create">Create News</a>
-                                    </li>
+                                </li>
                                 <li class="navi-item">
                                     <a asp-controller="Shop" asp-action="All">Shop</a>
-    
+
                                 </li>
 
                                 <li class="navi-item">
@@ -70,28 +70,14 @@
                                 </li>
                                 <li>
                                     <div class="header-icons">
-                                        @if (User.Identity.IsAuthenticated)
-                                        {
-                                            <a class="navi-item shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
 
- 
-                                            <a class="nav-link" asp-area="Identity" asp-controller="Account" asp-action="Logout">Logout2</a>
-                                        }
-                                        else
-                                        {
-
-                                            <a class="navi-item" asp-area="Identity" asp-page="/Account/Register">Register</a>
-
-
-                                            <a class="navi-item" asp-area="Identity" asp-page="/Account/Login">Login</a>
-
-                                        }
+                                        <partial name="_LoginPartial" />
                                     </div>
-                                        
+
                                 </li>
-                                    
+
                             </ul>
-                          
+
                         </nav>
                         <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
                         <div class="mobile-menu"></div>
@@ -101,8 +87,8 @@
             </div>
         </div>
     </div>
-    
-            @this.RenderBody()
+
+    @this.RenderBody()
 
     <!-- footer -->
     <div class="footer-area">
