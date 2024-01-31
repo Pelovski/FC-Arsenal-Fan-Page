@@ -10,6 +10,7 @@
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services.Mapping;
     using FCArsenalFanPage.Web.ViewModels;
 
     public class NewsService : INewsService
@@ -101,6 +102,17 @@
         public int GetCount()
         {
             return this.newsRepository.All().Count();
+        }
+
+        public T GetById<T>(int id)
+        {
+            var news = this.newsRepository
+                .All()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefault();
+
+            return news;
         }
     }
 }

@@ -148,7 +148,6 @@ D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\r
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Buffers.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Collections.Concurrent.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Collections.dll
-D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Collections.Immutable.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Collections.NonGeneric.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.Collections.Specialized.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\refs\System.ComponentModel.Annotations.dll
@@ -1211,3 +1210,7 @@ D:\Pavel\Project\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Debug\net7.0\r
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Facebook.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Twitter.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\AngleSharp.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\AngleSharp.Css.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\HtmlSanitizer.dll
+D:\Pavel\Project\FC Arsenal Fan Page\Web\FCArsenalFanPage.Web\bin\Debug\net7.0\System.Collections.Immutable.dll

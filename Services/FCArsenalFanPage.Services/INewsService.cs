@@ -12,5 +12,7 @@
         IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 6);
 
         int GetCount();
+
+        T GetById<T>(int id);
     }
 }
