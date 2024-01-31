@@ -24,6 +24,11 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             this.logger = logger;
         }
 
+        public void OnGet()
+        {
+            this.signInManager.SignOutAsync();
+            this.logger.LogInformation("User logged out.");
+        }
         public async Task<IActionResult> OnPost(string returnUrl = null)
         {
             await this.signInManager.SignOutAsync();
