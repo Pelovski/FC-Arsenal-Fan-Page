@@ -10,5 +10,7 @@
         Task CreateAsync(CreateProductInputModel input, string userId, string imagePath);
 
         IEnumerable<ProductInListViewModel> GetAll();
+
+        T GetById<T>(string id);
     }
 }

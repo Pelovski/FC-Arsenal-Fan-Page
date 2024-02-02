@@ -2,10 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
+
     using AutoMapper;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
-    using Ganss.Xss;
 
     public class SingleNewsViewModel : IMapFrom<News>, IHaveCustomMappings
     {
@@ -24,8 +24,6 @@
         public DateTime CreatedOn { get; set; }
 
         public string ImageUrl { get; set; }
-
-        public string SanitizedContent => new HtmlSanitizer().Sanitize(this.Content);
 
         public IEnumerable<NewsCommentViewModel> Comments { get; set; }
 
