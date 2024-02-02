@@ -1,12 +1,13 @@
 ﻿namespace FCArsenalFanPage.Services
 {
-	using System.Collections.Generic;
-	using System.IO;
-	using System.Linq;
-	using System.Threading.Tasks;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services.Mapping;
     using FCArsenalFanPage.Web.ViewModels;
 
     public class ProductService : IProductService
@@ -69,6 +70,17 @@
                                x.Image.RemoteImageUrl :
                               "/Images/Products/" + x.Image.Id + "." + x.Image.Extension,
                 }).ToList();
+        }
+
+        public T GetById<T>(string id)
+        {
+            var product = this.productRepository
+                .All()
+                .Where(x => x.Id == id)
+                .To<T>()
+                .FirstOrDefault();
+
+            return product;
         }
     }
 }

@@ -62,5 +62,12 @@
 
             return this.RedirectToAction("All");
         }
+
+        public IActionResult SingleProduct(string id)
+        {
+            var product = this.productService.GetById<SingleProductViewModel>(id);
+
+            return this.View(product);
+        }
     }
 }
