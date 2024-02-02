@@ -6,6 +6,5 @@
     {
         public IEnumerable<ProductInListViewModel> Products { get; set; }
 
-        public int PageNumber { get; set; }
     }
 }
