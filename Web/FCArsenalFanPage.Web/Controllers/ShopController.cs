@@ -1,21 +1,37 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-    using FCArsenalFanPage.Services;
+    using System.Security.Claims;
+	using System.Threading.Tasks;
+	using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels;
-    using Microsoft.AspNetCore.Mvc;
+	using Microsoft.AspNetCore.Authorization;
+	using Microsoft.AspNetCore.Hosting;
+	using Microsoft.AspNetCore.Mvc;
 
     public class ShopController : Controller
     {
         private readonly IProductCategoriesService productCategoriesService;
+        private readonly IProductService productService;
+        private readonly IWebHostEnvironment environment;
 
-        public ShopController(IProductCategoriesService productCategoriesService)
+        public ShopController(
+            IProductCategoriesService productCategoriesService,
+            IProductService productService,
+            IWebHostEnvironment environment)
         {
             this.productCategoriesService = productCategoriesService;
+            this.productService = productService;
+            this.environment = environment;
         }
 
         public IActionResult All()
         {
-            return this.View();
+            var viewModel = new ProductListViewModel
+            {
+                Products = this.productService.GetAll(),
+            };
+
+            return this.View(viewModel);
         }
 
         [HttpGet]
@@ -29,13 +45,20 @@
         }
 
         [HttpPost]
-        public IActionResult Create(CreateProductInputModel input)
+        [Authorize]
+        public async Task<IActionResult> Create(CreateProductInputModel input)
         {
             if (!this.ModelState.IsValid)
             {
                 input.ProductsItems = this.productCategoriesService.GetAll();
                 return this.View(input);
             }
+
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var imagePath = $"{this.environment.WebRootPath}/Images";
+
+            await this.productService.CreateAsync(input, userId, imagePath);
 
             return this.RedirectToAction("All");
         }

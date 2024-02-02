@@ -1,6 +1,8 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+	using System.Collections.Generic;
 	using System.IO;
+	using System.Linq;
 	using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -24,7 +26,6 @@
 
             var product = new Product
             {
-                Id = input.Id,
                 Name = input.Name,
                 Price = input.Price,
                 Quantity = input.Quantity,
@@ -51,6 +52,23 @@
 
             await this.productRepository.AddAsync(product);
             await this.productRepository.SaveChangesAsync();
+        }
+
+        public IEnumerable<ProductInListViewModel> GetAll()
+        {
+           return this.productRepository
+                .AllAsNoTracking()
+                .Select(x => new ProductInListViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Price = x.Price,
+                    ProductCategoryId = x.ProductCategoryId,
+                    ProductCategoryName = x.ProductCategory.Name,
+                    ImageUrl = x.Image.RemoteImageUrl != null ?
+                               x.Image.RemoteImageUrl :
+                              "/Images/Products/" + x.Image.Id + "." + x.Image.Extension,
+                }).ToList();
         }
     }
 }
