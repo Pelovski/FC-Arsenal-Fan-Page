@@ -23,6 +23,24 @@
             this.newsRepository = newsRepository;
         }
 
+        private static string GetFirstThreeSentencesLimited(string text, int maxLength)
+        {
+            string[] sentences = Regex.Split(text, @"(?<=[.!?])\s+");
+
+            int numberOfSentencesToTake = Math.Min(3, sentences.Length);
+            string[] selectedSentences = new string[numberOfSentencesToTake];
+
+            int currentLength = 0;
+            for (int i = 0; i < numberOfSentencesToTake && currentLength + sentences[i].Length <= maxLength; i++)
+            {
+                selectedSentences[i] = sentences[i];
+                currentLength += sentences[i].Length;
+            }
+
+            string result = string.Join(" ", selectedSentences);
+            return result;
+        }
+
         public async Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
         {
             Directory.CreateDirectory($"{imagePath}/News/");
@@ -56,13 +74,18 @@
             await this.newsRepository.SaveChangesAsync();
         }
 
-        public IEnumerable<NewsInListViewModel> GetAll(int page, int itemsPerPage = 6)
+        public IEnumerable<NewsInListViewModel> GetAllWithPaging(int page, int itemsPerPage = 6)
         {
-            var news = this.newsRepository
+            return this.GetAll()
+                   .Skip((page - 1) * itemsPerPage)
+                   .Take(itemsPerPage);
+        }
+
+        public IEnumerable<NewsInListViewModel> GetAll()
+        {
+            return this.newsRepository
                 .AllAsNoTracking()
                 .OrderByDescending(x => x.Id)
-                .Skip((page - 1) * itemsPerPage)
-                .Take(itemsPerPage)
                 .Select(x => new NewsInListViewModel
                 {
                     Id = x.Id,
@@ -77,26 +100,6 @@
                     Details = GetFirstThreeSentencesLimited(x.Content, 200),
                 })
                 .ToList();
-
-            return news;
-        }
-
-        private static string GetFirstThreeSentencesLimited(string text, int maxLength)
-        {
-            string[] sentences = Regex.Split(text, @"(?<=[.!?])\s+");
-
-            int numberOfSentencesToTake = Math.Min(3, sentences.Length);
-            string[] selectedSentences = new string[numberOfSentencesToTake];
-
-            int currentLength = 0;
-            for (int i = 0; i < numberOfSentencesToTake && currentLength + sentences[i].Length <= maxLength; i++)
-            {
-                selectedSentences[i] = sentences[i];
-                currentLength += sentences[i].Length;
-            }
-
-            string result = string.Join(" ", selectedSentences);
-            return result;
         }
 
         public int GetCount()

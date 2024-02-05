@@ -36,7 +36,7 @@
             var viewModel = new NewsListViewModel
             {
                 PageNumber = id,
-                News = this.newsService.GetAll(id, itemsPerPage),
+                News = this.newsService.GetAllWithPaging(id, itemsPerPage),
                 NewsCount = this.newsService.GetCount(),
                 ItemsPerPage = itemsPerPage,
             };
