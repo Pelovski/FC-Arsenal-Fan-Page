@@ -9,18 +9,18 @@
 </div>
 <!-- end breadcrumb section -->
 <!-- single article section -->
-<div class="mt-150 mb-150">
+<div class="mt-80 mb-150">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="single-article-section">
 					<div class="single-article-text">
-						<img class="single-artcile-bg" src="@Model.ImageUrl" alt="@Model.Title">
+						<h2>@Model.Title</h2>
 						<p class="blog-meta">
 							<span class="author"><i class="fas fa-user"></i>@Model.UserUserName </span>
 							<span class="date"><i class="fas fa-calendar"></i> @Model.CreatedOn.ToString("dd MMMM, yyyy", CultureInfo.InvariantCulture)</span>
 						</p>
-						<h2>@Model.Title</h2>
+						<img class="single-artcile-bg" src="@Model.ImageUrl" alt="@Model.Title">
 						<p>@Html.Raw(Model.Content)</p>
 					</div>
 				</div>
