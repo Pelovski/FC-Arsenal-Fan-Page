@@ -22,7 +22,15 @@
         public IActionResult Index()
         {
             var news = this.newsService.GetAll();
-            return this.View();
+            var products = this.productService.GetAll();
+
+            var viewModel = new IndexListViewModel
+            {
+                News = news,
+                Products = products,
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()
