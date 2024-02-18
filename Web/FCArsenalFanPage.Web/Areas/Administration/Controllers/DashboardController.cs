@@ -4,7 +4,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     [Area("Administration")]
-    public class DashboardController : BaseController
+    public class DashboardController : AdministrationController
     {
         public IActionResult Index()
         {

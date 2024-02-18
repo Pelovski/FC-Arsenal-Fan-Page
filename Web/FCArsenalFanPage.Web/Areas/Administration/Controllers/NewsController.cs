@@ -11,7 +11,7 @@
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class NewsController : Controller
+    public class NewsController : AdministrationController
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
         private readonly ApplicationDbContext context;
