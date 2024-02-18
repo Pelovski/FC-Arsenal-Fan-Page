@@ -1,98 +1,74 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using FCArsenalFanPage.Data;
-using FCArsenalFanPage.Data.Models;
-
-namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
+﻿namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    using FCArsenalFanPage.Data;
+    using FCArsenalFanPage.Data.Common.Repositories;
+    using FCArsenalFanPage.Data.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.EntityFrameworkCore;
+
     [Area("Administration")]
     public class NewsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IDeletableEntityRepository<News> dataRepository;
+        private readonly ApplicationDbContext context;
 
-        public NewsController(ApplicationDbContext context)
+        public NewsController(IDeletableEntityRepository<News> dataRepository, ApplicationDbContext context)
         {
-            _context = context;
+            this.dataRepository = dataRepository;
+            this.context = context;
         }
 
         // GET: Administration/News
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.News.Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
-            return View(await applicationDbContext.ToListAsync());
+            var applicationDbContext = this.dataRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
+            return this.View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Administration/News/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.News == null)
+            if (id == null || this.dataRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var news = await _context.News
+            var news = await this.dataRepository
+                .All()
                 .Include(n => n.Category)
                 .Include(n => n.Image)
                 .Include(n => n.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (news == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return View(news);
-        }
-
-        // GET: Administration/News/Create
-        public IActionResult Create()
-        {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id");
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
-            return View();
-        }
-
-        // POST: Administration/News/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Content,UserId,CategoryId,ImageId,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] News news)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(news);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", news.ImageId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", news.UserId);
-            return View(news);
+            return this.View(news);
         }
 
         // GET: Administration/News/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.News == null)
+            if (id == null || this.dataRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var news = await _context.News.FindAsync(id);
+            var news = this.dataRepository.AllAsNoTracking().FirstOrDefault(x => x.Id == id);
             if (news == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", news.ImageId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", news.UserId);
-            return View(news);
+
+            this.ViewData["CategoryId"] = new SelectList(this.context.Categories, "Id", "Id", news.CategoryId);
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id", news.ImageId);
+            this.ViewData["UserId"] = new SelectList(this.context.Users, "Id", "Id", news.UserId);
+            return this.View(news);
         }
 
         // POST: Administration/News/Edit/5
@@ -104,78 +80,83 @@ namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
         {
             if (id != news.Id)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(news);
-                    await _context.SaveChangesAsync();
+                    this.dataRepository.Update(news);
+                    await this.dataRepository.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!NewsExists(news.Id))
+                    if (!this.NewsExists(news.Id))
                     {
-                        return NotFound();
+                        return this.NotFound();
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+
+                return this.RedirectToAction(nameof(this.Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", news.CategoryId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", news.ImageId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", news.UserId);
-            return View(news);
+
+            this.ViewData["CategoryId"] = new SelectList(this.context.Categories, "Id", "Id", news.CategoryId);
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id", news.ImageId);
+            this.ViewData["UserId"] = new SelectList(this.context.Users, "Id", "Id", news.UserId);
+
+            return this.View(news);
         }
 
         // GET: Administration/News/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.News == null)
+            if (id == null || this.dataRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var news = await _context.News
+            var news = await this.dataRepository.All()
                 .Include(n => n.Category)
                 .Include(n => n.Image)
                 .Include(n => n.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (news == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return View(news);
+            return this.View(news);
         }
 
         // POST: Administration/News/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.News == null)
+            if (this.dataRepository.All() == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.News'  is null.");
+                return this.Problem("Entity set 'ApplicationDbContext.News'  is null.");
             }
-            var news = await _context.News.FindAsync(id);
+            var news = this.dataRepository.All().FirstOrDefault(x => x.Id == id);
             if (news != null)
             {
-                _context.News.Remove(news);
+                this.dataRepository.Delete(news);
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            await this.dataRepository.SaveChangesAsync();
+            return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool NewsExists(int id)
         {
-          return _context.News.Any(e => e.Id == id);
+            return this.dataRepository.All().Any(e => e.Id == id);
         }
     }
 }
