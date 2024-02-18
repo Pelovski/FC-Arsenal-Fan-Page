@@ -6,12 +6,13 @@
     using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
-    using Microsoft.AspNetCore.Mvc;
+	using FCArsenalFanPage.Web.Controllers;
+	using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class NewsController : AdministrationController
+    public class NewsController : BaseController
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
         private readonly ApplicationDbContext context;

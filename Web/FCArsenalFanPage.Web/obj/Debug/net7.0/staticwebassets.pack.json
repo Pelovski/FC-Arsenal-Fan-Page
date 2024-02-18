@@ -885,20 +885,8 @@
       "PackagePath": "staticwebassets\\dist\\js\\adminlte.min.js.map"
     },
     {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\demo.js",
-      "PackagePath": "staticwebassets\\dist\\js\\demo.js"
-    },
-    {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard.js",
       "PackagePath": "staticwebassets\\dist\\js\\pages\\dashboard.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard2.js",
-      "PackagePath": "staticwebassets\\dist\\js\\pages\\dashboard2.js"
-    },
-    {
-      "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard3.js",
-      "PackagePath": "staticwebassets\\dist\\js\\pages\\dashboard3.js"
     },
     {
       "Id": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\3d-square-with-twitter-logo.zip",

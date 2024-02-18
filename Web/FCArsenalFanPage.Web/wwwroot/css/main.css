@@ -2565,7 +2565,8 @@ td.product-image img {
 }
 
 thead.cart-table-head tr {
-    background-color: #efefef;
+    background-color: #212529;
+    color: #fff;
 }
 
 td.product-quantity input {
@@ -2579,10 +2580,12 @@ td.product-remove a {
 .total-section table.total-table {
     border: 1px solid #efefef;
     width: 100%;
+    border-collapse: collapse;
 }
 
 tr.table-total-row {
-    background-color: #efefef;
+    background-color: #212529;
+    color:white;
 }
 
     tr.table-total-row th {
@@ -2947,4 +2950,8 @@ table.order-details {
 .block {
     width: 306px;
     height: 230px;
+}
+
+.cart-size{
+    font-size:18px
 }
