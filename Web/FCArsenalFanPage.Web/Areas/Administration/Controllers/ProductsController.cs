@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using FCArsenalFanPage.Data;
-using FCArsenalFanPage.Data.Models;
-using FCArsenalFanPage.Data.Common.Repositories;
-
-namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
+﻿namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    using FCArsenalFanPage.Data;
+    using FCArsenalFanPage.Data.Common.Repositories;
+    using FCArsenalFanPage.Data.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.EntityFrameworkCore;
+
     [Area("Administration")]
-    public class ProductsController : Controller
+    public class ProductsController : AdministrationController
     {
         private readonly IDeletableEntityRepository<Product> productRepository;
         private readonly ApplicationDbContext context;

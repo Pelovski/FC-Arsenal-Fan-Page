@@ -17,8 +17,13 @@
             
         }
 
-    <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-    <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@this.Url.Action("Index", "Home", new { area = string.Empty })">Logout</a>
+    <li class="navi-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@this.Url.Action("Index", "Home", new { area = string.Empty })">Logout</a>
+    </li>
+
+        <li class="navi-item">
+        <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </li>
     }
     else
     {

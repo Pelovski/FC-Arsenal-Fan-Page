@@ -1,0 +1,27 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access denied";
+}
+
+<!-- breadcrumb-section -->
+
+
+<!-- error section -->
+<div class="full-height-section error-section">
+	<div class="full-height-tablecell">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="error-text">
+						<i class="far fa-sad-cry"></i>
+						<h1>Oops! Access Denied.</h1>
+						<p>You do not have permission to access this resource.</p>
+						<a asp-area="" asp-controller="Home" asp-action="Index" class="boxed-btn">Back to Home</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
