@@ -90,7 +90,8 @@
         $(".navi-item a").each(function () {
             var linkUrl = $(this).attr('href');
             if (linkUrl === currentUrl) {
-                $(this).parent().addClass("current-list-item");
+                let one = $(this).parent().addClass("current-list-item");
+                console.log(one);
             }
         });
 

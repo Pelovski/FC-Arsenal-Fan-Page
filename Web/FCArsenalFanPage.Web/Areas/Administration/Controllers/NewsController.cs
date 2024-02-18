@@ -27,7 +27,7 @@
         // GET: Administration/News
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.newsRepository.All().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
+            var applicationDbContext = this.newsRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
@@ -61,7 +61,7 @@
                 return this.NotFound();
             }
 
-            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
+            var news = this.newsRepository.AllAsNoTracking().FirstOrDefault(x => x.Id == id);
             if (news == null)
             {
                 return this.NotFound();
