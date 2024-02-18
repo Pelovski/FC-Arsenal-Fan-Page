@@ -7,54 +7,60 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FCArsenalFanPage.Data;
 using FCArsenalFanPage.Data.Models;
+using FCArsenalFanPage.Data.Common.Repositories;
 
 namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
     [Area("Administration")]
     public class ProductsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IDeletableEntityRepository<Product> productRepository;
+        private readonly ApplicationDbContext context;
 
-        public ProductsController(ApplicationDbContext context)
+        public ProductsController(
+            IDeletableEntityRepository<Product> productRepository,
+            ApplicationDbContext context)
         {
-            _context = context;
+            this.productRepository = productRepository;
+            this.context = context;
         }
 
         // GET: Administration/Products
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Products.Include(p => p.CreatedByUser).Include(p => p.Image).Include(p => p.ProductCategory);
-            return View(await applicationDbContext.ToListAsync());
+            var applicationDbContext = this.productRepository.AllAsNoTracking().Include(p => p.CreatedByUser).Include(p => p.Image).Include(p => p.ProductCategory);
+            return this.View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Administration/Products/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null || this.productRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var product = await _context.Products
+            var product = await this.productRepository.All()
                 .Include(p => p.CreatedByUser)
                 .Include(p => p.Image)
                 .Include(p => p.ProductCategory)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return View(product);
+            return this.View(product);
         }
 
         // GET: Administration/Products/Create
         public IActionResult Create()
         {
-            ViewData["CreatedByUserId"] = new SelectList(_context.Users, "Id", "Id");
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id");
-            ViewData["ProductCategoryId"] = new SelectList(_context.ProductCategories, "Id", "Id");
-            return View();
+            this.ViewData["CreatedByUserId"] = new SelectList(this.context.Users, "Id", "Id");
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id");
+            this.ViewData["ProductCategoryId"] = new SelectList(this.context.ProductCategories, "Id", "Id");
+            return this.View();
         }
 
         // POST: Administration/Products/Create
@@ -64,35 +70,40 @@ namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Name,Price,ImageId,Quantity,Description,ProductCategoryId,CreatedByUserId,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Product product)
         {
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
-                _context.Add(product);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await this.productRepository.AddAsync(product);
+                await this.productRepository.SaveChangesAsync();
+
+                return this.RedirectToAction(nameof(this.Index));
             }
-            ViewData["CreatedByUserId"] = new SelectList(_context.Users, "Id", "Id", product.CreatedByUserId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", product.ImageId);
-            ViewData["ProductCategoryId"] = new SelectList(_context.ProductCategories, "Id", "Id", product.ProductCategoryId);
-            return View(product);
+
+            this.ViewData["CreatedByUserId"] = new SelectList(this.context.Users, "Id", "Id", product.CreatedByUserId);
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id", product.ImageId);
+            this.ViewData["ProductCategoryId"] = new SelectList(this.context.ProductCategories, "Id", "Id", product.ProductCategoryId);
+
+            return this.View(product);
         }
 
         // GET: Administration/Products/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null || this.productRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var product = await _context.Products.FindAsync(id);
+            var product = this.productRepository.All().FirstOrDefault(x => x.Id == id);
+
             if (product == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
-            ViewData["CreatedByUserId"] = new SelectList(_context.Users, "Id", "Id", product.CreatedByUserId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", product.ImageId);
-            ViewData["ProductCategoryId"] = new SelectList(_context.ProductCategories, "Id", "Id", product.ProductCategoryId);
-            return View(product);
+            this.ViewData["CreatedByUserId"] = new SelectList(this.context.Users, "Id", "Id", product.CreatedByUserId);
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id", product.ImageId);
+            this.ViewData["ProductCategoryId"] = new SelectList(this.context.ProductCategories, "Id", "Id", product.ProductCategoryId);
+
+            return this.View(product);
         }
 
         // POST: Administration/Products/Edit/5
@@ -104,54 +115,56 @@ namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
         {
             if (id != product.Id)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(product);
-                    await _context.SaveChangesAsync();
+                    this.productRepository.Update(product);
+                    await this.productRepository.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductExists(product.Id))
+                    if (!this.ProductExists(product.Id))
                     {
-                        return NotFound();
+                        return this.NotFound();
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return this.RedirectToAction(nameof(this.Index));
             }
-            ViewData["CreatedByUserId"] = new SelectList(_context.Users, "Id", "Id", product.CreatedByUserId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", product.ImageId);
-            ViewData["ProductCategoryId"] = new SelectList(_context.ProductCategories, "Id", "Id", product.ProductCategoryId);
-            return View(product);
+            this.ViewData["CreatedByUserId"] = new SelectList(this.context.Users, "Id", "Id", product.CreatedByUserId);
+            this.ViewData["ImageId"] = new SelectList(this.context.Images, "Id", "Id", product.ImageId);
+            this.ViewData["ProductCategoryId"] = new SelectList(this.context.ProductCategories, "Id", "Id", product.ProductCategoryId);
+
+            return this.View(product);
         }
 
         // GET: Administration/Products/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Products == null)
+            if (id == null || this.productRepository.All() == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var product = await _context.Products
+            var product = await this.productRepository.All()
                 .Include(p => p.CreatedByUser)
                 .Include(p => p.Image)
                 .Include(p => p.ProductCategory)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (product == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return View(product);
+            return this.View(product);
         }
 
         // POST: Administration/Products/Delete/5
@@ -159,23 +172,25 @@ namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Products == null)
+            if (this.productRepository.All() == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Products'  is null.");
+                return this.Problem("Entity set 'ApplicationDbContext.Products'  is null.");
             }
-            var product = await _context.Products.FindAsync(id);
+
+            var product = this.productRepository.All().FirstOrDefault(x => x.Id == id);
+
             if (product != null)
             {
-                _context.Products.Remove(product);
+                this.productRepository.Delete(product);
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+
+            await this.productRepository.SaveChangesAsync();
+            return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool ProductExists(string id)
         {
-          return _context.Products.Any(e => e.Id == id);
+          return this.productRepository.All().Any(e => e.Id == id);
         }
     }
 }
