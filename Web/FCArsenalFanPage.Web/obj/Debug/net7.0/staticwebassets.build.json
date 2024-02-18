@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PG6EcwzQ8FQmIj4L5Rwdbai79HlYkHz2yasd3Q3MSBg=",
+  "Hash": "X59QOdzY8wezxsAvpzl60brm9Zo3SeHjQ6obz3SgU4I=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -4267,23 +4267,6 @@
       "OriginalItemSpec": "wwwroot\\dist\\js\\adminlte.min.js.map"
     },
     {
-      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\demo.js",
-      "SourceId": "FCArsenalFanPage.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
-      "BasePath": "_content/FCArsenalFanPage.Web",
-      "RelativePath": "dist/js/demo.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\dist\\js\\demo.js"
-    },
-    {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard.js",
       "SourceId": "FCArsenalFanPage.Web",
       "SourceType": "Discovered",
@@ -4299,40 +4282,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\js\\pages\\dashboard.js"
-    },
-    {
-      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard2.js",
-      "SourceId": "FCArsenalFanPage.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
-      "BasePath": "_content/FCArsenalFanPage.Web",
-      "RelativePath": "dist/js/pages/dashboard2.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\dist\\js\\pages\\dashboard2.js"
-    },
-    {
-      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\pages\\dashboard3.js",
-      "SourceId": "FCArsenalFanPage.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
-      "BasePath": "_content/FCArsenalFanPage.Web",
-      "RelativePath": "dist/js/pages/dashboard3.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\dist\\js\\pages\\dashboard3.js"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\097d14ba-6db2-4ec6-9eca-00cd85e3732f.png",
