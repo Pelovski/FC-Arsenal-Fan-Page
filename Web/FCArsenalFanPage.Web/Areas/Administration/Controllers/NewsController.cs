@@ -13,31 +13,33 @@
     [Area("Administration")]
     public class NewsController : Controller
     {
-        private readonly IDeletableEntityRepository<News> dataRepository;
+        private readonly IDeletableEntityRepository<News> newsRepository;
         private readonly ApplicationDbContext context;
 
-        public NewsController(IDeletableEntityRepository<News> dataRepository, ApplicationDbContext context)
+        public NewsController(
+            IDeletableEntityRepository<News> newsRepository,
+            ApplicationDbContext context)
         {
-            this.dataRepository = dataRepository;
+            this.newsRepository = newsRepository;
             this.context = context;
         }
 
         // GET: Administration/News
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.dataRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
+            var applicationDbContext = this.newsRepository.All().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Administration/News/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || this.dataRepository.All() == null)
+            if (id == null || this.newsRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var news = await this.dataRepository
+            var news = await this.newsRepository
                 .All()
                 .Include(n => n.Category)
                 .Include(n => n.Image)
@@ -54,12 +56,12 @@
         // GET: Administration/News/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || this.dataRepository.All() == null)
+            if (id == null || this.newsRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var news = this.dataRepository.AllAsNoTracking().FirstOrDefault(x => x.Id == id);
+            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
             if (news == null)
             {
                 return this.NotFound();
@@ -87,8 +89,8 @@
             {
                 try
                 {
-                    this.dataRepository.Update(news);
-                    await this.dataRepository.SaveChangesAsync();
+                    this.newsRepository.Update(news);
+                    await this.newsRepository.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -115,12 +117,12 @@
         // GET: Administration/News/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || this.dataRepository.All() == null)
+            if (id == null || this.newsRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var news = await this.dataRepository.All()
+            var news = await this.newsRepository.All()
                 .Include(n => n.Category)
                 .Include(n => n.Image)
                 .Include(n => n.User)
@@ -140,23 +142,25 @@
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (this.dataRepository.All() == null)
+            if (this.newsRepository.All() == null)
             {
                 return this.Problem("Entity set 'ApplicationDbContext.News'  is null.");
             }
-            var news = this.dataRepository.All().FirstOrDefault(x => x.Id == id);
+
+            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
+
             if (news != null)
             {
-                this.dataRepository.Delete(news);
+                this.newsRepository.Delete(news);
             }
 
-            await this.dataRepository.SaveChangesAsync();
+            await this.newsRepository.SaveChangesAsync();
             return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool NewsExists(int id)
         {
-            return this.dataRepository.All().Any(e => e.Id == id);
+            return this.newsRepository.All().Any(e => e.Id == id);
         }
     }
 }

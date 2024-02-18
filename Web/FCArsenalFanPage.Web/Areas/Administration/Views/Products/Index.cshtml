@@ -7,7 +7,7 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a style="color:white" type="submit" class="btn btn-success mt-5 mb-3 ml-2 p-3" asp-area="" asp-controller="Product" asp-action="Create">Create Product</a>
+    <a style="color:white" type="submit" class="btn btn-success mt-5 mb-3 ml-2 p-3" asp-area="" asp-controller="Shop" asp-action="Create">Create Product</a>
 </p>
 <table class="table table-striped table-bordered table-hover">
     <thead class="thead-dark text-center">
@@ -22,22 +22,16 @@
                 @Html.DisplayNameFor(model => model.Quantity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductCategory)
+                Priduct Category
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedByUser)
+                Created by user
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
+                Created on
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeletedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedOn)
+                Modified on
             </th>
             <th></th>
         </tr>
@@ -45,7 +39,7 @@
     <tbody class="text-center">
 @foreach (var item in Model) {
         <tr >
-                <td class="align-middle" style="width:14%">
+                <td class="align-middle" style="width:20%">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
                 <td class="align-middle">
@@ -61,18 +55,12 @@
                 @Html.DisplayFor(modelItem => item.CreatedByUser.Id)
             </td>
                 <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-                <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.DeletedOn)
-            </td>
-                <td class="align-middle">
                 @Html.DisplayFor(modelItem => item.CreatedOn)
             </td>
                 <td class="align-middle">
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
-                <td class="w-25 align-middle">
+                <td>
                     <a class="btn btn-primary mt-2 mb-2 ml-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>

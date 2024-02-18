@@ -23,22 +23,16 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                User
+                Created by user
             </th>
             <th>
                 Category
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
+                Created on
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeletedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedOn)
+               Modified on
             </th>
             <th>
                 Actions
@@ -49,7 +43,7 @@
 @foreach (var item in Model.OrderByDescending(x => x.CreatedOn)) {
             var date = item.CreatedOn.ToString("dd/MM/yyyy");
             <tr>
-                <td class="align-middle" style="width:25%">
+            <td class="align-middle" style="width:25%">
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
                 <td class="align-middle">
@@ -57,12 +51,6 @@
             </td>
                 <td class="align-middle">
                 @Html.DisplayFor(modelItem => item.Category.Name)
-            </td>
-                <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-                <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.DeletedOn)
             </td>
                 <td class="align-middle">
                     @Html.DisplayFor(modelItem => date)
