@@ -67,17 +67,15 @@
                                 <li class="navi-item">
                                     <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                 </li>
-                                <li class="navi-item">
-                                    <a asp-area="" 
-                                    asp-action="All">News</a>
-                                    @*<ul class="sub-menu">
-                                    <li><a href="news.html">News</a></li>
-                                    <li><a href="single-news.html">Single News</a></li>
-                                    </ul>*@
+
+                                <li class="navi-item"> 
+                                    <a asp-area="" asp-controller="News" asp-action="All">News</a>
                                 </li>
+
                                 <li class="navi-item">
                                     <a asp-area="" asp-controller="News" asp-action="Create">Create News</a>
                                 </li>
+
                                 <li class="navi-item">
                                     <a asp-area="" asp-controller="Shop" asp-action="All">Shop</a>
 
@@ -89,12 +87,12 @@
                                 </li>
                                 <li>
                                     <div class="header-icons">
-
                                         <partial name="_LoginPartial" />
                                     </div>
-
+                                 
                                 </li>
-
+                                
+                                       
                             </ul>
 
                         </nav>

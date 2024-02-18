@@ -614,7 +614,7 @@ nav.main-menu ul {
         display: inline-block;
     }
 
-nav.main-menu > ul li:last-child {
+nav.main-menu > ul li:nth-last-child(-n+2) {
     float: right;
 }
 
