@@ -8,6 +8,12 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Administration\**" />
+    <EmbeddedResource Remove="Administration\**" />
+    <None Remove="Administration\**" />
+  </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>
@@ -28,10 +34,6 @@
     <ProjectReference Include="..\..\Data\FCArsenalFanPage.Data.Models\FCArsenalFanPage.Data.Models.csproj" />
     <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services.Mapping\FCArsenalFanPage.Services.Mapping.csproj" />
     <ProjectReference Include="..\FCArsenalFanPage.Web.Infrastructure\FCArsenalFanPage.Web.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Administration\Dashboard\" />
   </ItemGroup>
 
 </Project>

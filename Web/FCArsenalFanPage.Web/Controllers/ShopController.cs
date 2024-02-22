@@ -1,12 +1,12 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
     using System.Security.Claims;
-	using System.Threading.Tasks;
-	using FCArsenalFanPage.Services;
-    using FCArsenalFanPage.Web.ViewModels;
-	using Microsoft.AspNetCore.Authorization;
-	using Microsoft.AspNetCore.Hosting;
-	using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
+    using FCArsenalFanPage.Services;
+    using FCArsenalFanPage.Web.ViewModels.Products;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
 
     public class ShopController : Controller
     {

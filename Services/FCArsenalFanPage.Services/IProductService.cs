@@ -2,8 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-
-    using FCArsenalFanPage.Web.ViewModels;
+    using FCArsenalFanPage.Web.ViewModels.Products;
 
     public interface IProductService
     {
