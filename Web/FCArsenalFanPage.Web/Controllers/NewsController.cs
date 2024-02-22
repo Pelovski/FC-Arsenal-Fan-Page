@@ -6,7 +6,7 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
-    using FCArsenalFanPage.Web.ViewModels;
+    using FCArsenalFanPage.Web.ViewModels.News;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;

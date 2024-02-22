@@ -5,17 +5,14 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
     using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Data.Repositories;
     using FCArsenalFanPage.Data.Seeding;
-    using FCArsenalFanPage.Services.Data;
     using FCArsenalFanPage.Services.Messaging;
-
-    using CommandLine;
-
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -52,9 +49,6 @@
         {
             var sw = Stopwatch.StartNew();
 
-            var settingsService = serviceProvider.GetService<ISettingsService>();
-            Console.WriteLine($"Count of settings: {settingsService.GetCount()}");
-
             Console.WriteLine(sw.Elapsed);
             return await Task.FromResult(0);
         }
@@ -81,7 +75,6 @@
 
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
-            services.AddTransient<ISettingsService, SettingsService>();
         }
     }
 }

@@ -11,7 +11,7 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
-    using FCArsenalFanPage.Web.ViewModels;
+    using FCArsenalFanPage.Web.ViewModels.News;
 
     public class NewsService : INewsService
     {

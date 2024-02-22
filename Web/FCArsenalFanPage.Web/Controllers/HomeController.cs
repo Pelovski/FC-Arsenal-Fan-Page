@@ -4,6 +4,7 @@
 
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels;
+    using FCArsenalFanPage.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController

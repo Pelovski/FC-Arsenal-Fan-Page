@@ -1,7 +1,6 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
-	using System.ComponentModel.DataAnnotations.Schema;
-	using FCArsenalFanPage.Data.Common.Models;
+    using FCArsenalFanPage.Data.Common.Models;
 
     public class News : BaseDeletableModel<int>
     {
