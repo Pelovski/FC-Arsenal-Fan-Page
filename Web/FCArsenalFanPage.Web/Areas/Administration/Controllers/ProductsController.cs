@@ -6,13 +6,14 @@
     using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
-    using Microsoft.AspNetCore.Mvc;
+	using FCArsenalFanPage.Web.Controllers;
+	using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class ProductsController : AdministrationController
-    {
+    public class ProductsController : BaseController
+	{
         private readonly IDeletableEntityRepository<Product> productRepository;
         private readonly ApplicationDbContext context;
 
