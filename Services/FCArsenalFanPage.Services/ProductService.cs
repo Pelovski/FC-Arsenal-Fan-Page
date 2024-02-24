@@ -55,6 +55,14 @@
             await this.productRepository.SaveChangesAsync();
         }
 
+        public IEnumerable<ProductInListViewModel> GetAllWithPaging(int page, int itemsPerPage = 6)
+        {
+            return this.GetAll()
+                   .Skip((page - 1) * itemsPerPage)
+                   .Take(itemsPerPage);
+        }
+
+
         public IEnumerable<ProductInListViewModel> GetAll()
         {
            return this.productRepository

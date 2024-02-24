@@ -24,10 +24,11 @@
             this.environment = environment;
         }
 
-        public IActionResult All()
+        public IActionResult All(int id = 1)
         {
             var viewModel = new ProductListViewModel
             {
+                PageNumber = id,
                 Products = this.productService.GetAll(),
             };
 

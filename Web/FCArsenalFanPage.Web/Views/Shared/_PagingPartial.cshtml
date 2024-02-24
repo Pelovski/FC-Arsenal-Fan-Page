@@ -1,4 +1,4 @@
-﻿<hr />
+﻿@model PagingViewModel
 
 <div class="row">
 	<div class="container">
@@ -6,10 +6,10 @@
 			<div class="col-lg-12 text-center">
 				<div class="pagination-wrap">
 					<ul>
-						<li class="@if(!Model.HasPreviousPage) 
-							{<text>disabled-page</text>}">
+						<li class="@if(!Model.HasPreviousPage) {<text>disabled-page</text>}">
 
 							<a asp-action="All" asp-route-id="@Model.PreviousPageNumber">Prev</a>
+
 						</li>
 
 						@for (int i = Model.PageNumber - 3; i < Model.PageNumber; i++)
@@ -31,8 +31,7 @@
 							}
 						}
 
-						<li class="@if(!Model.HasNextPage)
-							{<text>disabled-page</text>}">
+						<li class="@if(!Model.HasNextPage) {<text>disabled-page</text>}">
 							<a asp-action="All" asp-route-id="@Model.NextPageNumber">Next</a>
 						</li>
 					</ul>

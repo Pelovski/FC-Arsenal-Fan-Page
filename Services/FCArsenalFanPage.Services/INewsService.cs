@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+
     using FCArsenalFanPage.Web.ViewModels.News;
 
     public interface INewsService
