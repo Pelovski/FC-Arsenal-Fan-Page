@@ -64,6 +64,33 @@
             return this.RedirectToAction("All");
         }
 
+        // Edit Get
+        [HttpGet]
+        [Authorize]
+        public IActionResult Edit(string id)
+        {
+            var inputModel = this.productService.GetById<EditProductInputViewModel>(id);
+            inputModel.ProductsItems = this.productCategoriesService.GetAll();
+
+            return this.View(inputModel);
+        }
+
+        // Edit Post
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Edit(string id, EditProductInputViewModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                input.ProductsItems = this.productCategoriesService.GetAll();
+                return this.View(input);
+            }
+
+            await this.productService.UpdateAsync(id, input);
+
+            return this.RedirectToAction(nameof(this.SingleProduct), new { id });
+        }
+
         public IActionResult SingleProduct(string id)
         {
             var product = this.productService.GetById<SingleProductViewModel>(id);

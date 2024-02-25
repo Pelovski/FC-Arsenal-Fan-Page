@@ -44,6 +44,8 @@
             return this.View(viewModel);
         }
 
+		// Create Get
+        [Authorize]
         public IActionResult Create()
         {
             var viewModel = new CreateNewsInputModel();
@@ -52,6 +54,7 @@
             return this.View(viewModel);
         }
 
+        // Create Post
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> Create(CreateNewsInputModel input)
@@ -81,8 +84,8 @@
             return this.View(inputModel);
         }
 
-		[Authorize]
-		[HttpPost]
+        [Authorize]
+        [HttpPost]
         public async Task<IActionResult> Edit(int id, EditNewsInputViewModel input)
         {
 
