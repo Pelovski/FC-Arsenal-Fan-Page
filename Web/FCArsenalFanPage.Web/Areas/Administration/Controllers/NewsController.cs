@@ -8,7 +8,7 @@
     using FCArsenalFanPage.Data.Models;
 	using FCArsenalFanPage.Web.Controllers;
 	using Microsoft.AspNetCore.Mvc;
-    using Microsoft.AspNetCore.Mvc.Rendering;
+ 
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
