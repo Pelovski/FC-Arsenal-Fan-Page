@@ -54,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
             <td class="align-middle">
-                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="News" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a class="btn btn-info mt-2 mb-2 ml-1"  asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>

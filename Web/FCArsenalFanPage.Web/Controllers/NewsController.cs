@@ -72,6 +72,31 @@
             return this.RedirectToAction("All");
         }
 
+        [Authorize]
+        public IActionResult Edit(int id)
+        {
+            var inputModel = this.newsService.GetById<EditNewsInputViewModel>(id);
+            inputModel.CategoriesItems = this.categoriesService.GetAll();
+
+            return this.View(inputModel);
+        }
+
+		[Authorize]
+		[HttpPost]
+        public async Task<IActionResult> Edit(int id, EditNewsInputViewModel input)
+        {
+
+            if (!this.ModelState.IsValid)
+            {
+                input.CategoriesItems = this.categoriesService.GetAll();
+                return this.View(input);
+            }
+
+            await this.newsService.UpdateAsync(id, input);
+
+            return this.RedirectToAction(nameof(this.SingleNews), new { id });
+        }
+
         public IActionResult SingleNews(int id)
         {
             var news = this.newsService.GetById<SingleNewsViewModel>(id);
