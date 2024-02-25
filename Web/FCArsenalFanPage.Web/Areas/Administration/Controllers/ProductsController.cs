@@ -15,14 +15,11 @@
     public class ProductsController : BaseController
 	{
         private readonly IDeletableEntityRepository<Product> productRepository;
-        private readonly ApplicationDbContext context;
 
         public ProductsController(
-            IDeletableEntityRepository<Product> productRepository,
-            ApplicationDbContext context)
+            IDeletableEntityRepository<Product> productRepository)
         {
             this.productRepository = productRepository;
-            this.context = context;
         }
 
         // GET: Administration/Products

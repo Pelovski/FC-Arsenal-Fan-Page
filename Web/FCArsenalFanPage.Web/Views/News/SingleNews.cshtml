@@ -20,6 +20,7 @@
 							<span class="date"><i class="fas fa-calendar"></i> @Model.CreatedOn.ToString("dd MMMM, yyyy", CultureInfo.InvariantCulture)</span>
 						</p>
 						<img class="single-artcile-bg" src="@Model.ImageUrl" alt="@Model.Title">
+						<i class="fa-light fa-circle-exclamation"></i>
 						<p>@Html.Raw(Model.Content)</p>
 					</div>
 
