@@ -117,5 +117,17 @@
 
             return news;
         }
+
+        public async Task UpdateAsync(int id, EditNewsInputViewModel input)
+        {
+            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
+
+            news.Title = input.Title;
+            news.Content = input.Content;
+            news.CategoryId = input.CategoryId;
+            news.UserId = input.CreatedByUserId;
+
+            await this.newsRepository.SaveChangesAsync();
+        }
     }
 }

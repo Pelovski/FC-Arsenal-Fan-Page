@@ -1,6 +1,9 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.News
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+
+    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public class BaseNewsViewModel
     {
@@ -17,5 +20,7 @@
         public int CategoryId { get; set; }
 
         public string CreatedByUserId { get; set; }
+
+        public IEnumerable<SelectListItem> CategoriesItems { get; set; }
     }
 }
