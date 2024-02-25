@@ -7,7 +7,7 @@
 <h1 class="text-center mt-3 mb-4">Products Dashboard</h1>
 
 <p class="text-center">
-    <a style="color:white" type="submit" class="btn btn-success mt-2 mb-3 ml-2 p-3" asp-area="" asp-controller="Shop" asp-action="Create">Create New</a>
+    <a style="color:white" type="submit" class="btn btn-success mt-2 mb-3 ml-2 p-3" asp-area="" asp-controller="Shop" asp-action="Create">Create Product</a>
 </p>
 
 <table class="table table-striped table-bordered table-hover">
@@ -62,7 +62,7 @@
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
                 <td>
-                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="Shop" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>

@@ -90,5 +90,19 @@
 
             return product;
         }
+
+        public async Task UpdateAsync(string id, EditProductInputViewModel input)
+        {
+            var product = this.productRepository.All().FirstOrDefault(x => x.Id == id);
+
+            product.Name = input.Name;
+            product.Price = input.Price;
+            product.Quantity = input.Quantity;
+            product.Description = input.Description;
+            product.ProductCategoryId = input.ProductCategoryId;
+            product.CreatedByUserId = input.CreatedByUserId;
+
+            await this.productRepository.SaveChangesAsync();
+        }
     }
 }

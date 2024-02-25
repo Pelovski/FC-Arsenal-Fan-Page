@@ -25,6 +25,8 @@
 
         public string ImageUrl { get; set; }
 
+        //public ICollection<string> RecentPosts { get; set; }
+
         public IEnumerable<NewsCommentViewModel> Comments { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)

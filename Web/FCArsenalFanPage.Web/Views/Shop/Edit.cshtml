@@ -1,0 +1,50 @@
+﻿@model EditProductInputViewModel
+
+@{
+	this.ViewData["Title"] = "Edit Product";
+	var productItems = Model.ProductsItems;
+}
+
+<div class="breadcrumb-section breadcrumb-bg">
+</div>
+
+<div class="row justify-content-center my-5">
+	<div class="create-news-form col-lg-8">
+		<form method="post" asp-action="Edit" enctype="multipart/form-data">
+			<div class="form-group">
+				<label asp-for="Name"></label>
+				<input asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Price"></label>
+				<input asp-for="Price" class="form-control" />
+				<span asp-validation-for="Price" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Quantity"></label>
+				<input asp-for="Quantity" class="form-control" />
+				<span asp-validation-for="Quantity" class="text-danger"></span>
+			</div>
+
+			<div>
+				<label asp-for="ProductCategoryId"></label>
+				<select asp-for="ProductCategoryId" asp-items="productItems" class="form-control"></select>
+				<span asp-validation-for="ProductCategoryId" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Description"></label>
+				<textarea rows="6" asp-for="Description" class="form-control"></textarea>
+				<span asp-validation-for="Description" class="text-danger"></span>
+			</div>
+
+			<input type="hidden" asp-for="Id" />
+			<button style="color:white" type="submit" class="btn btn-success mt-5 mb-3 p-3">Save Changes</button>
+		</form>
+
+	</div>
+
+</div>
