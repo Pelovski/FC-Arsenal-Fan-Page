@@ -7,23 +7,29 @@
 
     @if (this.SignInManager.IsSignedIn(this.User))
     {
+      
        
-           @* <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @this.User.Identity.Name!</a>*@
-        
         if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             
                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin</a>
             
         }
-
     <li class="navi-item">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@this.Url.Action("Index", "Home", new { area = string.Empty })">Logout</a>
     </li>
 
-        <li>
+    
+    <li class="navi-item">
+        <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> <img class="profile-img rounded-circle shadow-4-strong" src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Avatar"></a>
+    </li>
+
+   
+
+    <li>
         <a class="shopping-cart cart-size" asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fas fa-shopping-cart"></i></a>
-        </li>
+    </li>
+
     }
     else
     {

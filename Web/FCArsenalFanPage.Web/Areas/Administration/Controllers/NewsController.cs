@@ -28,7 +28,7 @@
         // GET: Administration/News
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = this.newsRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.Image).Include(n => n.User);
+            var applicationDbContext = this.newsRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.User);
             return this.View(await applicationDbContext.ToListAsync());
         }
 
@@ -43,7 +43,6 @@
             var news = await this.newsRepository
                 .All()
                 .Include(n => n.Category)
-                .Include(n => n.Image)
                 .Include(n => n.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
@@ -65,7 +64,6 @@
 
             var news = await this.newsRepository.All()
                 .Include(n => n.Category)
-                .Include(n => n.Image)
                 .Include(n => n.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
