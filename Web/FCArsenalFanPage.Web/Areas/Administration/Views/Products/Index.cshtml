@@ -40,7 +40,7 @@
     <tbody class="text-center">
 @foreach (var item in Model) {
         <tr >
-                <td class="align-middle" style="width:20%">
+                <td class="align-middle" style="width:19%">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
                 <td class="align-middle">
@@ -62,8 +62,8 @@
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
                 <td>
-                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="Shop" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="Shop" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.Id">Details</a> 
                     <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
