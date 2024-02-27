@@ -58,6 +58,8 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            public string UserName { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -69,6 +71,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 
             this.Input = new InputModel
             {
+                UserName = userName,
                 PhoneNumber = phoneNumber,
             };
         }
@@ -97,6 +100,17 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             {
                 await this.LoadAsync(user);
                 return this.Page();
+            }
+
+            if (this.Input.UserName != user.UserName)
+            {
+               var setUserNameResult = await this.userManager.SetUserNameAsync(user, this.Input.UserName);
+
+               if (!setUserNameResult.Succeeded)
+                {
+                    this.StatusMessage = "Unexpected error when trying to set user name.";
+                    return this.RedirectToPage();
+                }
             }
 
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
