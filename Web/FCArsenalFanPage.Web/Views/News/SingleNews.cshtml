@@ -2,6 +2,7 @@
 
 @{
 	this.ViewData["Title"] = "News";
+	this.ViewData["BodyClass"] = "black-background";
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -11,7 +12,7 @@
 <div class="mt-80 mb-150">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-lg-8 border-right">
 				<div class="single-article-section">
 					<div class="single-article-text">
 						<h2>@Model.Title</h2>
@@ -71,28 +72,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-4 test">
 				<div class="sidebar-section">
 					<div class="recent-posts">
-						<h4>Recent Posts</h4>
-						<ul>
+						<h4 class="text-center" >Recent Posts</h4>
 							@foreach(var post in Model.RecentPosts)
 							{
-							<li><a href="single-news.html">@post.Title</a></li>
+								<div class="col-lg-9 col-md-6 recentPostst">
+									<div class="single-latest-news">
+										<img class="card-img-top" src="@post.ImageUrl" alt="Card image cap">
+										<div class="news-text-box">
+											<h3><a asp-action="SingleNews" asp-route-id="@post.Id">@post.Title</a></h3>
+											<p class="blog-meta">
+												<span class="author"><i class="fas fa-user"></i> @post.UserName</span>
+												<span class="date"><i class="fas fa-calendar"></i>@post.CreatedOn</span>
+											</p>
+											<p class="excerpt">@post.Details</p>
+											<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+										</div>
+									</div>
+								</div>
 							}
-						</ul>
-					</div>
-				
-					<div class="tag-section">
-						<h4>Tags</h4>
-						<ul>
-							<li><a href="single-news.html">Apple</a></li>
-							<li><a href="single-news.html">Strawberry</a></li>
-							<li><a href="single-news.html">BErry</a></li>
-							<li><a href="single-news.html">Orange</a></li>
-							<li><a href="single-news.html">Lemon</a></li>
-							<li><a href="single-news.html">Banana</a></li>
-						</ul>
 					</div>
 				</div>
 			</div>
