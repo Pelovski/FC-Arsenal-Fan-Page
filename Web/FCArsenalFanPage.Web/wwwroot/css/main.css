@@ -1716,6 +1716,7 @@ p.excerpt {
     background-color: #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
+    width: 100%
 }
 
 .single-article-text h2 {
@@ -3060,4 +3061,21 @@ table.order-details {
     object-position: center;
     width: 35px;
     height: 35px;
+}
+
+.recentPostst {
+    margin: 0 auto;
+    width: 85% ;
+    margin-top: 60px;
+}
+
+
+
+.test{
+    border-left: 1px solid;
+}
+
+.black-background {
+    background-color: black;
+    color: white
 }
