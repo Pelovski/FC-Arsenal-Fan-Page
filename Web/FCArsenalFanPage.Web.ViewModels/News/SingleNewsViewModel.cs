@@ -25,7 +25,7 @@
 
         public string ImageUrl { get; set; }
 
-        //public ICollection<string> RecentPosts { get; set; }
+        public IEnumerable<NewsInListViewModel> RecentPosts { get; set; }
 
         public IEnumerable<NewsCommentViewModel> Comments { get; set; }
 
