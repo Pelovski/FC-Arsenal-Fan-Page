@@ -18,5 +18,7 @@
         T GetById<T>(int id);
 
         Task UpdateAsync(int id, EditNewsInputViewModel input);
+
+        IEnumerable<NewsInListViewModel> RecentPosts(int id);
     }
 }

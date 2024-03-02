@@ -129,5 +129,14 @@
 
             await this.newsRepository.SaveChangesAsync();
         }
+
+        public IEnumerable<NewsInListViewModel> RecentPosts(int id)
+        {
+            return this.GetAll()
+                .Where(x => x.Id != id)
+                .OrderByDescending(x => x.CreatedOn)
+                .Take(5);
+
+        }
     }
 }

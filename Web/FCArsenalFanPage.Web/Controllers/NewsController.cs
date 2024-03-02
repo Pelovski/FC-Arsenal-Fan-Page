@@ -103,6 +103,7 @@
         public IActionResult SingleNews(int id)
         {
             var news = this.newsService.GetById<SingleNewsViewModel>(id);
+            news.RecentPosts = this.newsService.RecentPosts(id);
 
             return this.View(news);
         }
