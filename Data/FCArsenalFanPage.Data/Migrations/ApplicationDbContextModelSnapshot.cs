@@ -117,6 +117,9 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfilePictureId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -138,6 +141,10 @@ namespace FCArsenalFanPage.Data.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("ProfilePictureId")
+                        .IsUnique()
+                        .HasFilter("[ProfilePictureId] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -244,6 +251,9 @@ namespace FCArsenalFanPage.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("RemoteImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -564,6 +574,15 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("FCArsenalFanPage.Data.Models.Image", "ProfilePicture")
+                        .WithOne("User")
+                        .HasForeignKey("FCArsenalFanPage.Data.Models.ApplicationUser", "ProfilePictureId");
+
+                    b.Navigation("ProfilePicture");
+                });
+
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Comment", b =>
                 {
                     b.HasOne("FCArsenalFanPage.Data.Models.News", "News")
@@ -726,6 +745,8 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Navigation("News");
 
                     b.Navigation("Product");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.OrderStatus", b =>

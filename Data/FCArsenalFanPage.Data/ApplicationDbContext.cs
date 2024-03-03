@@ -76,6 +76,11 @@
                .WithOne(x => x.Status)
                .HasForeignKey(x => x.OrderStatusId);
 
+            builder.Entity<Image>()
+                .HasOne<ApplicationUser>(i => i.User)
+                .WithOne(n => n.ProfilePicture)
+                .HasForeignKey<ApplicationUser>(n => n.ProfilePictureId);
+
             // Needed for Identity models configuration
             base.OnModelCreating(builder);
 

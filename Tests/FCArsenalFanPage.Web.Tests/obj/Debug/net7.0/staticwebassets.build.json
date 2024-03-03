@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OJlipMoSfxk9ObYA/YiV4NDfh+KcKq2nn0Jd0Y2nx8k=",
+  "Hash": "4oiEPkoy41n7AUBpAM03uK/hbBxSsBVushAGznVOkN4=",
   "Source": "FCArsenalFanPage.Web.Tests",
   "BasePath": "_content/FCArsenalFanPage.Web.Tests",
   "Mode": "Default",
@@ -3718,6 +3718,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\News\\f190a27f-e0c7-4207-8c3b-76842aa77554.png"
     },
     {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\fcf88e90-4588-466d-9b1d-ce872c8170ce.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/News/fcf88e90-4588-466d-9b1d-ce872c8170ce.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\News\\fcf88e90-4588-466d-9b1d-ce872c8170ce.png"
+    },
+    {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\Products\\0af05d6d-b42b-45c2-9a70-8021ef3b7ef1.png",
       "SourceId": "FCArsenalFanPage.Web",
       "SourceType": "Project",
@@ -3835,6 +3852,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\abt.jpg"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\Alert.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "img/Alert.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Alert.png"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\arsenal-background2jpg.jpg",

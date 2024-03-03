@@ -3,6 +3,7 @@ namespace FCArsenalFanPage.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using FCArsenalFanPage.Data.Common.Models;
 
@@ -20,7 +21,9 @@ namespace FCArsenalFanPage.Data.Models
 
         // Audit info
 
-        public Image ProfilePicture { get; set; }
+        public string? ProfilePictureId { get; set; }
+
+        public virtual Image ProfilePicture { get; set; }
 
         public DateTime CreatedOn { get; set; }
 
