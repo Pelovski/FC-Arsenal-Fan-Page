@@ -1,7 +1,7 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
     using System;
-
+    using System.ComponentModel.DataAnnotations.Schema;
     using FCArsenalFanPage.Data.Common.Models;
 
     public class Image : BaseDeletableModel<string>
@@ -23,6 +23,7 @@
 
         public virtual Product Product { get; set; }
 
+        [ForeignKey("ApplicationUser")]
         public string UserId { get; set; }
 
         public ApplicationUser User { get; set; }

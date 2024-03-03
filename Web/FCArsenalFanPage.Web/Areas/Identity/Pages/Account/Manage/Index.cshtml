@@ -27,13 +27,13 @@
 
 <div class="container">
     <div class="row flex-lg-nowrap">
-        
         <div class="col">
             <div class="row">
                 <div class="col mb-3">
                     <div class="card">
                         <div class="card-body">
                             <div class="e-profile">
+                                <form class="form" id="profile-form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-12 col-sm-auto mb-3">
                                         <div class="mx-auto" style="width: 140px;">
@@ -48,10 +48,11 @@
                                             <p class="mb-0">johnny.s</p>
                                             <div class="text-muted"><small>Last seen 2 hours ago</small></div>
                                             <div class="mt-2">
-                                                <button class="btn btn-primary" type="button">
+                                                <label class="btn btn-primary" for="imageInput">
                                                     <i class="fa fa-fw fa-camera"></i>
                                                     <span>Change Photo</span>
-                                                </button>
+                                                </label>
+                                                <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" />
                                             </div>
                                         </div>
                                         <div class="text-center text-sm-right">
@@ -67,7 +68,8 @@
                                     <div class="tab-pane active">
 
 
-                                        <form class="form" novalidate>
+                                        <form class="form" id="profile-form" method="post">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="row">
@@ -123,12 +125,14 @@
                                                @*  Change Password  End*@
                                             <div class="row">
                                                 <div class="col d-flex justify-content-end">
-                                                    <button class="btn btn-primary" type="submit">Save Changes</button>
+                                                    <button id="update-profile-button" type="submit" class="btn btn-primary">Save Changes</button>
                                                 </div>
                                             </div>
                                         </form>
+
                                     </div>
                                 </div>
+                              </form>
                             </div>
                         </div>
                     </div>

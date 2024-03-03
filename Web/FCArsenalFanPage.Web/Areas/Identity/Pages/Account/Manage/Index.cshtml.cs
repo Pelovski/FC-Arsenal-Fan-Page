@@ -8,7 +8,11 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Models;
-    using Microsoft.AspNetCore.Identity;
+    using FCArsenalFanPage.Services;
+    using FCArsenalFanPage.Web.Infrastructure;
+    using Microsoft.AspNetCore.Hosting;
+	using Microsoft.AspNetCore.Http;
+	using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -16,13 +20,19 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly IApplicationUserService applicationUserService;
+        private readonly IWebHostEnvironment environment;
 
         public IndexModel(
             UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,
+            IApplicationUserService applicationUserService,
+            IWebHostEnvironment environment)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            this.applicationUserService = applicationUserService;
+            this.environment = environment;
         }
 
         /// <summary>
@@ -60,14 +70,17 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
 
             public string UserName { get; set; }
+
+            [DataType(DataType.Upload)]
+            [ImageMaxFileSize(10 * 1024 * 1024)]
+            [ImageExtensionValidation(new string[] { ".jpg", ".gif", ".png" })]
+            public IFormFile ProfilePicture { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
-
-            this.Username = userName;
 
             this.Input = new InputModel
             {
@@ -90,7 +103,10 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 
         public async Task<IActionResult> OnPostAsync()
         {
+            var imagePath = $"{this.environment.WebRootPath}/Images";
+
             var user = await this.userManager.GetUserAsync(this.User);
+
             if (user == null)
             {
                 return this.NotFound($"Unable to load user with ID '{this.userManager.GetUserId(this.User)}'.");
@@ -122,6 +138,11 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
                     this.StatusMessage = "Unexpected error when trying to set phone number.";
                     return this.RedirectToPage();
                 }
+            }
+
+            if (this.Input.ProfilePicture != null)
+            {
+                await this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
             }
 
             await this.signInManager.RefreshSignInAsync(user);
