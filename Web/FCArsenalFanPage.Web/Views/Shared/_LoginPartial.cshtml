@@ -1,14 +1,9 @@
-﻿@using FCArsenalFanPage.Common
-@using FCArsenalFanPage.Data.Models
-@using Microsoft.AspNetCore.Identity
-@inject SignInManager<ApplicationUser> SignInManager
+﻿@inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
 
     @if (this.SignInManager.IsSignedIn(this.User))
     {
-      
-       
         if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             
@@ -17,7 +12,7 @@
         }
 
     <li class="navi-item">
-        <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> <img class="profile-img rounded-circle shadow-4-strong" src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" alt="Avatar"></a>
+        <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> <img class="profile-img rounded-circle shadow-4-strong" src="" alt="Avatar"></a>
     </li>
 
    

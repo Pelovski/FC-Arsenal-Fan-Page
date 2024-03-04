@@ -147,7 +147,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 
             if (this.Input.ProfilePicture != null)
             {
-               var test = this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
+               await this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
             }
 
             await this.signInManager.RefreshSignInAsync(user);
