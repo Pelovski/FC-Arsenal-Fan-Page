@@ -21,6 +21,7 @@ namespace FCArsenalFanPage.Data.Models
 
         // Audit info
 
+        [ForeignKey("Image")]
         public string? ProfilePictureId { get; set; }
 
         public virtual Image ProfilePicture { get; set; }

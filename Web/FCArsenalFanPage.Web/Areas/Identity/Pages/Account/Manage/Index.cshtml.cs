@@ -5,6 +5,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 #nullable disable
 
     using System.ComponentModel.DataAnnotations;
+    using System.Runtime.InteropServices;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Models;
@@ -75,17 +76,21 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [ImageMaxFileSize(10 * 1024 * 1024)]
             [ImageExtensionValidation(new string[] { ".jpg", ".gif", ".png" })]
             public IFormFile ProfilePicture { get; set; }
+
+            public string? ImageUrl { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
+            var imageUrl = this.applicationUserService.GetProfilePictureUrl(user);
 
             this.Input = new InputModel
             {
                 UserName = userName,
                 PhoneNumber = phoneNumber,
+                ImageUrl = imageUrl,
             };
         }
 
@@ -142,7 +147,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 
             if (this.Input.ProfilePicture != null)
             {
-                await this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
+               var test = this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
             }
 
             await this.signInManager.RefreshSignInAsync(user);

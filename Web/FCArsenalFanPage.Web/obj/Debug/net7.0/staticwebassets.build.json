@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xb+UObsVOO1bpCTIUygaTv/fUW2QH0X5KwwpYAtv2z0=",
+  "Hash": "w/mqpjb9dQVebFFdj+ujLO/xomNN7Sqq/Q5eRbEkss4=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -4826,6 +4826,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\bb032bd0-3ae5-41b7-a5bb-393fe8cd62d0.png"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\15e7de4f-8ef5-44f1-b737-5e974cc9e404.jpg",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/ProfilePictures/15e7de4f-8ef5-44f1-b737-5e974cc9e404.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProfilePictures\\15e7de4f-8ef5-44f1-b737-5e974cc9e404.jpg"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\3d-square-with-twitter-logo.zip",
