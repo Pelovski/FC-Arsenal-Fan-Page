@@ -3079,3 +3079,14 @@ table.order-details {
     background-color: black;
     color: white
 }
+
+.profile-picture {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    width: 200px;
+    border-radius: 100px;
+    margin: 0px auto 20px;
+    font-size: 15px;
+    object-fit: cover;
+    cursor: pointer;
+}
