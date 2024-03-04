@@ -37,18 +37,24 @@
                                 <form class="form" id="profile-form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-12 col-sm-auto mb-3">
-                                        <div class="mx-auto" style="width: 140px;">
+                                        <div class="mx-auto">
                                                 @if (imageUrl != null)
                                                 {
-                                                    <img src="@Model.Input.ImageUrl" />
+                                                    <label for="imageInput">
+                                                    <img class="profile-picture" src="@Model.Input.ImageUrl" />
+                                                    </label>
                                                 }
 
                                                 else
                                                 {
+                                                    <label for="imageInput">
                                                     <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
                                                         <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
                                                     </div>
+                                                    </label>
                                                 }
+
+                                                <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" />
                                         </div>
                                     </div>
                                     <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
