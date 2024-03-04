@@ -26,6 +26,15 @@
 
         public async Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath)
         {
+            if (user.ProfilePictureId != null)
+            {
+                var currentProfilePicture = this.imageRepository.All().FirstOrDefault(x => user.ProfilePictureId == x.Id);
+
+                var currentImagePath = $"{imagePath}/ProfilePictures/{currentProfilePicture.Id}.{currentProfilePicture.Extension}";
+
+                File.Delete(currentImagePath);
+            }
+
             Directory.CreateDirectory($"{imagePath}/ProfilePictures/");
 
             var imageExtension = Path.GetExtension(profilePicture.FileName).TrimStart('.');
@@ -40,16 +49,10 @@
 
             var physicalPath = $"{imagePath}/ProfilePictures/{imageId}.{imageExtension}";
 
-            //TODO
-
-            if (user.ProfilePicture != null)
-            {
-
-            }
-
             using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
             await profilePicture.CopyToAsync(fileStream);
 
+            this.usersRepository.Update(user);
             await this.usersRepository.SaveChangesAsync();
         }
 
