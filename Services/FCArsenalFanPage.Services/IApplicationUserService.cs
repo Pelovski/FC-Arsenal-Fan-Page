@@ -8,5 +8,7 @@
     public interface IApplicationUserService
     {
         Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath);
+
+        string GetProfilePictureUrl(ApplicationUser user);
     }
 }
