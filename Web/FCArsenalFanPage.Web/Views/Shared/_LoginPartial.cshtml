@@ -1,10 +1,10 @@
 ﻿@inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-
     @if (this.SignInManager.IsSignedIn(this.User))
     {
-        if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+
+    if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             
                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin</a>
@@ -12,7 +12,8 @@
         }
 
     <li class="navi-item">
-        <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> <img class="profile-img rounded-circle shadow-4-strong" src="" alt="Avatar"></a>
+        <a class="navi-item text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> 
+            <img class="profile-img rounded-circle shadow-4-strong" src="" alt="Avatar"></a>
     </li>
 
    
