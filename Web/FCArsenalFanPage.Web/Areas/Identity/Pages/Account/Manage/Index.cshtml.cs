@@ -84,14 +84,18 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
         {
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
-            var imageUrl = this.applicationUserService.GetProfilePictureUrl(user);
 
             this.Input = new InputModel
             {
                 UserName = userName,
                 PhoneNumber = phoneNumber,
-                ImageUrl = imageUrl,
             };
+
+            if (user.ProfilePictureId != null)
+            {
+                var imageUrl = this.applicationUserService.GetProfilePictureUrl(user);
+                this.Input.ImageUrl = imageUrl;
+            }
         }
 
         public async Task<IActionResult> OnGetAsync()
