@@ -2,6 +2,8 @@
 
 @{
 	this.ViewData["Title"] = "Shop";
+	var productCategories = Model.Categories;
+	
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -16,9 +18,16 @@
 				<div class="product-filters">
 					<ul>
 						<li class="active" data-filter="*">All</li>
-						<li data-filter=".kit">Kit</li>
-						<li data-filter=".berry">Berry</li>
-						<li data-filter=".lemon">Lemon</li>
+						@foreach (var categorie in productCategories)
+						{
+							var classItem = $".{categorie.Text.ToLower()}";
+							var categoryName = char.ToUpper(categorie.Text[0]) + categorie.Text.Substring(1).ToLower();
+
+
+							<li data-filter="@classItem">@categoryName</li>
+						}
+						
+						
 					</ul>
 				</div>
 			</div>
