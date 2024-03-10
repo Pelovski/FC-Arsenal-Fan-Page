@@ -30,6 +30,7 @@
             {
                 PageNumber = id,
                 Products = this.productService.GetAll(),
+                Categories = this.productCategoriesService.GetAll(),
             };
 
             return this.View(viewModel);
