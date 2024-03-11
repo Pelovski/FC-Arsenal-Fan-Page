@@ -2,7 +2,6 @@
 
 @{
 	this.ViewData["Title"] = "News";
-	this.ViewData["BodyClass"] = "black-background";
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -12,7 +11,7 @@
 <div class="mt-80 mb-150">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 border-right">
+			<div class="col-lg-8">
 				<div class="single-article-section">
 					<div class="single-article-text">
 						<h2>@Model.Title</h2>
@@ -25,16 +24,21 @@
 						<p>@Html.Raw(Model.Content)</p>
 					</div>
 
+					@if(this.Model.Comments.Any()){
+
 					<div class="comments-list-wrap">
-						<h3 class="comment-count-title">3 Comments</h3>
+						<hr />
+						<h3 class="comment-count-title">@this.Model.Comments.Count() Comments</h3>
+						@foreach(var comment in Model.Comments)
+						{
 						<div class="comment-list">
 							<div class="single-comment-body">
 								<div class="comment-user-avater">
-									<img src="assets/img/avaters/avatar1.png" alt="">
+								  <img class="profile-picture" src="@comment.UserImageUrl" alt="">
 								</div>
 								<div class="comment-text-body">
-									<h4>Jenny Joe <span class="comment-date">Aprl 26, 2020</span> <a href="#">reply</a></h4>
-									<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
+									<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn</span> <a href="#">reply</a></h4>
+									<p>@Html.Raw(comment.SanitizedContent)</p>
 								</div>
 								<div class="single-comment-body child">
 									<div class="comment-user-avater">
@@ -46,35 +50,26 @@
 									</div>
 								</div>
 							</div>
-							<div class="single-comment-body">
-								<div class="comment-user-avater">
-									<img src="assets/img/avaters/avatar2.png" alt="">
-								</div>
-								<div class="comment-text-body">
-									<h4>Addy Aoe <span class="comment-date">May 12, 2020</span> <a href="#">reply</a></h4>
-									<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
-								</div>
-							</div>
 						</div>
+						}
 					</div>
-
+					}
 					<div class="comment-template">
 						<h4>Leave a comment</h4>
 						<p>If you have a comment dont feel hesitate to send us your opinion.</p>
-						<form action="index.html">
-							<p>
-								<input type="text" placeholder="Your Name">
-								<input type="email" placeholder="Your Email">
-							</p>
-							<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message"></textarea></p>
-							<p><input type="submit" value="Submit"></p>
+						<form asp-controller="Comments" asp-action="Create" method="post">
+							<div>
+								<input type="hidden" name="NewsId" value="@this.Model.Id"/>
+							</div>
+							<p><textarea name="content" id="content" cols="30" rows="10" placeholder="Your Message"></textarea></p>
+							<p><input type="submit" value="Add comment"></p>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 test">
+			<div class="col-lg-4">
 				<div class="sidebar-section">
-					<div class="recent-posts">
+					<div class="recent-posts test">
 						<h4 class="text-center" >Recent Posts</h4>
 							@foreach(var post in Model.RecentPosts)
 							{
