@@ -586,7 +586,7 @@ namespace FCArsenalFanPage.Data.Migrations
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Comment", b =>
                 {
                     b.HasOne("FCArsenalFanPage.Data.Models.News", "News")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("NewsId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -747,6 +747,11 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.News", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.OrderStatus", b =>

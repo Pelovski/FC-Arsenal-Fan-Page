@@ -69,6 +69,7 @@
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IProductCategoriesService, ProductCategoriesService>();
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
+            services.AddTransient<ICommentService, CommentService>();
 
             services.AddAuthentication().AddFacebook(opt =>
             {

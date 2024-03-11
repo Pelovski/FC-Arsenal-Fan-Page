@@ -6,6 +6,7 @@
     using AutoMapper;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
+    using Ganss.Xss;
 
     public class SingleNewsViewModel : IMapFrom<News>, IHaveCustomMappings
     {
@@ -14,6 +15,8 @@
         public string Title { get; set; }
 
         public string Content { get; set; }
+
+        public string SanitizedContent => new HtmlSanitizer().Sanitize(this.Content);
 
         public int CategoryId { get; set; }
 
@@ -33,9 +36,7 @@
         {
             configuration.CreateMap<News, SingleNewsViewModel>()
                  .ForMember(x => x.ImageUrl, opt =>
-                  opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
-                  x.Image.RemoteImageUrl :
-                  "/Images/News/" + x.Image.Id + "." + x.Image.Extension));
+                  opt.MapFrom(x => x.Image.RemoteImageUrl ?? "/Images/News/" + x.Image.Id + "." + x.Image.Extension));
         }
     }
 }

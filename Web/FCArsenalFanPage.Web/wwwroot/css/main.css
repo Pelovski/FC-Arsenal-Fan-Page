@@ -2395,7 +2395,7 @@ ul.social-link-team {
         .product-filters ul li {
             display: inline-block;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             margin: 15px;
             border: 2px solid #051922;
             color: #323232;
@@ -3071,8 +3071,12 @@ table.order-details {
 
 
 
-.test{
-    border-left: 1px solid;
+.test {
+    border-left: 2px solid #ddd;
+}
+
+.test2 {
+    border-left: 1px solid #ddd;
 }
 
 .black-background {
