@@ -24,42 +24,57 @@
 						<p>@Html.Raw(Model.Content)</p>
 					</div>
 
-					@if(this.Model.Comments.Any()){
+					@if (this.Model.Comments.Any())
+					{
+						<div class="comments-list-wrap">
+							<hr />
+							<h3 class="comment-count-title">@this.Model.Comments.Count() Comments</h3>
+							@foreach (var comment in Model.Comments)
+							{
+								@if (comment.ParentId != null)
+								{
+									var replyComments = this.Model.Comments
+									.Where(x => x.ParentId == comment.ParentId);
 
-					<div class="comments-list-wrap">
-						<hr />
-						<h3 class="comment-count-title">@this.Model.Comments.Count() Comments</h3>
-						@foreach(var comment in Model.Comments)
-						{
-						<div class="comment-list">
-							<div class="single-comment-body">
-								<div class="comment-user-avater">
-								  <img class="profile-picture" src="@comment.UserImageUrl" alt="">
-								</div>
-								<div class="comment-text-body">
-									<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn</span> <a href="#">reply</a></h4>
-									<p>@Html.Raw(comment.SanitizedContent)</p>
-								</div>
-								<div class="single-comment-body child">
-									<div class="comment-user-avater">
-										<img src="assets/img/avaters/avatar3.png" alt="">
+									foreach (var replyComment in replyComments)
+									{
+										<div class="single-comment-body child">
+											<div class="comment-user-avater">
+												<img class="profile-picture" src="@replyComment.UserImageUrl" alt="">
+											</div>
+											<div class="comment-text-body">
+												<h4>@replyComment.UserUserName <span class="comment-date">@replyComment.CreatedOn</span></h4>
+												<p>@Html.Raw(replyComment.SanitizedContent)</p>
+											</div>
+										</div>
+									}
+								}
+								else
+								{
+
+									<div class="comment-list">
+										<div class="single-comment-body">
+											<div class="comment-user-avater">
+												<img class="profile-picture" src="@comment.UserImageUrl" alt="">
+											</div>
+											<div class="comment-text-body">
+												<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn</span> <a onclick="showAddCommentForm(@comment.Id)">reply</a></h4>
+												<p>@Html.Raw(comment.SanitizedContent)</p>
+											</div>
+										</div>
 									</div>
-									<div class="comment-text-body">
-										<h4>Simon Soe <span class="comment-date">Aprl 27, 2020</span> <a href="#">reply</a></h4>
-										<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
-									</div>
-								</div>
-							</div>
+								}
+							}
 						</div>
-						}
-					</div>
 					}
+
 					<div class="comment-template">
 						<h4>Leave a comment</h4>
 						<p>If you have a comment dont feel hesitate to send us your opinion.</p>
-						<form asp-controller="Comments" asp-action="Create" method="post">
+						<form asp-controller="Comments" asp-action="Create" method="post" id="AddCommentForm">
 							<div>
-								<input type="hidden" name="NewsId" value="@this.Model.Id"/>
+								<input type="hidden" name="NewsId" value="@this.Model.Id" />
+								<input type="hidden" name="ParentId" value="0" />
 							</div>
 							<p><textarea name="content" id="content" cols="30" rows="10" placeholder="Your Message"></textarea></p>
 							<p><input type="submit" value="Add comment"></p>
@@ -70,24 +85,24 @@
 			<div class="col-lg-4">
 				<div class="sidebar-section">
 					<div class="recent-posts test">
-						<h4 class="text-center" >Recent Posts</h4>
-							@foreach(var post in Model.RecentPosts)
-							{
-								<div class="col-lg-9 col-md-6 recentPostst">
-									<div class="single-latest-news">
-										<img class="card-img-top" src="@post.ImageUrl" alt="Card image cap">
-										<div class="news-text-box">
-											<h3><a asp-action="SingleNews" asp-route-id="@post.Id">@post.Title</a></h3>
-											<p class="blog-meta">
-												<span class="author"><i class="fas fa-user"></i> @post.UserName</span>
-												<span class="date"><i class="fas fa-calendar"></i>@post.CreatedOn</span>
-											</p>
-											<p class="excerpt">@post.Details</p>
-											<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-										</div>
+						<h4 class="text-center">Recent Posts</h4>
+						@foreach (var post in Model.RecentPosts)
+						{
+							<div class="col-lg-9 col-md-6 recentPostst">
+								<div class="single-latest-news">
+									<img class="card-img-top" src="@post.ImageUrl" alt="Card image cap">
+									<div class="news-text-box">
+										<h3><a asp-action="SingleNews" asp-route-id="@post.Id">@post.Title</a></h3>
+										<p class="blog-meta">
+											<span class="author"><i class="fas fa-user"></i> @post.UserName</span>
+											<span class="date"><i class="fas fa-calendar"></i>@post.CreatedOn</span>
+										</p>
+										<p class="excerpt">@post.Details</p>
+										<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 									</div>
 								</div>
-							}
+							</div>
+						}
 					</div>
 				</div>
 			</div>
@@ -95,3 +110,14 @@
 	</div>
 </div>
 <!-- end single article section -->
+@section Scripts {
+	<script>
+		function showAddCommentForm(parentId) {
+			$("#AddCommentForm input[name='ParentId']").val(parentId);
+			$([document.documentElement, document.body]).animate({
+				scrollTop: $("#AddCommentForm").offset().top
+			}, 100);
+		}
+
+	</script>
+}
