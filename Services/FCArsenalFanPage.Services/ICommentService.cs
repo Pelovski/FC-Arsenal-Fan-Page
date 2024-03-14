@@ -5,5 +5,7 @@
     public interface ICommentService
     {
         Task Create(int newsId, string userId, string content, int? parentId = null);
+
+        bool IsInNewsId(int commentId, int NewsId);
     }
 }

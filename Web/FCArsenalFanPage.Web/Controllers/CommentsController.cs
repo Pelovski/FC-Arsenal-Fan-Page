@@ -5,8 +5,8 @@
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Comments;
-	using Microsoft.AspNetCore.Authorization;
-	using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class CommentsController : BaseController
@@ -27,8 +27,19 @@
         public async Task<IActionResult> Create(CreateCommentInputModel input)
         {
             var userId = this.userManager.GetUserId(this.User);
+            var parentId = input.ParentId == 0 ?
+                (int?)null :
+                input.ParentId;
 
-            await this.commentService.Create(input.NewsId, userId, input.Content);
+            if (parentId.HasValue)
+            {
+                if (!this.commentService.IsInNewsId(parentId.Value, input.NewsId))
+                {
+                    return this.BadRequest();
+                }
+            }
+
+            await this.commentService.Create(input.NewsId, userId, input.Content, parentId);
 
             return this.RedirectToAction("SingleNews", "News", new { id = input.NewsId });
         }

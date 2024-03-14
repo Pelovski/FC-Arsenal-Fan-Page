@@ -1,5 +1,7 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System.ComponentModel.Design;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -7,11 +9,11 @@
 
     public class CommentService : ICommentService
     {
-        private readonly IDeletableEntityRepository<Comment> commentRepository;
+        private readonly IDeletableEntityRepository<Comment> commentsRepository;
 
-        public CommentService(IDeletableEntityRepository<Comment> commentRepository)
+        public CommentService(IDeletableEntityRepository<Comment> commentsRepository)
         {
-            this.commentRepository = commentRepository;
+            this.commentsRepository = commentsRepository;
         }
 
         public async Task Create(int newsId, string userId, string content, int? parentId = null)
@@ -24,8 +26,16 @@
                 UserId = userId,
             };
 
-            await this.commentRepository.AddAsync(comment);
-            await this.commentRepository.SaveChangesAsync();
+            await this.commentsRepository.AddAsync(comment);
+            await this.commentsRepository.SaveChangesAsync();
+        }
+
+        public bool IsInNewsId(int commentId, int newstId)
+        {
+            var commentNewsId = this.commentsRepository.All().Where(x => x.Id == commentId)
+                .Select(x => x.NewsId).FirstOrDefault();
+
+            return commentNewsId == newstId;
         }
     }
 }
