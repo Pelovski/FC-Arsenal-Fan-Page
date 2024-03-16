@@ -5,5 +5,11 @@
         public const string SystemName = "FCArsenalFanPage";
 
         public const string AdministratorRoleName = "Administrator";
+
+        public const string AssistantAdministrator = "Administration Rights";
+
+        public const string ContentCreaterRoleName = "Content Creater";
+
+        public const string MerchandisingSpecialistRoleName = "Merchandising Specialist";
     }
 }

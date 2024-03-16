@@ -3,7 +3,6 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
 	using FCArsenalFanPage.Web.Controllers;
