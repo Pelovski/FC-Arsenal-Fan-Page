@@ -6,9 +6,8 @@
     using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
-	using FCArsenalFanPage.Web.Controllers;
-	using Microsoft.AspNetCore.Mvc;
- 
+    using FCArsenalFanPage.Web.Controllers;
+    using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
