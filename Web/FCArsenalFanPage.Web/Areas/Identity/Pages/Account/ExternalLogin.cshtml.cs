@@ -11,7 +11,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     using System.Text.Encodings.Web;
     using System.Threading;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Models;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -175,7 +175,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
                     if (result.Succeeded)
                     {
                         this.logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
-
+                        await this.userManager.AddToRoleAsync(user, GlobalConstants.UserRoleName);
                         var userId = await this.userManager.GetUserIdAsync(user);
                         var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
                         code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
