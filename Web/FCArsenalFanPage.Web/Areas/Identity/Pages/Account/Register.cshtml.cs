@@ -12,7 +12,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     using System.Text.Encodings.Web;
     using System.Threading;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Models;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Authorization;
@@ -123,6 +123,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
 
                 await this.userStore.SetUserNameAsync(user, this.Input.UserName, CancellationToken.None);
                 await this.emailStore.SetEmailAsync(user, this.Input.Email, CancellationToken.None);
+
                 var result = await this.userManager.CreateAsync(user, this.Input.Password);
 
                 if (result.Succeeded)
@@ -131,6 +132,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
 
                     var userId = await this.userManager.GetUserIdAsync(user);
                     var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
+                    await this.userManager.AddToRoleAsync(user, GlobalConstants.UserRoleName);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = this.Url.Page(
                         "/Account/ConfirmEmail",

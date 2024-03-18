@@ -11,5 +11,7 @@
         public const string ContentCreaterRoleName = "Content Creater";
 
         public const string MerchandisingSpecialistRoleName = "Merchandising Specialist";
+
+        public const string UserRoleName = "User";
     }
 }
