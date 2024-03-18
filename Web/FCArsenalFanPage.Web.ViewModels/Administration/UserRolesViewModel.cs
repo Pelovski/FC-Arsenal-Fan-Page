@@ -1,13 +1,17 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.Administration
 {
-    using System.Collections.Generic;
-
-    using FCArsenalFanPage.Data.Models;
-    using Microsoft.AspNetCore.Mvc.Rendering;
+    using System;
 
     public class UserRolesViewModel
     {
-        public IEnumerable<ApplicationUser> Users { get; set; }
+        public string UserId { get; set; }
 
+        public string UserName { get; set; }
+
+        public string Email { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public string Role { get; set; }
     }
 }

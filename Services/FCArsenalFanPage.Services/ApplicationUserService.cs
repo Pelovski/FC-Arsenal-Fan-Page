@@ -63,5 +63,10 @@
             return profilePicture.RemoteImageUrl ??
                 "/Images/ProfilePictures/" + profilePicture.Id + "." + profilePicture.Extension;
         }
+
+        public void GetRoles()
+        {
+            
+        }
     }
 }
