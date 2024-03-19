@@ -1,32 +1,29 @@
 ﻿namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
-    using System;
     using System.Linq;
-    using System.Threading.Tasks;
-    using FCArsenalFanPage.Data.Common.Repositories;
+	using System.Threading.Tasks;
+	using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.Controllers;
     using FCArsenalFanPage.Web.ViewModels.Administration;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
-	using Microsoft.AspNetCore.Mvc.Rendering;
-	using Microsoft.Extensions.DependencyInjection;
 
     [Area("Administration")]
     public class UserRolesController : BaseController
     {
-        private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IServiceProvider serviceProvider;
+        private readonly IRoleService roleService;
 
         public UserRolesController(
-            IDeletableEntityRepository<ApplicationUser> userRepository,
             UserManager<ApplicationUser> userManager,
-            IServiceProvider serviceProvider)
+            IDeletableEntityRepository<ApplicationUser> userRepository,
+            IRoleService roleService)
         {
-            this.userRepository = userRepository;
             this.userManager = userManager;
-            this.serviceProvider = serviceProvider;
+            this.roleService = roleService;
         }
 
         [HttpGet]
@@ -35,6 +32,7 @@
 
             var users = this.userManager.Users.ToList();
 
+            // TODO: Service GetAllUsersWithRole
             var viewModel = users
                 .SelectMany(user => this.userManager.GetRolesAsync(user)
                     .Result
@@ -54,24 +52,30 @@
 
         public IActionResult Edit(string id)
         {
-            //var user = await this.userManager.FindByIdAsync(id);
-
-            var roles = this.serviceProvider.
-                GetRequiredService<RoleManager<ApplicationRole>>()
-                .Roles
-                .Select(x => new SelectListItem
-                {
-                    Value = x.Id,
-                    Text = x.Name,
-                }).ToList();
+            var roles = this.roleService.GetAll();
 
             var viewModel = new EditUserRolesViewModel
             {
-                Id = id,
+                UserId = id,
                 Roles = roles,
             };
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditUserRolesViewModel input)
+        {
+            if (!this.ModelState.IsValid)
+            {
+                input.Roles = this.roleService.GetAll();
+                return this.View(input);
+            }
+
+            await this.roleService.UpdateAsync(input.UserId, input.RoleId);
+
+            return this.RedirectToAction(nameof(this.Index));
         }
     }
 }
