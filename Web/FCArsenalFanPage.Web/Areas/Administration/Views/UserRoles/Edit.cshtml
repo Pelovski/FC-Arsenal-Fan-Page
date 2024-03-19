@@ -1,0 +1,28 @@
+﻿@model EditUserRolesViewModel
+
+@{
+	this.ViewData["Title"] = "Edit News";
+	var roles = Model.Roles;
+}
+
+<div class="breadcrumb-section breadcrumb-bg">
+</div>
+
+
+<div class="row justify-content-center my-5">
+	<div class="create-news-form col-lg-8">
+		<form method="post" asp-action="Edit" enctype="multipart/form-data">
+			
+			<div>
+				<label>Set role</label>
+				<select asp-for="RoleId" asp-items="roles" class="form-control"></select>
+				<span asp-validation-for="RoleId" class="text-danger"></span>
+			</div>
+
+			<input type="hidden" asp-for="Id" />
+			<button style="color:white" type="submit" class="btn btn-success mt-5 mb-3 p-3">Save Changes</button>
+		</form>
+
+	</div>
+
+</div>
