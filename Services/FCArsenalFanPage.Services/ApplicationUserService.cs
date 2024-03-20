@@ -7,6 +7,7 @@
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.ViewModels.Administration;
     using FCArsenalFanPage.Web.ViewModels.News;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
@@ -15,13 +16,16 @@
     {
         private readonly IDeletableEntityRepository<ApplicationUser> usersRepository;
         private readonly IDeletableEntityRepository<Image> imageRepository;
+        private readonly UserManager<ApplicationUser> userManager;
 
         public ApplicationUserService(
             IDeletableEntityRepository<ApplicationUser> usersRepository,
-            IDeletableEntityRepository<Image> imageRepository)
+            IDeletableEntityRepository<Image> imageRepository,
+            UserManager<ApplicationUser> userManager)
         {
             this.usersRepository = usersRepository;
             this.imageRepository = imageRepository;
+            this.userManager = userManager;
         }
 
         public async Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath)
@@ -64,9 +68,22 @@
                 "/Images/ProfilePictures/" + profilePicture.Id + "." + profilePicture.Extension;
         }
 
-        public void GetRoles()
+        public IEnumerable<UserRolesViewModel> GetAllUsersWithRole()
         {
-            
+            var users = this.userManager.Users.ToList();
+
+            return users
+                .SelectMany(user => this.userManager.GetRolesAsync(user)
+                    .Result
+                    .Select(role => new UserRolesViewModel
+                    {
+                        UserId = user.Id,
+                        UserName = user.UserName,
+                        Role = role,
+                        CreatedOn = user.CreatedOn,
+                        Email = user.Email,
+                    }))
+                .ToList();
         }
     }
 }

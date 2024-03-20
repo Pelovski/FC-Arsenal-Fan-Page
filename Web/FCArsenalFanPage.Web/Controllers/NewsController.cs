@@ -3,6 +3,7 @@
     using System.Security.Claims;
     using System.Threading.Tasks;
 
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
@@ -45,7 +46,7 @@
         }
 
         // Create Get
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         public IActionResult Create()
         {
             var viewModel = new CreateNewsInputModel();
@@ -56,7 +57,7 @@
 
         // Create Post
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         public async Task<IActionResult> Create(CreateNewsInputModel input)
         {
             if (!this.ModelState.IsValid)
@@ -75,7 +76,7 @@
             return this.RedirectToAction("All");
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         public IActionResult Edit(int id)
         {
             var inputModel = this.newsService.GetById<EditNewsInputViewModel>(id);
@@ -84,7 +85,7 @@
             return this.View(inputModel);
         }
 
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         [HttpPost]
         public async Task<IActionResult> Edit(int id, EditNewsInputViewModel input)
         {

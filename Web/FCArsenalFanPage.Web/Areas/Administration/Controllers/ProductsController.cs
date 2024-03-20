@@ -5,14 +5,13 @@
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
-	using FCArsenalFanPage.Web.Controllers;
-	using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc;
 
     using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class ProductsController : BaseController
-	{
+    public class ProductsController : AdministrationController
+    {
         private readonly IDeletableEntityRepository<Product> productRepository;
 
         public ProductsController(
@@ -49,7 +48,7 @@
 
             return this.View(product);
         }
-        
+
         // GET: Administration/Products/Delete/5
         public async Task<IActionResult> Delete(string id)
         {

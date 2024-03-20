@@ -13,5 +13,9 @@
         public const string MerchandisingSpecialistRoleName = "Merchandising Specialist";
 
         public const string UserRoleName = "User";
+
+        public const string NewsAdministration = $"{AdministratorRoleName}, {AssistantAdministrator}, {ContentCreaterRoleName}";
+
+        public const string MerchandisAdministration = $"{AdministratorRoleName}, {AssistantAdministrator}, {MerchandisingSpecialistRoleName}";
     }
 }
