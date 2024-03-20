@@ -94,9 +94,7 @@
                     CategoryId = x.CategoryId,
                     CreatedOn = x.CreatedOn.ToString("dd MMMM, yyyy", CultureInfo.InvariantCulture),
                     Content = x.Content,
-                    ImageUrl = x.Image.RemoteImageUrl != null ?
-                               x.Image.RemoteImageUrl :
-                              "/Images/News/" + x.Image.Id + "." + x.Image.Extension,
+                    ImageUrl = x.Image.RemoteImageUrl ?? "/Images/News/" + x.Image.Id + "." + x.Image.Extension,
                     Details = GetFirstThreeSentencesLimited(x.Content, 200),
                 })
                 .ToList();

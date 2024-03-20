@@ -39,18 +39,6 @@
                 Products = products,
             };
 
-            // Take the ImageUrl form the user to give it to the _LoginPartial
-            if (this.User.Identity.IsAuthenticated)
-            {
-                var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-                var user = this.userManager.FindByIdAsync(userId).Result;
-
-                if (user.ProfilePictureId != null)
-                {
-                    this.ViewData["ImageUrl"] = this.userService.GetProfilePictureUrl(user);
-                }
-            }
-
             return this.View(viewModel);
         }
 
