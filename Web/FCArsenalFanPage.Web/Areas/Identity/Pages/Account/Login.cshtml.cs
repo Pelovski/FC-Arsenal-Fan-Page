@@ -4,7 +4,6 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
 {
 #nullable disable
 
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
@@ -21,11 +20,16 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly ILogger<LoginModel> logger;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<LoginModel> logger,
+            UserManager<ApplicationUser> userManager)
         {
             this.signInManager = signInManager;
             this.logger = logger;
+            this.userManager = userManager;
         }
 
         /// <summary>
@@ -111,7 +115,9 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await this.signInManager.PasswordSignInAsync(this.Input.Email, this.Input.Password, this.Input.RememberMe, lockoutOnFailure: false);
+                var currentUser = this.userManager.FindByEmailAsync(this.Input.Email).Result;
+
+                var result = await this.signInManager.PasswordSignInAsync(currentUser.UserName, this.Input.Password, this.Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     this.logger.LogInformation("User logged in.");

@@ -1,51 +1,38 @@
 ﻿namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
     using System.Linq;
-	using System.Threading.Tasks;
-	using FCArsenalFanPage.Data.Common.Repositories;
+    using System.Threading.Tasks;
+
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
-    using FCArsenalFanPage.Web.Controllers;
+
     using FCArsenalFanPage.Web.ViewModels.Administration;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     [Area("Administration")]
-    public class UserRolesController : BaseController
+    public class UserRolesController : AdministrationController
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IRoleService roleService;
+        private readonly IApplicationUserService applicationUserService;
 
         public UserRolesController(
             UserManager<ApplicationUser> userManager,
-            IDeletableEntityRepository<ApplicationUser> userRepository,
-            IRoleService roleService)
+            IRoleService roleService,
+            IApplicationUserService applicationUserService)
         {
             this.userManager = userManager;
             this.roleService = roleService;
+            this.applicationUserService = applicationUserService;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-
-            var users = this.userManager.Users.ToList();
-
-            // TODO: Service GetAllUsersWithRole
-            var viewModel = users
-                .SelectMany(user => this.userManager.GetRolesAsync(user)
-                    .Result
-                    .Select(role => new UserRolesViewModel
-                    {
-                        UserId = user.Id,
-                        UserName = user.UserName,
-                        Role = role,
-                        CreatedOn = user.CreatedOn,
-                        Email = user.Email,
-                    }))
-                .Where(x => x.Role != "Administrator")
-                .ToList();
+            var viewModel = this.applicationUserService.GetAllUsersWithRole()
+                .Where(x => x.Role != "Administrator");
 
             return this.View(viewModel);
         }

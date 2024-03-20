@@ -72,19 +72,27 @@
                                     <a asp-area="" asp-controller="News" asp-action="All">News</a>
                                 </li>
 
+                                @if(this.User.IsInRole(GlobalConstants.NewsAdministration))
+                                {
+
                                 <li class="navi-item">
                                     <a asp-area="" asp-controller="News" asp-action="Create">Create News</a>
                                 </li>
-
+                                }
                                 <li class="navi-item">
                                     <a asp-area="" asp-controller="Shop" asp-action="All">Shop</a>
 
                                 </li>
 
-                                <li class="navi-item">
-                                    <a asp-area="" asp-controller="Shop" asp-action="Create">Create Product</a>
+                                @if (this.User.IsInRole(GlobalConstants.MerchandisAdministration))
+                                {
+                                    <li class="navi-item">
+                                        <a asp-area="" asp-controller="Shop" asp-action="Create">Create Product</a>
 
-                                </li>
+                                    </li>
+                              
+                                }
+
                                 <li>
                                     <div class="header-icons">
                                         <partial name="_LoginPartial" />

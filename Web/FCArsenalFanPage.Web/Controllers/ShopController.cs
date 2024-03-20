@@ -2,6 +2,8 @@
 {
     using System.Security.Claims;
     using System.Threading.Tasks;
+
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Products;
     using Microsoft.AspNetCore.Authorization;
@@ -47,7 +49,7 @@
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
         public async Task<IActionResult> Create(CreateProductInputModel input)
         {
             if (!this.ModelState.IsValid)
@@ -67,7 +69,7 @@
 
         // Edit Get
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
         public IActionResult Edit(string id)
         {
             var inputModel = this.productService.GetById<EditProductInputViewModel>(id);
@@ -78,7 +80,7 @@
 
         // Edit Post
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
         public async Task<IActionResult> Edit(string id, EditProductInputViewModel input)
         {
             if (!this.ModelState.IsValid)

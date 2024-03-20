@@ -4,10 +4,10 @@
     @if (this.SignInManager.IsSignedIn(this.User))
     {
 
-    if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+    if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.AssistantAdministrator))
         {
             
-                <a class="nav-link text-dark" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin</a>
+                <a class="navi-item" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin Panel</a>
             
         }
 
