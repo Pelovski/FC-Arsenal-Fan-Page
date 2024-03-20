@@ -10,6 +10,7 @@
     using FCArsenalFanPage.Web.ViewModels.News;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class NewsController : Controller
@@ -18,17 +19,20 @@
         private readonly INewsService newsService;
         private readonly IDeletableEntityRepository<ApplicationUser> userRepository;
         private readonly IWebHostEnvironment environment;
+        private readonly UserManager<ApplicationUser> userManager;
 
         public NewsController(
             ICategoriesService categoriesService,
             INewsService newsService,
             IDeletableEntityRepository<ApplicationUser> userRepository,
-            IWebHostEnvironment environment)
+            IWebHostEnvironment environment,
+            UserManager<ApplicationUser> userManager)
         {
             this.categoriesService = categoriesService;
             this.newsService = newsService;
             this.userRepository = userRepository;
             this.environment = environment;
+            this.userManager = userManager;
         }
 
         public IActionResult All(int id = 1)
