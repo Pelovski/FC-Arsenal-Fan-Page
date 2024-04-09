@@ -17,6 +17,7 @@ namespace FCArsenalFanPage.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.CartItems = new HashSet<Cart>();
         }
 
         // Audit info
@@ -40,5 +41,7 @@ namespace FCArsenalFanPage.Data.Models
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
+
+        public virtual ICollection<Cart> CartItems { get; set; }
     }
 }

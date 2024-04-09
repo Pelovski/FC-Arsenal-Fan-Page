@@ -2,6 +2,7 @@
 
 @{
 	this.ViewData["Title"] = Model.Name;
+	var test = Model.Id;
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -22,10 +23,17 @@
 					<p class="single-product-pricing">$@Model.Price</p>
 					<p>@Html.Raw(Model.Description)</p>
 					<div class="single-product-form">
-						<form action="index.html">
-							<input type="number" placeholder="0">
+
+						<form method="get" asp-controller="Orders" asp-action="Order">
+							<div class="form-group">
+								<label asp-for="Quantity"></label>
+								<input asp-for="Quantity" class="form-control"/>
+								<span asp-validation-for="Quantity" class="text-danger"></span>
+							</div>
+								<input type="hidden" asp-for="Id" />
+								<button type="submit"><a class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a></button>
 						</form>
-						<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						
 						<p><strong>Categories: </strong>@Model.ProductCategoryName</p>
 					</div>
 				</div>
