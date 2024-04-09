@@ -1,13 +1,26 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc;
+	using System.Collections.Generic;
+	using FCArsenalFanPage.Services;
+	using FCArsenalFanPage.Web.ViewModels.Orders;
+	using FCArsenalFanPage.Web.ViewModels.Products;
+	using Microsoft.AspNetCore.Mvc;
 
     public class OrdersController : BaseController
     {
-        [Authorize]
-        public IActionResult Cart()
+        private readonly IProductService productService;
+
+        public OrdersController(
+            IProductService productService)
         {
+            this.productService = productService;
+        }
+        public IActionResult Order(ProductOrderInputViewModel input)
+        {
+            var product = this.productService.GetById<CartItemViewModel>(input.Id);
+
+            product.Quantity = input.Quantity;
+
             return this.View();
         }
     }
