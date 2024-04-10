@@ -49,7 +49,7 @@
         }
 
         [HttpPost]
-        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Create(CreateProductInputModel input)
         {
             if (!this.ModelState.IsValid)
@@ -69,7 +69,7 @@
 
         // Edit Get
         [HttpGet]
-        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
+        [Authorize(Roles = GlobalConstants.MerchandisAdministration)]
         public IActionResult Edit(string id)
         {
             var inputModel = this.productService.GetById<EditProductInputViewModel>(id);
@@ -80,7 +80,7 @@
 
         // Edit Post
         [HttpPost]
-        [Authorize(Roles = GlobalConstants.MerchandisingSpecialistRoleName)]
+        [Authorize(Roles = GlobalConstants.MerchandisAdministration)]
         public async Task<IActionResult> Edit(string id, EditProductInputViewModel input)
         {
             if (!this.ModelState.IsValid)

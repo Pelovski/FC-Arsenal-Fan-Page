@@ -390,6 +390,9 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CreatedByUserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -642,7 +645,7 @@ namespace FCArsenalFanPage.Data.Migrations
                         .HasForeignKey("ProductId");
 
                     b.HasOne("FCArsenalFanPage.Data.Models.ApplicationUser", "User")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("UserId");
 
                     b.Navigation("Product");
@@ -731,6 +734,8 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Navigation("Claims");
 
                     b.Navigation("Logins");
+
+                    b.Navigation("Orders");
 
                     b.Navigation("Roles");
                 });

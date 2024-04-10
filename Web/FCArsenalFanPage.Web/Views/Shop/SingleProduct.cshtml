@@ -24,7 +24,7 @@
 					<p>@Html.Raw(Model.Description)</p>
 					<div class="single-product-form">
 
-						<form method="get" asp-controller="Orders" asp-action="Order">
+						<form method="post" asp-controller="Orders" asp-action="Order">
 							<div class="form-group">
 								<label asp-for="Quantity"></label>
 								<input asp-for="Quantity" class="form-control"/>

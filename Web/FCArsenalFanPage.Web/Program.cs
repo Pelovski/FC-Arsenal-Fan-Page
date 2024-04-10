@@ -71,6 +71,7 @@
             services.AddTransient<IApplicationUserService, ApplicationUserService>();
             services.AddTransient<ICommentService, CommentService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IOrderService, OrderService>();
 
             services.AddAuthentication().AddFacebook(opt =>
             {

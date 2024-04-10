@@ -1,27 +1,39 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-	using System.Collections.Generic;
-	using FCArsenalFanPage.Services;
-	using FCArsenalFanPage.Web.ViewModels.Orders;
-	using FCArsenalFanPage.Web.ViewModels.Products;
-	using Microsoft.AspNetCore.Mvc;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
+
+    using FCArsenalFanPage.Services;
+    using FCArsenalFanPage.Web.ViewModels.Orders;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
 
     public class OrdersController : BaseController
     {
         private readonly IProductService productService;
+        private readonly IOrderService orderService;
 
         public OrdersController(
-            IProductService productService)
+            IProductService productService,
+            IOrderService orderService)
         {
             this.productService = productService;
+            this.orderService = orderService;
         }
-        public IActionResult Order(ProductOrderInputViewModel input)
+
+
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Order(ProductOrderInputViewModel input)
         {
-            var product = this.productService.GetById<CartItemViewModel>(input.Id);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var quantity = input.Quantity;
+            var product = this.productService.GetById<CreateOrderInputModel>(input.Id);
 
-            product.Quantity = input.Quantity;
+            await this.orderService.CreateAsync(product, userId, quantity);
 
-            return this.View();
+            return this.Redirect("/Shop/All");
         }
     }
 }

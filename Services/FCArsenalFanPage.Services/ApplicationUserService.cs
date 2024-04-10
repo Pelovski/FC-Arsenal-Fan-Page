@@ -64,6 +64,11 @@
         {
             var profilePicture = this.imageRepository.All().FirstOrDefault(x => user.ProfilePictureId == x.Id);
 
+            if (profilePicture == null)
+            {
+                return string.Empty;
+            }
+
             return profilePicture.RemoteImageUrl ??
                 "/Images/ProfilePictures/" + profilePicture.Id + "." + profilePicture.Extension;
         }
