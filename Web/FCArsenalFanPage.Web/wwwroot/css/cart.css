@@ -43,3 +43,55 @@ a {
     border: 1px solid #eff0f2;
     border-radius: 1rem;
 }
+
+
+.quantity {
+    display: flex;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .quantity button {
+        background-color: #ee0000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 15px;
+        width: 25px;
+        height: auto;
+        text-align: center;
+        transition: background-color 0.2s;
+    }
+
+        .quantity button:hover {
+            background-color: #051922;
+            color: #ee0000;
+        }
+
+.input-box {
+    width: 30px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+    /* Hide the number input spin buttons */
+    .input-box::-webkit-inner-spin-button,
+    .input-box::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .input-box[type="number"] {
+        -moz-appearance: textfield;
+        padding: 0px;
+        margin-bottom: 0px;
+        width:50px;
+    }
+
+
+

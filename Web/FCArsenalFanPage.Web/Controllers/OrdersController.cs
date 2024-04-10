@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-    using System.Security.Claims;
+	using System.Linq;
+	using System.Security.Claims;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Services;
@@ -21,7 +22,12 @@
             this.orderService = orderService;
         }
 
+        public IActionResult Cart()
+        {
+            var viewModel = this.orderService.GetAll().Where(x => x.Status == "Active");
 
+            return this.View(viewModel);
+        }
 
         [Authorize]
         [HttpPost]
