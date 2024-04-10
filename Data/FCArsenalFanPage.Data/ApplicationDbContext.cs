@@ -28,7 +28,7 @@
 
         public DbSet<Image> Images { get; set; }
 
-        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public DbSet<Comment> Comments { get; set; }
 

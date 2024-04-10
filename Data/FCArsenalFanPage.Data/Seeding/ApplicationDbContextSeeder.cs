@@ -28,6 +28,7 @@
                               new RolesSeeder(),
                               new CategoriesSeeder(),
                               new ProductCategorySeeder(),
+                              new OrderStatusSeeder(),
                           };
 
             foreach (var seeder in seeders)
