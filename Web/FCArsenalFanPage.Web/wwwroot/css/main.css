@@ -3094,3 +3094,27 @@ table.order-details {
     object-fit: cover;
     cursor: pointer;
 }
+
+a.cart-update-btn {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+a.cart-update-btn:hover {
+    background-color: #051922;
+    color: #ee0000;
+}
+
+a.cart-update-btn {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    background-color: #198754;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+a.cart-btn i {
+    margin-right: 5px;
+}

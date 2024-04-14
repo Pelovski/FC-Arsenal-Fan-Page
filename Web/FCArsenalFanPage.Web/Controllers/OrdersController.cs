@@ -1,7 +1,7 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
-	using System.Linq;
-	using System.Security.Claims;
+    using System.Linq;
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Services;
@@ -22,9 +22,14 @@
             this.orderService = orderService;
         }
 
+        [Authorize]
         public IActionResult Cart()
         {
-            var viewModel = this.orderService.GetAll().Where(x => x.Status == "Active");
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            var viewModel = this.orderService
+                .GetAll()
+                .Where(x => x.Status == "Active" && x.UserId == userId);
 
             return this.View(viewModel);
         }
@@ -40,6 +45,15 @@
             await this.orderService.CreateAsync(product, userId, quantity);
 
             return this.Redirect("/Shop/All");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Update(UpdateOrderInputModel input)
+        {
+
+            await this.orderService.UpdateAsync(input);
+            return this.RedirectToAction(nameof(this.Cart));
         }
     }
 }
