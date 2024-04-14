@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TrEjm9QUIQk06gko1dqFtV9kSmWaIbpiHx+A66dATao=",
+  "Hash": "vcM5KpQwFgyxtwkcGO7Wq+D19Ad9JLOPh3vBwlhI/Dc=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -2072,6 +2072,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\bb032bd0-3ae5-41b7-a5bb-393fe8cd62d0.png"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/ProfilePictures/8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\e9624e20-28f4-4761-ab4e-386775bb2bb8.jpg",
