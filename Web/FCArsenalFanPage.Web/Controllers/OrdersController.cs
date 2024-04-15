@@ -55,5 +55,10 @@
             await this.orderService.UpdateAsync(input);
             return this.RedirectToAction(nameof(this.Cart));
         }
+
+        public IActionResult Checkout()
+        {
+            return this.View();
+        }
     }
 }

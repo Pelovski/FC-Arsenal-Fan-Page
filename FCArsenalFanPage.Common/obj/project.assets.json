@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+      "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
       "projectName": "FCArsenalFanPage.Common",
-      "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+      "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
       "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-      "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\obj\\",
+      "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
