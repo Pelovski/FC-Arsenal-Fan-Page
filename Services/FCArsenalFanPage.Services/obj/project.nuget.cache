@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gWovjbmgKnhIIuaBhMXOgiwiG8rKYf5Tzqkqx163qU9LmS6V3I+I1oiWX8Diggc7NvVRSDf7QoPEUKzK838WhQ==",
+  "dgSpecHash": "9iT7IqGjqJTchsFViaejyj7rFkkV0wHL/i+riPvoTmXM2wUcEbU3aXQcBv6F0YXdKq+GVCXUyDDMmhZnRYAEDQ==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",

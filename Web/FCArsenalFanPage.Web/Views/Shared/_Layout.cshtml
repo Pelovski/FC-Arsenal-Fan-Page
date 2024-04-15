@@ -12,6 +12,9 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="~/css/all.min.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/cart.css" asp-append-version="true">
@@ -26,6 +29,8 @@
     <link rel="stylesheet" href="~/css/magnific-popup.css" asp-append-version="true">
     <!-- animate css -->
     <link rel="stylesheet" href="~/css/animate.css" asp-append-version="true">
+
+    <link rel="stylesheet" href="~/css/checkout.css" asp-append-version="true">
     <!-- mean menu css -->
     <link rel="stylesheet" href="~/css/meanmenu.min.css" asp-append-version="true">
     <!-- main style -->
@@ -37,7 +42,8 @@
     <!-- Place the following <script> and <textarea> tags your HTML's <body> -->
     <script>
         tinymce.init({
-            selector: 'textarea',
+            selector: "textarea:not(.not-here)",
+
             plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
             toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
             tinycomments_mode: 'embedded',

@@ -3,13 +3,12 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using AngleSharp.Browser.Dom;
+
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels.Orders;
-	using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-	public class OrderService : IOrderService
+    public class OrderService : IOrderService
     {
         private readonly IDeletableEntityRepository<Order> orderRepository;
 

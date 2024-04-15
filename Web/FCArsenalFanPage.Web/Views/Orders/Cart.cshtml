@@ -92,13 +92,11 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="text-sm-end mt-2">
-							<button type="submit">
-							<a  class="cart-update-btn m-3">
-								<i class="mdi mdi-cart-outline me-1"></i> Update
-							</a>
+								<button class="btn cart-update-btn" type="submit">
+									<i class="fa-solid fa-rotate-right me-1"></i> Update
 								</button>
-						<a href="ecommerce-checkout.html" class="cart-btn">
-								<i class="mdi mdi-cart-outline me-1"></i> Checkout
+								<a asp-controller="Orders" asp-action="Checkout" class="cart-btn">
+									<i class="fa-regular fa-credit-card me-1"></i> Checkout
 							</a>
 						</div>
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/X2KCmuXFYcbchMFAJv8N5AcghGz5Ve4e86empr01/utt4jjJa4EwXJjM6mjQLEtwv6CK7rDZFfNYmA0Wqrm2A==",
+  "dgSpecHash": "8gtsnUCHrY3jH8xK5IUITtiT+qyfixqsp8x5wXKzApI5fmWJXvT8evFxorXCItKidR1eN/7ax7FZofLpEZ6Klw==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\herrp\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\herrp\\.nuget\\packages\\anglesharp.css\\0.17.0\\anglesharp.css.0.17.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj": {}
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj": {}
   },
   "projects": {
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
         "projectName": "FCArsenalFanPage.Data.Common",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
         "projectName": "FCArsenalFanPage.Data.Models",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,8 +95,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               }
             }
           }
@@ -142,14 +142,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
         "projectName": "FCArsenalFanPage.Data",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -166,14 +166,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
               }
             }
           }
@@ -239,14 +239,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
         "projectName": "FCArsenalFanPage.Common",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -302,14 +302,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
         "projectName": "FCArsenalFanPage.Services.Data",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -326,14 +326,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               }
             }
           }
@@ -375,14 +375,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
         "projectName": "FCArsenalFanPage.Services.Mapping",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -442,14 +442,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
         "projectName": "FCArsenalFanPage.Services.Messaging",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -509,14 +509,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
         "projectName": "FCArsenalFanPage.Services",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -533,8 +533,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
               }
             }
           }
@@ -576,14 +576,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
         "projectName": "FCArsenalFanPage.Web.Tests",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\FCArsenalFanPage.Web.Tests.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Tests\\FCArsenalFanPage.Web.Tests\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Web.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -601,8 +601,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj"
               }
             }
           }
@@ -665,14 +665,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
         "projectName": "FCArsenalFanPage.Web.Infrastructure",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -732,14 +732,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
         "projectName": "FCArsenalFanPage.Web.ViewModels",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -756,14 +756,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
               }
             }
           }
@@ -817,14 +817,14 @@
         }
       }
     },
-    "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
+    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj",
+        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj",
         "projectName": "FCArsenalFanPage.Web",
-        "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj",
+        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj",
         "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web\\obj\\",
+        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -842,32 +842,32 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
               },
-              "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
+              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
               }
             }
           }
