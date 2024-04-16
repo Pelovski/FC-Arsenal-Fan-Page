@@ -58,6 +58,8 @@
 
         public IActionResult Checkout()
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
             return this.View();
         }
     }

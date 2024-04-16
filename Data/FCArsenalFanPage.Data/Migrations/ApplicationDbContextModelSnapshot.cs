@@ -22,6 +22,47 @@ namespace FCArsenalFanPage.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Adress", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PostalCode")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Adress");
+                });
+
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationRole", b =>
                 {
                     b.Property<string>("Id")
@@ -99,6 +140,9 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -221,7 +265,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Image", b =>
@@ -577,6 +621,15 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Adress", b =>
+                {
+                    b.HasOne("FCArsenalFanPage.Data.Models.ApplicationUser", "User")
+                        .WithMany("Adresses")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationUser", b =>
                 {
                     b.HasOne("FCArsenalFanPage.Data.Models.Image", "ProfilePicture")
@@ -731,6 +784,8 @@ namespace FCArsenalFanPage.Data.Migrations
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("Adresses");
+
                     b.Navigation("Claims");
 
                     b.Navigation("Logins");

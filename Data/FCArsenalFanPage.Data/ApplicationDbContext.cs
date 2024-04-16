@@ -30,6 +30,8 @@
 
         public DbSet<Order> Orders { get; set; }
 
+        public DbSet<Comment> Adress { get; set; }
+
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Product> Products { get; set; }
