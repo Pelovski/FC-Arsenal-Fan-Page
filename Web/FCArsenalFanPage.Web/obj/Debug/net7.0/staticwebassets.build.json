@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S/28OCG3E+aYSY/xUrT4BIMmHAtIXnAbEu4khlmC+pg=",
+  "Hash": "GK9qETEov9WfXFAhKimg4mxan2kOCGS6YDoPOX0eZPc=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -1273,6 +1273,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\cart.css"
+    },
+    {
+      "Identity": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\checkout.css",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "css/checkout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\checkout.css"
     },
     {
       "Identity": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\login.css",

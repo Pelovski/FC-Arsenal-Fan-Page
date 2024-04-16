@@ -18,6 +18,7 @@ namespace FCArsenalFanPage.Data.Models
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
             this.Orders = new HashSet<Order>();
+            this.Adresses = new HashSet<Adress>();
         }
 
         // Audit info
@@ -36,6 +37,8 @@ namespace FCArsenalFanPage.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
+        public string Name { get; set; }
+
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
@@ -43,5 +46,7 @@ namespace FCArsenalFanPage.Data.Models
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
+
+        public virtual ICollection<Adress> Adresses { get; set; }
     }
 }
