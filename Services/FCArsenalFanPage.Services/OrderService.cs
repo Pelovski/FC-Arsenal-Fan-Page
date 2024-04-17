@@ -51,6 +51,18 @@
             await this.orderRepository.SaveChangesAsync();
         }
 
+        public async Task DeleteAsync(string id)
+        {
+            var order = this.orderRepository.AllAsNoTracking().FirstOrDefault(x => x.Id == id);
+
+            if (order != null)
+            {
+                this.orderRepository.Delete(order);
+            }
+
+            await this.orderRepository.SaveChangesAsync();
+        }
+
         public IEnumerable<OrdersInListViewModel> GetAll()
         {
             return this.orderRepository.AllAsNoTracking()

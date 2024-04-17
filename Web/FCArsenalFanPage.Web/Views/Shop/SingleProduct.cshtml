@@ -27,7 +27,7 @@
 						<form method="post" asp-controller="Orders" asp-action="Order">
 							<div class="form-group">
 								<label asp-for="Quantity"></label>
-								<input asp-for="Quantity" class="form-control"/>
+								<input value="1" asp-for="Quantity" class="form-control"/>
 								<span asp-validation-for="Quantity" class="text-danger"></span>
 							</div>
 								<input type="hidden" asp-for="Id" />
