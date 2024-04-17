@@ -51,9 +51,16 @@
         [HttpPost]
         public async Task<IActionResult> Update(UpdateOrderInputModel input)
         {
-
             await this.orderService.UpdateAsync(input);
+
             return this.RedirectToAction(nameof(this.Cart));
+        }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+           await this.orderService.DeleteAsync(id);
+
+           return this.RedirectToAction(nameof(this.Cart));
         }
 
         public IActionResult Checkout()
