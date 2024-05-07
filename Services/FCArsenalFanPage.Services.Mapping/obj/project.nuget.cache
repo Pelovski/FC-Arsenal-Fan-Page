@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "/3Jxn6AvWRnUhnZr1/+IU0l3CJw7duLZiawLL/lfetwNe6mgELO4+qGg5g+gMxLwAHAFE9T+nVRT5C20F0foaQ==",
+  "dgSpecHash": "J2H/IKL4rheOY/qvHrThqpcgrdO42+ew9sS2JM7p7+SdDHV7xoNZEh5jIt9YpQtguPSrR31vZLraE6sOk/Ap3w==",
   "success": true,
-  "projectFilePath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
+  "projectFilePath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\herrp\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\herrp\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
-    "C:\\Users\\herrp\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
+    "C:\\Users\\Pavel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }

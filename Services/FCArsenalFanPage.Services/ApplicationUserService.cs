@@ -66,7 +66,7 @@
 
             if (profilePicture == null)
             {
-                return string.Empty;
+                return "/Images/ProfilePictures/noImage.png";
             }
 
             return profilePicture.RemoteImageUrl ??

@@ -53,7 +53,7 @@
                                                     </div>
                                                     </label>
                                                 }
-
+                                                
                                                 <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" />
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                             </div>
                                         </div>
                                         <div class="text-center text-sm-right">
-                                            <span class="badge badge-secondary">administrator</span>
+                                                <span class="badge badge-secondary">@Model.Input.UserRole</span>
                                             <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
                                         </div>
                                     </div>

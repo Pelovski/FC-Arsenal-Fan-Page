@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj": {}
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj": {}
   },
   "projects": {
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
         "projectName": "FCArsenalFanPage.Data.Common",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,26 +67,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
         "projectName": "FCArsenalFanPage.Data.Models",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,8 +114,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               }
             }
           }
@@ -105,6 +124,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -138,21 +162,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
         "projectName": "FCArsenalFanPage.Data",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -166,14 +190,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
               }
             }
           }
@@ -182,6 +206,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -235,21 +264,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
         "projectName": "FCArsenalFanPage.Common",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -269,6 +298,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -293,26 +327,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
         "projectName": "FCArsenalFanPage.Services.Data",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -326,14 +374,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               }
             }
           }
@@ -342,6 +390,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -371,21 +424,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
         "projectName": "FCArsenalFanPage.Services.Mapping",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -405,6 +458,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -433,26 +491,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
         "projectName": "FCArsenalFanPage.Services.Messaging",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -472,6 +544,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -500,26 +577,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
         "projectName": "FCArsenalFanPage.Services",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -533,8 +624,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj"
               }
             }
           }
@@ -543,6 +634,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -572,21 +668,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj",
         "projectName": "Sandbox",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\Sandbox.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\Sandbox\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -600,29 +696,29 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common\\FCArsenalFanPage.Data.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data\\FCArsenalFanPage.Data.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data\\FCArsenalFanPage.Services.Data.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging\\FCArsenalFanPage.Services.Messaging.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj"
               }
             }
           }
@@ -631,6 +727,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -684,21 +785,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
         "projectName": "FCArsenalFanPage.Web.Infrastructure",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -718,6 +819,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -746,26 +852,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.18, 7.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
+    "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
+        "projectUniqueName": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
         "projectName": "FCArsenalFanPage.Web.ViewModels",
-        "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\herrp\\.nuget\\packages\\",
-        "outputPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\obj\\",
+        "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Pavel\\.nuget\\packages\\",
+        "outputPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\herrp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pavel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -779,14 +899,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping\\FCArsenalFanPage.Services.Mapping.csproj"
               },
-              "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
-                "projectPath": "D:\\Pavel\\Project\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
+              "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj": {
+                "projectPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure\\FCArsenalFanPage.Web.Infrastructure.csproj"
               }
             }
           }
@@ -795,6 +915,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -836,7 +961,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

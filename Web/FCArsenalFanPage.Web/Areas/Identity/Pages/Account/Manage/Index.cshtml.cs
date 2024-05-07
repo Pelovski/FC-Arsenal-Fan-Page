@@ -5,6 +5,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 #nullable disable
 
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
     using System.Runtime.InteropServices;
     using System.Threading.Tasks;
 
@@ -78,17 +79,21 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             public IFormFile ProfilePicture { get; set; }
 
             public string? ImageUrl { get; set; }
+
+            public string UserRole { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
+            var userRole = await this.userManager.GetRolesAsync(user);
 
             this.Input = new InputModel
             {
                 UserName = userName,
                 PhoneNumber = phoneNumber,
+                UserRole = userRole.FirstOrDefault(),
             };
 
             if (user.ProfilePictureId != null)

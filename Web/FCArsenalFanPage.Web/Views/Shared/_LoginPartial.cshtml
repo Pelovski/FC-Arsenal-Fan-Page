@@ -1,15 +1,16 @@
 ﻿@inject SignInManager<ApplicationUser> SignInManager;
 @inject UserManager<ApplicationUser> UserManager;
 @inject IApplicationUserService userService;
+@inject IOrderService orderService;
 
 @{
     var user = UserManager.GetUserAsync(this.User).Result;
-   
 }
 
     @if (this.SignInManager.IsSignedIn(this.User))
     {
     var imageUrl = userService.GetProfilePictureUrl(user);
+    var count = orderService.GetCountByUserId(user.Id);
 
     if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) || this.User.IsInRole(GlobalConstants.AssistantAdministrator))
         {
@@ -27,7 +28,10 @@
    
 
     <li>
-        <a class="shopping-cart cart-size" asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fas fa-shopping-cart"></i></a>
+        <a class="shopping-cart cart-size" asp-area="" asp-controller="Orders" asp-action="Cart">
+            <i class="fa" style="font-size:24px">&#xf07a;</i>
+            <span class='badge badge-warning' id='lblCartCount'> @count </span>
+        </a>
     </li>
 
     }
