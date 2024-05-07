@@ -79,6 +79,14 @@
                 });
         }
 
+        public int GetCountByUserId(string userId)
+        {
+            return this.orderRepository
+                .AllAsNoTracking()
+                .Where(x => x.UserId == userId)
+                .Count();
+        }
+
         public Order GetCurrentOrder(string userId, string productId)
         {
             return this.orderRepository

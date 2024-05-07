@@ -14,5 +14,7 @@
         Task UpdateAsync(UpdateOrderInputModel input);
 
         Task DeleteAsync(string id);
+
+        int GetCountByUserId(string userId);
     }
 }

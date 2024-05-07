@@ -1,13 +1,13 @@
 {
-  "FCArsenalFanPage.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\FCArsenalFanPage.Common",
-  "FCArsenalFanPage.Data.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Common",
-  "FCArsenalFanPage.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data",
-  "FCArsenalFanPage.Data.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Data\\FCArsenalFanPage.Data.Models",
-  "FCArsenalFanPage.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Data",
-  "FCArsenalFanPage.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services",
-  "FCArsenalFanPage.Services.Mapping, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Mapping",
-  "FCArsenalFanPage.Services.Messaging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Services\\FCArsenalFanPage.Services.Messaging",
-  "FCArsenalFanPage.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web",
-  "FCArsenalFanPage.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.Infrastructure",
-  "FCArsenalFanPage.Web.ViewModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\Project\\FC Arsenal Fan Page\\Web\\FCArsenalFanPage.Web.ViewModels"
+  "FCArsenalFanPage.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common",
+  "FCArsenalFanPage.Data.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Common",
+  "FCArsenalFanPage.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data",
+  "FCArsenalFanPage.Data.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models",
+  "FCArsenalFanPage.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Data",
+  "FCArsenalFanPage.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services",
+  "FCArsenalFanPage.Services.Mapping, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Mapping",
+  "FCArsenalFanPage.Services.Messaging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services.Messaging",
+  "FCArsenalFanPage.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web",
+  "FCArsenalFanPage.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.Infrastructure",
+  "FCArsenalFanPage.Web.ViewModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels"
 }
