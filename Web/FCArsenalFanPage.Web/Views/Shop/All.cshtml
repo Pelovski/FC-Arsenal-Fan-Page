@@ -46,7 +46,13 @@
 					</div>
 						<h3>@product.Name</h3>
 					<p class="product-price">@product.Price$ </p>
-						<a class="cart-btn" asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						
+						<form method="post" asp-controller="Orders" asp-action="Order">
+							
+							<input type="hidden" name="Id" value="@product.Id" />
+							<input type="hidden" name="Quantity" value="1" />
+							<button class="btn product-btn" type="submit"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+						</form>
 				</div>
 			</div>
 
