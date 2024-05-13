@@ -84,7 +84,8 @@
             return this.orderRepository
                 .AllAsNoTracking()
                 .Where(x => x.UserId == userId)
-                .Count();
+                .Select(x => x.Quantity)
+                .Sum();
         }
 
         public Order GetCurrentOrder(string userId, string productId)
