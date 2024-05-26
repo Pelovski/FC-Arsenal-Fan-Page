@@ -1,7 +1,14 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.Orders
 {
+    using System.Collections.Generic;
+    using System.Reflection.Metadata.Ecma335;
+    using FCArsenalFanPage.Data.Models;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+
     public class CheckoutViewModel
     {
+        public string UserId { get; set; }
+
         public string Name { get; set; }
 
         public string Email { get; set; }
@@ -15,5 +22,13 @@
         public string City { get; set; }
 
         public int PostalCode { get; set; }
+
+        public double TotalPrice { get; set; }
+
+        public IEnumerable<OrdersInListViewModel> Orders { get; set; }
+
+        public IEnumerable<SelectListItem> Countries { get; set; }
+
+        public IEnumerable<Adress> Adresses { get; set; }
     }
 }

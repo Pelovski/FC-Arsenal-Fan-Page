@@ -79,6 +79,13 @@
                 });
         }
 
+        public IEnumerable<OrdersInListViewModel> GetAllByUserId(string userId)
+        {
+            return this.GetAll()
+                .Where(x => x.UserId == userId)
+                .ToList();
+        }
+
         public int GetCountByUserId(string userId)
         {
             return this.orderRepository
@@ -94,6 +101,15 @@
                 .All()
                 .Where(x => x.UserId == userId && x.Id == productId)
                 .FirstOrDefault();
+        }
+
+        public double GetTotalPrice(IEnumerable<OrdersInListViewModel> orders)
+        {
+            var deliveryPrice = 25;
+
+            return orders
+                .Select(x => x.TotalOrderPrice)
+                .Sum() + deliveryPrice;
         }
 
         public async Task UpdateAsync(UpdateOrderInputModel input)

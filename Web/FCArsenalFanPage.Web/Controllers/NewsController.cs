@@ -32,7 +32,9 @@
             this.newsService = newsService;
             this.userRepository = userRepository;
             this.environment = environment;
-            this.userManager = userManager;
+            this.userManager = userManager
+                
+                ;
         }
 
         public IActionResult All(int id = 1)

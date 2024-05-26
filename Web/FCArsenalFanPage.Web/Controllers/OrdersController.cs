@@ -3,24 +3,28 @@
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
-
-    using FCArsenalFanPage.Services;
+	using FCArsenalFanPage.Data.Models;
+	using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Orders;
     using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc;
+	using Microsoft.AspNetCore.Identity;
+	using Microsoft.AspNetCore.Mvc;
 
     public class OrdersController : BaseController
     {
         private readonly IProductService productService;
         private readonly IOrderService orderService;
+		private readonly UserManager<ApplicationUser> userManager;
 
-        public OrdersController(
+		public OrdersController(
             IProductService productService,
-            IOrderService orderService)
+            IOrderService orderService,
+            UserManager<ApplicationUser> userManager)
         {
             this.productService = productService;
             this.orderService = orderService;
-        }
+			this.userManager = userManager;
+		}
 
         [Authorize]
         public IActionResult Cart()
@@ -63,11 +67,20 @@
            return this.RedirectToAction(nameof(this.Cart));
         }
 
-        public IActionResult Checkout()
+        public async Task<IActionResult> Checkout()
         {
-            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var user = await this.userManager.GetUserAsync(this.User);
+            var orders = this.orderService.GetAllByUserId(user.Id);
+            var totalPrice = this.orderService.GetTotalPrice(orders);
 
-            return this.View();
+            var viewModel = new CheckoutViewModel
+            {
+                User = user,
+                Orders = orders,
+                TotalPrice = totalPrice,
+            };
+
+            return this.View(viewModel);
         }
     }
 }

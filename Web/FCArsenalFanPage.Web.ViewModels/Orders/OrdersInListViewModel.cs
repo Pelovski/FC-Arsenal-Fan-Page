@@ -15,5 +15,7 @@
         public string Status { get; set; }
 
         public string UserId { get; set; }
+
+        public double TotalOrderPrice => (double)(this.Quantity * this.Price);
     }
 }
