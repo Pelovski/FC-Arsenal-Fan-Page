@@ -16,5 +16,9 @@
         Task DeleteAsync(string id);
 
         int GetCountByUserId(string userId);
+
+        double GetTotalPrice(IEnumerable<OrdersInListViewModel> orders);
+
+        IEnumerable<OrdersInListViewModel> GetAllByUserId(string userId);
     }
 }

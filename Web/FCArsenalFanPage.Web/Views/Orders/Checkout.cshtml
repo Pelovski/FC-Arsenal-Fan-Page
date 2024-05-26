@@ -1,4 +1,4 @@
-﻿
+﻿@model CheckoutViewModel
     <div class="breadcrumb-section breadcrumb-bg">
     </div>
 
@@ -20,6 +20,11 @@
                                         <p class="text-muted text-truncate mb-4">Sed ut perspiciatis unde omnis iste</p>
                                         <div class="mb-3">
                                             <form>
+                                            <div class="form-group">
+                                                <label asp-for=""></label>
+                                                <input asp-for="" class="form-control" />
+                                                <span asp-validation-for="Title" class="text-danger"></span>
+                                            </div>
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-lg-4">
@@ -43,22 +48,13 @@
                                                     </div>
                                                     <div class="mb-3">
                                                         <label class="form-label" for="billing-address">Address</label>
-<textarea class="form-control not-here" id="billing-address" rows="3" placeholder="Enter full address"></textarea>
+                                                    <textarea class="form-control not-here" id="billing-address" rows="3" placeholder="Enter full address"></textarea>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="mb-4 mb-lg-0">
                                                                 <label class="form-label">Country</label>
-                                                                <select class="form-control form-select" title="Country">
-                                                                    <option value="0">Select Country</option>
-                                                                    <option value="AF">Afghanistan</option>
-                                                                    <option value="AL">Albania</option>
-                                                                    <option value="DZ">Algeria</option>
-                                                                    <option value="AS">American Samoa</option>
-                                                                    <option value="AD">Andorra</option>
-                                                                    <option value="AO">Angola</option>
-                                                                    <option value="AI">Anguilla</option>
-                                                                </select>
+                                                            <input type="text" class="form-control" id="billing-city" placeholder="Enter Country">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
@@ -213,48 +209,23 @@
                                 <thead>
                                     <tr>
                                         <th class="border-top-0" style="width: 110px;" scope="col">Product</th>
-                                        <th class="border-top-0" scope="col">Product Desc</th>
+                                        <th class="border-top-0" scope="col">Product quantity and price</th>
                                         <th class="border-top-0" scope="col">Price</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach(var order in Model.Orders){
                                     <tr>
-                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="checkout-avatar-lg rounded"></th>
+                                        <th scope="row"><img class="me-4" src="@order.ImageUrl" alt="product-img" title="product-img"></th>
                                         <td>
-                                            <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Waterproof Mobile Phone</a></h5>
-                                            <p class="text-muted mb-0">
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star-half text-warning"></i>
-                                            </p>
-                                            <p class="text-muted mb-0 mt-1">$ 260 x 2</p>
+                                            <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark"> </a></h5>
+                                      
+                                            <p class="text-muted mb-0 mt-1">$ @order.Price x @order.Quantity</p>
                                         </td>
-                                        <td>$ 520</td>
+                                        <td>$ @order.TotalOrderPrice</td>
                                     </tr>
-                                    <tr>
-                                    <th scope="row"><img src="https://www.bootdey.com/image/280x280/FF00FF/000000" alt="product-img" title="product-img" class="checkout-avatar-lg rounded"></th>
-                                        <td>
-                                            <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">Smartphone Dual Camera</a></h5>
-                                            <p class="text-muted mb-0">
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                                <i class="bx bxs-star text-warning"></i>
-                                            </p>
-                                            <p class="text-muted mb-0 mt-1">$ 260 x 1</p>
-                                        </td>
-                                        <td>$ 260</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">
-                                            <h5 class="font-size-14 m-0">Sub Total :</h5>
-                                        </td>
-                                        <td>
-                                            $ 780
-                                        </td>
-                                    </tr>
+                                }
+                                    
                                     <tr>
                                         <td colspan="2">
                                             <h5 class="font-size-14 m-0">Shipping Charge :</h5>
@@ -268,10 +239,11 @@
                                             <h5 class="font-size-14 m-0">Total:</h5>
                                         </td>
                                         <td>
-                                            $745.20
+                                            $@Model.TotalPrice
                                         </td>
                                     </tr>
                                 </tbody>
+                              
                             </table>
                         </div>
                     </div>
