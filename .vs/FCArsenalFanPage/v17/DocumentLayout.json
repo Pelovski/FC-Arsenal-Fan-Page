@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web.viewmodels\\orders\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|solutionrelative:web\\fcarsenalfanpage.web.viewmodels\\orders\\checkoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\data\\fcarsenalfanpage.data.models\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|solutionrelative:data\\fcarsenalfanpage.data.models\\applicationrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web.viewmodels\\news\\createnewsinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|solutionrelative:web\\fcarsenalfanpage.web.viewmodels\\news\\createnewsinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\data\\fcarsenalfanpage.data.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|solutionrelative:data\\fcarsenalfanpage.data.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\categoriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\categoriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\data\\fcarsenalfanpage.data.models\\adress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|solutionrelative:data\\fcarsenalfanpage.data.models\\adress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\views\\orders\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\views\\orders\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\iproductcategoriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\iproductcategoriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web.viewmodels\\orders\\ordersinlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}|Web\\FCArsenalFanPage.Web.ViewModels\\FCArsenalFanPage.Web.ViewModels.csproj|solutionrelative:web\\fcarsenalfanpage.web.viewmodels\\orders\\ordersinlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\services\\fcarsenalfanpage.services\\iapplicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8522212F-F01E-4E20-9975-FCF5E10D71DB}|Services\\FCArsenalFanPage.Services\\FCArsenalFanPage.Services.csproj|solutionrelative:services\\fcarsenalfanpage.services\\iapplicationuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\data\\fcarsenalfanpage.data.models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|solutionrelative:data\\fcarsenalfanpage.data.models\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\data\\fcarsenalfanpage.data.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FDB52F-52DC-48B2-86E1-0176377BB53F}|Data\\FCArsenalFanPage.Data.Models\\FCArsenalFanPage.Data.Models.csproj|solutionrelative:data\\fcarsenalfanpage.data.models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,60 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Adress.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\Adress.cs",
-              "RelativeDocumentMoniker": "Data\\FCArsenalFanPage.Data.Models\\Adress.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\Adress.cs",
-              "RelativeToolTip": "Data\\FCArsenalFanPage.Data.Models\\Adress.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T18:40:02.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationRole.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\ApplicationRole.cs",
-              "RelativeDocumentMoniker": "Data\\FCArsenalFanPage.Data.Models\\ApplicationRole.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\ApplicationRole.cs",
-              "RelativeToolTip": "Data\\FCArsenalFanPage.Data.Models\\ApplicationRole.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T18:47:13.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\News\\Create.cshtml",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Views\\News\\Create.cshtml",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\News\\Create.cshtml",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\News\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-26T18:42:43.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateNewsInputModel.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\News\\CreateNewsInputModel.cs",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web.ViewModels\\News\\CreateNewsInputModel.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\News\\CreateNewsInputModel.cs",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web.ViewModels\\News\\CreateNewsInputModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T18:42:34.094Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -136,146 +40,62 @@
               "RelativeDocumentMoniker": "Data\\FCArsenalFanPage.Data.Models\\ApplicationUser.cs",
               "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\ApplicationUser.cs",
               "RelativeToolTip": "Data\\FCArsenalFanPage.Data.Models\\ApplicationUser.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowDEAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T18:39:41.87Z",
+              "WhenOpened": "2024-06-02T05:49:23.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoriesService.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\CategoriesService.cs",
-              "RelativeDocumentMoniker": "Services\\FCArsenalFanPage.Services\\CategoriesService.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\CategoriesService.cs",
-              "RelativeToolTip": "Services\\FCArsenalFanPage.Services\\CategoriesService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "DocumentIndex": 3,
+              "Title": "IApplicationUserService.cs",
+              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IApplicationUserService.cs",
+              "RelativeDocumentMoniker": "Services\\FCArsenalFanPage.Services\\IApplicationUserService.cs",
+              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IApplicationUserService.cs",
+              "RelativeToolTip": "Services\\FCArsenalFanPage.Services\\IApplicationUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T18:32:27.057Z",
+              "WhenOpened": "2024-06-02T05:49:18.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CheckoutViewModel.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\CheckoutViewModel.cs",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\CheckoutViewModel.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\CheckoutViewModel.cs",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\CheckoutViewModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwB8AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:44:25.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\Orders\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Views\\Orders\\Checkout.cshtml",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\Orders\\Checkout.cshtml",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\Orders\\Checkout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-19T18:55:31.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "OrderService.cs",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Services\\FCArsenalFanPage.Services\\OrderService.cs",
               "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\OrderService.cs",
               "RelativeToolTip": "Services\\FCArsenalFanPage.Services\\OrderService.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAswG4AAAAvAAAA",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAgwJMAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:51:56.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrdersInListViewModel.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\OrdersInListViewModel.cs",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\OrdersInListViewModel.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\OrdersInListViewModel.cs",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web.ViewModels\\Orders\\OrdersInListViewModel.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAIAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:42:55.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Controllers\\NewsController.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Controllers\\NewsController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAwDoAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T15:35:43.13Z",
+              "WhenOpened": "2024-05-13T19:51:56.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IProductCategoriesService.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IProductCategoriesService.cs",
-              "RelativeDocumentMoniker": "Services\\FCArsenalFanPage.Services\\IProductCategoriesService.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IProductCategoriesService.cs",
-              "RelativeToolTip": "Services\\FCArsenalFanPage.Services\\IProductCategoriesService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:52:11.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "all.css",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css",
-              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\wwwroot\\plugins\\fontawesome-free\\css\\all.css",
-              "ViewState": "AQIAAP0HAAAAAAAAAAAAAP0HAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-19T18:57:02.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Controllers\\OrdersController.cs",
               "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Controllers\\OrdersController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAqwE8AAAAoAAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAkwFEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T15:33:53.495Z"
+              "WhenOpened": "2024-05-13T15:33:53.495Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
               "Title": "IOrderService.cs",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IOrderService.cs",
               "RelativeDocumentMoniker": "Services\\FCArsenalFanPage.Services\\IOrderService.cs",
               "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Services\\FCArsenalFanPage.Services\\IOrderService.cs",
               "RelativeToolTip": "Services\\FCArsenalFanPage.Services\\IOrderService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABIAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T19:52:11.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrderStatus.cs",
-              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\OrderStatus.cs",
-              "RelativeDocumentMoniker": "Data\\FCArsenalFanPage.Data.Models\\OrderStatus.cs",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Data\\FCArsenalFanPage.Data.Models\\OrderStatus.cs",
-              "RelativeToolTip": "Data\\FCArsenalFanPage.Data.Models\\OrderStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T15:33:50.171Z"
+              "WhenOpened": "2024-06-02T05:33:01.601Z",
+              "EditorCaption": ""
             }
           ]
         }

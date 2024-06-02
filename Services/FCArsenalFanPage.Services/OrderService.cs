@@ -128,5 +128,31 @@
 
             await this.orderRepository.SaveChangesAsync();
         }
+
+        public CheckoutViewModel GetOrderData(ApplicationUser user)
+        {
+
+            var orders = this.GetAllByUserId(user.Id);
+
+
+            if (!orders.Any())
+            {
+                return null;
+            }
+
+
+            var totalPrice = this.GetTotalPrice(orders);
+
+            var result = new CheckoutViewModel()
+            {
+                Name = user.Name,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Orders = orders,
+                TotalPrice = totalPrice,
+            };
+
+            return result;
+        }
     }
 }
