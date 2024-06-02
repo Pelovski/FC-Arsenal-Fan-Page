@@ -71,12 +71,23 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
+            //TODO: Add name and adress to the profile
+            public string Name { get; set; }
+
             public string UserName { get; set; }
 
             [DataType(DataType.Upload)]
             [ImageMaxFileSize(10 * 1024 * 1024)]
             [ImageExtensionValidation(new string[] { ".jpg", ".gif", ".png" })]
             public IFormFile ProfilePicture { get; set; }
+
+            public string Adress { get; set; }
+
+            public string Country { get; set; }
+
+            public string City { get; set; }
+
+            public int PostalCode { get; set; }
 
             public string? ImageUrl { get; set; }
 
