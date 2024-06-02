@@ -19,18 +19,13 @@
                                         <h5 class="font-size-16 mb-1">Billing Info</h5>
                                         <p class="text-muted text-truncate mb-4">Sed ut perspiciatis unde omnis iste</p>
                                         <div class="mb-3">
-                                            <form>
-                                            <div class="form-group">
-                                                <label asp-for=""></label>
-                                                <input asp-for="" class="form-control" />
-                                                <span asp-validation-for="Title" class="text-danger"></span>
-                                            </div>
+                                           
                                                 <div>
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="mb-3">
                                                                 <label class="form-label" for="billing-name">Name</label>
-                                                                <input type="text" class="form-control" id="billing-name" placeholder="Enter name">
+                                                                <input type="text" value="@Model.Name" class="form-control" id="billing-name" placeholder="Enter name">
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
@@ -71,7 +66,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </form>
+                                           
                                         </div>
                                     </div>
                                 </div>

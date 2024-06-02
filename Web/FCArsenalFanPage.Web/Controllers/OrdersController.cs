@@ -67,18 +67,17 @@
            return this.RedirectToAction(nameof(this.Cart));
         }
 
+        [Authorize]
+        //TODO: If null redirect to Shop
         public async Task<IActionResult> Checkout()
         {
             var user = await this.userManager.GetUserAsync(this.User);
-            var orders = this.orderService.GetAllByUserId(user.Id);
-            var totalPrice = this.orderService.GetTotalPrice(orders);
+            var viewModel = this.orderService.GetOrderData(user);
 
-            var viewModel = new CheckoutViewModel
+            if (viewModel == null)
             {
-                User = user,
-                Orders = orders,
-                TotalPrice = totalPrice,
-            };
+                return this.Redirect("Cart");
+            }
 
             return this.View(viewModel);
         }

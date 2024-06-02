@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels.Orders;
 
     public interface IOrderService
@@ -10,6 +10,8 @@
         Task CreateAsync(CreateOrderInputModel input, string userId, int quantity);
 
         IEnumerable<OrdersInListViewModel> GetAll();
+
+        CheckoutViewModel GetOrderData(ApplicationUser user);
 
         Task UpdateAsync(UpdateOrderInputModel input);
 
