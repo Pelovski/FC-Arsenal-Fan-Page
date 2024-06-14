@@ -115,11 +115,7 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="mb-3">
-                                                            <label asp-for="Input.Adress"></label>
-                                                            <textarea asp-for="Input.Adress" id="billing-address" rows="3" class="form-control  not-here" placeholder="Enter full address"></textarea>
-                                                            <span asp-validation-for="Input.Adress" class="text-danger"></span>
-                                                        </div>
+                                               
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <div class="mb-4 mb-lg-0">
@@ -141,6 +137,12 @@
                                                                     <input type="text" asp-for="Input.PostalCode" class="form-control text-black" placeholder="Enter Postal code" />
                                                                     <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
                                                                 </div>
+                                                            </div>
+
+                                                            <div class="mb-3">
+                                                                <label asp-for="Input.Street"></label>
+                                                                <input type ="text" asp-for="Input.Street" id="billing-address" rows="3" class="form-control  not-here" placeholder="Enter street and street number"></input>
+                                                                <span asp-validation-for="Input.Street" class="text-danger"></span>
                                                             </div>
 
                                                     </div>

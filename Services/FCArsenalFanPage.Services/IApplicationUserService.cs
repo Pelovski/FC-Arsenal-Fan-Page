@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Services
 {
     using System.Collections.Generic;
+    using System.Diagnostics.Metrics;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Models;
@@ -14,5 +15,9 @@
         string GetProfilePictureUrl(ApplicationUser user);
 
         IEnumerable<UserRolesViewModel> GetAllUsersWithRole();
+
+        Task SetNameToUserAsync(ApplicationUser user, string name);
+
+        Task SetAdressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode);
     }
 }

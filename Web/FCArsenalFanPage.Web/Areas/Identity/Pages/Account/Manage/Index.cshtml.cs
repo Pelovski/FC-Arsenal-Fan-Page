@@ -2,6 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 {
+    using System;
 #nullable disable
 
     using System.ComponentModel.DataAnnotations;
@@ -81,7 +82,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [ImageExtensionValidation(new string[] { ".jpg", ".gif", ".png" })]
             public IFormFile ProfilePicture { get; set; }
 
-            public string Adress { get; set; }
+            public string Street { get; set; }
 
             public string Country { get; set; }
 
@@ -99,11 +100,17 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
             var userRole = await this.userManager.GetRolesAsync(user);
+            var test = user.Adresses;
 
             this.Input = new InputModel
             {
+                Name = user.Name,
                 UserName = userName,
                 PhoneNumber = phoneNumber,
+                Street = "",
+                //Country = this.Input.Country,
+                //City = this.Input.City,
+                //PostalCode = this.Input.PostalCode,
                 UserRole = userRole.FirstOrDefault(),
             };
 
@@ -143,18 +150,25 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
                 return this.Page();
             }
 
+            if (this.Input.Name != user.Name)
+            {
+                var name = this.Input.Name;
+                await this.applicationUserService.SetNameToUserAsync(user, name);
+            }
+
             if (this.Input.UserName != user.UserName)
             {
                var setUserNameResult = await this.userManager.SetUserNameAsync(user, this.Input.UserName);
 
                if (!setUserNameResult.Succeeded)
                 {
-                    this.StatusMessage = "Unexpected error when trying to set user name.";
+                    this.StatusMessage = "Unexpected error when trying to set username.";
                     return this.RedirectToPage();
                 }
             }
 
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
+
             if (this.Input.PhoneNumber != phoneNumber)
             {
                 var setPhoneResult = await this.userManager.SetPhoneNumberAsync(user, this.Input.PhoneNumber);
@@ -169,6 +183,8 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             {
                await this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
             }
+
+            await this.applicationUserService.SetAdressToUserAsync(user, this.Input.Street, this.Input.Country, this.Input.City, this.Input.PostalCode);
 
             await this.signInManager.RefreshSignInAsync(user);
             this.StatusMessage = "Your profile has been updated";

@@ -17,15 +17,18 @@
         private readonly IDeletableEntityRepository<ApplicationUser> usersRepository;
         private readonly IDeletableEntityRepository<Image> imageRepository;
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly IAdressService adressService;
 
         public ApplicationUserService(
             IDeletableEntityRepository<ApplicationUser> usersRepository,
             IDeletableEntityRepository<Image> imageRepository,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IAdressService adressService)
         {
             this.usersRepository = usersRepository;
             this.imageRepository = imageRepository;
             this.userManager = userManager;
+            this.adressService = adressService;
         }
 
         public async Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath)
@@ -89,6 +92,25 @@
                         Email = user.Email,
                     }))
                 .ToList();
+        }
+
+        public async Task SetNameToUserAsync(ApplicationUser user, string name)
+        {
+            user.Name = name;
+            this.usersRepository.Update(user);
+            await this.usersRepository.SaveChangesAsync();
+        }
+
+        public async Task SetAdressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode)
+        {
+            var adress = await this.adressService.AddUniqueAddressAsync(street, country, city, postalCode);
+
+            if (user.Adresses.FirstOrDefault(a => a.Id == adress.Id) == null)
+            {
+                user.Adresses.Add(adress);
+                this.usersRepository.Update(user);
+                await this.usersRepository.SaveChangesAsync();
+            }
         }
     }
 }

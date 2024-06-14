@@ -60,7 +60,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Adress");
+                    b.ToTable("Adresses");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationRole", b =>
@@ -265,7 +265,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Image", b =>

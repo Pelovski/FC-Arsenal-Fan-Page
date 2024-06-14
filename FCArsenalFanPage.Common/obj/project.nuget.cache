@@ -1,14 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJw9VVbZwcBPrzFr74L2Mus6DT1txIPT5v80UjHsmeUxgoiUThu7t6RAHywGDHcaiOWZG6e/FpmLDOY+s3Gz5Q==",
+  "dgSpecHash": "QOGdLdUeZPQDfwsDGW5VkKNRLwBgwHiq0m8nS5HZxcFVqynhfTsiDnBilmc73wGgLaNgFdFn3Ed6aJCel3HaSQ==",
   "success": true,
   "projectFilePath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\FCArsenalFanPage.Common\\FCArsenalFanPage.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pavel\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
-    "C:\\Users\\Pavel\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
-    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
-    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
-    "C:\\Users\\Pavel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+    "C:\\Users\\Pavel\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
   ],
   "logs": []
 }
