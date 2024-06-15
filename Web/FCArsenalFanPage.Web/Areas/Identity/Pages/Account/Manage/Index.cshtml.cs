@@ -9,7 +9,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
     using System.Linq;
     using System.Runtime.InteropServices;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.Infrastructure;
@@ -25,17 +25,20 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IApplicationUserService applicationUserService;
         private readonly IWebHostEnvironment environment;
+        private readonly IAdressService adressService;
 
         public IndexModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IApplicationUserService applicationUserService,
-            IWebHostEnvironment environment)
+            IWebHostEnvironment environment,
+            IAdressService adressService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.applicationUserService = applicationUserService;
             this.environment = environment;
+            this.adressService = adressService;
         }
 
         /// <summary>
@@ -82,15 +85,19 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [ImageExtensionValidation(new string[] { ".jpg", ".gif", ".png" })]
             public IFormFile ProfilePicture { get; set; }
 
+            [Required]
             public string Street { get; set; }
 
+            [Required]
             public string Country { get; set; }
 
+             [Required]
             public string City { get; set; }
 
+            [Required]
             public int PostalCode { get; set; }
 
-            public string? ImageUrl { get; set; }
+            public string ImageUrl { get; set; }
 
             public string UserRole { get; set; }
         }
@@ -100,19 +107,23 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
             var userRole = await this.userManager.GetRolesAsync(user);
-            var test = user.Adresses;
+            var userAdresses = this.adressService.GetAdressesByUser(user).LastOrDefault();
 
             this.Input = new InputModel
             {
                 Name = user.Name,
                 UserName = userName,
                 PhoneNumber = phoneNumber,
-                Street = "",
-                //Country = this.Input.Country,
-                //City = this.Input.City,
-                //PostalCode = this.Input.PostalCode,
                 UserRole = userRole.FirstOrDefault(),
             };
+
+            if (userAdresses != null)
+            {
+                this.Input.Street = userAdresses.Name;
+                this.Input.Country = userAdresses.Country;
+                this.Input.City = userAdresses.City;
+                this.Input.PostalCode = userAdresses.PostalCode;
+            }
 
             if (user.ProfilePictureId != null)
             {
