@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -42,6 +43,14 @@
             await this.adressRepository.SaveChangesAsync();
 
             return newAdress;
+        }
+
+        public ICollection<Adress> GetAdressesByUser(ApplicationUser user)
+        {
+            return this.adressRepository
+                .AllAsNoTracking()
+                .Where(a => a.UserId == user.Id)
+                .ToList();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 #nullable disable
 
     using System;
-
+    using FCArsenalFanPage.Data.Models;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
     /// <summary>
@@ -19,6 +19,8 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
         public static string Index => "Index";
+
+        public static string Address => "Adress";
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -67,6 +69,8 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
+
+        public static string AddressNavClass(ViewContext viewContext) => PageNavClass(viewContext, Address);
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
