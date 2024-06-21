@@ -7,7 +7,7 @@
 
     public interface IAdressService
     {
-        Task<Adress> AddUniqueAddressAsync(string street, string country, string city, int postalCode);
+        Task<Adress> AddUniqueAddressAsync(ApplicationUser user, string street, string country, string city, int postalCode);
 
         ICollection<Adress> GetAdressesByUser(ApplicationUser user);
     }

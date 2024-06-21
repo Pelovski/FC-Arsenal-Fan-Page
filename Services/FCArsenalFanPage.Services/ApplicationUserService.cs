@@ -103,7 +103,7 @@
 
         public async Task SetAdressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode)
         {
-            var adress = await this.adressService.AddUniqueAddressAsync(street, country, city, postalCode);
+            var adress = await this.adressService.AddUniqueAddressAsync(user, street, country, city, postalCode);
 
             if (user.Adresses.FirstOrDefault(a => a.Id == adress.Id) == null)
             {

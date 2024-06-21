@@ -17,10 +17,13 @@
             this.adressRepository = adressRepository;
         }
 
-        public async Task<Adress> AddUniqueAddressAsync(string street, string country, string city, int postalCode)
+        public async Task<Adress> AddUniqueAddressAsync(ApplicationUser user, string street, string country, string city, int postalCode)
         {
 
-            var existingAddress = this.adressRepository.All()
+            var addresses = this.GetAdressesByUser(user);
+
+            var existingAddress = this.adressRepository
+                .All()
                 .FirstOrDefault(a => a.Name == street &&
                 a.Country == country &&
                 a.City == city &&
@@ -31,7 +34,7 @@
                 return existingAddress;
             }
 
-            var newAdress = new Adress
+            var newAddress = new Adress
             {
                Name = street,
                Country = country,
@@ -39,10 +42,19 @@
                PostalCode = postalCode,
             };
 
-            await this.adressRepository.AddAsync(newAdress);
+            if (addresses.Count == 3)
+            {
+                var firstAddress = addresses.First();
+                firstAddress = newAddress;
+
+                await this.adressRepository.SaveChangesAsync();
+                return newAddress;
+            }
+
+            await this.adressRepository.AddAsync(newAddress);
             await this.adressRepository.SaveChangesAsync();
 
-            return newAdress;
+            return newAddress;
         }
 
         public ICollection<Adress> GetAdressesByUser(ApplicationUser user)

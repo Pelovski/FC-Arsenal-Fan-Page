@@ -1,4 +1,9 @@
 ﻿@model CheckoutViewModel
+
+@{
+    ViewData["Title"] = "Checkout";
+    var adressCount = 1;
+}
     <div class="breadcrumb-section breadcrumb-bg">
     </div>
 
@@ -24,44 +29,51 @@
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="mb-3">
-                                                                <label class="form-label" for="billing-name">Name</label>
-                                                                <input type="text" value="@Model.Name" class="form-control" id="billing-name" placeholder="Enter name">
+                                                                <label asp-for="Name" class="form-label" for="billing-name"></label>
+                                                                <input asp-for="Name" type="text" value="@Model.Name" class="form-control text-black" id="billing-name" placeholder="Enter name">
+                                                                <span asp-validation-for="Name" class="text-danger text-black"></span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
                                                             <div class="mb-3">
-                                                                <label class="form-label" for="billing-email-address">Email Address</label>
-                                                                <input type="email" class="form-control" id="billing-email-address" placeholder="Enter email">
+                                                                <label asp-for="Email" class="form-label" for="billing-email-address">E-Mail</label>
+                                                                <input asp-for="Email" type="email" class="form-control text-black" id="billing-email-address" placeholder="Enter email">
+                                                                <span asp-validation-for="Email" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
                                                             <div class="mb-3">
-                                                                <label class="form-label" for="billing-phone">Phone</label>
-                                                                <input type="text" class="form-control" id="billing-phone" placeholder="Enter Phone no.">
+                                                                <label asp-for="PhoneNumber" class="form-label" for="billing-phone">Phone</label>
+                                                                <input asp-for="PhoneNumber" type="text" class="form-control text-black" id="billing-phone" placeholder="Enter Phone no.">
+                                                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label class="form-label" for="billing-address">Address</label>
-                                                    <textarea class="form-control not-here" id="billing-address" rows="3" placeholder="Enter full address"></textarea>
+                                                        <label asp-for="Street" class="form-label" for="billing-address"></label>
+                                                        <input asp-for="Street" type="text" class="form-control text-black" id="billing-address" rows="3" placeholder="Enter full address"></inpu>
+                                                        <span asp-validation-for="Street" class="text-danger"></span>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="mb-4 mb-lg-0">
-                                                                <label class="form-label">Country</label>
-                                                            <input type="text" class="form-control" id="billing-city" placeholder="Enter Country">
+                                                            <label asp-for="Country" class="form-label"></label>
+                                                            <input asp-for="Country" type="text" class="form-control text-black" id="billing-city" placeholder="Enter Country">
+                                                            <span asp-validation-for="Country" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
                                                             <div class="mb-4 mb-lg-0">
-                                                                <label class="form-label" for="billing-city">City</label>
-                                                                <input type="text" class="form-control" id="billing-city" placeholder="Enter City">
+                                                                <label asp-for="City" class="form-label" for="billing-city"></label>
+                                                                <input asp-for="City" type="text" class="form-control text-black" id="billing-city" placeholder="Enter City">
+                                                                <span asp-validation-for="City" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-4">
                                                             <div class="mb-0">
-                                                                <label class="form-label" for="zip-code">Zip / Postal code</label>
-                                                                <input type="text" class="form-control" id="zip-code" placeholder="Enter Postal code">
+                                                                <label asp-for="PostalCode" class="form-label" for="zip-code">Zip / Postal code</label>
+                                                                <input asp-for="PostalCode" type="text" class="form-control text-black" id="zip-code" placeholder="Enter Postal code">
+                                                                <span asp-validation-for="PostalCode" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -83,15 +95,18 @@
                                         <p class="text-muted text-truncate mb-4">Neque porro quisquam est</p>
                                         <div class="mb-3">
                                             <div class="row">
+                                            @foreach(var adress in Model.Adresses)
+                                           {
                                                 <div class="col-lg-4 col-sm-6">
                                                     <div data-bs-toggle="collapse">
                                                         <label class="card-radio-label mb-0">
                                                             <input type="radio" name="address" id="info-address1" class="card-radio-input" checked>
                                                             <div class="card-radio text-truncate p-3">
-                                                                <span class="fs-14 mb-4 d-block">Address 1</span>
-                                                                <span class="fs-14 mb-2 d-block">Bradley McMillian</span>
-                                                                <span class="text-muted fw-normal text-wrap mb-1 d-block">109 Clarksburg Park Road Show Low, AZ 85901</span>
-                                                                <span class="text-muted fw-normal d-block">Mo. 012-345-6789</span>
+                                                                <span class="fs-14 mb-4 d-block">Address @adressCount</span>
+                                                                <span class="fs-14 mb-2 d-block">@Model.Name</span>
+                                                                <span class="text-muted fw-normal text-wrap mb-1 d-block">@adress.Country, @adress.City, </span>
+                                                                <span class="text-muted fw-normal d-block">@adress.Name, @adress.PostalCode</span>
+                                                                <span class="text-muted fw-normal d-block">@adress.PostalCode</span>
                                                             </div>
                                                         </label>
                                                         <div class="edit-btn bg-light  rounded">
@@ -101,24 +116,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-4 col-sm-6">
-                                                    <div>
-                                                        <label class="card-radio-label mb-0">
-                                                            <input type="radio" name="address" id="info-address2" class="card-radio-input">
-                                                            <div class="card-radio text-truncate p-3">
-                                                                <span class="fs-14 mb-4 d-block">Address 2</span>
-                                                                <span class="fs-14 mb-2 d-block">Bradley McMillian</span>
-                                                                <span class="text-muted fw-normal text-wrap mb-1 d-block">109 Clarksburg Park Road Show Low, AZ 85901</span>
-                                                                <span class="text-muted fw-normal d-block">Mo. 012-345-6789</span>
-                                                            </div>
-                                                        </label>
-                                                        <div class="edit-btn bg-light  rounded">
-                                                            <a href="#" data-bs-toggle="tooltip" data-placement="top" title data-bs-original-title="Edit">
-                                                                <i class="bx bx-pencil font-size-16"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+
+                                                adressCount++;
+                                            }
+                                            
+                                               
                                             </div>
                                         </div>
                                     </div>  
@@ -180,7 +182,7 @@
                 </div>
                 <div class="row my-4">
                     <div class="col">
-                        <a href="ecommerce-products.html" class="btn btn-link text-muted">
+                    <a asp-controller="Shop" asp-action="All" class="btn btn-link text-muted">
                             <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping
                         </a>
                     </div>

@@ -11,11 +11,14 @@
     public class OrderService : IOrderService
     {
         private readonly IDeletableEntityRepository<Order> orderRepository;
+        private readonly IAdressService adressService;
 
         public OrderService(
-            IDeletableEntityRepository<Order> orderRepository)
+            IDeletableEntityRepository<Order> orderRepository,
+            IAdressService adressService)
         {
             this.orderRepository = orderRepository;
+            this.adressService = adressService;
         }
 
         public async Task CreateAsync(CreateOrderInputModel input, string userId, int quantity)
@@ -133,6 +136,7 @@
         {
 
             var orders = this.GetAllByUserId(user.Id);
+            var adresses = this.adressService.GetAdressesByUser(user);
 
 
             if (!orders.Any())
@@ -149,6 +153,7 @@
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Orders = orders,
+                Adresses = adresses,
                 TotalPrice = totalPrice,
             };
 
