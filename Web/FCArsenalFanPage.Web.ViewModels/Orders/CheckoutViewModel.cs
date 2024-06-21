@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.Orders
 {
     using System.Collections.Generic;
+
     using FCArsenalFanPage.Data.Models;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -14,7 +15,7 @@
 
         public string? PhoneNumber { get; set; }
 
-        public string? Adress { get; set; }
+        public string? Street { get; set; }
 
         public string? Country { get; set; }
 

@@ -68,7 +68,6 @@
         }
 
         [Authorize]
-        //TODO: If null redirect to Shop
         public async Task<IActionResult> Checkout()
         {
             var user = await this.userManager.GetUserAsync(this.User);
@@ -78,6 +77,8 @@
             {
                 return this.Redirect("Cart");
             }
+
+
 
             return this.View(viewModel);
         }
