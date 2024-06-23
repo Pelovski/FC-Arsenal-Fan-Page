@@ -21,7 +21,7 @@
 
         public string? City { get; set; }
 
-        public int? PostalCode { get; set; }
+        public int PostalCode { get; set; }
 
         public double TotalPrice { get; set; }
 

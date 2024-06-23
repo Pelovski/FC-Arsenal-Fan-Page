@@ -3,28 +3,36 @@
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
-	using FCArsenalFanPage.Data.Models;
-	using FCArsenalFanPage.Services;
+
+    using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Orders;
     using Microsoft.AspNetCore.Authorization;
-	using Microsoft.AspNetCore.Identity;
-	using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Components.Forms;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
 
     public class OrdersController : BaseController
     {
         private readonly IProductService productService;
         private readonly IOrderService orderService;
-		private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly IApplicationUserService userService;
+        private readonly IAdressService adressService;
 
-		public OrdersController(
+        public OrdersController(
             IProductService productService,
             IOrderService orderService,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IApplicationUserService userService,
+            IAdressService adressService)
         {
             this.productService = productService;
             this.orderService = orderService;
-			this.userManager = userManager;
-		}
+            this.userManager = userManager;
+            this.userService = userService;
+            this.adressService = adressService;
+        }
 
         [Authorize]
         public IActionResult Cart()
@@ -81,6 +89,22 @@
 
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Checkout(CheckoutViewModel input)
+        {
+            var user = await this.userManager.GetUserAsync(this.User);
+
+            var newAdress = await this.userService.SetAdressToUserAsync(user, input.Street, input.Country, input.City, input.PostalCode);
+
+            if (!newAdress)
+            {
+                // TODO: this adress exist alredy, please enter another one
+            }
+
+            return this.RedirectToAction("Checkout");
         }
     }
 }
