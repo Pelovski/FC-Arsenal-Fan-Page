@@ -38,17 +38,9 @@
         border-left: 2px solid #f5f6f8
     }
 
-        .activity-checkout .checkout-item:first-child {
-            border-color: #3b76e1
-        }
+       
 
-            .activity-checkout .checkout-item:first-child:after {
-                background-color: #3b76e1
-            }
-
-        .activity-checkout .checkout-item:last-child {
-            border-color: transparent
-        }
+        
 
         .activity-checkout .checkout-item.crypto-activity {
             margin-left: 50px

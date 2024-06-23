@@ -22,10 +22,11 @@
                                 <div class="feed-item-list">
                                     <div>
                                         <h5 class="font-size-16 mb-1">Billing Info</h5>
-                                        <p class="text-muted text-truncate mb-4">Sed ut perspiciatis unde omnis iste</p>
+                                        <p class="text-muted text-truncate mb-4">Set the data for the shippment</p>
                                         <div class="mb-3">
-                                           
+
                                                 <div>
+                                            <form method="post" asp-controller="Orders" asp-action="Checkout">
                                                     <div class="row">
                                                         <div class="col-lg-4">
                                                             <div class="mb-3">
@@ -77,8 +78,14 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                <div class="text-end mt-4 ">
+                                                <button class="btn cart-update-btn" type="submit">
+                                                    <i class="fa-solid fa-plus"></i>  Add New Shipping Info
+                                                </button>
+                                               </div>
+                                            </form>
                                                 </div>
-                                           
                                         </div>
                                     </div>
                                 </div>
@@ -90,6 +97,8 @@
                                     </div>
                                 </div>
                                 <div class="feed-item-list">
+
+                                    @* Shippng info starts *@
                                     <div>
                                         <h5 class="font-size-16 mb-1">Shipping Info</h5>
                                         <p class="text-muted text-truncate mb-4">Neque porro quisquam est</p>
