@@ -147,17 +147,17 @@
 
             var totalPrice = this.GetTotalPrice(orders);
 
-            var result = new CheckoutViewModel()
+            var viewModel = new CheckoutViewModel()
             {
                 Name = user.Name,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Orders = orders,
-                Adresses = adresses,
+                Adresses = adresses.OrderByDescending(x => x.CreatedOn),
                 TotalPrice = totalPrice,
             };
 
-            return result;
+            return viewModel;
         }
     }
 }

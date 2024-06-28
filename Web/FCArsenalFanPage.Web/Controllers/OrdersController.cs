@@ -86,8 +86,6 @@
                 return this.Redirect("Cart");
             }
 
-
-
             return this.View(viewModel);
         }
 
@@ -96,12 +94,23 @@
         public async Task<IActionResult> Checkout(CheckoutViewModel input)
         {
             var user = await this.userManager.GetUserAsync(this.User);
+            var data = this.orderService.GetOrderData(user);
+
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
 
             var newAdress = await this.userService.SetAdressToUserAsync(user, input.Street, input.Country, input.City, input.PostalCode);
 
             if (!newAdress)
             {
-                // TODO: this adress exist alredy, please enter another one
+                input.ErrorMessage = "This address already exists. Please enter another one.";
+                input.Adresses = data.Adresses;
+                input.Orders = data.Orders;
+                input.TotalPrice = data.TotalPrice;
+
+                return this.View(input);
             }
 
             return this.RedirectToAction("Checkout");

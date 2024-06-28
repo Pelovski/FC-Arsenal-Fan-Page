@@ -45,10 +45,7 @@
             if (addresses.Count == 3)
             {
                 var firstAddress = addresses.First();
-                firstAddress = newAddress;
-
-                await this.adressRepository.SaveChangesAsync();
-                return newAddress;
+                this.adressRepository.Delete(firstAddress);
             }
 
             await this.adressRepository.AddAsync(newAddress);
