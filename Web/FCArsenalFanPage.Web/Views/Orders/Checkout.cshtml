@@ -2,151 +2,154 @@
 
 @{
     ViewData["Title"] = "Checkout";
-    var adressCount = 1;
+    var addressCount = 1;
 }
     <div class="breadcrumb-section breadcrumb-bg">
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-8">
-            <div class="checkout-card">
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8">
+
+            <!-- First Form: Billing Info -->
+            <form method="post" asp-controller="Orders" asp-action="AddAddress">
+                <div class="checkout-card mt-3">
                     <div class="card-body">
                         <ol class="activity-checkout mb-0 px-4 mt-3">
                             <li class="checkout-item">
-                            <div class="checkout-avatar checkout-icon p-1">
-                                <div class="checkout-avatar-title rounded-circle bg-primary">
+                                <div class="checkout-avatar checkout-icon p-1">
+                                    <div class="checkout-avatar-title rounded-circle bg-primary">
                                         <i class="bx bxs-receipt text-white font-size-20"></i>
                                     </div>
                                 </div>
                                 <div class="feed-item-list">
                                     <div>
                                         <h5 class="font-size-16 mb-1">Billing Info</h5>
-                                        <p class="text-muted text-truncate mb-4">Set the data for the shippment</p>
+                                        <p class="text-muted text-truncate mb-4">Set the data for the shipment</p>
                                         <div class="mb-3">
-
-                                        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                                        {
-                                            <div class="alert alert-danger" id="error-message">
-                                                @Model.ErrorMessage
-                                            </div>
-                                        }
-
-                                                <div>
-                                            <form method="post" asp-controller="Orders" asp-action="Checkout">
-                                                    <div class="row">
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-3">
-                                                                <label asp-for="Name" class="form-label" for="billing-name"></label>
-                                                                <input asp-for="Name" type="text" value="@Model.Name" class="form-control text-black" id="billing-name" placeholder="Enter name">
-                                                                <span asp-validation-for="Name" class="text-danger text-black"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-3">
-                                                                <label asp-for="Email" class="form-label" for="billing-email-address">E-Mail</label>
-                                                                <input asp-for="Email" type="email" class="form-control text-black" id="billing-email-address" placeholder="Enter email">
-                                                                <span asp-validation-for="Email" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-3">
-                                                                <label asp-for="PhoneNumber" class="form-label" for="billing-phone">Phone</label>
-                                                                <input asp-for="PhoneNumber" type="text" class="form-control text-black" id="billing-phone" placeholder="Enter Phone no.">
-                                                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label asp-for="Street" class="form-label" for="billing-address"></label>
-                                                        <input asp-for="Street" type="text" class="form-control text-black" id="billing-address" rows="3" placeholder="Enter full address"></inpu>
-                                                        <span asp-validation-for="Street" class="text-danger"></span>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-4 mb-lg-0">
-                                                            <label asp-for="Country" class="form-label"></label>
-                                                            <input asp-for="Country" type="text" class="form-control text-black" id="billing-city" placeholder="Enter Country">
-                                                            <span asp-validation-for="Country" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-4 mb-lg-0">
-                                                                <label asp-for="City" class="form-label" for="billing-city"></label>
-                                                                <input asp-for="City" type="text" class="form-control text-black" id="billing-city" placeholder="Enter City">
-                                                                <span asp-validation-for="City" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-4">
-                                                            <div class="mb-0">
-                                                                <label asp-for="PostalCode" class="form-label" for="zip-code">Zip / Postal code</label>
-                                                                <input asp-for="PostalCode" type="text" class="form-control text-black" id="zip-code" placeholder="Enter Postal code">
-                                                                <span asp-validation-for="PostalCode" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                <div class="text-end mt-4 ">
-                                                <button class="btn cart-update-btn" type="submit">
-                                                    <i class="fa-solid fa-plus"></i>  Add New Shipping Info
-                                                </button>
-                                               </div>
-                                            </form>
+                                            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                                            {
+                                                <div class="alert alert-danger" id="error-message">
+                                                    @Model.ErrorMessage
                                                 </div>
+                                            }
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label asp-for="Name" class="form-label" for="billing-name"></label>
+                                                            <input asp-for="Name" type="text" value="@Model.Name" class="form-control text-black" id="billing-name" placeholder="Enter name">
+                                                            <span asp-validation-for="Name" class="text-danger text-black"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label asp-for="Email" class="form-label" for="billing-email-address">E-Mail</label>
+                                                            <input asp-for="Email" type="email" class="form-control text-black" id="billing-email-address" placeholder="Enter email">
+                                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-3">
+                                                            <label asp-for="PhoneNumber" class="form-label" for="billing-phone">Phone</label>
+                                                            <input asp-for="PhoneNumber" type="text" class="form-control text-black" id="billing-phone" placeholder="Enter Phone no.">
+                                                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label asp-for="Street" class="form-label" for="billing-address"></label>
+                                                    <input asp-for="Street" type="text" class="form-control text-black" id="billing-address" rows="3" placeholder="Enter full address">
+                                                    <span asp-validation-for="Street" class="text-danger"></span>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label asp-for="Country" class="form-label"></label>
+                                                            <input asp-for="Country" type="text" class="form-control text-black" id="billing-country" placeholder="Enter Country">
+                                                            <span asp-validation-for="Country" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label asp-for="City" class="form-label" for="billing-city"></label>
+                                                            <input asp-for="City" type="text" class="form-control text-black" id="billing-city" placeholder="Enter City">
+                                                            <span asp-validation-for="City" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="mb-0">
+                                                            <label asp-for="PostalCode" class="form-label" for="zip-code">Zip / Postal code</label>
+                                                            <input asp-for="PostalCode" type="text" class="form-control text-black" id="zip-code" placeholder="Enter Postal code">
+                                                            <span asp-validation-for="PostalCode" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-end mt-4">
+                                                    <button class="btn cart-update-btn" type="submit">
+                                                        <i class="fa-solid fa-plus"></i> Add New Shipping Info
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
+                        </ol>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Second Form: Shipping Info and Payment Info -->
+            <form asp-controller="Orders" asp-action="CreateOrderStatus" method="post">
+                <div class="checkout-card">
+                    <div class="card-body">
+                        <ol class="activity-checkout mb-0 px-4 mt-3">
                             <li class="checkout-item">
-                            <div class="checkout-avatar checkout-icon p-1">
-                                <div class="checkout-avatar-title rounded-circle bg-primary">
+                                <div class="checkout-avatar checkout-icon p-1">
+                                    <div class="checkout-avatar-title rounded-circle bg-primary">
                                         <i class="bx bxs-truck text-white font-size-20"></i>
                                     </div>
                                 </div>
                                 <div class="feed-item-list">
-
-                                    @* Shippng info starts *@
                                     <div>
                                         <h5 class="font-size-16 mb-1">Shipping Info</h5>
                                         <p class="text-muted text-truncate mb-4">Your current Addresses</p>
                                         <div class="mb-3">
                                             <div class="row">
-                                          
-                                            @foreach(var adress in Model.Adresses)
-                                           {
-                                                <div class="col-lg-4 col-sm-6">
-                                                    <div data-bs-toggle="collapse">
-                                                        <label class="card-radio-label mb-0">
-                                                            <input type="radio" name="address" id="info-address1" class="card-radio-input" checked>
-                                                            <div class="card-radio text-truncate p-3">
-                                                                <span class="fs-14 mb-4 d-block">Address @adressCount</span>
-                                                                <span class="fs-14 mb-2 d-block">@Model.Name</span>
-                                                                <span class="text-muted fw-normal text-wrap mb-1 d-block">@adress.Country, @adress.City</span>
-                                                                <span class="text-muted fw-normal d-block">@adress.Name, @adress.PostalCode</span>
-                                                                <span class="text-muted fw-normal d-block">@adress.PostalCode</span>
-                                                            </div>
-                                                        </label>
-                                                        
+                                                @foreach (var address in Model.Adresses)
+                                                {
+                                                    <div class="col-lg-4 col-sm-6">
+                                                        <div data-bs-toggle="collapse">
+                                                            <label class="card-radio-label mb-0">
+                                                                <input type="radio" name="addressId" value="@address.Id" class="card-radio-input" checked>
+                                                                <div class="card-radio text-truncate p-3">
+                                                                    <span class="fs-14 mb-4 d-block">Address @addressCount</span>
+                                                                    <span class="fs-14 mb-2 d-block">@Model.Name</span>
+                                                                    <span class="text-muted fw-normal text-wrap mb-1 d-block">@address.Country, @address.City</span>
+                                                                    <span class="text-muted fw-normal d-block">@address.Name, @address.PostalCode</span>
+                                                                    <span class="text-muted fw-normal d-block">@address.PostalCode</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
                                                     </div>
-                                                </div>
-
-                                                adressCount++;
-                                            }
+                                                    addressCount++;
+                                                }
                                             </div>
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
                             </li>
                             <li class="checkout-item">
-                            <div class="checkout-avatar checkout-icon p-1">
-                                <div class="checkout-avatar-title rounded-circle bg-primary">
+                                <div class="checkout-avatar checkout-icon p-1">
+                                    <div class="checkout-avatar-title rounded-circle bg-primary">
                                         <i class="bx bxs-wallet-alt text-white font-size-20"></i>
                                     </div>
                                 </div>
                                 <div class="feed-item-list">
                                     <div>
                                         <h5 class="font-size-16 mb-1">Payment Info</h5>
-                                    <p class="text-muted text-truncate mb-4">Please choose your paymand methode</p>
+                                        <p class="text-muted text-truncate mb-4">Please choose your payment method</p>
                                     </div>
                                     <div>
                                         <h5 class="font-size-14 mb-3">Payment method :</h5>
@@ -154,7 +157,7 @@
                                             <div class="col-lg-3 col-sm-6">
                                                 <div data-bs-toggle="collapse">
                                                     <label class="card-radio-label">
-                                                        <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input">
+                                                        <input type="radio" name="paymethod" value="DebitCard" id="pay-methodoption1" class="card-radio-input">
                                                         <span class="card-radio py-3 text-center text-truncate">
                                                             <i class="bx bx-credit-card d-block h2 mb-3"></i>
                                                             Credit / Debit Card
@@ -165,7 +168,7 @@
                                             <div class="col-lg-3 col-sm-6">
                                                 <div>
                                                     <label class="card-radio-label">
-                                                        <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input">
+                                                        <input type="radio" name="paymethod" value="Paypal" id="pay-methodoption2" class="card-radio-input">
                                                         <span class="card-radio py-3 text-center text-truncate">
                                                             <i class="bx bxl-paypal d-block h2 mb-3"></i>
                                                             Paypal
@@ -176,15 +179,27 @@
                                             <div class="col-lg-3 col-sm-6">
                                                 <div>
                                                     <label class="card-radio-label">
-                                                        <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked>
+                                                        <input type="radio" name="paymethod" value="Cash on delivery" id="pay-methodoption3" class="card-radio-input" checked>
                                                         <span class="card-radio py-3 text-center text-truncate">
                                                             <i class="bx bx-money d-block h2 mb-3"></i>
-                                                            <span>Cash on Delivery</span>
+                                                            Cash on Delivery
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-sm-6">
+                                                <div>
+                                                    <label class="card-radio-label">
+                                                        <input type="radio" name="paymethod" value="Bitcoin" id="pay-methodoption4" class="card-radio-input">
+                                                        <span class="card-radio py-3 text-center text-truncate">
+                                                            <i class="bx bx-bitcoin d-block h2 mb-3"></i>
+                                                            Bitcoin
                                                         </span>
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </li>
@@ -193,74 +208,82 @@
                 </div>
                 <div class="row my-4">
                     <div class="col">
-                    <a asp-controller="Shop" asp-action="All" class="btn btn-link text-muted">
+                        <a asp-controller="Shop" asp-action="All" class="btn btn-link text-muted">
                             <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping
                         </a>
                     </div>
                     <div class="col">
                         <div class="text-end mt-2 mt-sm-0">
-                            <a href="#" class="btn btn-success">
-                                <i class="mdi mdi-cart-outline me-1"></i> Procced
-                            </a>
+                            <button type="submit" class="btn cart-update-btn">
+                                <i class="mdi mdi-cart-outline me-1"></i> Place Your Order
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-4">
-                <div class="card checkout-order-summary">
-                    <div class="card-body">
-                        <div class="p-3 bg-light mb-3">
-                            <h5 class="font-size-16 mb-0">Order Summary <span class="float-end ms-2">#MN0124</span></h5>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-centered mb-0 table-nowrap">
-                                <thead>
-                                    <tr>
-                                        <th class="border-top-0" style="width: 110px;" scope="col">Product</th>
-                                        <th class="border-top-0" scope="col">Product quantity and price</th>
-                                        <th class="border-top-0" scope="col">Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach(var order in Model.Orders){
+
+            </form>
+        </div>
+
+
+
+
+        <div class="col-xl-4 mt-3">
+            <div class="card checkout-order-summary">
+                <div class="card-body">
+                    <div class="p-3 bg-light mb-3">
+                        <h5 class="font-size-16 mb-0">Order Summary <span class="float-end ms-2">#MN0124</span></h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-centered mb-0 table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0" style="width: 110px;" scope="col">Product</th>
+                                    <th class="border-top-0" scope="col">Product quantity and price</th>
+                                    <th class="border-top-0" scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var order in Model.Orders)
+                                {
                                     <tr>
                                         <th scope="row"><img class="me-4" src="@order.ImageUrl" alt="product-img" title="product-img"></th>
                                         <td>
                                             <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark"> </a></h5>
-                                      
+
                                             <p class="text-muted mb-0 mt-1">$ @order.Price x @order.Quantity</p>
                                         </td>
                                         <td>$ @order.TotalOrderPrice</td>
                                     </tr>
                                 }
-                                    
-                                    <tr>
-                                        <td colspan="2">
-                                            <h5 class="font-size-14 m-0">Shipping Charge :</h5>
-                                        </td>
-                                        <td>
-                                            $ 25
-                                        </td>
-                                    </tr>
-                                    <tr class="bg-light">
-                                        <td colspan="2">
-                                            <h5 class="font-size-14 m-0">Total:</h5>
-                                        </td>
-                                        <td>
-                                            $@Model.TotalPrice
-                                        </td>
-                                    </tr>
-                                </tbody>
-                              
-                            </table>
-                        </div>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Shipping Charge :</h5>
+                                    </td>
+                                    <td>
+                                        $ 25
+                                    </td>
+                                </tr>
+                                <tr class="bg-light">
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Total:</h5>
+                                    </td>
+                                    <td>
+                                        $@Model.TotalPrice
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-    l
+
+</div>
+
+
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>

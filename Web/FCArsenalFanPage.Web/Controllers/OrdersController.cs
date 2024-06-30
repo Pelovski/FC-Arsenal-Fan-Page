@@ -90,7 +90,7 @@
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Checkout(CheckoutViewModel input)
+        public async Task<IActionResult> AddAddress(CheckoutViewModel input)
         {
             var user = await this.userManager.GetUserAsync(this.User);
             var data = this.orderService.GetOrderData(user);
@@ -122,6 +122,14 @@
         {
 
             var user = await this.userManager.GetUserAsync(this.User);
+
+            return this.View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> CreateOrderStatus(string addressId, string payMethod)
+        {
 
             return this.View();
         }
