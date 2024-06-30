@@ -8,7 +8,6 @@
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Orders;
     using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Components.Forms;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -101,6 +100,7 @@
                 return this.View();
             }
 
+            // Set and chek if address alredy exist
             var newAdress = await this.userService.SetAdressToUserAsync(user, input.Street, input.Country, input.City, input.PostalCode);
 
             if (!newAdress)
@@ -113,7 +113,17 @@
                 return this.View(input);
             }
 
+            //TODO:Create OrderStatus
+
             return this.RedirectToAction("Checkout");
+        }
+
+        public async Task<IActionResult> MyOrders()
+        {
+
+            var user = await this.userManager.GetUserAsync(this.User);
+
+            return this.View();
         }
     }
 }

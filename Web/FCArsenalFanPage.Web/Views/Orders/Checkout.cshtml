@@ -108,11 +108,10 @@
                                     @* Shippng info starts *@
                                     <div>
                                         <h5 class="font-size-16 mb-1">Shipping Info</h5>
-                                        <p class="text-muted text-truncate mb-4">Neque porro quisquam est</p>
+                                        <p class="text-muted text-truncate mb-4">Your current Addresses</p>
                                         <div class="mb-3">
                                             <div class="row">
-
-                                            
+                                          
                                             @foreach(var adress in Model.Adresses)
                                            {
                                                 <div class="col-lg-4 col-sm-6">
@@ -127,18 +126,12 @@
                                                                 <span class="text-muted fw-normal d-block">@adress.PostalCode</span>
                                                             </div>
                                                         </label>
-                                                        <div class="edit-btn bg-light  rounded">
-                                                            <a href="#" data-bs-toggle="tooltip" data-placement="top" title data-bs-original-title="Edit">
-                                                                <i class="bx bx-pencil font-size-16"></i>
-                                                            </a>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
 
                                                 adressCount++;
                                             }
-                                        
-                                               
                                             </div>
                                         </div>
                                     </div>  
@@ -153,7 +146,7 @@
                                 <div class="feed-item-list">
                                     <div>
                                         <h5 class="font-size-16 mb-1">Payment Info</h5>
-                                        <p class="text-muted text-truncate mb-4">Duis arcu tortor, suscipit eget</p>
+                                    <p class="text-muted text-truncate mb-4">Please choose your paymand methode</p>
                                     </div>
                                     <div>
                                         <h5 class="font-size-14 mb-3">Payment method :</h5>
@@ -267,7 +260,7 @@
         </div>
 
     </div>
-
+    l
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
