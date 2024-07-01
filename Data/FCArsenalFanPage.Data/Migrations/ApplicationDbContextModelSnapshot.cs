@@ -22,7 +22,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Adress", b =>
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Address", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -60,7 +60,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Adresses");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationRole", b =>
@@ -407,6 +407,9 @@ namespace FCArsenalFanPage.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AddressId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
@@ -422,9 +425,19 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PaymentMethod")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("AddressId");
+
                     b.HasIndex("IsDeleted");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("OrderStatuses");
                 });
@@ -621,10 +634,10 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Adress", b =>
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.Address", b =>
                 {
                     b.HasOne("FCArsenalFanPage.Data.Models.ApplicationUser", "User")
-                        .WithMany("Adresses")
+                        .WithMany("Addresses")
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
@@ -708,6 +721,21 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("FCArsenalFanPage.Data.Models.OrderStatus", b =>
+                {
+                    b.HasOne("FCArsenalFanPage.Data.Models.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressId");
+
+                    b.HasOne("FCArsenalFanPage.Data.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Address");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Product", b =>
                 {
                     b.HasOne("FCArsenalFanPage.Data.Models.ApplicationUser", "CreatedByUser")
@@ -784,7 +812,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("Adresses");
+                    b.Navigation("Addresses");
 
                     b.Navigation("Claims");
 
