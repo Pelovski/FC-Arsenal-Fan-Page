@@ -30,7 +30,7 @@
 
         public DbSet<Order> Orders { get; set; }
 
-        public DbSet<Adress> Adresses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Comment> Comments { get; set; }
 

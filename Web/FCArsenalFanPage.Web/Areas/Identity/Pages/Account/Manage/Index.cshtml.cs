@@ -25,20 +25,20 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IApplicationUserService applicationUserService;
         private readonly IWebHostEnvironment environment;
-        private readonly IAdressService adressService;
+        private readonly IAddressService addressService;
 
         public IndexModel(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IApplicationUserService applicationUserService,
             IWebHostEnvironment environment,
-            IAdressService adressService)
+            IAddressService addressService)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.applicationUserService = applicationUserService;
             this.environment = environment;
-            this.adressService = adressService;
+            this.addressService = addressService;
         }
 
         /// <summary>
@@ -75,7 +75,6 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
-            //TODO: Add name and adress to the profile
             public string Name { get; set; }
 
             public string UserName { get; set; }
@@ -107,7 +106,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             var userName = await this.userManager.GetUserNameAsync(user);
             var phoneNumber = await this.userManager.GetPhoneNumberAsync(user);
             var userRole = await this.userManager.GetRolesAsync(user);
-            var userAdresses = this.adressService.GetAdressesByUser(user).LastOrDefault();
+            var userAddresses = this.addressService.GetAddressesByUser(user).LastOrDefault();
 
             this.Input = new InputModel
             {
@@ -117,12 +116,12 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
                 UserRole = userRole.FirstOrDefault(),
             };
 
-            if (userAdresses != null)
+            if (userAddresses != null)
             {
-                this.Input.Street = userAdresses.Name;
-                this.Input.Country = userAdresses.Country;
-                this.Input.City = userAdresses.City;
-                this.Input.PostalCode = userAdresses.PostalCode;
+                this.Input.Street = userAddresses.Name;
+                this.Input.Country = userAddresses.Country;
+                this.Input.City = userAddresses.City;
+                this.Input.PostalCode = userAddresses.PostalCode;
             }
 
             if (user.ProfilePictureId != null)
@@ -195,7 +194,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
                await this.applicationUserService.SetProfilePictureAsync(this.Input.ProfilePicture, user, imagePath);
             }
 
-            await this.applicationUserService.SetAdressToUserAsync(user, this.Input.Street, this.Input.Country, this.Input.City, this.Input.PostalCode);
+            await this.applicationUserService.SetAddressToUserAsync(user, this.Input.Street, this.Input.Country, this.Input.City, this.Input.PostalCode);
 
             await this.signInManager.RefreshSignInAsync(user);
             this.StatusMessage = "Your profile has been updated";

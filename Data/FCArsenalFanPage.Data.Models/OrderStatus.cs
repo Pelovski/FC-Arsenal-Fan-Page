@@ -17,7 +17,11 @@
 
         public ApplicationUser User { get; set; }
 
-        public double TotalPrice { get; set; }
+        public string AddressId { get; set; }
+
+        public Address Address { get; set; }
+
+        public string PaymentMethod { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
     }

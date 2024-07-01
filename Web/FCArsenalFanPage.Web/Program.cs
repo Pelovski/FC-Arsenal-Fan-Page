@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Web
 {
+    using System;
     using System.Reflection;
 
     using FCArsenalFanPage.Data;
@@ -34,6 +35,13 @@
 
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(20);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
@@ -72,7 +80,7 @@
             services.AddTransient<ICommentService, CommentService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IOrderService, OrderService>();
-            services.AddTransient<IAdressService, AdressService>();
+            services.AddTransient<IAddressService, AddressService>();
 
             services.AddAuthentication().AddFacebook(opt =>
             {
@@ -117,6 +125,7 @@
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseRouting();
 

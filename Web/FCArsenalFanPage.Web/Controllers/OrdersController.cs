@@ -1,15 +1,20 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
+    using System.Collections.Generic;
+    using System.Data;
     using System.Linq;
     using System.Security.Claims;
+    using System.Text;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.ViewModels.Orders;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Newtonsoft.Json;
 
     public class OrdersController : BaseController
     {
@@ -17,20 +22,20 @@
         private readonly IOrderService orderService;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IApplicationUserService userService;
-        private readonly IAdressService adressService;
+        private readonly IAddressService addressService;
 
         public OrdersController(
             IProductService productService,
             IOrderService orderService,
             UserManager<ApplicationUser> userManager,
             IApplicationUserService userService,
-            IAdressService adressService)
+            IAddressService addressService)
         {
             this.productService = productService;
             this.orderService = orderService;
             this.userManager = userManager;
             this.userService = userService;
-            this.adressService = adressService;
+            this.addressService = addressService;
         }
 
         [Authorize]
@@ -85,6 +90,8 @@
                 return this.Redirect("Cart");
             }
 
+            this.HttpContext.Session.SetString("Orders", JsonConvert.SerializeObject(viewModel.Orders));
+
             return this.View(viewModel);
         }
 
@@ -101,19 +108,17 @@
             }
 
             // Set and chek if address alredy exist
-            var newAdress = await this.userService.SetAdressToUserAsync(user, input.Street, input.Country, input.City, input.PostalCode);
+            var newAddress = await this.userService.SetAddressToUserAsync(user, input.Street, input.Country, input.City, input.PostalCode);
 
-            if (!newAdress)
+            if (!newAddress)
             {
                 input.ErrorMessage = "This address already exists. Please enter another one.";
-                input.Adresses = data.Adresses;
+                input.Addresses = data.Addresses;
                 input.Orders = data.Orders;
                 input.TotalPrice = data.TotalPrice;
 
                 return this.View(input);
             }
-
-            //TODO:Create OrderStatus
 
             return this.RedirectToAction("Checkout");
         }
@@ -128,8 +133,19 @@
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> CreateOrderStatus(string addressId, string payMethod)
+        public async Task<IActionResult> CreateOrderStatus(OrderStatusViewModel input)
         {
+            var areOrdersEmpty = !this.HttpContext.Session.TryGetValue("Orders", out byte[] ordersBytes);
+
+            if (!areOrdersEmpty)
+            {
+                var ordersJson = Encoding.UTF8.GetString(ordersBytes);
+                var orders = JsonConvert.DeserializeObject<List<OrdersInListViewModel>>(ordersJson);
+
+                input.Orders = orders;
+            }
+
+
 
             return this.View();
         }
