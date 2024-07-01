@@ -10,6 +10,6 @@
 
         public IEnumerable<OrdersInListViewModel> Orders { get; set; }
 
-        public IEnumerable<Adress> Adresses { get; set; }
+        public IEnumerable<Address> Addresses { get; set; }
     }
 }

@@ -17,18 +17,18 @@
         private readonly IDeletableEntityRepository<ApplicationUser> usersRepository;
         private readonly IDeletableEntityRepository<Image> imageRepository;
         private readonly UserManager<ApplicationUser> userManager;
-        private readonly IAdressService adressService;
+        private readonly IAddressService addressService;
 
         public ApplicationUserService(
             IDeletableEntityRepository<ApplicationUser> usersRepository,
             IDeletableEntityRepository<Image> imageRepository,
             UserManager<ApplicationUser> userManager,
-            IAdressService adressService)
+            IAddressService addressService)
         {
             this.usersRepository = usersRepository;
             this.imageRepository = imageRepository;
             this.userManager = userManager;
-            this.adressService = adressService;
+            this.addressService = addressService;
         }
 
         public async Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath)
@@ -101,16 +101,16 @@
             await this.usersRepository.SaveChangesAsync();
         }
 
-        public async Task<bool> SetAdressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode)
+        public async Task<bool> SetAddressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode)
         {
-            var adress = await this.adressService.AddUniqueAddressAsync(user, street, country, city, postalCode);
+            var address = await this.addressService.AddUniqueAddressAsync(user, street, country, city, postalCode);
 
-            if (user.Adresses.FirstOrDefault(a => a.Id == adress.Id) != null)
+            if (user.Addresses.FirstOrDefault(a => a.Id == address.Id) != null)
             {
                 return false;
             }
 
-            user.Adresses.Add(adress);
+            user.Addresses.Add(address);
             this.usersRepository.Update(user);
             await this.usersRepository.SaveChangesAsync();
             return true;
