@@ -142,7 +142,7 @@
                 var ordersJson = Encoding.UTF8.GetString(ordersBytes);
                 var orders = JsonConvert.DeserializeObject<List<OrdersInListViewModel>>(ordersJson);
 
-                input.Orders = orders;
+               
             }
 
 

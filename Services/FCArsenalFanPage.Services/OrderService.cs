@@ -89,6 +89,14 @@
                 .ToList();
         }
 
+        public ICollection<Order> GetAllOrdersByUserId(string userId)
+        {
+            return this.orderRepository
+                .All()
+                .Where (x => x.UserId == userId)
+                .ToList();
+        }
+
         public int GetCountByUserId(string userId)
         {
             return this.orderRepository
