@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
+
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels.Orders;
 
@@ -22,5 +23,7 @@
         double GetTotalPrice(IEnumerable<OrdersInListViewModel> orders);
 
         IEnumerable<OrdersInListViewModel> GetAllByUserId(string userId);
+
+        ICollection<Order> GetAllOrdersByUserId(string userId);
     }
 }

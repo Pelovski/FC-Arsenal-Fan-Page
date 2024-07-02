@@ -81,6 +81,7 @@
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IAddressService, AddressService>();
+            services.AddTransient<IOrderStatusService, OrderStatusService>();
 
             services.AddAuthentication().AddFacebook(opt =>
             {

@@ -23,6 +23,8 @@
 
         public int OrderStatusId { get; set; }
 
+        public double TotalPrice { get; set; }
+
         public virtual OrderStatus Status { get; set; }
     }
 }
