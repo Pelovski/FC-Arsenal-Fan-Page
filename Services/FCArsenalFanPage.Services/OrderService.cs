@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -161,11 +162,18 @@
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Orders = orders,
-                Addresses = addresses.OrderByDescending(x => x.CreatedOn),
+                Addresses = addresses,
                 TotalPrice = totalPrice,
             };
 
             return viewModel;
+        }
+
+        public string GenerateOrderNumber()
+        {
+            string orderIdPrefix = "COM-";
+
+            return orderIdPrefix + Guid.NewGuid().ToString("N").ToUpper().Substring(0, 9);
         }
     }
 }

@@ -116,6 +116,7 @@
                                         <h5 class="font-size-16 mb-1">Shipping Info</h5>
                                         <p class="text-muted text-truncate mb-4">Your current Addresses</p>
                                         <div class="mb-3">
+
                                             <div class="row">
                                                 @foreach (var address in Model.Addresses)
                                                 {
@@ -127,7 +128,7 @@
                                                                     <span class="fs-14 mb-4 d-block">Address @addressCount</span>
                                                                     <span class="fs-14 mb-2 d-block">@Model.Name</span>
                                                                     <span class="text-muted fw-normal text-wrap mb-1 d-block">@address.Country, @address.City</span>
-                                                                    <span class="text-muted fw-normal d-block">@address.Name, @address.PostalCode</span>
+                                                                    <span class="text-muted fw-normal d-block">@address.Name</span>
                                                                     <span class="text-muted fw-normal d-block">@address.PostalCode</span>
                                                                 </div>
                                                             </label>

@@ -1,9 +1,12 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.ViewModels.Orders;
 
     public class OrderStatusService : IOrderStatusService
     {
@@ -18,17 +21,27 @@
             this.orderService = orderService;
         }
 
-        public async Task CreateAsync(string addressId, string paymentMethod, string userId)
+        public async Task CreateAsync(string addressId, string paymentMethod, IEnumerable<OrdersInListViewModel> orders)
         {
-            var orders = this.orderService.GetAllOrdersByUserId(userId);
+            var totalPrice = this.orderService.GetTotalPrice(orders);
+            var userId = orders.First().UserId;
+            var currentOrders = this.orderService.GetAllOrdersByUserId(userId);
+            var orderNumber = this.orderService.GenerateOrderNumber();
+
 
             var orderStatus = new OrderStatus
             {
                 AddressId = addressId,
                 PaymentMethod = paymentMethod,
                 UserId = userId,
-                Orders = orders,
+                Orders = currentOrders,
+                TotalPrice = totalPrice,
+                OrderNumber = orderNumber,
             };
+
+            await this.orderStatusRepository.AddAsync(orderStatus);
+            await this.orderStatusRepository.SaveChangesAsync();
+
         }
     }
 }
