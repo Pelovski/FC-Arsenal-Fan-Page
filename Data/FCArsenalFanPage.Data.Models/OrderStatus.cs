@@ -1,7 +1,7 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
     using System.Collections.Generic;
-    using System.Reflection.Metadata.Ecma335;
+
     using FCArsenalFanPage.Data.Common.Models;
 
     public class OrderStatus : BaseDeletableModel<int>
@@ -22,6 +22,8 @@
         public Address Address { get; set; }
 
         public string PaymentMethod { get; set; }
+
+        public string OrderNumber { get; set; }
 
         public double TotalPrice { get; set; }
 

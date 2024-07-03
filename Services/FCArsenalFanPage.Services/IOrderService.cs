@@ -25,5 +25,7 @@
         IEnumerable<OrdersInListViewModel> GetAllByUserId(string userId);
 
         ICollection<Order> GetAllOrdersByUserId(string userId);
+
+        public string GenerateOrderNumber();
     }
 }

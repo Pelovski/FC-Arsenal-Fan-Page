@@ -23,19 +23,22 @@
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IApplicationUserService userService;
         private readonly IAddressService addressService;
+        private readonly IOrderStatusService orderStatusService;
 
         public OrdersController(
             IProductService productService,
             IOrderService orderService,
             UserManager<ApplicationUser> userManager,
             IApplicationUserService userService,
-            IAddressService addressService)
+            IAddressService addressService,
+            IOrderStatusService orderStatusService)
         {
             this.productService = productService;
             this.orderService = orderService;
             this.userManager = userManager;
             this.userService = userService;
             this.addressService = addressService;
+            this.orderStatusService = orderStatusService;
         }
 
         [Authorize]
@@ -90,6 +93,12 @@
                 return this.Redirect("Cart");
             }
 
+            if (!viewModel.Addresses.Any())
+            {
+                viewModel.ErrorMessage = "Please enter your address to proceed.";
+                return this.View(viewModel);
+            }
+
             this.HttpContext.Session.SetString("Orders", JsonConvert.SerializeObject(viewModel.Orders));
 
             return this.View(viewModel);
@@ -128,6 +137,7 @@
 
             var user = await this.userManager.GetUserAsync(this.User);
 
+
             return this.View();
         }
 
@@ -137,17 +147,22 @@
         {
             var areOrdersEmpty = !this.HttpContext.Session.TryGetValue("Orders", out byte[] ordersBytes);
 
+            if (input.AddressId == null)
+            {
+                return this.RedirectToAction("Checkout");
+            }
+
             if (!areOrdersEmpty)
             {
                 var ordersJson = Encoding.UTF8.GetString(ordersBytes);
                 var orders = JsonConvert.DeserializeObject<List<OrdersInListViewModel>>(ordersJson);
 
-               
+                input.Orders = orders;
+
+                await this.orderStatusService.CreateAsync(input.AddressId, input.PaymentMethod, orders);
             }
 
-
-
-            return this.View();
+            return this.View(input);
         }
     }
 }

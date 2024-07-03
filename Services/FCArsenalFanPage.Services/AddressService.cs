@@ -56,10 +56,13 @@
 
         public ICollection<Address> GetAddressesByUser(ApplicationUser user)
         {
-            return this.addressRepository
-                .AllAsNoTracking()
-                .Where(a => a.UserId == user.Id)
-                .ToList();
+            var addresses = this.addressRepository
+                  .AllAsNoTracking()
+                  .Where(a => a.UserId == user.Id)
+                  .OrderByDescending(x => x.CreatedOn)
+                  .ToList();
+
+            return addresses;
         }
     }
 }
