@@ -164,5 +164,76 @@
 	</div>
 	</div>
 	<!-- end latest news -->
+
+		<style>
+			.order {
+				margin: 10px;
+				padding: 10px;
+				border: 1px solid #ccc;
+			}
+
+			.order-header {
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.order-details {
+				display: none;
+				margin-top: 10px;
+			}
+
+			.product {
+				display: flex;
+				margin-bottom: 10px;
+			}
+
+				.product img {
+					max-width: 100px;
+					margin-right: 10px;
+				}
+		</style>
+
+		<div id="orders-container"></div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				fetch('/api/orders') // Вземете данните от API
+					.then(response => response.json())
+					.then(data => renderOrders(data));
+			});
+
+			function renderOrders(orders) {
+				const container = document.getElementById('orders-container');
+				container.innerHTML = '';
+				orders.forEach(order => {
+					const orderElement = document.createElement('div');
+					orderElement.classList.add('order');
+					orderElement.innerHTML = `
+								<div class="order-header" onclick="toggleOrderDetails(${order.id})">
+									Поръчка № ${order.id} - Сума: ${order.total} - Статус: ${order.status}
+								</div>
+								<div class="order-details" id="order-details-${order.id}">
+									${order.products.map(product => `
+										<div class="product">
+											<img src="${product.image}" alt="${product.description}">
+											<div>
+												<div>Описание: ${product.description}</div>
+												<div>Количество: ${product.quantity}</div>
+												<div>Цена: ${product.price}</div>
+											</div>
+										</div>
+									`).join('')}
+								</div>
+							`;
+					container.appendChild(orderElement);
+				});
+			}
+
+			function toggleOrderDetails(orderId) {
+				const details = document.getElementById(`order-details-${orderId}`);
+				details.style.display = details.style.display === 'none' ? 'block' : 'none';
+			}
+		</script>
+</html>
 </body>
 </html>
