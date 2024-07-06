@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Md3FxBrnCuZo4ZVg59rouqp2B96r1Asq8NSXzXxHJSY=",
+  "Hash": "FzTYMyPkllotUGcjGni4TQNydK3ZhQwDE9S+wxrQjRA=",
   "Source": "FCArsenalFanPage.Web",
   "BasePath": "_content/FCArsenalFanPage.Web",
   "Mode": "Default",
@@ -1516,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\meanmenu.min.css"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\myOrders.css",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "css/myOrders.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\myOrders.css"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\owl.carousel.css",

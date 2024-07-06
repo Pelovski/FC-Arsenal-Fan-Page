@@ -233,6 +233,10 @@
       "PackagePath": "staticwebassets\\css\\meanmenu.min.css"
     },
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\myOrders.css",
+      "PackagePath": "staticwebassets\\css\\myOrders.css"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.css"
     },

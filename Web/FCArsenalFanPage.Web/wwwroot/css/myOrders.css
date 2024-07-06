@@ -1,0 +1,7 @@
+﻿.order-item {
+    cursor: pointer; /* Промяна на курсора на показалец */
+}
+
+.toggle-content {
+    display: none; /* Скриване на съдържанието по подразбиране */
+}

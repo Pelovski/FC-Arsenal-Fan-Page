@@ -1,1 +1,71 @@
-﻿
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="hero-area breadcrumb-bg">
+</div>
+
+<body>
+    <div class="container mt-5 mb-5">
+        <h3 class="mb-5">My Orders</h3>
+        <div class="list-group">
+            <div class="list-group-item order-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Order #12345</h5>
+                    <small>2024-07-01</small>
+                </div>
+                <p class="mb-1">Status: Completed</p>
+                <small>Total: $150.00</small>
+                <div class="toggle-content mt-3">
+                    <div class="row mb-3">
+                        <!-- Добавяне на разстояние между продуктите -->
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product Image">
+                        </div>
+                        <div class="col-md-4">
+                            <p>Product Name 1</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Price: $50.00</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Quantity: 2</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <!-- Добавяне на разстояние между продуктите -->
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product Image">
+                        </div>
+                        <div class="col-md-4">
+                            <p>Product Name 2</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Price: $25.00</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>Quantity: 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional orders can be added here in similar fashion -->
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.order-item').forEach(item => {
+            item.addEventListener('click', function () {
+                var content = this.querySelector('.toggle-content');
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
