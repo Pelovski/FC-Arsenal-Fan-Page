@@ -87,6 +87,11 @@
 
                                 </li>
 
+                                <li class="navi-item">
+                                    <a asp-area="" asp-controller="Orders" asp-action="MyOrders">My Orders</a>
+
+                                </li>
+
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) ||
                                 this.User.IsInRole(GlobalConstants.AssistantAdministrator) ||
                                 this.User.IsInRole(GlobalConstants.ContentCreaterRoleName))

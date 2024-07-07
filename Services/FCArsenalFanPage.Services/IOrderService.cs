@@ -27,5 +27,7 @@
         ICollection<Order> GetAllOrdersByUserId(string userId);
 
         public string GenerateOrderNumber();
+
+        Task RemoveAsync(string orderId);
     }
 }
