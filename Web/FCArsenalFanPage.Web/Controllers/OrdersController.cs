@@ -160,9 +160,10 @@
                 input.Orders = orders;
 
                 await this.orderStatusService.CreateAsync(input.AddressId, input.PaymentMethod, orders);
+
             }
 
-            return this.View(input);
+            return this.RedirectToAction("MyOrders");
         }
     }
 }

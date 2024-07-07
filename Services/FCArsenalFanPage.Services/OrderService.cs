@@ -141,6 +141,11 @@
             await this.orderRepository.SaveChangesAsync();
         }
 
+        public async Task RemoveAsync(string orderId)
+        {
+             await this.DeleteAsync(orderId);
+        }
+
         public CheckoutViewModel GetOrderData(ApplicationUser user)
         {
 

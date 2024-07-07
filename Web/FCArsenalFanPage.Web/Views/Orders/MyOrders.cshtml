@@ -1,52 +1,60 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    this.ViewData["Title"] = "My Orders";
 }
 
-<div class="hero-area breadcrumb-bg">
+<div class="breadcrumb-section breadcrumb-bg mb-2">
 </div>
 
-<body>
     <div class="container mt-5 mb-5">
         <h3 class="mb-5">My Orders</h3>
         <div class="list-group">
-            <div class="list-group-item order-item">
+            <div class="list-group-item order-item" data-target="#order1-details">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">Order #12345</h5>
                     <small>2024-07-01</small>
                 </div>
                 <p class="mb-1">Status: Completed</p>
                 <small>Total: $150.00</small>
-                <div class="toggle-content mt-3">
-                    <div class="row mb-3">
-                        <!-- Добавяне на разстояние между продуктите -->
-                        <div class="col-md-2">
-                            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product Image">
-                        </div>
-                        <div class="col-md-4">
+            </div>
+            <div id="order1-details" class="toggle-content">
+                <div class="row py-3 mb-3">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <img src="~/Images/Products/bb032bd0-3ae5-41b7-a5bb-393fe8cd62d0.png" class="img-fluid product-img" alt="Product Image">
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
                             <p>Product Name 1</p>
                         </div>
-                        <div class="col-md-3">
-                            <p>Price: $50.00</p>
-                        </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
                             <p>Quantity: 2</p>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <!-- Добавяне на разстояние между продуктите -->
-                        <div class="col-md-2">
-                            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product Image">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
+                            <p>Price: $50.00</p>
                         </div>
-                        <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="row py-3 mb-3">
+                    <div class="col-md-2 d-flex align-items-center">
+                        <img src="~/Images/Products/0af05d6d-b42b-45c2-9a70-8021ef3b7ef1.png" class="img-fluid product-img" alt="Product Image">
+                    </div>
+                    <div class="col-md-4 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
                             <p>Product Name 2</p>
                         </div>
-                        <div class="col-md-3">
-                            <p>Price: $25.00</p>
-                        </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
                             <p>Quantity: 2</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class="product-info">
+                            <p>Price: $25.00</p>
                         </div>
                     </div>
                 </div>
@@ -59,13 +67,15 @@
     <script>
         document.querySelectorAll('.order-item').forEach(item => {
             item.addEventListener('click', function () {
-                var content = this.querySelector('.toggle-content');
-                if (content.style.display === 'none' || content.style.display === '') {
-                    content.style.display = 'block';
-                } else {
-                    content.style.display = 'none';
+                var target = document.querySelector(this.getAttribute('data-target'));
+                target.classList.toggle('show');
+                if (target.classList.contains('show')) {
+                    var rect = this.getBoundingClientRect();
+                    window.scrollBy({
+                        top: rect.top - 100, // настройка на колко да скролне страницата, напр. 100 пиксела над главния елемент
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
     </script>
-</body>

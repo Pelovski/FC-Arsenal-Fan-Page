@@ -1,7 +1,37 @@
 ﻿.order-item {
-    cursor: pointer; /* Промяна на курсора на показалец */
+    cursor: pointer;
+}
+
+.product-img {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.toggle-content .row:last-child {
+    border-bottom: none;
+}
+
+.toggle-content .row {
+    border-bottom: 1px solid #ddd;
 }
 
 .toggle-content {
-    display: none; /* Скриване на съдържанието по подразбиране */
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.list-group-item, .toggle-content {
+    background-color: #f3f3f3;
 }
