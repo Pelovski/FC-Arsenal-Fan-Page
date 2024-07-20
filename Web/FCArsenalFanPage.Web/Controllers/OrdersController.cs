@@ -136,13 +136,7 @@
         public async Task<IActionResult> MyOrders()
         {
             var user = await this.userManager.GetUserAsync(this.User);
-            var test = this.orderStatusService.GetAllOrderStatuses(user.Id);
-            var orders = this.orderService.GetAllByUserId(user.Id);
-
-            var viewModel = new MyOrderViewModel
-            {
-                Orders = orders,
-            };
+            var viewModel = this.orderStatusService.GetAllOrderStatuses(user.Id);
 
             return this.View(viewModel);
         }
@@ -168,10 +162,9 @@
                 input.Orders = orders;
 
                 await this.orderStatusService.CreateAsync(input.AddressId, input.PaymentMethod, orders);
-                await this.orderService.DeleteAllAsync(user.Id);
             }
 
-            return this.RedirectToAction("Cart");
+            return this.RedirectToAction("MyOrders");
         }
     }
 }

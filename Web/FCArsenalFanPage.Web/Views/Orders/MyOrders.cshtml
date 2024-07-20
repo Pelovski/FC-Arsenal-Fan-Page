@@ -27,21 +27,21 @@
                 {
                 <div class="row py-3 mb-3">
                     <div class="col-md-2 d-flex align-items-center">
-                        <img src="" class="img-fluid product-img" alt="Product Image">
+                        <img src="@order.ImageUrl" class="img-fluid product-img" alt="Product Image">
                     </div>
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
                         <div class="product-info">
-                            <p>Product Name 1</p>
+                            <p>@order.ProductName</p>
                         </div>
                     </div>
                     <div class="col-md-3 d-flex align-items-center justify-content-center">
                         <div class="product-info">
-                            <p>Quantity: 2</p>
+                            <p>Quantity: @order.Quantity</p>
                         </div>
                     </div>
                     <div class="col-md-3 d-flex align-items-center justify-content-center">
                         <div class="product-info">
-                            <p>Price: $50.00</p>
+                            <p>Price: $@order.Price.ToString("F2")</p>
                         </div>
                     </div>
                 </div>
