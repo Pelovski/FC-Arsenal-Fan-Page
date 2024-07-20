@@ -74,9 +74,7 @@
                     Price = x.Price,
                     ProductCategoryId = x.ProductCategoryId,
                     ProductCategoryName = x.ProductCategory.Name,
-                    ImageUrl = x.Image.RemoteImageUrl != null ?
-                               x.Image.RemoteImageUrl :
-                              "/Images/Products/" + x.Image.Id + "." + x.Image.Extension,
+                    ImageUrl = x.Image.RemoteImageUrl ?? "/Images/Products/" + x.Image.Id + "." + x.Image.Extension,
                 }).ToList();
         }
 

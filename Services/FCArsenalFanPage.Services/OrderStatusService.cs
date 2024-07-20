@@ -7,6 +7,7 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels.Orders;
+    using Microsoft.EntityFrameworkCore;
 
     public class OrderStatusService : IOrderStatusService
     {
@@ -46,21 +47,28 @@
 
         public IEnumerable<MyOrderViewModel> GetAllOrderStatuses(string userId)
         {
-            // TODO: Get orders by order status id
-
-            var oderStatuses = this.orderStatusRepository
-                .All();
-
-                
-
-            return this.orderStatusRepository
-                .AllAsNoTracking()
+            var model = this.orderStatusRepository
+                .All()
+                .Include(x => x.Orders)
+                .Where(x => x.UserId == userId)
                 .Select(x => new MyOrderViewModel
                 {
                     OrderNumber = x.OrderNumber,
                     CreatedOn = x.CreatedOn.ToString(),
                     TotalPrice = x.TotalPrice,
-                });
+                    Orders = x.Orders
+                            .Where(o => o.Status.Id == x.Id)
+                            .Select(o => new OrdersInListViewModel
+                            {
+                                ProductName = o.Product.Name,
+                                Price = o.Product.Price * o.Quantity,
+                                Quantity = o.Quantity,
+                                ImageUrl = o.Product.Image.RemoteImageUrl ?? "/Images/Products/" + o.Product.Image.Id + "." + o.Product.Image.Extension,
+                            }).ToList(),
+
+                }).ToList();
+
+            return model;
         }
     }
 }
