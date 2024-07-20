@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<MyOrderViewModel>
+
 @{
     this.ViewData["Title"] = "My Orders";
 }
@@ -6,21 +7,27 @@
 <div class="breadcrumb-section breadcrumb-bg mb-2">
 </div>
 
-    <div class="container mt-5 mb-5">
-        <h3 class="mb-5">My Orders</h3>
+<div class="container mt-5 mb-5">
+    <h3 class="mb-5">My Orders</h3>
+    
+    @foreach(var orderStatus in Model)
+    {
         <div class="list-group">
             <div class="list-group-item order-item" data-target="#order1-details">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">Order #12345</h5>
-                    <small>2024-07-01</small>
+                    <h5 class="mb-1">@orderStatus.OrderNumber </h5>
+                    <small>@orderStatus.CreatedOn</small>
                 </div>
-                <p class="mb-1">Status: Completed</p>
-                <small>Total: $150.00</small>
+                <p class="mb-1">Status: @orderStatus.Status</p>
+                <small>Total: $@orderStatus.TotalPrice</small>
             </div>
+
             <div id="order1-details" class="toggle-content">
+                @foreach (var order in orderStatus.Orders)
+                {
                 <div class="row py-3 mb-3">
                     <div class="col-md-2 d-flex align-items-center">
-                        <img src="~/Images/Products/bb032bd0-3ae5-41b7-a5bb-393fe8cd62d0.png" class="img-fluid product-img" alt="Product Image">
+                        <img src="" class="img-fluid product-img" alt="Product Image">
                     </div>
                     <div class="col-md-4 d-flex align-items-center justify-content-center">
                         <div class="product-info">
@@ -38,44 +45,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="row py-3 mb-3">
-                    <div class="col-md-2 d-flex align-items-center">
-                        <img src="~/Images/Products/0af05d6d-b42b-45c2-9a70-8021ef3b7ef1.png" class="img-fluid product-img" alt="Product Image">
-                    </div>
-                    <div class="col-md-4 d-flex align-items-center justify-content-center">
-                        <div class="product-info">
-                            <p>Product Name 2</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                        <div class="product-info">
-                            <p>Quantity: 2</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                        <div class="product-info">
-                            <p>Price: $25.00</p>
-                        </div>
-                    </div>
-                </div>
+
+                }
             </div>
 
             <!-- Additional orders can be added here in similar fashion -->
         </div>
-    </div>
+    }
+</div>
 
-    <script>
-        document.querySelectorAll('.order-item').forEach(item => {
-            item.addEventListener('click', function () {
-                var target = document.querySelector(this.getAttribute('data-target'));
-                target.classList.toggle('show');
-                if (target.classList.contains('show')) {
-                    var rect = this.getBoundingClientRect();
-                    window.scrollBy({
-                        top: rect.top - 100, // настройка на колко да скролне страницата, напр. 100 пиксела над главния елемент
-                        behavior: 'smooth'
-                    });
-                }
-            });
+<script>
+    document.querySelectorAll('.order-item').forEach(item => {
+        item.addEventListener('click', function () {
+            var target = document.querySelector(this.getAttribute('data-target'));
+            target.classList.toggle('show');
+            if (target.classList.contains('show')) {
+                var rect = this.getBoundingClientRect();
+                window.scrollBy({
+                    top: rect.top - 100, // настройка на колко да скролне страницата, напр. 100 пиксела над главния елемент
+                    behavior: 'smooth'
+                });
+            }
         });
-    </script>
+    });
+</script>

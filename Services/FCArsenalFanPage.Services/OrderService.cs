@@ -57,11 +57,28 @@
 
         public async Task DeleteAsync(string id)
         {
-            var order = this.orderRepository.AllAsNoTracking().FirstOrDefault(x => x.Id == id);
+            var order = this.orderRepository
+                .All()
+                .FirstOrDefault(x => x.Id == id);
 
             if (order != null)
             {
                 this.orderRepository.Delete(order);
+                await this.orderRepository.SaveChangesAsync();
+            }
+        }
+
+        public async Task DeleteAllAsync(string userId)
+        {
+
+            var orders = this.orderRepository
+                .All()
+                .Where(x => x.UserId == userId)
+                .ToList();
+
+            foreach (var order in orders)
+            {
+               this.orderRepository.Delete(order);
             }
 
             await this.orderRepository.SaveChangesAsync();
@@ -77,7 +94,6 @@
                     Quantity = x.Quantity,
                     Price = x.Product.Price,
                     UserId = x.UserId,
-                    Status = x.Status.Name,
                     ImageUrl = x.Product.Image.RemoteImageUrl ?? "/Images/Products/"
                     + x.Product.Image.Id + "." + x.Product.Image.Extension,
                 });
@@ -141,23 +157,15 @@
             await this.orderRepository.SaveChangesAsync();
         }
 
-        public async Task RemoveAsync(string orderId)
-        {
-             await this.DeleteAsync(orderId);
-        }
-
         public CheckoutViewModel GetOrderData(ApplicationUser user)
         {
-
             var orders = this.GetAllByUserId(user.Id);
             var addresses = this.addressService.GetAddressesByUser(user);
-
 
             if (!orders.Any())
             {
                 return null;
             }
-
 
             var totalPrice = this.GetTotalPrice(orders);
 
