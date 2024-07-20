@@ -48,7 +48,7 @@
 
             var viewModel = this.orderService
                 .GetAll()
-                .Where(x => x.Status == "Active" && x.UserId == userId);
+                .Where(x => x.UserId == userId);
 
             return this.View(viewModel);
         }
@@ -132,13 +132,19 @@
             return this.RedirectToAction("Checkout");
         }
 
+        [Authorize]
         public async Task<IActionResult> MyOrders()
         {
-
             var user = await this.userManager.GetUserAsync(this.User);
+            var test = this.orderStatusService.GetAllOrderStatuses(user.Id);
+            var orders = this.orderService.GetAllByUserId(user.Id);
 
+            var viewModel = new MyOrderViewModel
+            {
+                Orders = orders,
+            };
 
-            return this.View();
+            return this.View(viewModel);
         }
 
         [Authorize]
@@ -146,6 +152,8 @@
         public async Task<IActionResult> CreateOrderStatus(OrderStatusViewModel input)
         {
             var areOrdersEmpty = !this.HttpContext.Session.TryGetValue("Orders", out byte[] ordersBytes);
+
+            var user = await this.userManager.GetUserAsync(this.User);
 
             if (input.AddressId == null)
             {
@@ -160,10 +168,10 @@
                 input.Orders = orders;
 
                 await this.orderStatusService.CreateAsync(input.AddressId, input.PaymentMethod, orders);
-
+                await this.orderService.DeleteAllAsync(user.Id);
             }
 
-            return this.RedirectToAction("MyOrders");
+            return this.RedirectToAction("Cart");
         }
     }
 }

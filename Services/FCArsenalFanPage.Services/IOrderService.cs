@@ -28,6 +28,6 @@
 
         public string GenerateOrderNumber();
 
-        Task RemoveAsync(string orderId);
+        Task DeleteAllAsync(string userId);
     }
 }

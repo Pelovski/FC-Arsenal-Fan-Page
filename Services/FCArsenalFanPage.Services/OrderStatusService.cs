@@ -43,5 +43,24 @@
             await this.orderStatusRepository.SaveChangesAsync();
 
         }
+
+        public IEnumerable<MyOrderViewModel> GetAllOrderStatuses(string userId)
+        {
+            // TODO: Get orders by order status id
+
+            var oderStatuses = this.orderStatusRepository
+                .All();
+
+                
+
+            return this.orderStatusRepository
+                .AllAsNoTracking()
+                .Select(x => new MyOrderViewModel
+                {
+                    OrderNumber = x.OrderNumber,
+                    CreatedOn = x.CreatedOn.ToString(),
+                    TotalPrice = x.TotalPrice,
+                });
+        }
     }
 }

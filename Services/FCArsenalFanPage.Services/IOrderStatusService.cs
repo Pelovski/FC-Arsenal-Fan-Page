@@ -8,5 +8,7 @@
     public interface IOrderStatusService
     {
         Task CreateAsync(string addressId, string paymentMethod, IEnumerable<OrdersInListViewModel> orders);
+
+        IEnumerable<MyOrderViewModel> GetAllOrderStatuses(string userId);
     }
 }
