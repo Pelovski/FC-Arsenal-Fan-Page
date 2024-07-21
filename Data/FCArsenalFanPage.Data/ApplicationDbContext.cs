@@ -75,7 +75,7 @@
 
             builder.Entity<OrderStatus>()
                .HasMany(x => x.Orders)
-               .WithOne(x => x.Status)
+               .WithOne(x => x.OrderDetails)
                .HasForeignKey(x => x.OrderStatusId);
 
             builder.Entity<Image>()

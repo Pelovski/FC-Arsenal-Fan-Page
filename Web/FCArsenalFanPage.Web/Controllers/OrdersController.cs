@@ -48,7 +48,7 @@
 
             var viewModel = this.orderService
                 .GetAll()
-                .Where(x => x.UserId == userId);
+                .Where(x => x.UserId == userId && x.Status == "Cart");
 
             return this.View(viewModel);
         }
@@ -162,6 +162,8 @@
                 input.Orders = orders;
 
                 await this.orderStatusService.CreateAsync(input.AddressId, input.PaymentMethod, orders);
+
+                await this.orderService.DeleteAllFromCartAsync(user.Id);
             }
 
             return this.RedirectToAction("MyOrders");

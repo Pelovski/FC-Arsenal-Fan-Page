@@ -27,12 +27,12 @@
 
             var orderStatus = new OrderStatus
             {
-                Name = "Active",
+                Name = "In Progress",
             };
 
             var currentOrder = this.orderRepository
                 .All()
-                .Where(x => x.UserId == userId && x.ProductId == input.Id)
+                .Where(x => x.UserId == userId && x.ProductId == input.Id && x.Status == "Cart")
                 .FirstOrDefault();
 
             if (currentOrder == null)
@@ -42,7 +42,8 @@
                     ProductId = input.Id,
                     Quantity = quantity,
                     UserId = userId,
-                    Status = orderStatus,
+                    OrderDetails = orderStatus,
+                    Status = "Cart",
                 };
 
                 await this.orderRepository.AddAsync(order);
@@ -68,7 +69,7 @@
             }
         }
 
-        public async Task DeleteAllAsync(string userId)
+        public async Task DeleteAllFromCartAsync(string userId)
         {
 
             var orders = this.orderRepository
@@ -78,7 +79,7 @@
 
             foreach (var order in orders)
             {
-               this.orderRepository.Delete(order);
+               order.Status = "Done";
             }
 
             await this.orderRepository.SaveChangesAsync();
@@ -90,6 +91,7 @@
                 .Select(x => new OrdersInListViewModel
                 {
                     Id = x.Id,
+                    Status = x.Status,
                     ProductName = x.Product.Name,
                     Quantity = x.Quantity,
                     Price = x.Product.Price,
@@ -118,7 +120,7 @@
         {
             return this.orderRepository
                 .AllAsNoTracking()
-                .Where(x => x.UserId == userId)
+                .Where(x => x.UserId == userId && x.Status == "Cart")
                 .Select(x => x.Quantity)
                 .Sum();
         }

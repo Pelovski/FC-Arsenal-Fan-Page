@@ -383,6 +383,9 @@ namespace FCArsenalFanPage.Data.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -706,7 +709,7 @@ namespace FCArsenalFanPage.Data.Migrations
 
             modelBuilder.Entity("FCArsenalFanPage.Data.Models.Order", b =>
                 {
-                    b.HasOne("FCArsenalFanPage.Data.Models.OrderStatus", "Status")
+                    b.HasOne("FCArsenalFanPage.Data.Models.OrderStatus", "OrderDetails")
                         .WithMany("Orders")
                         .HasForeignKey("OrderStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -720,9 +723,9 @@ namespace FCArsenalFanPage.Data.Migrations
                         .WithMany("Orders")
                         .HasForeignKey("UserId");
 
-                    b.Navigation("Product");
+                    b.Navigation("OrderDetails");
 
-                    b.Navigation("Status");
+                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
