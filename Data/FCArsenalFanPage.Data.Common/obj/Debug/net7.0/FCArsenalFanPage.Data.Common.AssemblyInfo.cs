@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCArsenalFanPage.Data.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+472f73aec255572466e16fb77ba6e6fe6a5a83c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+395afe3ef7e248ba1e827b152e86790f779a3d0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCArsenalFanPage.Data.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCArsenalFanPage.Data.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

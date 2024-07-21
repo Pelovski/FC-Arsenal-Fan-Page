@@ -11,6 +11,8 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
+        public string Status { get; set; }
+
         public string ProductId { get; set; }
 
         public virtual Product Product { get; set; }
@@ -23,6 +25,6 @@
 
         public int OrderStatusId { get; set; }
 
-        public virtual OrderStatus Status { get; set; }
+        public virtual OrderStatus OrderDetails { get; set; }
     }
 }

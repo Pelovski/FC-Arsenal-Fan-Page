@@ -57,7 +57,7 @@
                     CreatedOn = x.CreatedOn.ToString(),
                     TotalPrice = x.TotalPrice,
                     Orders = x.Orders
-                            .Where(o => o.Status.Id == x.Id)
+                            .Where(o => o.OrderDetails.Id == x.Id)
                             .Select(o => new OrdersInListViewModel
                             {
                                 ProductName = o.Product.Name,
