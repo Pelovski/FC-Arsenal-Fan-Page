@@ -1840,7 +1840,10 @@
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Common.dll": {}
+          "FCArsenalFanPage.Data.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FCArsenalFanPage.Data.Models/1.0.0": {
@@ -1849,7 +1852,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Models.dll": {}
+          "FCArsenalFanPage.Data.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FCArsenalFanPage.Services.Mapping/1.0.0": {
@@ -1857,7 +1863,10 @@
           "AutoMapper": "12.0.1"
         },
         "runtime": {
-          "FCArsenalFanPage.Services.Mapping.dll": {}
+          "FCArsenalFanPage.Services.Mapping.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
@@ -1865,7 +1874,10 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17"
         },
         "runtime": {
-          "FCArsenalFanPage.Web.Infrastructure.dll": {}
+          "FCArsenalFanPage.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

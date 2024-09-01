@@ -3706,7 +3706,10 @@
       },
       "FCArsenalFanPage.Common/1.0.0": {
         "runtime": {
-          "FCArsenalFanPage.Common.dll": {}
+          "FCArsenalFanPage.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Common.dll": {}
@@ -3722,7 +3725,10 @@
           "Microsoft.Extensions.Configuration.UserSecrets": "7.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.dll": {}
+          "FCArsenalFanPage.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Data.dll": {}
@@ -3733,7 +3739,10 @@
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Common.dll": {}
+          "FCArsenalFanPage.Data.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Data.Common.dll": {}
@@ -3745,7 +3754,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Models.dll": {}
+          "FCArsenalFanPage.Data.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Data.Models.dll": {}
@@ -3756,7 +3768,10 @@
           "FCArsenalFanPage.Web.ViewModels": "1.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Services.dll": {}
+          "FCArsenalFanPage.Services.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Services.dll": {}
@@ -3769,7 +3784,10 @@
           "FCArsenalFanPage.Services.Mapping": "1.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Services.Data.dll": {}
+          "FCArsenalFanPage.Services.Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Services.Data.dll": {}
@@ -3780,7 +3798,10 @@
           "AutoMapper": "12.0.1"
         },
         "runtime": {
-          "FCArsenalFanPage.Services.Mapping.dll": {}
+          "FCArsenalFanPage.Services.Mapping.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Services.Mapping.dll": {}
@@ -3791,7 +3812,10 @@
           "SendGrid": "9.28.1"
         },
         "runtime": {
-          "FCArsenalFanPage.Services.Messaging.dll": {}
+          "FCArsenalFanPage.Services.Messaging.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Services.Messaging.dll": {}
@@ -3802,7 +3826,10 @@
           "Microsoft.AspNetCore.Http.Features": "5.0.17"
         },
         "runtime": {
-          "FCArsenalFanPage.Web.Infrastructure.dll": {}
+          "FCArsenalFanPage.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Web.Infrastructure.dll": {}
@@ -3818,7 +3845,10 @@
           "Microsoft.AspNetCore.Mvc": "2.2.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Web.ViewModels.dll": {}
+          "FCArsenalFanPage.Web.ViewModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         },
         "compile": {
           "FCArsenalFanPage.Web.ViewModels.dll": {}

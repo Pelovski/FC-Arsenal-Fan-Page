@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IGKMvr4fh9SW3ewGUZt5lihcFRcEsmIeeCYCwMdumeU=",
+  "Hash": "+RM4OkdVOMkyBynzy+G5V10hZEHtLaT1yCVB1mEg+hU=",
   "Source": "FCArsenalFanPage.Web.Tests",
   "BasePath": "_content/FCArsenalFanPage.Web.Tests",
   "Mode": "Default",
@@ -388,6 +388,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\meanmenu.min.css"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\myOrders.css",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "css/myOrders.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\myOrders.css"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\owl.carousel.css",
@@ -1093,6 +1112,25 @@
       "OriginalItemSpec": "wwwroot\\Images\\Products\\0af05d6d-b42b-45c2-9a70-8021ef3b7ef1.png"
     },
     {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\Products\\2b0c58a4-c510-4a13-aff5-c612687a6999.jpg",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/Products/2b0c58a4-c510-4a13-aff5-c612687a6999.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\2b0c58a4-c510-4a13-aff5-c612687a6999.jpg"
+    },
+    {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\Products\\445ec036-f6ff-47bd-90d2-8602a1f1b9e6.png",
       "SourceId": "FCArsenalFanPage.Web",
       "SourceType": "Project",
@@ -1129,6 +1167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Products\\493e2690-6128-44b5-b038-4ad59fe0c7ae.png"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\Products\\493fd264-1fe0-40d8-b141-8cedfb572da8.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/Products/493fd264-1fe0-40d8-b141-8cedfb572da8.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Products\\493fd264-1fe0-40d8-b141-8cedfb572da8.png"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\Products\\4f4d16ee-d0bd-4bd2-866a-9b76cf79b2f8.png",
@@ -1243,6 +1300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ProfilePictures\\e9624e20-28f4-4761-ab4e-386775bb2bb8.jpg"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\noImage.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "Images/ProfilePictures/noImage.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProfilePictures\\noImage.png"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\abt.jpg",
@@ -1376,6 +1452,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\dd.jpg"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\facebook.png",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "img/facebook.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\facebook.png"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\favicon.ico",

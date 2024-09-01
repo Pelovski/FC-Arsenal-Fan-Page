@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\FCArsenalFanPage.Data\FCArsenalFanPage.Data.csproj" />
-    <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services.Data\FCArsenalFanPage.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\FCArsenalFanPage.Services\FCArsenalFanPage.Services.csproj" />
   </ItemGroup>
 
 </Project>
