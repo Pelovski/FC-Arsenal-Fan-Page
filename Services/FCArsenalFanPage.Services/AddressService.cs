@@ -44,8 +44,8 @@
 
             if (addresses.Count == 3)
             {
-                var firstAddress = addresses.First();
-                this.addressRepository.Delete(firstAddress);
+                var oldestAddress = addresses.Last();
+                this.addressRepository.Delete(oldestAddress);
             }
 
             await this.addressRepository.AddAsync(newAddress);

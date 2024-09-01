@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{901AB2DA-6E52-4FB2-91F0-58EB0115F2F7}|Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\tests\\fcarsenalfanpage.services.data.tests\\addressservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{901AB2DA-6E52-4FB2-91F0-58EB0115F2F7}|Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj|solutionrelative:tests\\fcarsenalfanpage.services.data.tests\\addressservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{901AB2DA-6E52-4FB2-91F0-58EB0115F2F7}|Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\tests\\fcarsenalfanpage.services.data.tests\\fcarsenalfanpage.services.data.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{901AB2DA-6E52-4FB2-91F0-58EB0115F2F7}|Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj|solutionrelative:tests\\fcarsenalfanpage.services.data.tests\\fcarsenalfanpage.services.data.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddressServiceTests.cs",
+              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Services.Data.Tests\\AddressServiceTests.cs",
+              "RelativeDocumentMoniker": "Tests\\FCArsenalFanPage.Services.Data.Tests\\AddressServiceTests.cs",
+              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Services.Data.Tests\\AddressServiceTests.cs",
+              "RelativeToolTip": "Tests\\FCArsenalFanPage.Services.Data.Tests\\AddressServiceTests.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwFAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T09:30:49.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FCArsenalFanPage.Services.Data.Tests",
+              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj",
+              "RelativeDocumentMoniker": "Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj",
+              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj",
+              "RelativeToolTip": "Tests\\FCArsenalFanPage.Services.Data.Tests\\FCArsenalFanPage.Services.Data.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-01T09:29:40.258Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

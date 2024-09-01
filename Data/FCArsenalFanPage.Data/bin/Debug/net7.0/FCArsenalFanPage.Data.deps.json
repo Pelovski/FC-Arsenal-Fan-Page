@@ -830,7 +830,10 @@
       },
       "FCArsenalFanPage.Common/1.0.0": {
         "runtime": {
-          "FCArsenalFanPage.Common.dll": {}
+          "FCArsenalFanPage.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FCArsenalFanPage.Data.Common/1.0.0": {
@@ -838,7 +841,10 @@
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Common.dll": {}
+          "FCArsenalFanPage.Data.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "FCArsenalFanPage.Data.Models/1.0.0": {
@@ -847,7 +853,10 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3"
         },
         "runtime": {
-          "FCArsenalFanPage.Data.Models.dll": {}
+          "FCArsenalFanPage.Data.Models.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
