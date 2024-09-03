@@ -1,17 +1,20 @@
-﻿using FCArsenalFanPage.Data.Common.Repositories;
-using FCArsenalFanPage.Data.Models;
-using FCArsenalFanPage.Web.ViewModels.News;
-using Microsoft.AspNetCore.Http;
-using Moq;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using Xunit;
-
-namespace FCArsenalFanPage.Services.Data.Tests
+﻿namespace FCArsenalFanPage.Services.Data.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+    using System.Threading;
+    using System.Threading.Tasks;
+
+    using FCArsenalFanPage.Data.Common.Repositories;
+    using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.ViewModels.News;
+    using Microsoft.AspNetCore.Http;
+    using Moq;
+    using Xunit;
+
     public class NewsServiceTests
     {
         private readonly Mock<IDeletableEntityRepository<News>> mockNewsRepository;
@@ -59,17 +62,14 @@ namespace FCArsenalFanPage.Services.Data.Tests
 
             this.mockNewsRepository.Setup(x => x.AllAsNoTracking()).Returns(newsData);
 
-            // Act
             var result = this.newsService.GetAll();
 
-            // Assert
             Assert.Equal(3, result.Count());
         }
 
         [Fact]
         public async Task CreateAsyncShouldAddNewsToRepository()
         {
-            // Arrange
             var mockFile = new Mock<IFormFile>();
             var content = "Fake file content";
             var fileName = "test.jpg";
@@ -99,10 +99,8 @@ namespace FCArsenalFanPage.Services.Data.Tests
 
             this.mockNewsRepository.Setup(x => x.AddAsync(It.IsAny<News>())).Returns(Task.CompletedTask);
 
-            // Act
             await this.newsService.CreateAsync(createNewsModel, "test-user", "/images");
 
-            // Assert
             this.mockNewsRepository.Verify(x => x.AddAsync(It.IsAny<News>()), Times.Once);
             this.mockNewsRepository.Verify(x => x.SaveChangesAsync(), Times.Once);
         }
@@ -121,6 +119,79 @@ namespace FCArsenalFanPage.Services.Data.Tests
             Assert.Equal("New Content", news.Content);
             Assert.Equal(2, news.CategoryId);
             this.mockNewsRepository.Verify(x => x.SaveChangesAsync(), Times.Once);
+        }
+
+        [Fact]
+        public void GetAllShouldReturnLimitedSentences()
+        {
+            var mockRepo = new Mock<IDeletableEntityRepository<News>>();
+            var sampleNews = new List<News>
+        {
+            new News
+            {
+                Id = 1,
+                Title = "Sample News 1",
+                Content = "This is the first sentence. This is the second sentence. This is the third sentence. This is the fourth sentence.",
+                User = new ApplicationUser { UserName = "User1" },
+                CategoryId = 1,
+                CreatedOn = System.DateTime.Now,
+                Image = new Image { Id = "1", Extension = "jpg" },
+            },
+        }.AsQueryable();
+
+            mockRepo.Setup(r => r.AllAsNoTracking()).Returns(sampleNews);
+
+            var service = new NewsService(mockRepo.Object);
+
+            var result = service.GetAll().FirstOrDefault();
+
+            Assert.NotNull(result);
+            Assert.Equal("This is the first sentence. This is the second sentence. This is the third sentence.", result.Details);
+        }
+
+        [Fact]
+        public void GetAllShouldReturnLimitedSentencesWhenContentExceedsMaxLength()
+        {
+            var mockRepo = new Mock<IDeletableEntityRepository<News>>();
+            var sampleNews = new List<News>
+        {
+            new News
+            {
+                Id = 1,
+                Title = "Sample News 1",
+                Content = "This is the first sentence which is very long. This is the second sentence which is also very long. This is the third sentence which is long too.",
+                User = new ApplicationUser { UserName = "User1" },
+                CategoryId = 1,
+                CreatedOn = System.DateTime.Now,
+                Image = new Image { Id = "1", Extension = "jpg" },
+            },
+        }.AsQueryable();
+
+            mockRepo.Setup(r => r.AllAsNoTracking()).Returns(sampleNews);
+
+            var service = new NewsService(mockRepo.Object);
+
+            var result = service.GetAll().FirstOrDefault();
+
+            Assert.NotNull(result);
+            Assert.True(result.Details.Length <= 200);
+        }
+
+
+        [Fact]
+        public void GetCountShouldReturnCorrectCount()
+        {
+            var newsList = new List<News>
+        {
+            new News { Id = 1, Title = "News 1" },
+            new News { Id = 2, Title = "News 2" },
+        }.AsQueryable();
+
+            this.mockNewsRepository.Setup(r => r.All()).Returns(newsList);
+
+            var count = this.newsService.GetCount();
+
+            Assert.Equal(2, count);
         }
     }
 }
