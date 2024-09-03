@@ -37,7 +37,8 @@
                 currentLength += sentences[i].Length;
             }
 
-            string result = string.Join(" ", selectedSentences);
+            string result = string.Join(" ", selectedSentences).TrimEnd();
+
             return result;
         }
 
@@ -134,7 +135,6 @@
                 .Where(x => x.Id != id)
                 .OrderByDescending(x => x.CreatedOn)
                 .Take(4);
-
         }
     }
 }

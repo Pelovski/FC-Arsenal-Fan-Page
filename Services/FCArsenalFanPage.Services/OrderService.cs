@@ -71,7 +71,6 @@
 
         public async Task DeleteAllFromCartAsync(string userId)
         {
-
             var orders = this.orderRepository
                 .All()
                 .Where(x => x.UserId == userId)
