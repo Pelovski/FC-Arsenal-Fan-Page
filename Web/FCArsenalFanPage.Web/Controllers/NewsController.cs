@@ -38,6 +38,8 @@
         public IActionResult All(int id = 1)
         {
             const int itemsPerPage = 6;
+            var news = this.newsService.GetAllWithPaging(id, itemsPerPage);
+
             var viewModel = new NewsListViewModel
             {
                 PageNumber = id,

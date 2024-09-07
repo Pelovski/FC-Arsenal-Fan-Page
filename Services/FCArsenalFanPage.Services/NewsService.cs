@@ -5,6 +5,8 @@
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Net;
+    using System.Text.Encodings.Web;
     using System.Text.RegularExpressions;
     using System.Threading.Tasks;
 
@@ -12,6 +14,7 @@
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
     using FCArsenalFanPage.Web.ViewModels.News;
+    using Microsoft.CodeAnalysis.CSharp.Syntax;
 
     public class NewsService : INewsService
     {
@@ -21,25 +24,6 @@
             IDeletableEntityRepository<News> newsRepository)
         {
             this.newsRepository = newsRepository;
-        }
-
-        private static string GetFirstThreeSentencesLimited(string text, int maxLength)
-        {
-            string[] sentences = Regex.Split(text, @"(?<=[.!?])\s+");
-
-            int numberOfSentencesToTake = Math.Min(3, sentences.Length);
-            string[] selectedSentences = new string[numberOfSentencesToTake];
-
-            int currentLength = 0;
-            for (int i = 0; i < numberOfSentencesToTake && currentLength + sentences[i].Length <= maxLength; i++)
-            {
-                selectedSentences[i] = sentences[i];
-                currentLength += sentences[i].Length;
-            }
-
-            string result = string.Join(" ", selectedSentences).TrimEnd();
-
-            return result;
         }
 
         public async Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath)
@@ -96,7 +80,6 @@
                     CreatedOn = x.CreatedOn.ToString("dd MMMM, yyyy", CultureInfo.InvariantCulture),
                     Content = x.Content,
                     ImageUrl = x.Image.RemoteImageUrl ?? "/Images/News/" + x.Image.Id + "." + x.Image.Extension,
-                    Details = GetFirstThreeSentencesLimited(x.Content, 200),
                 })
                 .ToList();
         }

@@ -873,7 +873,7 @@ a.mobile-show {
 .footer-area {
     background-color: #051922;
     color: #fff;
-    padding: 150px 0;
+    padding: 65px 0;
 }
 
 h2.widget-title {
@@ -3166,3 +3166,61 @@ table.order-details {
     vertical-align: top;
     margin-left: -10px;
 }
+
+.latest-news {
+    margin-top: 150px; /* Adjust as needed */
+    margin-bottom: 150px; /* Adjust as needed */
+}
+
+.single-latest-news {
+    position: relative; /* Ensure positioning for child elements */
+    height: 400px; /* Fixed height for the container */
+    overflow: hidden; /* Hide any overflow content */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    transform: scale(0.95); /* Scale down the entire container by 5% */
+}
+
+.image-wrapper {
+    position: relative; /* Position relative for the image to scale within this wrapper */
+    width: 100%; /* Fill the width of the parent container */
+    height: 100%; /* Fill the height of the parent container */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.single-latest-news img {
+    width: 100%; /* Make the image fill the wrapper width */
+    height: 100%; /* Make the image fill the wrapper height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    display: block; /* Ensure the image is displayed as a block */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for image scaling */
+}
+
+.single-latest-news:hover {
+    transform: scale(1); /* Restore normal size on hover */
+}
+
+.single-latest-news.large-news {
+    height: 600px; /* Increased height for the large news item */
+    transform: scale(0.95); /* Scale down the large news item by 5% */
+}
+
+    .single-latest-news.large-news:hover {
+        transform: scale(1); /* Restore normal size on hover */
+    }
+
+.single-latest-news:hover img {
+    transform: scale(1.05); /* Scale up the image by 5% on hover */
+}
+
+.news-text-box {
+    padding: 15px; /* Padding around the text box */
+    flex: 1; /* Allow the text box to take up remaining space */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: flex-start; /* Align content to the top */
+    position: relative; /* Ensure text box stays above the image */
+    z-index: 1; /* Ensure text box stays on top of the image */
+}
+
