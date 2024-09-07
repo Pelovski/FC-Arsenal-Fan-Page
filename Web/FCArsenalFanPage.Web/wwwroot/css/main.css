@@ -3185,7 +3185,7 @@ table.order-details {
 .image-wrapper {
     position: relative; /* Position relative for the image to scale within this wrapper */
     width: 100%; /* Fill the width of the parent container */
-    height: 100%; /* Fill the height of the parent container */
+    height: 70%; /* Set a percentage height to maintain a proper aspect ratio */
     overflow: hidden; /* Hide overflow content */
 }
 
@@ -3193,6 +3193,7 @@ table.order-details {
     width: 100%; /* Make the image fill the wrapper width */
     height: 100%; /* Make the image fill the wrapper height */
     object-fit: cover; /* Ensure the image covers the area without distortion */
+    object-position: top; /* Align the image to the top */
     display: block; /* Ensure the image is displayed as a block */
     transition: transform 0.3s ease-in-out; /* Smooth transition for image scaling */
 }
@@ -3224,3 +3225,17 @@ table.order-details {
     z-index: 1; /* Ensure text box stays on top of the image */
 }
 
+/* Adjust the title and other elements for the large news item */
+.single-latest-news.large-news h3 {
+    font-size: 32px; /* Increase the font size of the title */
+    font-weight: bold; /* Make the title bold */
+}
+
+.single-latest-news.large-news .blog-meta {
+    font-size: 16px; /* Increase the font size of the meta information (author and date) */
+}
+
+/* Optional: Adjust the padding and spacing around the text */
+.single-latest-news.large-news .news-text-box {
+    padding: 20px; /* Increase padding for better spacing */
+}

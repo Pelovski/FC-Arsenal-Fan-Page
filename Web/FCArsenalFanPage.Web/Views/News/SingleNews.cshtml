@@ -33,21 +33,16 @@
 							{
 								@if (comment.ParentId != null)
 								{
-									var replyComments = this.Model.Comments
-									.Where(x => x.ParentId == comment.ParentId);
-
-									foreach (var replyComment in replyComments)
-									{
+									
 										<div class="single-comment-body child">
 											<div class="comment-user-avater">
-												<img class="profile-picture" src="@replyComment.UserImageUrl" alt="">
+												<img class="profile-picture" src="@comment.UserImageUrl" alt="">
 											</div>
 											<div class="comment-text-body">
-												<h4>@replyComment.UserUserName <span class="comment-date">@replyComment.CreatedOn</span></h4>
-												<p>@Html.Raw(replyComment.SanitizedContent)</p>
+											<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn.ToLocalTime().ToString("d MMM yyyy | HH:mm", CultureInfo.CurrentCulture)</span></h4>
+											<p>@Html.Raw(comment.SanitizedContent)</p>
 											</div>
 										</div>
-									}
 								}
 								else
 								{
@@ -58,7 +53,7 @@
 												<img class="profile-picture" src="@comment.UserImageUrl" alt="">
 											</div>
 											<div class="comment-text-body">
-												<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn</span> <a onclick="showAddCommentForm(@comment.Id)">reply</a></h4>
+												<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn.ToLocalTime().ToString("d MMM yyyy | HH:mm", CultureInfo.CurrentCulture)</span> <a onclick="showAddCommentForm(@comment.Id)">reply</a></h4>
 												<p>@Html.Raw(comment.SanitizedContent)</p>
 											</div>
 										</div>
