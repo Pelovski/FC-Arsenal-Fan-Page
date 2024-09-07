@@ -19,7 +19,10 @@
                 <div class="col-lg-12">
                     <div class="single-latest-news large-news">
                         <div class="image-wrapper">
-                            <img class="card-img-top" src="@largeNews.ImageUrl" alt="Large News Image">
+                            <!-- Wrap the image with a link -->
+                            <a asp-action="SingleNews" asp-route-id="@largeNews.Id">
+                                <img class="card-img-top" src="@largeNews.ImageUrl" alt="Large News Image">
+                            </a>
                         </div>
                         <div class="news-text-box">
                             <h3><a asp-action="SingleNews" asp-route-id="@largeNews.Id">@largeNews.Title</a></h3>
@@ -39,7 +42,10 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-latest-news">
                                     <div class="image-wrapper">
-                                        <img class="card-img-top" src="@news.ImageUrl" alt="Card image cap">
+                                        <!-- Wrap the image with a link -->
+                                        <a asp-action="SingleNews" asp-route-id="@news.Id">
+                                            <img class="card-img-top" src="@news.ImageUrl" alt="Card image cap">
+                                        </a>
                                     </div>
                                     <div class="news-text-box">
                                         <h3><a asp-action="SingleNews" asp-route-id="@news.Id">@news.Title</a></h3>

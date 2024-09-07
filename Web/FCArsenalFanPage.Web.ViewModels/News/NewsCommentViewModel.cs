@@ -2,6 +2,7 @@
 {
     using System;
     using AutoMapper;
+
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
     using Ganss.Xss;

@@ -1,6 +1,5 @@
 ﻿namespace FCArsenalFanPage.Services
 {
-    using System.ComponentModel.Design;
     using System.Linq;
     using System.Threading.Tasks;
 
