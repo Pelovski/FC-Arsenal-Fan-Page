@@ -3168,7 +3168,7 @@ table.order-details {
 }
 
 .latest-news {
-    margin-top: 150px; /* Adjust as needed */
+    margin-top: 100px; /* Adjust as needed */
     margin-bottom: 150px; /* Adjust as needed */
 }
 
@@ -3239,3 +3239,50 @@ table.order-details {
 .single-latest-news.large-news .news-text-box {
     padding: 20px; /* Increase padding for better spacing */
 }
+
+/* Divider */
+.divider hr {
+    border: 2px solid #ee0000; /* Orange color divider to match your theme */
+    margin: 50px 0;
+    width: 60%; /* Make the divider a bit shorter */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single-product-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0.95);
+    padding: 15px;
+    text-align: center; /* Center-align the content, including the button */
+}
+
+.product-image {
+    height: 300px; /* Set a fixed height for the image container */
+    overflow: hidden;
+    margin-bottom: 15px; /* Space between image and content */
+}
+
+.single-product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.single-product-item:hover {
+    transform: scale(1);
+}
+
+    .single-product-item:hover img {
+        transform: scale(1.1);
+    }
