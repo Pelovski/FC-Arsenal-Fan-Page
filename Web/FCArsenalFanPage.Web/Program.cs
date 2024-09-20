@@ -55,6 +55,7 @@
                     options.MinimumSameSitePolicy = SameSiteMode.None;
                 });
 
+
             services.AddControllersWithViews(
                 options =>
                 {
@@ -123,14 +124,15 @@
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+
+			app.UseSession();
+			app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.UseSession();
 
             app.UseRouting();
 
-            app.UseAuthentication();
+			app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");

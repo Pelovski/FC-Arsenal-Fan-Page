@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
+    using System;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@
     using FCArsenalFanPage.Web.ViewModels.Products;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
 
     public class ShopController : Controller
@@ -34,6 +36,21 @@
                 Products = this.productService.GetAll(),
                 Categories = this.productCategoriesService.GetAll(),
             };
+
+            if (this.Request.Cookies.ContainsKey("SuccessMessage"))
+            {
+                this.ViewBag.SuccessMessage = this.Request.Cookies["SuccessMessage"];
+
+                var cookieOptions = new CookieOptions
+                {
+                    Expires = DateTime.Now.AddDays(-1),
+                    Secure = true,       // SameSite=None requires Secure flag
+                    SameSite = SameSiteMode.None,
+                    HttpOnly = true,
+                };
+
+                this.Response.Cookies.Delete("SuccessMessage", cookieOptions);
+            }
 
             return this.View(viewModel);
         }
