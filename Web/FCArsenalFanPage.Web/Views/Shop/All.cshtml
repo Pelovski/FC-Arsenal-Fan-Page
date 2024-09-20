@@ -2,12 +2,20 @@
 
 @{
 	this.ViewData["Title"] = "Shop";
-	var productCategories = Model.Categories;
-	
+	var productCategories = Model.Categories;	
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
 </div>
+
+@if (ViewBag.SuccessMessage != null)
+{
+	<div id="success-message">
+		<span class="icon">&#10003;</span>
+    <span class="message"> @ViewBag.SuccessMessage</span>
+    <button class="close-btn" onclick="this.parentElement.style.display='none'">X</button>
+</div>
+}
 
 <!-- products -->
 <div class="product-section mt-150 mb-150">
@@ -62,3 +70,28 @@
 	</div>
 </div>
 <!-- end products -->
+
+@section Scripts {
+		<script type="text/javascript">
+			// Автоматично скриване на съобщението след 5 секунди
+			setTimeout(function () {
+				var messageElement = document.getElementById("success-message");
+				if (messageElement) {
+					messageElement.classList.add("fade-out");
+
+					// Пълно скриване след анимацията
+					setTimeout(function () {
+						messageElement.style.display = "none";
+					}, 1000); // 1 секунда за анимация
+				}
+			}, 5000); // 5 секунди
+
+			// Функция за ръчно затваряне на съобщението
+			function closeMessage() {
+				var messageElement = document.getElementById("success-message");
+				if (messageElement) {
+					messageElement.style.display = "none";
+				}
+			}
+		</script>
+}

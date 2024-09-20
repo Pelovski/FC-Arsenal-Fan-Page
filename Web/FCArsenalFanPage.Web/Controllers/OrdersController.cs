@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
@@ -63,7 +64,17 @@
 
             await this.orderService.CreateAsync(product, userId, quantity);
 
-            return this.Redirect("/Shop/All");
+            CookieOptions option = new CookieOptions
+            {
+                Expires = DateTime.Now.AddMinutes(1),
+                IsEssential = true,
+                SameSite = SameSiteMode.None,
+                Secure = true,
+            };
+
+            this.Response.Cookies.Append("SuccessMessage", $"{product.Name} has been added successfully!", option);
+
+            return this.RedirectToAction("All", "Shop");
         }
 
         [Authorize]
@@ -129,7 +140,7 @@
                 return this.View(input);
             }
 
-            return this.RedirectToAction("Checkout");
+            return this.RedirectToAction(nameof(this.Checkout));
         }
 
         [Authorize]
@@ -151,7 +162,7 @@
 
             if (input.AddressId == null)
             {
-                return this.RedirectToAction("Checkout");
+                return this.RedirectToAction(nameof(this.Checkout));
             }
 
             if (!areOrdersEmpty)
@@ -166,7 +177,7 @@
                 await this.orderService.DeleteAllFromCartAsync(user.Id);
             }
 
-            return this.RedirectToAction("MyOrders");
+            return this.RedirectToAction(nameof(this.MyOrders));
         }
     }
 }

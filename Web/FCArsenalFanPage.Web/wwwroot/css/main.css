@@ -1646,7 +1646,7 @@ p.blog-meta span {
     margin-right: 15px;
     opacity: 0.6;
     color: #051922;
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
     p.blog-meta span:last-child {
@@ -3286,3 +3286,45 @@ h3 {
     .single-product-item:hover img {
         transform: scale(1.1);
     }
+
+html {
+    zoom: 95%; /* This is a simple way to scale the page */
+}
+
+#success-message {
+    display: flex;
+    align-items: center; /* Центрира по вертикала */
+    justify-content: space-between; /* Разделя иконата, текста и бутона "X" */
+    padding: 15px;
+    margin: 20px auto;
+    background-color: #4CAF50; /* Зелен фон за успех */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 600px;
+    text-align: center; /* Центрира текста */
+}
+
+    #success-message .icon {
+        margin-right: 10px; /* Разстояние от текста */
+        font-size: 26px; /* Размер на иконата */
+        color: white !important; /* Цвят на иконата */
+    }
+
+    #success-message .message {
+        flex: 1; /* Позволява на текста да запълни наличното пространство */
+        text-align: center; /* Центрира текста в оставащото пространство */
+    }
+
+    #success-message .close-btn {
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 20px; /* По-малък размер на "X" */
+        cursor: pointer;
+        padding: 0; /* Няма нужда от padding */
+        margin-left: 10px; /* Разстояние от текста */
+    }
+/* Alternatively, you can use a transform with scale */

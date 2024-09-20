@@ -6,26 +6,6 @@
     var imageUrl = Model.Input.ImageUrl;
 }
 
-@*<h3>@ViewData["Title"]</h3>
-<partial name="_StatusMessage" for="StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
-        <form id="profile-form" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.UserName" class="form-control" placeholder="Please choose your username." />
-                <label asp-for="Input.UserName" class="form-label"></label>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
-                <label asp-for="Input.PhoneNumber" class="form-label"></label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
-        </form>
-    </div>
-</div>*@
-
 <div class="container">
     <div class="row flex-lg-nowrap">
         <div class="col">
@@ -35,141 +15,115 @@
                         <div class="card-body">
                             <div class="e-profile">
                                 <form class="form" id="profile-form" method="post" enctype="multipart/form-data">
-                                <div class="row">
-                                    <div class="col-12 col-sm-auto mb-3">
-                                        <div class="mx-auto pointer">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-auto mb-3">
+                                            <div class="mx-auto pointer">
                                                 @if (imageUrl != null)
                                                 {
                                                     <label for="imageInput">
-                                                    <img class="profile-picture" src="@Model.Input.ImageUrl" />
+                                                        <img class="profile-picture" src="@Model.Input.ImageUrl" id="profileImage" />
                                                     </label>
                                                 }
-
                                                 else
                                                 {
                                                     <label for="imageInput">
-                                                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                                                        <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
-                                                    </div>
+                                                        <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                            <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                                        </div>
                                                     </label>
                                                 }
-                                                
-                                                <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" />
-                                        </div>
-                                    </div>
-                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
-                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
-                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
-                                            <p class="mb-0">johnny.s</p>
-                                            <div class="text-muted"><small>Last seen 2 hours ago</small></div>
-                                            <div class="mt-2">
-                                                <label class="btn btn-primary" for="imageInput">
-                                                    <i class="fa fa-fw fa-camera"></i>
-                                                    <span>Change Photo</span>
-                                                </label>
-                                                <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" />
+                                                <input type="file" id="imageInput" asp-for="Input.ProfilePicture" class="form-control" style="display: none;" accept="image/*" onchange="previewImage(event)" />
                                             </div>
                                         </div>
-                                        <div class="text-center text-sm-right">
+                                        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                            <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                                <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Input.Name</h4>
+                                                <p class="mb-0">@Model.Input.UserName</p>
+                                               @*  <div class="text-muted"><small>Last seen 2 hours ago</small></div> *@
+                                                <div class="mt-2">
+                                                    <label class="btn btn-primary" for="imageInput">
+                                                        <i class="fa fa-fw fa-camera"></i>
+                                                        <span>Change Photo</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="text-center text-sm-right">
                                                 <span class="badge badge-secondary">@Model.Input.UserRole</span>
-                                            <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                                                <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                                            </div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <ul class="nav nav-tabs">
-                                   
-                                </ul>
-                                <div class="tab-content pt-3">
-                                    <div class="tab-pane active">
-
-
-                                        <form class="form" id="profile-form" method="post">
+                                    <div class="tab-content pt-3">
+                                        <div class="tab-pane active">
                                             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                                        <div class="row">
+                                            <div class="row">
                                                 <div class="col">
                                                     <div class="row">
-
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-3">
-                                                                <label class="form-label" >Username</labe>
-                                                                <input asp-for="Input.UserName" class="form-control text-black" placeholder="Please choose your username." />
-                                                                 <span asp-validation-for="Input.UserName" class="text-danger"></span>
-                                                            </div>
-                                                        </div>
-
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label" asp-for="Input.Name"></label>
-                                                                    <input asp-for="Input.Name" class="form-control text-black" placeholder="Enter name" />
-                                                                    <span asp-validation-for="Input.Name" class="text-danger"></span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label" asp-for="Input.PhoneNumber"></label>
-                                                                    <input asp-for="Input.PhoneNumber" class="form-control text-black" placeholder="Enter Phone no." />
-                                                                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                               
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-4 mb-lg-0">
-                                                                    <label asp-for="Input.Country"></label>
-                                                                    <input asp-for="Input.Country" class="form-control text-black" placeholder="Enter Country" />
-                                                                    <span asp-validation-for="Input.Country" class="text-danger"></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-4 mb-lg-0">
-                                                                    <label asp-for="Input.City"></label>
-                                                                    <input asp-for="Input.City" class="form-control text-black" placeholder="Enter City" />
-                                                                    <span asp-validation-for="Input.City" class="text-danger"></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <div class="mb-0">
-                                                                    <label asp-for="Input.PostalCode"></label>
-                                                                    <input type="text" asp-for="Input.PostalCode" class="form-control text-black" placeholder="Enter Postal code" />
-                                                                    <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
-                                                                </div>
-                                                            </div>
-
+                                                        <div class="col-lg-4">
                                                             <div class="mb-3">
-                                                                <label asp-for="Input.Street"></label>
-                                                                <input type ="text" asp-for="Input.Street" id="billing-address" rows="3" class="form-control  not-here" placeholder="Enter street and street number"></input>
-                                                                <span asp-validation-for="Input.Street" class="text-danger"></span>
+                                                                <label class="form-label">Username</label>
+                                                                <input asp-for="Input.UserName" class="form-control text-black" placeholder="Please choose your username." />
+                                                                <span asp-validation-for="Input.UserName" class="text-danger"></span>
                                                             </div>
-
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="form-group">
-
-                                                                <label>Email</label>
-                                                                <input class="form-control" type="text" placeholder="user@example.com">
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" asp-for="Input.Name"></label>
+                                                                <input asp-for="Input.Name" class="form-control text-black" placeholder="Enter name" />
+                                                                <span asp-validation-for="Input.Name" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" asp-for="Input.PhoneNumber"></label>
+                                                                <input asp-for="Input.PhoneNumber" class="form-control text-black" placeholder="Enter Phone no." />
+                                                                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <div class="mb-4 mb-lg-0">
+                                                                <label asp-for="Input.Country"></label>
+                                                                <input asp-for="Input.Country" class="form-control text-black" placeholder="Enter Country" />
+                                                                <span asp-validation-for="Input.Country" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="mb-4 mb-lg-0">
+                                                                <label asp-for="Input.City"></label>
+                                                                <input asp-for="Input.City" class="form-control text-black" placeholder="Enter City" />
+                                                                <span asp-validation-for="Input.City" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <div class="mb-0">
+                                                                <label asp-for="Input.PostalCode"></label>
+                                                                <input type="text" asp-for="Input.PostalCode" class="form-control text-black" placeholder="Enter Postal code" />
+                                                                <span asp-validation-for="Input.PostalCode" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label asp-for="Input.Street"></label>
+                                                            <input type="text" asp-for="Input.Street" id="billing-address" class="form-control not-here" placeholder="Enter street and street number" />
+                                                            <span asp-validation-for="Input.Street" class="text-danger"></span>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label>Email</label>
+                                                            <input class="form-control" type="text" placeholder="user@example.com">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col d-flex justify-content-end">
+                                                            <button id="update-profile-button" type="submit" class="btn btn-primary">Save Changes</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="row">
-                                                <div class="col d-flex justify-content-end">
-                                                    <button id="update-profile-button" type="submit" class="btn btn-primary">Save Changes</button>
-                                                </div>
-                                            </div>
-                                        </form>
-
+                                        </div>
                                     </div>
-                                </div>
-                              </form>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -185,7 +139,6 @@
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
@@ -194,4 +147,19 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        function previewImage(event) {
+            const input = event.target;
+            const reader = new FileReader();
+
+            reader.onload = function () {
+                const imgElement = document.getElementById('profileImage');
+                imgElement.src = reader.result;
+            }
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
 }
