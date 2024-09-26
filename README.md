@@ -34,6 +34,8 @@ The **Arsenal Fan Page** is an interactive platform dedicated to fans of Arsenal
 - **ASP.NET Core**: Provides a robust backend framework.
 - **SQL**: Used for managing user data, news, and products.
 - **JavaScript, HTML, CSS**: Ensures smooth frontend interactions and design.
+- **Unit Testing**: Implemented to ensure the reliability and correctness of the application.
 
+## Project Summary
 
-## What the App Looks Like
+This project offers a comprehensive fan experience for Arsenal supporters, balancing news, products, and user interaction. The structure allows a clear division of roles, ensuring that users have access to appropriate features based on their responsibilities. The platform is designed following Object-Oriented Programming (OOP) principles and the Model-View-Controller (MVC) design pattern, catering to both casual users and administrators managing the site. It also provides a user-friendly interface with social media integration for easy registration and engagement.
