@@ -3,6 +3,7 @@
     using System;
     using System.Reflection;
 
+    using Azure.Identity;
     using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common;
     using FCArsenalFanPage.Data.Common.Repositories;
@@ -42,6 +43,9 @@
                 options.Cookie.IsEssential = true;
             });
 
+            var keyKeyVaultUrl = new Uri(configuration.GetSection("keyKeyVaultURL").Value!);
+            var azureCredential = new DefaultAzureCredential();
+
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
@@ -54,7 +58,6 @@
                     options.CheckConsentNeeded = context => true;
                     options.MinimumSameSitePolicy = SameSiteMode.None;
                 });
-
 
             services.AddControllersWithViews(
                 options =>
