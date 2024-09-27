@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|d:\\pavel\\softuni\\fc-arsenal-fan-page\\web\\fcarsenalfanpage.web\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B90D1067-FE4C-400E-BA78-5413E30AB9ED}|Web\\FCArsenalFanPage.Web\\FCArsenalFanPage.Web.csproj|solutionrelative:web\\fcarsenalfanpage.web\\wwwroot\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -22,24 +26,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.css",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\main.css",
               "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\wwwroot\\css\\main.css",
               "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\css\\main.css",
               "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\wwwroot\\css\\main.css",
-              "ViewState": "AgIAAOYMAAAAAAAAAAAqwAENAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAFkGAAAAAAAAAAAawG8GAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-09-20T13:59:23.973Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAJEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-20T14:42:38.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SingleNews.cshtml",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\News\\SingleNews.cshtml",
               "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Views\\News\\SingleNews.cshtml",
@@ -52,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "All.cshtml",
               "DocumentMoniker": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml",
               "RelativeDocumentMoniker": "Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml",
-              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml*",
-              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml*",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml",
+              "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-20T13:56:47.688Z",
               "EditorCaption": ""
