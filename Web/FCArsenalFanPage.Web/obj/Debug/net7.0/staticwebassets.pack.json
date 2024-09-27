@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\071b9cd4-e7df-4d0a-9dc9-e51a06340e58.png",
+      "PackagePath": "staticwebassets\\Images\\News\\071b9cd4-e7df-4d0a-9dc9-e51a06340e58.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\078aca40-6faa-48e4-b679-f98e2753236a.png",
+      "PackagePath": "staticwebassets\\Images\\News\\078aca40-6faa-48e4-b679-f98e2753236a.png"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\097d14ba-6db2-4ec6-9eca-00cd85e3732f.png",
       "PackagePath": "staticwebassets\\Images\\News\\097d14ba-6db2-4ec6-9eca-00cd85e3732f.png"
     },
@@ -17,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\News\\0e8484a1-c4e7-4612-8285-f4556ef73128.png"
     },
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\12947f86-23c7-4854-8325-d3a98e6eef2e.png",
+      "PackagePath": "staticwebassets\\Images\\News\\12947f86-23c7-4854-8325-d3a98e6eef2e.png"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\13685e9e-bc1b-46e5-a531-f8574e2a8d05.png",
       "PackagePath": "staticwebassets\\Images\\News\\13685e9e-bc1b-46e5-a531-f8574e2a8d05.png"
     },
@@ -29,8 +41,16 @@
       "PackagePath": "staticwebassets\\Images\\News\\184677aa-95b0-4d07-91c9-fa020b585c5a.png"
     },
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\243b075e-2e29-47a9-8637-28947e0255fa.png",
+      "PackagePath": "staticwebassets\\Images\\News\\243b075e-2e29-47a9-8637-28947e0255fa.png"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\29e87c0a-4b61-4040-b6c0-49e2134aff09.png",
       "PackagePath": "staticwebassets\\Images\\News\\29e87c0a-4b61-4040-b6c0-49e2134aff09.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\2e6492f6-b6ab-4bc5-860f-2e6e5bff7c8d.png",
+      "PackagePath": "staticwebassets\\Images\\News\\2e6492f6-b6ab-4bc5-860f-2e6e5bff7c8d.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\31845b22-31fa-45d6-9789-4e0d116a2355.png",
@@ -41,12 +61,20 @@
       "PackagePath": "staticwebassets\\Images\\News\\44bfed36-df43-4b75-b783-b083e7b2b06d.png"
     },
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\4ba81f75-e81b-42d3-80e3-51608a133bfe.png",
+      "PackagePath": "staticwebassets\\Images\\News\\4ba81f75-e81b-42d3-80e3-51608a133bfe.png"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\59c510a2-a69e-4792-bd0a-2fcdd6fa3f8e.png",
       "PackagePath": "staticwebassets\\Images\\News\\59c510a2-a69e-4792-bd0a-2fcdd6fa3f8e.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\5ed7e843-41dd-4231-ac82-7badc9d458f8.png",
       "PackagePath": "staticwebassets\\Images\\News\\5ed7e843-41dd-4231-ac82-7badc9d458f8.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\6309f98e-4a09-4625-9b9e-e2512ba30474.png",
+      "PackagePath": "staticwebassets\\Images\\News\\6309f98e-4a09-4625-9b9e-e2512ba30474.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\63af87c8-7df9-406d-96ec-4b117996ce86.png",
@@ -63,6 +91,10 @@
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\77456835-dda0-4004-8b23-1c8c9e055260.png",
       "PackagePath": "staticwebassets\\Images\\News\\77456835-dda0-4004-8b23-1c8c9e055260.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\7ebcc387-e98d-4e6f-a59d-5782b6f75667.png",
+      "PackagePath": "staticwebassets\\Images\\News\\7ebcc387-e98d-4e6f-a59d-5782b6f75667.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\83a511da-df00-4de3-85ea-7adf4efbdbd8.png",
@@ -85,8 +117,16 @@
       "PackagePath": "staticwebassets\\Images\\News\\8b5cc516-793b-424c-98d4-1d03e7d2e479.png"
     },
     {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\8d6aec9e-0ebe-4a96-99ec-03ef2ba56509.png",
+      "PackagePath": "staticwebassets\\Images\\News\\8d6aec9e-0ebe-4a96-99ec-03ef2ba56509.png"
+    },
+    {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\8f717003-0291-4634-aed1-43c3d39ab086.png",
       "PackagePath": "staticwebassets\\Images\\News\\8f717003-0291-4634-aed1-43c3d39ab086.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\91d02def-4456-4d23-b9c8-8b09e12d3f74.png",
+      "PackagePath": "staticwebassets\\Images\\News\\91d02def-4456-4d23-b9c8-8b09e12d3f74.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\9bf812a8-95ed-4116-8004-add3f37aac93.png",
@@ -95,6 +135,14 @@
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\a848beaf-b00c-4911-a971-d674e15b2a26.png",
       "PackagePath": "staticwebassets\\Images\\News\\a848beaf-b00c-4911-a971-d674e15b2a26.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\b25b40a8-1717-496d-8372-ef1d34c0cee7.png",
+      "PackagePath": "staticwebassets\\Images\\News\\b25b40a8-1717-496d-8372-ef1d34c0cee7.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\b73bc285-7740-455c-9196-abf97af5389a.png",
+      "PackagePath": "staticwebassets\\Images\\News\\b73bc285-7740-455c-9196-abf97af5389a.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\b921cc36-d1e9-44ee-9a2c-60fdc958429e.png",
@@ -115,6 +163,10 @@
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\cb88fc0d-c45f-4343-843d-b284b6163002.png",
       "PackagePath": "staticwebassets\\Images\\News\\cb88fc0d-c45f-4343-843d-b284b6163002.png"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\ce568fc6-8b37-4818-a8f4-dbb9adc92967.png",
+      "PackagePath": "staticwebassets\\Images\\News\\ce568fc6-8b37-4818-a8f4-dbb9adc92967.png"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\f190a27f-e0c7-4207-8c3b-76842aa77554.png",
@@ -169,12 +221,12 @@
       "PackagePath": "staticwebassets\\Images\\Products\\d1c19bec-bdd1-4ddc-9d00-363cbafc9c59.png"
     },
     {
-      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg",
-      "PackagePath": "staticwebassets\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg"
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\1075cbf8-5167-48fb-a0da-77bfa6721257.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProfilePictures\\1075cbf8-5167-48fb-a0da-77bfa6721257.jpg"
     },
     {
-      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\d4828248-2f52-4b46-8883-12f1bffcb7f0.jpg",
-      "PackagePath": "staticwebassets\\Images\\ProfilePictures\\d4828248-2f52-4b46-8883-12f1bffcb7f0.jpg"
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg",
+      "PackagePath": "staticwebassets\\Images\\ProfilePictures\\8569a805-0c23-4b9c-bab6-ad45b9e2c9ce.jpg"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\ProfilePictures\\e9624e20-28f4-4761-ab4e-386775bb2bb8.jpg",
@@ -299,6 +351,10 @@
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\adminlte.js",
       "PackagePath": "staticwebassets\\dist\\js\\adminlte.js"
+    },
+    {
+      "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\newFile.js",
+      "PackagePath": "staticwebassets\\dist\\js\\newFile.js"
     },
     {
       "Id": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\img\\Alert.png",

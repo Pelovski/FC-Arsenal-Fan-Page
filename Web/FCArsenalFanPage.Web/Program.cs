@@ -124,15 +124,14 @@
                 app.UseHsts();
             }
 
-
-			app.UseSession();
-			app.UseHttpsRedirection();
+            app.UseSession();
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
             app.UseRouting();
 
-			app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute("areaRoute", "{area:exists}/{controller=Home}/{action=Index}/{id?}");

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHYZVv6wB/0avErSpsxMUQgAAAAACAAAAAAAQZgAAAAEAACAAAABkGeQ8yDdbeWfo05hziLuBqkn3rD4Yvb47zcbOLMdpiAAAAAAOgAAAAAIAACAAAAAhnun1RdJA6GQ3vnALrxLjy463uzCfNoLWRs3jbCoE14AAAACBxK/Soubz4OG/Scl9Yynw8542C57P3oKnxeLl7X6ptXItcFwg4TSfo9NgzRZSw57RkKpzev3A6iurduo8MWRXAtQ++TxYIB0/k3ieJ3JJIhWpI2RzFF1pne8O2U9ATkYGgywkz03rs6+Wk5lA6urJAS/zBhgL19uIxaoEF52nmEAAAABDYJIuLGnNAiqylsGB8tbyONXN4c7ikom+2Q7wGB57Nj8B/9ErsO5qXyFZma1cjWM6ZPCfRD1eK6L68jFZROG3</EncryptedPassword>
+    <History>True|2024-09-26T19:59:08.3149862Z||;True|2024-09-26T22:54:23.6553630+03:00||;True|2024-09-26T22:01:13.9939691+03:00||;True|2024-09-26T21:49:17.4519393+03:00||;True|2024-09-26T21:30:39.7713745+03:00||;False|2024-09-26T21:28:03.2166053+03:00||;False|2024-09-26T21:21:55.9280805+03:00||;False|2024-09-26T21:20:01.9648513+03:00||;False|2024-09-26T21:12:05.9055020+03:00||;False|2024-09-26T21:11:01.1450450+03:00||;False|2024-09-26T21:08:25.1833101+03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=ArsenalDatabase%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Facebook:ClientId">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Facebook:ClientSecret">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Google:ClientId">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Google:ClientSecret">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Twitter:ConsumerKey">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Twitter:ConsumerSecret">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="FCArsenalFanPage.Data.ApplicationDbContext">
+      <Value>Data Source=arsenalfanpagedbserver.database.windows.net,1433%3bInitial Catalog=FCArsenalFanPage.Web_db%3bUser ID=AdminMaster%3bPassword=Gp2024!!!1</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -7,18 +7,20 @@
 
     public interface INewsService
     {
-        Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath);
-
-        IEnumerable<NewsInListViewModel> GetAll();
+        IEnumerable<NewsInListViewModel> GetAllWithDynamicPaging(int page, int firstPageItems, int otherPagesItems);
 
         IEnumerable<NewsInListViewModel> GetAllWithPaging(int page, int itemsPerPage = 6);
 
-        int GetCount();
-
-        T GetById<T>(int id);
+        Task CreateAsync(CreateNewsInputModel input, string userId, string imagePath);
 
         Task UpdateAsync(int id, EditNewsInputViewModel input);
 
         IEnumerable<NewsInListViewModel> RecentPosts(int id);
+
+        IEnumerable<NewsInListViewModel> GetAll();
+
+        T GetById<T>(int id);
+
+        int GetCount();
     }
 }

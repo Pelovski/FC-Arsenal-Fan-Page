@@ -42,7 +42,6 @@ D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\obj\Debug\net7.0
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\obj\Debug\net7.0\FCArsenalFanPage.Data.pdb
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\obj\Debug\net7.0\FCArsenalFanPage.Data.genruntimeconfig.cache
 D:\Pavel\Project\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\obj\Debug\net7.0\ref\FCArsenalFanPage.Data.dll
-D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\bin\Debug\net7.0\appsettings.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.deps.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.runtimeconfig.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Data\FCArsenalFanPage.Data\bin\Debug\net7.0\FCArsenalFanPage.Data.dll

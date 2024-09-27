@@ -37,15 +37,16 @@
 
         public IActionResult All(int id = 1)
         {
-            const int itemsPerPage = 6;
-            var news = this.newsService.GetAllWithPaging(id, itemsPerPage);
+            int firstItemsPerPage = 7;
+            int otherPagesItems = 9;
+
 
             var viewModel = new NewsListViewModel
             {
                 PageNumber = id,
-                News = this.newsService.GetAllWithPaging(id, itemsPerPage),
+                News = this.newsService.GetAllWithDynamicPaging(id, firstItemsPerPage, otherPagesItems),
                 NewsCount = this.newsService.GetCount(),
-                ItemsPerPage = itemsPerPage,
+                ItemsPerPage = firstItemsPerPage,
             };
 
             return this.View(viewModel);

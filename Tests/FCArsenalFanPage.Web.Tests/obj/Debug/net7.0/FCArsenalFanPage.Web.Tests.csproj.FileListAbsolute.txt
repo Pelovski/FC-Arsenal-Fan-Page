@@ -679,11 +679,7 @@ D:\Pavel\Project\FC Arsenal Fan Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\
 D:\Pavel\Project\FC Arsenal Fan Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 D:\Pavel\Project\FC Arsenal Fan Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\testhost.exe
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\testhost.dll
-D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
-D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.reporters.netcoreapp10.dll
-D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.utility.netcoreapp10.dll
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.deps.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.runtimeconfig.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\appsettings.Development.json
@@ -692,8 +688,12 @@ D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\libman.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.staticwebassets.runtime.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.exe
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\testhost.exe
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\MvcTestingAppManifest.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.Tests.staticwebassets.runtime.json
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.reporters.netcoreapp10.dll
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\xunit.runner.utility.netcoreapp10.dll
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.Tests.exe
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.Tests.deps.json
 D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Tests\FCArsenalFanPage.Web.Tests\bin\Debug\net7.0\FCArsenalFanPage.Web.Tests.runtimeconfig.json

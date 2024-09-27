@@ -66,6 +66,21 @@
                    .Take(itemsPerPage);
         }
 
+        public IEnumerable<NewsInListViewModel> GetAllWithDynamicPaging(int page, int firstPageItems, int otherPagesItems)
+        {
+            int itemsPerPage = page == 1 ? firstPageItems : otherPagesItems;
+
+            int skip = (page - 1) * otherPagesItems;
+            if (page > 1)
+            {
+                skip -= otherPagesItems - firstPageItems;
+            }
+
+            return this.GetAll()
+                       .Skip(skip)
+                       .Take(itemsPerPage);
+        }
+
         public IEnumerable<NewsInListViewModel> GetAll()
         {
             return this.newsRepository

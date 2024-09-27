@@ -1,7 +1,8 @@
 ﻿@model NewsListViewModel
 
 @{
-	this.ViewData["Title"] = "News";
+    this.ViewData["Title"] = "News";
+    var skipNews = 1;
 }
 
 <!-- breadcrumb-section -->
@@ -24,7 +25,9 @@
             <!-- Large News Item -->
             @if (Model.News.Any())
             {
-                var largeNews = Model.News.First();
+                if (Model.PageNumber == 1)
+                {
+                    var largeNews = Model.News.First();
                 <div class="col-lg-12">
                     <div class="single-latest-news large-news">
                         <div class="image-wrapper">
@@ -42,11 +45,17 @@
                         </div>
                     </div>
                 </div>
-
+                }
                 <!-- Other News Items -->
                 <div class="col-lg-12">
                     <div class="row">
-                        @foreach (var news in Model.News.Where(n => n.Id != largeNews.Id))
+                        
+                        @if(Model.HasPreviousPage == true)
+                        {
+                            skipNews = 0;
+                        }
+
+                        @foreach (var news in Model.News.Skip(skipNews))
                         {
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-latest-news">

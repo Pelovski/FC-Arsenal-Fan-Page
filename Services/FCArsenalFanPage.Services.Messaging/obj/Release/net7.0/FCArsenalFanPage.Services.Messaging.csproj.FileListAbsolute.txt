@@ -1,0 +1,13 @@
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Release\net7.0\FCArsenalFanPage.Services.Messaging.deps.json
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Release\net7.0\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\bin\Release\net7.0\FCArsenalFanPage.Services.Messaging.pdb
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.csproj.AssemblyReference.cache
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.AssemblyInfoInputs.cache
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.AssemblyInfo.cs
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.csproj.CoreCompileInputs.cache
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.sourcelink.json
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\refint\FCArsenalFanPage.Services.Messaging.dll
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\FCArsenalFanPage.Services.Messaging.pdb
+D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Services\FCArsenalFanPage.Services.Messaging\obj\Release\net7.0\ref\FCArsenalFanPage.Services.Messaging.dll
