@@ -39,8 +39,7 @@
               "ViewState": "AgIAAFkGAAAAAAAAAAAawG8GAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-09-20T13:59:23.973Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -65,8 +64,7 @@
               "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\News\\SingleNews.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-20T13:57:06.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T13:57:06.642Z"
             },
             {
               "$type": "Document",
@@ -78,8 +76,7 @@
               "RelativeToolTip": "Web\\FCArsenalFanPage.Web\\Views\\Shop\\All.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-20T13:56:47.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-20T13:56:47.688Z"
             }
           ]
         }
