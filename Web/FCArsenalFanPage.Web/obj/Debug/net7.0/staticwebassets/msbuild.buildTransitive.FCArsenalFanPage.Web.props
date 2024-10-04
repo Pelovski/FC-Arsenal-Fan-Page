@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\FCArsenalFanPage.Web.props" />
-</Project>

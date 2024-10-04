@@ -1,31 +1,3 @@
-# Visual Studio
+bin/
+obj/
 .vs/
-*.sln.ide
-
-# Build results
-[Dd]ebug/
-[Rr]elease/
-[Bb]in/
-[Oo]bj/
-
-# User-specific files
-*.user
-*.suo
-*.userprefs
-*.sln.docstates
-
-# Rider
-.idea/
-
-# Visual Studio Code
-.vscode/
-
-# ASP.NET
-appsettings*.json
-*.db
-*.bak
-
-# NuGet Packages
-*.nupkg
-*.snupkg
-**/packages/*

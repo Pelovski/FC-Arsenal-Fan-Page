@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="IIS Web Application Name" description="" value="ArsenalFanPage" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage\.Web\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="FCArsenalFanPage.Data.ApplicationDbContext" description="" value="Data Source=arsenalfanpagedbserver.database.windows.net,1433;Initial Catalog=FCArsenalFanPage.Web_db;User ID=AdminMaster;Password=Gp2024!!!1" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage\.Web\\obj\\Release\\net7\.0\\PubTmp\\EFSQLScripts\\FCArsenalFanPage\.Data\.ApplicationDbContext\.sql$" />
-  </parameter>
-</parameters>

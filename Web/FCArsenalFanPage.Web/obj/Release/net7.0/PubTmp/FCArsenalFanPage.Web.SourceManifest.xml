@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Release\net7.0\PubTmp\Out\" />
-  <dbfullsql path="D:\Pavel\SoftUni\FC-Arsenal-Fan-Page\Web\FCArsenalFanPage.Web\obj\Release\net7.0\PubTmp\EFSQLScripts\FCArsenalFanPage.Data.ApplicationDbContext.sql" />
-</sitemanifest>
