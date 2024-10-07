@@ -43,11 +43,11 @@
                                                     </a>
                                                  
                                             </li>
-                                            <li class="list-inline-item">
+                                            @* <li class="list-inline-item">
                                                 <a href="#" class="text-muted px-1">
                                                     <i class="mdi mdi-heart-outline"></i>
                                                 </a>
-                                            </li>
+                                            </li> *@
                                         </ul>
                                     </div>
                                 </div>
@@ -150,122 +150,65 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript"></script>
 
-	<script>
-
-	$(document).ready(function () {
-		$(".quantity").each(function () {
-			const minusBtn = $(this).find(".minus");
-			const plusBtn = $(this).find(".plus");
-			const inputBox = $(this).find(".input-box");
-			const totalPriceElement = $(this).closest(".card-body").find(".total-price");
-			const unitPriceElement = $(this).closest(".card-body").find(".mb-0");
-
-			const unitPrice = parseFloat(unitPriceElement.text().replace("$", ""));
-			let totalPrice = unitPrice * parseInt(inputBox.val());
-
-			updateButtonStates();
-
-			minusBtn.on("click", decreaseValue);
-			plusBtn.on("click", increaseValue);
-			inputBox.on("input", handleQuantityChange);
-
-			function updateButtonStates() {
-				const value = parseInt(inputBox.val());
-				minusBtn.prop("disabled", value <= 1);
-				plusBtn.prop("disabled", value >= parseInt(inputBox.attr("max")));
-			}
-
-			function decreaseValue() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : Math.max(value, 1);
-				inputBox.val(value);
-				updateButtonStates();
-				handleQuantityChange();
-			}
-
-			function increaseValue() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : Math.min(value, parseInt(inputBox.attr("max")));
-				inputBox.val(value);
-				updateButtonStates();
-				handleQuantityChange();
-			}
-
-			function handleQuantityChange() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : value;
-
-				totalPrice = unitPrice * value;
-				totalPriceElement.text("$" + totalPrice.toFixed(2));
-			}
-		});
-	});
-</script>
-
 <script>
+    $(document).ready(function () {
+        $(".quantity").each(function () {
+            const minusBtn = $(this).find(".minus");
+            const plusBtn = $(this).find(".plus");
+            const inputBox = $(this).find(".input-box");
+            const totalPriceElement = $(this).closest(".card-body").find(".total-price");
+            const unitPriceElement = $(this).closest(".card-body").find(".mb-0");
 
-	$(document).ready(function () {
-		$(".quantity").each(function () {
-			const minusBtn = $(this).find(".minus");
-			const plusBtn = $(this).find(".plus");
-			const inputBox = $(this).find(".input-box");
-			const totalPriceElement = $(this).closest(".card-body").find(".total-price");
-			const unitPriceElement = $(this).closest(".card-body").find(".mb-0");
+            const unitPrice = parseFloat(unitPriceElement.text().replace("$", ""));
+            let totalPrice = unitPrice * parseInt(inputBox.val());
 
-			const unitPrice = parseFloat(unitPriceElement.text().replace("$", ""));
-			let totalPrice = unitPrice * parseInt(inputBox.val());
+            updateButtonStates();
 
-			updateButtonStates();
+            minusBtn.on("click", () => changeValue(-1));
+            plusBtn.on("click", () => changeValue(1));
+            inputBox.on("input", handleQuantityChange);
 
-			minusBtn.on("click", decreaseValue);
-			plusBtn.on("click", increaseValue);
-			inputBox.on("input", handleQuantityChange);
+            function updateButtonStates() {
+                const value = parseInt(inputBox.val());
+                minusBtn.prop("disabled", value <= 1);
+                plusBtn.prop("disabled", value >= parseInt(inputBox.attr("max")));
+            }
 
-			function updateButtonStates() {
-				const value = parseInt(inputBox.val());
-				minusBtn.prop("disabled", value <= 1);
-				plusBtn.prop("disabled", value >= parseInt(inputBox.attr("max")));
-			}
+            function changeValue(change) {
+                let value = parseInt(inputBox.val());
+                value = isNaN(value) ? 1 : Math.max(1, Math.min(value + change, parseInt(inputBox.attr("max"))));
+                inputBox.val(value);
+                updateButtonStates();
+                handleQuantityChange();
+            }
 
-			function decreaseValue() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : Math.max(value - 1, 1);
-				inputBox.val(value);
-				updateButtonStates();
-				handleQuantityChange();
-				calculateTotalPrice(); // Променяме общата цена след всяка промяна в количеството
-			}
+            function handleQuantityChange() {
+                let value = parseInt(inputBox.val());
+                value = isNaN(value) ? 1 : value;
 
-			function increaseValue() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.attr("max")));
-				inputBox.val(value);
-				updateButtonStates();
-				handleQuantityChange();
-				calculateTotalPrice(); // Променяме общата цена след всяка промяна в количеството
-			}
+                totalPrice = unitPrice * value;
+                totalPriceElement.text("$" + totalPrice.toFixed(2));
+                calculatePrices(); // Актуализация на subtotal и total при промяна на количеството
+            }
+        });
 
-			function handleQuantityChange() {
-				let value = parseInt(inputBox.val());
-				value = isNaN(value) ? 1 : value;
+        function calculatePrices() {
+            let subtotal = 0;
+            $(".total-price").each(function () {
+                subtotal += parseFloat($(this).text().replace("$", ""));
+            });
 
-				totalPrice = unitPrice * value;
-				totalPriceElement.text("$" + totalPrice.toFixed(2));
-			}
-		});
+            const shippingCharge = 25.00;
+            const total = subtotal + shippingCharge;
 
-		function calculateTotalPrice() {
-			let totalPrice = 0;
-			$(".total-price").each(function () {
-				totalPrice += parseFloat($(this).text().replace("$", ""));
-			});
-			$("#totalPrice").text("$" + totalPrice.toFixed(2));
-		}
+            $("#totalPrice").text("$" + total.toFixed(2)); // Актуализиране на Total
+            $("td:contains('Sub Total')").next().text("$" + subtotal.toFixed(2)); // Актуализиране на Subtotal
+        }
 
-		calculateTotalPrice(); // Първоначално изчисляване на общата цена
+        calculatePrices(); // Първоначално изчисляване на subtotal и total
 
-		$(".quantity .input-box").on("input", function () {
-			calculateTotalPrice(); // Актуализация на общата цена при всяка промяна на количеството
-		});
-	});
+        $(".quantity .input-box").on("input", function () {
+            calculatePrices(); // Актуализация на subtotal и total при всяка промяна на количеството
+        });
+    });
 </script>

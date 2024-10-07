@@ -3328,3 +3328,6 @@ html {
         margin-left: 10px; /* Разстояние от текста */
     }
 /* Alternatively, you can use a transform with scale */
+.mdi-trash-can-outline{
+    font-size: 20px;
+}
