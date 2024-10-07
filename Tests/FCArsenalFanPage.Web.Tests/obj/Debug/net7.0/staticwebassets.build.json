@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YqPXwglEPUHDCr5LczMKboGu1byJz11e034f/GvHOKA=",
+  "Hash": "I7t5ze70mGG3to0gyv31ZsnovBsLMQIx2pdGIdOdcYw=",
   "Source": "FCArsenalFanPage.Web.Tests",
   "BasePath": "_content/FCArsenalFanPage.Web.Tests",
   "Mode": "Default",
@@ -578,6 +578,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\js\\adminlte.js"
+    },
+    {
+      "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\dist\\js\\newFile.js",
+      "SourceId": "FCArsenalFanPage.Web",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\",
+      "BasePath": "_content/FCArsenalFanPage.Web",
+      "RelativePath": "dist/js/newFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dist\\js\\newFile.js"
     },
     {
       "Identity": "D:\\Pavel\\SoftUni\\FC-Arsenal-Fan-Page\\Web\\FCArsenalFanPage.Web\\wwwroot\\Images\\News\\071b9cd4-e7df-4d0a-9dc9-e51a06340e58.png",

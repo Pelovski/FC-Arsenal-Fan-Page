@@ -2,11 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-
-    using AutoMapper;
-    using FCArsenalFanPage.Data.Models;
+	using AutoMapper;
+	using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
-    using Ganss.Xss;
+	using Ganss.Xss;
 
     public class SingleNewsViewModel : IMapFrom<News>, IHaveCustomMappings
     {

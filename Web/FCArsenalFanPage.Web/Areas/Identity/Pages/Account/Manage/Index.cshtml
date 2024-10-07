@@ -49,7 +49,7 @@
                                             </div>
                                             <div class="text-center text-sm-right">
                                                 <span class="badge badge-secondary">@Model.Input.UserRole</span>
-                                                <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                                                <div class="text-muted"><small>Joined @Model.Input.JoinedOn</small></div>
                                             </div>
                                         </div>
                                     </div>
@@ -146,10 +146,23 @@
         function previewImage(event) {
             const input = event.target;
             const reader = new FileReader();
+            const imgElement = document.getElementById('profileImage');
 
             reader.onload = function () {
-                const imgElement = document.getElementById('profileImage');
-                imgElement.src = reader.result;
+                if (imgElement) {
+                    // Ако има качена снимка, просто променяме src
+                    imgElement.src = reader.result;
+                } else {
+                    // Ако няма качена снимка, създаваме нов img елемент и го добавяме
+                    const newImg = document.createElement('img');
+                    newImg.id = 'profileImage';
+                    newImg.className = 'profile-picture';
+                    newImg.src = reader.result;
+
+                    // Премахваме placeholder-а и добавяме новата снимка
+                    const placeholderDiv = document.querySelector('.d-flex.justify-content-center.align-items-center.rounded');
+                    placeholderDiv.replaceWith(newImg);
+                }
             }
 
             if (input.files && input.files[0]) {

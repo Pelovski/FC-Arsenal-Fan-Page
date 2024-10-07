@@ -21,9 +21,7 @@
         {
             configuration.CreateMap<Product, CreateOrderInputModel>()
                  .ForMember(x => x.ImageUrl, opt =>
-                  opt.MapFrom(x => x.Image.RemoteImageUrl != null ?
-                  x.Image.RemoteImageUrl :
-                  "/Images/Products/" + x.Image.Id + "." + x.Image.Extension));
+                  opt.MapFrom(x => x.Image.RemoteImageUrl ?? "/Images/Products/" + x.Image.Id + "." + x.Image.Extension));
         }
     }
 }

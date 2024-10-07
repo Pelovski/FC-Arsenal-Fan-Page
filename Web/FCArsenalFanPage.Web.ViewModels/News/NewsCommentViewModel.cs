@@ -1,9 +1,9 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.News
 {
     using System;
-    using AutoMapper;
-
-    using FCArsenalFanPage.Data.Models;
+	using System.ComponentModel.DataAnnotations;
+	using AutoMapper;
+	using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
     using Ganss.Xss;
 
@@ -15,9 +15,11 @@
 
         public int? ParentId { get; set; }
 
-        public string Content { get; set; }
+		[MinLength(3, ErrorMessage = "Content must be at least 3 characters long.")]
+		public string Content { get; set; }
 
-        public string SanitizedContent => new HtmlSanitizer().Sanitize(this.Content);
+		[MinLength(3, ErrorMessage = "Content must be at least 3 characters long.")]
+		public string SanitizedContent => new HtmlSanitizer().Sanitize(this.Content);
 
         public string? UserImageUrl { get; set; }
 

@@ -1,11 +1,16 @@
 {
   "dependencies": {
     "mssql1": {
-      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ArsenalFanPage/providers/Microsoft.ServiceLinker/linkers/ConnectionStrings_8B368ADE3C",
-      "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/arsenalfanpagedbserver/databases/FCArsenalFanPage.Web_db",
-      "type": "mssql.azure",
+      "ignored": "true",
+      "type": "mssql",
       "connectionId": "ConnectionStrings"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/ArsenalFanPage/providers/Microsoft.ServiceLinker/linkers/ConnectionString_07436C0254",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/fcarsenalfanpagedbdbserver/databases/FCArsenalFanPageDatabase",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionString"
     }
   }
 }

@@ -7,15 +7,14 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
 
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
-    using System.Runtime.InteropServices;
     using System.Threading.Tasks;
-    using FCArsenalFanPage.Data.Common.Repositories;
+
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
     using FCArsenalFanPage.Web.Infrastructure;
     using Microsoft.AspNetCore.Hosting;
-	using Microsoft.AspNetCore.Http;
-	using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -75,8 +74,11 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
 
+            [Required]
+            [Display(Name = "First and Last Name")]
             public string Name { get; set; }
 
+            [Required]
             public string UserName { get; set; }
 
             [DataType(DataType.Upload)]
@@ -99,6 +101,8 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
             public string ImageUrl { get; set; }
 
             public string UserRole { get; set; }
+
+            public string JoinedOn { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -115,6 +119,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account.Manage
                 UserName = userName,
                 PhoneNumber = phoneNumber,
                 UserRole = userRole.FirstOrDefault(),
+                JoinedOn = user.CreatedOn.ToString("dd MMM yyyy"),
             };
 
             if (userAddresses != null)

@@ -1,11 +1,9 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.Products
 {
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using FCArsenalFanPage.Web.Infrastructure;
     using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc.Rendering;
 
     public class CreateProductInputModel : BaseProductViewModel
     {

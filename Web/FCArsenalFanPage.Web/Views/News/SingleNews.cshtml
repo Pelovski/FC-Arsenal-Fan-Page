@@ -70,9 +70,10 @@
 							<div>
 								<input type="hidden" name="NewsId" value="@this.Model.Id" />
 								<input type="hidden" name="ParentId" value="0" />
-							</div>
+							</div class="form-group">
 							<p><textarea name="content" id="content" cols="30" rows="10" placeholder="Your Message"></textarea></p>
 							<p><input type="submit" value="Add comment"></p>
+							<span asp-validation-for="Content" class="text-danger"></span>
 						</form>
 					</div>
 				</div>
@@ -108,6 +109,7 @@
 </div>
 <!-- end single article section -->
 @section Scripts {
+	 @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 	<script>
 		function showAddCommentForm(parentId) {
 			$("#AddCommentForm input[name='ParentId']").val(parentId);

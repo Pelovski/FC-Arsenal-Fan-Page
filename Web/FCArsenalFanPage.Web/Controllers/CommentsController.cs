@@ -26,6 +26,7 @@
         [Authorize]
         public async Task<IActionResult> Create(CreateCommentInputModel input)
         {
+
             var userId = this.userManager.GetUserId(this.User);
             var parentId = input.ParentId == 0 ?
                 (int?)null :
@@ -37,6 +38,11 @@
                 {
                     return this.BadRequest();
                 }
+            }
+
+            if (!this.ModelState.IsValid)
+            {
+                return this.RedirectToAction("SingleNews", "News", new { id = input.NewsId });
             }
 
             await this.commentService.Create(input.NewsId, userId, input.Content, parentId);

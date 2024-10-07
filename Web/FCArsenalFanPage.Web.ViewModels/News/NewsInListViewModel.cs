@@ -1,9 +1,5 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.News
 {
-    using AutoMapper;
-    using FCArsenalFanPage.Data.Models;
-    using FCArsenalFanPage.Services.Mapping;
-
     public class NewsInListViewModel
     {
         public int Id { get; set; }
