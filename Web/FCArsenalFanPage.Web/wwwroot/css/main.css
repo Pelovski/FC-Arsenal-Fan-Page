@@ -3331,3 +3331,25 @@ html {
 .mdi-trash-can-outline{
     font-size: 20px;
 }
+
+.footer-area .footer-box {
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.footer-area h2 {
+    margin-bottom: 15px; /* Space below titles */
+    text-align: center; /* Center the titles */
+}
+
+.footer-area ul {
+    padding: 0; /* Remove padding */
+    list-style-type: none; /* Remove bullet points */
+}
+
+    .footer-area ul li {
+        margin-bottom: 10px; /* Space between list items */
+        text-align: center; /* Center list items */
+    }

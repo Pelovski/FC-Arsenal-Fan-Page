@@ -22,7 +22,7 @@
 					<p class="single-product-pricing">$@Model.Price</p>
 					<p>@Html.Raw(Model.Description)</p>
 					<div class="single-product-form">
-
+						<p><strong>Categorie: </strong>@Model.ProductCategoryName</p>
 						<form method="post" asp-controller="Orders" asp-action="Order">
 							<div class="form-group">
 								<label asp-for="Quantity"></label>
@@ -32,8 +32,6 @@
 								<input type="hidden" asp-for="Id" />
 							<button class="btn product-btn" type="submit"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
 						</form>
-						
-						<p><strong>Categories: </strong>@Model.ProductCategoryName</p>
 					</div>
 				</div>
 			</div>
@@ -41,7 +39,9 @@
 	</div>
 </div>
 
-<!-- more products -->
+@* TODO: Implemented related products *@
+
+@* <!-- more products -->
 <div class="more-products mb-150">
 	<div class="container">
 		<div class="row">
@@ -63,27 +63,7 @@
 					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-6 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-2.jpg" alt=""></a>
-					</div>
-					<h3>Berry</h3>
-					<p class="product-price"><span>Per Kg</span> 70$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-3.jpg" alt=""></a>
-					</div>
-					<h3>Lemon</h3>
-					<p class="product-price"><span>Per Kg</span> 35$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
 		</div>
 	</div>
-</div>
+</div> *@
 <!-- end more products -->
