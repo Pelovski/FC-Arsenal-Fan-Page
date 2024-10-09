@@ -103,7 +103,7 @@
         public IEnumerable<OrdersInListViewModel> GetAllByUserId(string userId)
         {
             return this.GetAll()
-                .Where(x => x.UserId == userId)
+                .Where(x => x.UserId == userId && x.Status != "Done")
                 .ToList();
         }
 
@@ -111,7 +111,7 @@
         {
             return this.orderRepository
                 .All()
-                .Where (x => x.UserId == userId)
+                .Where(x => x.UserId == userId)
                 .ToList();
         }
 

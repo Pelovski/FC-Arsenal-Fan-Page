@@ -38,7 +38,10 @@
         public async Task UpdateAsync(string userId, string roleId)
         {
             var user = await this.userManager.FindByIdAsync(userId);
+            var currentRole = this.userManager.GetRolesAsync(user).Result.FirstOrDefault();
             var roleName = this.GetAll().FirstOrDefault(x => x.Value == roleId).Text;
+
+            await this.userManager.RemoveFromRoleAsync(user, currentRole);
 
             await this.userManager.AddToRoleAsync(user, roleName);
         }

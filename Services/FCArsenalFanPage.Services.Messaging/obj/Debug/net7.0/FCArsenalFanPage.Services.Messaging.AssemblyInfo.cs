@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCArsenalFanPage.Services.Messaging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+231ee42f78944850dece548229f77dbd1467303b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+127978a1f246f28b4da3101533faba50d4584f57")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCArsenalFanPage.Services.Messaging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCArsenalFanPage.Services.Messaging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
