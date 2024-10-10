@@ -65,10 +65,14 @@
                                 Quantity = o.Quantity,
                                 ImageUrl = o.Product.Image.RemoteImageUrl ?? "/Images/Products/" + o.Product.Image.Id + "." + o.Product.Image.Extension,
                             }).ToList(),
-
                 }).ToList();
 
             return model;
+        }
+
+        public int GetCount()
+        {
+          return this.orderStatusRepository.AllAsNoTracking().Count();
         }
     }
 }

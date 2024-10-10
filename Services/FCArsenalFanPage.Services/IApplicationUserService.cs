@@ -19,5 +19,7 @@
         Task SetNameToUserAsync(ApplicationUser user, string name);
 
         Task<bool> SetAddressToUserAsync(ApplicationUser user, string street, string country, string city, int postalCode);
+
+        public int GetCount();
     }
 }

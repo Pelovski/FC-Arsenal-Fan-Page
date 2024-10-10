@@ -115,5 +115,10 @@
             await this.usersRepository.SaveChangesAsync();
             return true;
         }
+
+        public int GetCount()
+        {
+            return this.usersRepository.AllAsNoTracking().Count();
+        }
     }
 }

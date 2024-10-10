@@ -14,5 +14,7 @@
         T GetById<T>(string id);
 
         Task UpdateAsync(string id, EditProductInputViewModel input);
+
+        public int GetCount();
     }
 }

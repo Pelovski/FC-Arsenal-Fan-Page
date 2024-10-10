@@ -14,8 +14,7 @@
     {
         private readonly IDeletableEntityRepository<Product> productRepository;
 
-        public ProductService(
-            IDeletableEntityRepository<Product> productRepository)
+        public ProductService(IDeletableEntityRepository<Product> productRepository)
         {
             this.productRepository = productRepository;
         }
@@ -101,6 +100,11 @@
             product.CreatedByUserId = input.CreatedByUserId;
 
             await this.productRepository.SaveChangesAsync();
+        }
+
+        public int GetCount()
+        {
+            return this.productRepository.AllAsNoTracking().Count();
         }
     }
 }
