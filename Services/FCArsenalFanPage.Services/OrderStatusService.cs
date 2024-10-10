@@ -72,7 +72,7 @@
 
         public int GetCount()
         {
-          return this.orderStatusRepository.AllAsNoTracking().Count();
+          return this.orderStatusRepository.AllAsNoTracking().Where(x => x.Name == "Completed").Count();
         }
     }
 }

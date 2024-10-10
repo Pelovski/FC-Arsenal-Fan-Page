@@ -8,7 +8,6 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Web.ViewModels.Administration;
-    using FCArsenalFanPage.Web.ViewModels.News;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
 

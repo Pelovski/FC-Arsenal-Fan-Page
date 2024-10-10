@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@inject UserManager<ApplicationUser> UserManager
+@inject IApplicationUserService userService;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -20,6 +23,13 @@
     <link rel="stylesheet" href="~/dist/css/adminlte.min.css" asp-append-version="true">
 
 </head>
+
+@{
+    var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    var currentUser = await UserManager.FindByIdAsync(userId);
+    var userImageUrl = this.userService.GetProfilePictureUrl(currentUser);
+}
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div style="background-color: #f4f6f9" class="wrapper">
 
@@ -55,10 +65,10 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="~/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                        <img src="@userImageUrl" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block">@currentUser.UserName</a>
                     </div>
                 </div>
 
