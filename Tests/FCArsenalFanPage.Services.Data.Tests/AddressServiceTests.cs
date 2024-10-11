@@ -11,8 +11,8 @@
 
     public class AddressServiceTests
     {
-        private Mock<IDeletableEntityRepository<Address>> mockRepo;
-        private AddressService service;
+        private readonly Mock<IDeletableEntityRepository<Address>> mockRepo;
+        private readonly AddressService service;
 
         public AddressServiceTests()
         {

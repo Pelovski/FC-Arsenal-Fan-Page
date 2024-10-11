@@ -4,17 +4,22 @@
 
     using FCArsenalFanPage.Data.Common.Models;
 
-    public class Address : BaseDeletableModel<string>
+	using System.ComponentModel.DataAnnotations;
+
+	public class Address : BaseDeletableModel<string>
     {
         public Address()
         {
             this.Id = Guid.NewGuid().ToString();
         }
 
+        [MaxLength(30)]
         public string Name { get; set; }
 
-        public string Country { get; set; }
+        [MaxLength(50)]
+		public string Country { get; set; }
 
+        [MaxLength(50)]
         public string City { get; set; }
 
         public int PostalCode { get; set; }

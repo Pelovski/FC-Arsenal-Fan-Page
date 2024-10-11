@@ -1,10 +1,8 @@
 ﻿namespace FCArsenalFanPage.Services.Data.Tests
 {
-    using System;
-    using System.Collections.Generic;
+	using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using System.Text.RegularExpressions;
     using System.Threading;
     using System.Threading.Tasks;
 

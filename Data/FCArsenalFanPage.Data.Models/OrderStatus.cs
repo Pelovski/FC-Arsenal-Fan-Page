@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using FCArsenalFanPage.Data.Common.Models;
 
@@ -11,6 +12,7 @@
             this.Orders = new HashSet<Order>();
         }
 
+        [MaxLength(50)]
         public string Name { get; set; }
 
         public string UserId { get; set; }

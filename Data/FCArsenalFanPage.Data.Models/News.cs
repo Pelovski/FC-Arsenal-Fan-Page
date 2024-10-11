@@ -1,6 +1,7 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     using FCArsenalFanPage.Data.Common.Models;
 
@@ -11,8 +12,10 @@
             this.Comments = new HashSet<Comment>();
         }
 
+        [MaxLength(50)]
         public string Title { get; set; }
 
+        [MaxLength(1000)]
         public string Content { get; set; }
 
         public string UserId { get; set; }

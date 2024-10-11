@@ -1,9 +1,10 @@
-﻿// ReSharper disable VirtualMemberCallInConstructor
+﻿using System.ComponentModel.DataAnnotations;
+
 namespace FCArsenalFanPage.Data.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations.Schema;
+	using System.ComponentModel.DataAnnotations.Schema;
 
     using FCArsenalFanPage.Data.Common.Models;
 
@@ -36,7 +37,8 @@ namespace FCArsenalFanPage.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        public string Name { get; set; }
+		[MaxLength(30)]
+		public string Name { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 

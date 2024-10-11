@@ -95,7 +95,10 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
                 this.ModelState.AddModelError(string.Empty, this.ErrorMessage);
             }
 
-            returnUrl ??= this.Url.Content("~/");
+            var refererUrl = this.Request.Headers["Referer"].ToString();
+            int index = refererUrl.IndexOf('/', refererUrl.IndexOf("://") + 3);
+
+            returnUrl = refererUrl.Substring(index);
 
             // Clear the existing external cookie to ensure a clean login process
             await this.HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);

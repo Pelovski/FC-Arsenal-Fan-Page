@@ -1,4 +1,6 @@
-﻿namespace FCArsenalFanPage.Data.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FCArsenalFanPage.Data.Models
 {
     using System.Collections.Generic;
 
@@ -11,7 +13,8 @@
             this.News = new HashSet<News>();
         }
 
-        public string Name { get; set; }
+        [MaxLength(30)]
+		public string Name { get; set; }
 
         public virtual ICollection<News> News { get; set; }
     }

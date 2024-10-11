@@ -1,4 +1,6 @@
-﻿namespace FCArsenalFanPage.Data.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FCArsenalFanPage.Data.Models
 {
     using FCArsenalFanPage.Data.Common.Models;
 
@@ -12,7 +14,8 @@
 
         public virtual Comment Parent { get; set; }
 
-        public string Content { get; set; }
+        [MaxLength(1000)]
+		public string Content { get; set; }
 
         public string UserId { get; set; }
 
