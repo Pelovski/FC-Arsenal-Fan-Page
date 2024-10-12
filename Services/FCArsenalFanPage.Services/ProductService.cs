@@ -8,7 +8,9 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
+    using FCArsenalFanPage.Web.ViewModels.Administration;
     using FCArsenalFanPage.Web.ViewModels.Products;
+    using Microsoft.EntityFrameworkCore;
 
     public class ProductService : IProductService
     {
@@ -31,6 +33,7 @@
                 Quantity = input.Quantity,
                 Description = input.Description,
                 ProductCategoryId = input.ProductCategoryId,
+                CreatedByUserId = userId,
             };
 
             var image = input.Image;
@@ -105,6 +108,27 @@
         public int GetCount()
         {
             return this.productRepository.AllAsNoTracking().Count();
+        }
+
+        public IEnumerable<ProductDashboardViewModel> GetProductsForDashboard()
+        {
+            return this.productRepository
+                .AllAsNoTracking()
+                .Include(p => p.CreatedByUser)
+                .Include(p => p.ProductCategory)
+                .Select(x => new ProductDashboardViewModel
+                {
+                    ProductId = x.Id,
+                    Name = x.Name,
+                    Price = x.Price,
+                    Description = x.Description,
+                    Quantity = x.Quantity,
+                    ProductCategory = x.ProductCategory.Name,
+                    CreatedByUser = x.CreatedByUser.Name,
+                    CreatedOn = x.CreatedOn.ToString("dd/MM/yyyy"),
+                    ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn.Value.ToString("dd/MM/yyyy") : string.Empty,
+                })
+                .ToList();
         }
     }
 }

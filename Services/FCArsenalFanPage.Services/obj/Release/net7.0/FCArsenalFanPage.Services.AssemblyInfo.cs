@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1671b14452d92de00feba2d5eab820e4dca4c266")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6475592156cd14f7d60907a3aec006bc57113a6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

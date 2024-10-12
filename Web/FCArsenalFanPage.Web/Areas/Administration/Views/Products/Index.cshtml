@@ -1,4 +1,4 @@
-﻿@model IEnumerable<FCArsenalFanPage.Data.Models.Product>
+﻿@model IEnumerable<ProductDashboardViewModel>
 
 @{
     ViewData["Title"] = "Products";
@@ -23,16 +23,16 @@
                 @Html.DisplayNameFor(model => model.Quantity)
             </th>
             <th>
-                Priduct Category
+                @Html.DisplayNameFor(model => model.ProductCategory)
             </th>
             <th>
-                Created by user
+                @Html.DisplayNameFor(model => model.CreatedByUser)
             </th>
             <th>
-                Created on
+                @Html.DisplayNameFor(model => model.CreatedOn)
             </th>
             <th>
-                Modified on
+                @Html.DisplayNameFor(model => model.ModifiedOn)
             </th>
             <th></th>
         </tr>
@@ -50,10 +50,10 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
                 <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.ProductCategory.Name)
+                @Html.DisplayFor(modelItem => item.ProductCategory)
             </td>
                 <td class="align-middle">
-                @Html.DisplayFor(modelItem => item.CreatedByUser.Id)
+                    @Html.DisplayFor(modelItem => item.CreatedByUser)
             </td>
                 <td class="align-middle">
                 @Html.DisplayFor(modelItem => item.CreatedOn)
@@ -62,9 +62,9 @@
                 @Html.DisplayFor(modelItem => item.ModifiedOn)
             </td>
                 <td>
-                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="Shop" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                    <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                    <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-primary mt-2 mb-2 ml-1" asp-area="" asp-controller="Shop" asp-action="Edit" asp-route-id="@item.ProductId">Edit</a>
+                    <a class="btn btn-info mt-2 mb-2 ml-1" asp-action="Details" asp-route-id="@item.ProductId">Details</a> 
+                    <a class="btn btn-danger mt-2 mb-2 ml-1" asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
             </td>
         </tr>
 }

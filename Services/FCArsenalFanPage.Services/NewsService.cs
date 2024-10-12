@@ -137,13 +137,13 @@
                 .Take(4);
         }
 
-        public IEnumerable<NewsViewModel> GetNewsForDashboard()
+        public IEnumerable<NewsDashboardViewModel> GetNewsForDashboard()
         {
             return this.newsRepository
                 .AllAsNoTracking()
                 .Include(x => x.Category)
                 .Include(x => x.User)
-                .Select(x => new NewsViewModel
+                .Select(x => new NewsDashboardViewModel
                 {
                     NewsId = x.Id,
                     Title = x.Title,

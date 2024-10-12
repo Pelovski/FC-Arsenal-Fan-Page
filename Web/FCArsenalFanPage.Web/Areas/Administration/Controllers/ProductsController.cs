@@ -5,70 +5,71 @@
 
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services;
     using Microsoft.AspNetCore.Mvc;
-
-    using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
     public class ProductsController : AdministrationController
     {
         private readonly IDeletableEntityRepository<Product> productRepository;
+        private readonly IProductService productService;
 
         public ProductsController(
-            IDeletableEntityRepository<Product> productRepository)
+            IDeletableEntityRepository<Product> productRepository,
+            IProductService productService)
         {
             this.productRepository = productRepository;
+            this.productService = productService;
         }
 
         // GET: Administration/Products
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var applicationDbContext = this.productRepository.AllAsNoTracking().Include(p => p.CreatedByUser).Include(p => p.Image).Include(p => p.ProductCategory);
-            return this.View(await applicationDbContext.ToListAsync());
+            var viewModel = this.productService.GetProductsForDashboard();
+
+            return this.View(viewModel);
         }
 
         // GET: Administration/Products/Details/5
-        public async Task<IActionResult> Details(string id)
+        public IActionResult Details(string id)
         {
             if (id == null || this.productRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var product = await this.productRepository.All()
-                .Include(p => p.CreatedByUser)
-                .Include(p => p.Image)
-                .Include(p => p.ProductCategory)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var viewModel = this.productService
+                .GetProductsForDashboard()
+                .Where(x => x.ProductId == id)
+                .FirstOrDefault();
 
-            if (product == null)
+            if (viewModel == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(product);
+            return this.View(viewModel);
         }
 
         // GET: Administration/Products/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public IActionResult Delete(string id)
         {
             if (id == null || this.productRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var product = await this.productRepository.All()
-                .Include(p => p.CreatedByUser)
-                .Include(p => p.Image)
-                .Include(p => p.ProductCategory)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var viewModel = this.productService
+                .GetProductsForDashboard()
+                .Where(x => x.ProductId == id)
+                .FirstOrDefault();
 
-            if (product == null)
+            if (viewModel == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(product);
+            return this.View(viewModel);
         }
 
         // POST: Administration/Products/Delete/5

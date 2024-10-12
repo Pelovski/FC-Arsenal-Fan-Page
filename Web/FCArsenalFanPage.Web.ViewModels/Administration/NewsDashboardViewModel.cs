@@ -2,7 +2,7 @@
 {
     using System.ComponentModel;
 
-    public class NewsViewModel
+    public class NewsDashboardViewModel
     {
         public int NewsId { get; set; }
 

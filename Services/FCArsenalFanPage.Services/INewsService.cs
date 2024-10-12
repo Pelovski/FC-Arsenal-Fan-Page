@@ -17,7 +17,7 @@
 
         IEnumerable<NewsInListViewModel> RecentPosts(int id);
 
-        public IEnumerable<NewsViewModel> GetNewsForDashboard();
+        public IEnumerable<NewsDashboardViewModel> GetNewsForDashboard();
 
         IEnumerable<NewsInListViewModel> GetAll();
 
