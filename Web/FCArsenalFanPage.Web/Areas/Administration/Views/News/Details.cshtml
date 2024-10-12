@@ -1,4 +1,4 @@
-﻿@model FCArsenalFanPage.Data.Models.News
+﻿@model NewsViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -23,16 +23,16 @@
             @Html.Raw(Model.Content)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.User.UserName)
+            @Html.DisplayNameFor(model => model.UserName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.User.UserName)
+            @Html.DisplayFor(model => model.UserName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.CategoryName)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Category.Name)
+            @Html.DisplayFor(model => model.CategoryName)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.CreatedOn)
@@ -49,6 +49,6 @@
     </dl>
 </div>
 <div class="text-center mb-4 pl-2 ">
-    <a class="btn btn-primary mr-2" asp-area="" asp-controller="News" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    <a class="btn btn-primary mr-2" asp-area="" asp-controller="News" asp-action="Edit" asp-route-id="@Model?.NewsId">Edit</a>
     <a class="btn btn-info " asp-action="Index">Back to List</a>
 </div>

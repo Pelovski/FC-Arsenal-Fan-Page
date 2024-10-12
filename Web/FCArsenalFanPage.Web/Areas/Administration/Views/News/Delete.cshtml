@@ -1,4 +1,4 @@
-﻿@model FCArsenalFanPage.Data.Models.News
+﻿@model NewsViewModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -22,16 +22,16 @@
             @Html.Raw(Model.Content)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User.UserName)
+            @Html.DisplayNameFor(model => model.UserName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.UserName)
+            @Html.DisplayFor(model => model.UserName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.CategoryName)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Category.Name)
+            @Html.DisplayFor(model => model.CategoryName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CreatedOn)
@@ -69,7 +69,7 @@
             <div class="modal-footer justify-content-center">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <form asp-action="Delete">
-                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="NewsId" />
                         <input type="submit" value="Delete" class="btn btn-danger" />
                     </form>
             </div>

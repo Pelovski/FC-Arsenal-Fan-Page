@@ -13,8 +13,10 @@
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services.Mapping;
+    using FCArsenalFanPage.Web.ViewModels.Administration;
     using FCArsenalFanPage.Web.ViewModels.News;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
+    using Microsoft.EntityFrameworkCore;
 
     public class NewsService : INewsService
     {
@@ -133,6 +135,24 @@
                 .Where(x => x.Id != id)
                 .OrderByDescending(x => x.CreatedOn)
                 .Take(4);
+        }
+
+        public IEnumerable<NewsViewModel> GetNewsForDashboard()
+        {
+            return this.newsRepository
+                .AllAsNoTracking()
+                .Include(x => x.Category)
+                .Include(x => x.User)
+                .Select(x => new NewsViewModel
+                {
+                    NewsId = x.Id,
+                    Title = x.Title,
+                    Content = x.Content,
+                    UserName = x.User.UserName,
+                    CategoryName = x.Category.Name,
+                    CreatedOn = x.CreatedOn.ToString("dd/MM/yyyy"),
+                    ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn.Value.ToString("dd/MM/yyyy") : string.Empty,
+                }).ToList();
         }
     }
 }

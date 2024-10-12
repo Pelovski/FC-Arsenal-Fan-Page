@@ -3,74 +3,73 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using FCArsenalFanPage.Data;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
     public class NewsController : AdministrationController
     {
         private readonly IDeletableEntityRepository<News> newsRepository;
-        private readonly ApplicationDbContext context;
+        private readonly INewsService newsService;
 
         public NewsController(
             IDeletableEntityRepository<News> newsRepository,
-            ApplicationDbContext context)
+            INewsService newsService)
         {
             this.newsRepository = newsRepository;
-            this.context = context;
+            this.newsService = newsService;
         }
 
         // GET: Administration/News
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var applicationDbContext = this.newsRepository.AllAsNoTracking().Include(n => n.Category).Include(n => n.User);
-            return this.View(await applicationDbContext.ToListAsync());
+            var viewModel = this.newsService.GetNewsForDashboard();
+
+            return this.View(viewModel);
         }
 
         // GET: Administration/News/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
             if (id == null || this.newsRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var news = await this.newsRepository
-                .All()
-                .Include(n => n.Category)
-                .Include(n => n.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var viewModel = this.newsService
+                .GetNewsForDashboard()
+                .Where(x => x.NewsId == id)
+                .FirstOrDefault();
 
-            if (news == null)
+            if (viewModel == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(news);
+            return this.View(viewModel);
         }
 
         // GET: Administration/News/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(int? id)
         {
             if (id == null || this.newsRepository.All() == null)
             {
                 return this.NotFound();
             }
 
-            var news = await this.newsRepository.All()
-                .Include(n => n.Category)
-                .Include(n => n.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var viewModel = this.newsService
+               .GetNewsForDashboard()
+               .Where(x => x.NewsId == id)
+               .FirstOrDefault();
 
-            if (news == null)
+            if (viewModel == null)
             {
                 return this.NotFound();
             }
 
-            return this.View(news);
+            return this.View(viewModel);
         }
 
         // POST: Administration/News/Delete/5

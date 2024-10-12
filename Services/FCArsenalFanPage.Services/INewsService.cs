@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Web.ViewModels.Administration;
     using FCArsenalFanPage.Web.ViewModels.News;
 
     public interface INewsService
@@ -16,6 +16,8 @@
         Task UpdateAsync(int id, EditNewsInputViewModel input);
 
         IEnumerable<NewsInListViewModel> RecentPosts(int id);
+
+        public IEnumerable<NewsViewModel> GetNewsForDashboard();
 
         IEnumerable<NewsInListViewModel> GetAll();
 

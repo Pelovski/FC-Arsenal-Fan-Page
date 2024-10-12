@@ -1,11 +1,13 @@
 ﻿namespace FCArsenalFanPage.Web.ViewModels.Administration
 {
     using System;
+    using System.ComponentModel;
 
     public class ApplicationUserViewModel
     {
         public string UserId { get; set; }
 
+        [DisplayName("Username")]
         public string UserName { get; set; }
 
         public string Name { get; set; }
