@@ -2,7 +2,7 @@
 {
     using System.Linq;
     using System.Threading.Tasks;
-
+    using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
 
@@ -10,22 +10,26 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
-    public class UserRolesController : AdministrationController
+    public class ApplicationUsersController : AdministrationController
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IRoleService roleService;
         private readonly IApplicationUserService applicationUserService;
+        private readonly IDeletableEntityRepository<ApplicationUser> applicationUserRepository;
 
-        public UserRolesController(
+        public ApplicationUsersController(
             UserManager<ApplicationUser> userManager,
             IRoleService roleService,
-            IApplicationUserService applicationUserService)
+            IApplicationUserService applicationUserService,
+            IDeletableEntityRepository<ApplicationUser> applicationUserRepository)
         {
             this.userManager = userManager;
             this.roleService = roleService;
             this.applicationUserService = applicationUserService;
+            this.applicationUserRepository = applicationUserRepository;
         }
 
         [HttpGet]
@@ -63,6 +67,27 @@
             await this.roleService.UpdateAsync(input.UserId, input.RoleId);
 
             return this.RedirectToAction(nameof(this.Index));
+        }
+
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (id == null || this.applicationUserRepository.All() == null)
+            {
+                return this.NotFound();
+            }
+
+            var viewModel = this.applicationUserService
+                .GetAllUsersWithRole()
+                .Where(x => x.UserId == id)
+                .FirstOrDefault();
+
+
+            if (viewModel == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.View(viewModel);
         }
     }
 }

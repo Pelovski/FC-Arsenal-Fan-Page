@@ -75,17 +75,18 @@
                 "/Images/ProfilePictures/" + profilePicture.Id + "." + profilePicture.Extension;
         }
 
-        public IEnumerable<UserRolesViewModel> GetAllUsersWithRole()
+        public IEnumerable<ApplicationUserViewModel> GetAllUsersWithRole()
         {
             var users = this.userManager.Users.ToList();
 
             return users
                 .SelectMany(user => this.userManager.GetRolesAsync(user)
                     .Result
-                    .Select(role => new UserRolesViewModel
+                    .Select(role => new ApplicationUserViewModel
                     {
                         UserId = user.Id,
                         UserName = user.UserName,
+                        Name = user.Name,
                         Role = role,
                         CreatedOn = user.CreatedOn,
                         Email = user.Email,

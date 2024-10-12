@@ -1,12 +1,11 @@
 ﻿namespace FCArsenalFanPage.Data.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     using FCArsenalFanPage.Data.Common.Models;
 
-	using System.ComponentModel.DataAnnotations;
-
-	public class Address : BaseDeletableModel<string>
+    public class Address : BaseDeletableModel<string>
     {
         public Address()
         {
@@ -17,7 +16,7 @@
         public string Name { get; set; }
 
         [MaxLength(50)]
-		public string Country { get; set; }
+        public string Country { get; set; }
 
         [MaxLength(50)]
         public string City { get; set; }

@@ -37,8 +37,8 @@ namespace FCArsenalFanPage.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-		[MaxLength(30)]
-		public string Name { get; set; }
+        [MaxLength(30)]
+        public string Name { get; set; }
 
         public virtual ICollection<IdentityUserRole<string>> Roles { get; set; }
 

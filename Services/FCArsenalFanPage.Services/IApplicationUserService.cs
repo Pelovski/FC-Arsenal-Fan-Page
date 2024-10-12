@@ -14,7 +14,7 @@
 
         string GetProfilePictureUrl(ApplicationUser user);
 
-        IEnumerable<UserRolesViewModel> GetAllUsersWithRole();
+        IEnumerable<ApplicationUserViewModel> GetAllUsersWithRole();
 
         Task SetNameToUserAsync(ApplicationUser user, string name);
 
