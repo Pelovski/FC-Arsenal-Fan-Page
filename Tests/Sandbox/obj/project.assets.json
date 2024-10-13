@@ -4029,7 +4029,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.0"
         },
         "compile": {
           "bin/placeholder/FCArsenalFanPage.Web.Infrastructure.dll": {}

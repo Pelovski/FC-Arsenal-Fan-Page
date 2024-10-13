@@ -5,7 +5,6 @@
     using System.Linq;
     using System.Threading.Tasks;
     using FCArsenalFanPage.Data.Models;
-    using FCArsenalFanPage.Web.ViewModels.Administration;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.Extensions.DependencyInjection;
@@ -42,7 +41,6 @@
             var roleName = this.GetAll().FirstOrDefault(x => x.Value == roleId).Text;
 
             await this.userManager.RemoveFromRoleAsync(user, currentRole);
-
             await this.userManager.AddToRoleAsync(user, roleName);
         }
     }

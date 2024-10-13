@@ -10,12 +10,14 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.Infrastructure;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.Extensions.Logging;
 
+    [RedirectIfAuthenticated]
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> signInManager;
@@ -87,7 +89,6 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
-
         public async Task OnGetAsync(string returnUrl = null)
         {
             if (!string.IsNullOrEmpty(this.ErrorMessage))

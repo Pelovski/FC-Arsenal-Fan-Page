@@ -10,7 +10,6 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
 
     [Area("Administration")]
     public class ApplicationUsersController : AdministrationController
@@ -69,7 +68,8 @@
             return this.RedirectToAction(nameof(this.Index));
         }
 
-        public async Task<IActionResult> Delete(string id)
+        [HttpGet]
+        public IActionResult Delete(string id)
         {
             if (id == null || this.applicationUserRepository.All() == null)
             {
@@ -81,13 +81,25 @@
                 .Where(x => x.UserId == id)
                 .FirstOrDefault();
 
-
             if (viewModel == null)
             {
                 return this.NotFound();
             }
 
             return this.View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(string userId)
+        {
+            var isDeleted = await this.applicationUserService.DeleteApplicationUser(userId);
+
+            if (isDeleted == false)
+            {
+                return this.NotFound();
+            }
+
+            return this.RedirectToAction(nameof(this.Index));
         }
     }
 }

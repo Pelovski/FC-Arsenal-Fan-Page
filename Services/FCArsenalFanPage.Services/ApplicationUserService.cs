@@ -10,6 +10,7 @@
     using FCArsenalFanPage.Web.ViewModels.Administration;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     public class ApplicationUserService : IApplicationUserService
     {
@@ -119,6 +120,24 @@
         public int GetCount()
         {
             return this.usersRepository.AllAsNoTracking().Count();
+        }
+
+        public async Task<bool> DeleteApplicationUser(string userId)
+        {
+            var isUserDeleted = false;
+
+            var user = await this.usersRepository
+                .All()
+                .Where(x => x.Id == userId)
+                .FirstOrDefaultAsync();
+
+            var userRole = this.userManager.GetRolesAsync(user).Result.FirstOrDefault();
+
+            await this.userManager.RemoveFromRoleAsync(user, userRole);
+            this.usersRepository.Delete(user);
+            var test = this.usersRepository.SaveChangesAsync().Result == 1 ? isUserDeleted = true : isUserDeleted = false;
+
+            return isUserDeleted;
         }
     }
 }

@@ -12,6 +12,8 @@
     {
         Task SetProfilePictureAsync(IFormFile profilePicture, ApplicationUser user, string imagePath);
 
+        Task<bool> DeleteApplicationUser(string userId);
+
         string GetProfilePictureUrl(ApplicationUser user);
 
         IEnumerable<ApplicationUserViewModel> GetAllUsersWithRole();

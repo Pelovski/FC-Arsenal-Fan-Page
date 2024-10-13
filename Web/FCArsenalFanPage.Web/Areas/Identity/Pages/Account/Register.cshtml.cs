@@ -15,6 +15,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
 
     using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Web.Infrastructure;
     using Microsoft.AspNetCore.Authentication;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.UI.Services;
@@ -23,6 +24,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     using Microsoft.AspNetCore.WebUtilities;
     using Microsoft.Extensions.Logging;
 
+    [RedirectIfAuthenticated]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> signInManager;
