@@ -29,23 +29,10 @@
 						<div class="comments-list-wrap">
 							<hr />
 							<h3 class="comment-count-title">@this.Model.Comments.Count() Comments</h3>
-							@foreach (var comment in Model.Comments)
+							@foreach (var comment in Model.Comments.Where(x => x.ParentId == null))
 							{
-								@if (comment.ParentId != null)
-								{
-									
-										<div class="single-comment-body child">
-											<div class="comment-user-avater">
-												<img class="profile-picture" src="@comment.UserImageUrl" alt="">
-											</div>
-											<div class="comment-text-body">
-											<h4>@comment.UserUserName <span class="comment-date">@comment.CreatedOn.ToLocalTime().ToString("d MMM yyyy | HH:mm", CultureInfo.CurrentCulture)</span></h4>
-											<p>@Html.Raw(comment.SanitizedContent)</p>
-											</div>
-										</div>
-								}
-								else
-								{
+
+									var replyComments = Model.Comments.Where(x => x.ParentId == comment.Id).ToList();
 
 									<div class="comment-list">
 										<div class="single-comment-body">
@@ -58,8 +45,23 @@
 											</div>
 										</div>
 									</div>
+
+										if (replyComments != null)
+									{
+										foreach (var replyComment in replyComments)
+										{
+											<div class="single-comment-body child">
+											<div class="comment-user-avater">
+												<img class="profile-picture" src="@replyComment.UserImageUrl" alt="">
+											</div>
+											<div class="comment-text-body">
+											<h4>@comment.UserUserName <span class="comment-date">@replyComment.CreatedOn.ToLocalTime().ToString("d MMM yyyy | HH:mm", CultureInfo.CurrentCulture)</span></h4>
+											<p>@Html.Raw(replyComment.SanitizedContent)</p>
+											</div>
+										</div>
+										}
+									}
 								}
-							}
 						</div>
 					}
 

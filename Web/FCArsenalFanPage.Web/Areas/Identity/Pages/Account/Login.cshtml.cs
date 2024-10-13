@@ -89,6 +89,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             [Display(Name = "Remember me?")]
             public bool RememberMe { get; set; }
         }
+
         public async Task OnGetAsync(string returnUrl = null)
         {
             if (!string.IsNullOrEmpty(this.ErrorMessage))
@@ -97,9 +98,11 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             }
 
             var refererUrl = this.Request.Headers["Referer"].ToString();
-            int index = refererUrl.IndexOf('/', refererUrl.IndexOf("://") + 3);
-
-            returnUrl = refererUrl.Substring(index);
+            if (!string.IsNullOrEmpty(refererUrl))
+                {
+                    int index = refererUrl.IndexOf('/', refererUrl.IndexOf("://") + 3);
+                    returnUrl = refererUrl.Substring(index);
+            }
 
             // Clear the existing external cookie to ensure a clean login process
             await this.HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
