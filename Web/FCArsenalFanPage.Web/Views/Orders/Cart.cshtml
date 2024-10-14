@@ -65,7 +65,7 @@
                                             <div class="d-inline-flex">
                                                 <div class="quantity">
                                                     <button type="button" class="minus" aria-label="Decrease">&minus;</button>
-                                                        <input type="number" name="Quantity" class="input-box" value="@product.Quantity" min="1" max="50">
+                                                        <input type="number" name="Quantity" class="input-box" value="@product.Quantity" min="1" max="@product.AvailableQuantity">
                                                     <button type="button" class="plus" aria-label="Increase">&plus;</button>
                                                 </div>
                                             </div>

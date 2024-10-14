@@ -51,7 +51,7 @@
                 .GetAll()
                 .Where(x => x.UserId == userId && x.Status == "Cart");
 
-            return this.View(viewModel);
+			return this.View(viewModel);
         }
 
         [Authorize]
@@ -61,6 +61,8 @@
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var quantity = input.Quantity;
             var product = this.productService.GetById<CreateOrderInputModel>(input.Id);
+            var availableStock = product.Quantity;
+
 
             await this.orderService.CreateAsync(product, userId, quantity);
 

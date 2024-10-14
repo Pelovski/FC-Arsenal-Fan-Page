@@ -93,6 +93,7 @@
                     Status = x.Status,
                     ProductName = x.Product.Name,
                     Quantity = x.Quantity,
+                    AvailableQuantity = x.Quantity,
                     Price = x.Product.Price,
                     UserId = x.UserId,
                     ImageUrl = x.Product.Image.RemoteImageUrl ?? "/Images/Products/"

@@ -23,13 +23,15 @@
 					<p>@Html.Raw(Model.Description)</p>
 					<div class="single-product-form">
 						<p><strong>Categorie: </strong>@Model.ProductCategoryName</p>
+						<p><strong>In Stock: </strong>@Model.AvailableQuantity</p>	
 						<form method="post" asp-controller="Orders" asp-action="Order">
 							<div class="form-group">
 								<label asp-for="Quantity"></label>
-								<input value="1" asp-for="Quantity" class="form-control"/>
-								<span asp-validation-for="Quantity" class="text-danger"></span>
+								<input min="0" value="1" asp-for="Quantity" class="form-control" />
+								<span asp-validation-for="Quantity" class="text-danger" id="quantity-error"></span>
 							</div>
 								<input type="hidden" asp-for="Id" />
+							<input type="hidden" asp-for="AvailableQuantity" value="@Model.AvailableQuantity"/>
 							<button class="btn product-btn" type="submit"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
 						</form>
 					</div>
@@ -67,3 +69,30 @@
 	</div>
 </div> *@
 <!-- end more products -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+		$(document).ready(function () {
+		$("form").submit(function (event) {
+			var quantity = parseInt($("input[name='Quantity']").val());
+			var availableQuantity = parseInt($("input[name='AvailableQuantity']").val());
+			var errorMessage = $("#quantity-error");
+
+			errorMessage.text("");
+
+			if (isNaN(quantity) || isNaN(availableQuantity)) {
+				event.preventDefault();
+				errorMessage.text("Invalid quantity values.");
+				errorMessage.show();
+				return;
+			}
+
+			if (quantity > availableQuantity) {
+				event.preventDefault();
+				errorMessage.text(`Not enough stock available. Only ${availableQuantity} left in stock.`);
+				errorMessage.show();
+			}
+		});
+	});
+</script>
