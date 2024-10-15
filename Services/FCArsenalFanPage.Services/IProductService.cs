@@ -9,7 +9,9 @@
     {
         Task CreateAsync(CreateProductInputModel input, string userId, string imagePath);
 
-        public IEnumerable<ProductDashboardViewModel> GetProductsForDashboard();
+        IEnumerable<ProductDashboardViewModel> GetProductsForDashboard();
+
+        Task UpdateProductQuantityAsync(string productId, int quantity, bool isAdding);
 
         Task UpdateAsync(string id, EditProductInputViewModel input);
 
@@ -17,6 +19,6 @@
 
         T GetById<T>(string id);
 
-        public int GetCount();
+        int GetCount();
     }
 }

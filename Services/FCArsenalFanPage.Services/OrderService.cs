@@ -12,14 +12,20 @@
     public class OrderService : IOrderService
     {
         private readonly IDeletableEntityRepository<Order> orderRepository;
+        private readonly IDeletableEntityRepository<Product> productRepostitory;
         private readonly IAddressService addressService;
+        private readonly IProductService productService;
 
         public OrderService(
             IDeletableEntityRepository<Order> orderRepository,
-            IAddressService addressService)
+            IDeletableEntityRepository<Product> productRepostitory,
+            IAddressService addressService,
+            IProductService productService)
         {
             this.orderRepository = orderRepository;
+            this.productRepostitory = productRepostitory;
             this.addressService = addressService;
+            this.productService = productService;
         }
 
         public async Task CreateAsync(CreateOrderInputModel input, string userId, int quantity)
@@ -29,6 +35,7 @@
             {
                 Name = "In Progress",
             };
+
 
             var currentOrder = this.orderRepository
                 .All()
@@ -46,11 +53,13 @@
                     Status = "Cart",
                 };
 
+                await this.productService.UpdateProductQuantityAsync(input.Id, quantity, false);
                 await this.orderRepository.AddAsync(order);
             }
             else
             {
                 currentOrder.Quantity += quantity;
+                await this.productService.UpdateProductQuantityAsync(input.Id, quantity, false);
             }
 
             await this.orderRepository.SaveChangesAsync();
@@ -65,6 +74,8 @@
             if (order != null)
             {
                 this.orderRepository.Delete(order);
+
+                await this.productService.UpdateProductQuantityAsync(order.ProductId, order.Quantity, true);
                 await this.orderRepository.SaveChangesAsync();
             }
         }
@@ -93,7 +104,7 @@
                     Status = x.Status,
                     ProductName = x.Product.Name,
                     Quantity = x.Quantity,
-                    AvailableQuantity = x.Quantity,
+                    AvailableQuantity = x.Product.Quantity + x.Quantity,
                     Price = x.Product.Price,
                     UserId = x.UserId,
                     ImageUrl = x.Product.Image.RemoteImageUrl ?? "/Images/Products/"
@@ -152,7 +163,18 @@
 
                 if (currentOrder.Quantity != orderQuantity)
                 {
+                    var currentProduct = this.productRepostitory
+                        .All()
+                        .FirstOrDefault(x => x.Id == currentOrder.ProductId);
+
+                    currentProduct.Quantity += currentOrder.Quantity;
+
                     currentOrder.Quantity = orderQuantity;
+
+                    this.productRepostitory.Update(currentProduct);
+
+                    await this.productRepostitory.SaveChangesAsync();
+                    await this.productService.UpdateProductQuantityAsync(currentProduct.Id, orderQuantity, false);
                 }
             }
 

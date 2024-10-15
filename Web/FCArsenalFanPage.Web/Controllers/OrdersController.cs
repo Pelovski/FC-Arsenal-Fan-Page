@@ -51,7 +51,7 @@
                 .GetAll()
                 .Where(x => x.UserId == userId && x.Status == "Cart");
 
-			return this.View(viewModel);
+            return this.View(viewModel);
         }
 
         [Authorize]

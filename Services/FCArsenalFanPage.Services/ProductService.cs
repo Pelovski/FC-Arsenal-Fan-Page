@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
@@ -102,6 +103,31 @@
             product.ProductCategoryId = input.ProductCategoryId;
             product.CreatedByUserId = input.CreatedByUserId;
 
+            await this.productRepository.SaveChangesAsync();
+        }
+
+        public async Task UpdateProductQuantityAsync(string productId, int quantity, bool isAdding)
+        {
+            var currentProduct = this.productRepository
+                .All()
+                .FirstOrDefault(x => x.Id == productId);
+
+            if (quantity > 0)
+            {
+                if (currentProduct.Quantity >= quantity && !isAdding)
+                {
+                    currentProduct.Quantity -= quantity;
+                }
+                else
+                {
+                    if (isAdding)
+                    {
+                        currentProduct.Quantity += quantity;
+                    }
+                }
+            }
+
+            this.productRepository.Update(currentProduct);
             await this.productRepository.SaveChangesAsync();
         }
 

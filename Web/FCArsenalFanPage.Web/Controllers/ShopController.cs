@@ -114,7 +114,7 @@
         public IActionResult SingleProduct(string id)
         {
             var product = this.productService.GetById<SingleProductViewModel>(id);
-            product.AvailableQuantity = 20;
+            product.AvailableQuantity = product.Quantity;
 
             return this.View(product);
         }
