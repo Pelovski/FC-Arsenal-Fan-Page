@@ -135,7 +135,7 @@
 
             await this.userManager.RemoveFromRoleAsync(user, userRole);
             this.usersRepository.Delete(user);
-            var test = this.usersRepository.SaveChangesAsync().Result == 1 ? isUserDeleted = true : isUserDeleted = false;
+            isUserDeleted = this.usersRepository.SaveChangesAsync().Result == 1;
 
             return isUserDeleted;
         }

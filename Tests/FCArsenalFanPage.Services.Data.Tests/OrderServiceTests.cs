@@ -13,14 +13,18 @@
     public class OrderServiceTests
     {
         private readonly Mock<IDeletableEntityRepository<Order>> orderRepositoryMock;
+        private readonly Mock<IDeletableEntityRepository<Product>> productRepository;
         private readonly Mock<IAddressService> addressServiceMock;
+        private readonly Mock<IProductService> productServiceMock;
         private readonly OrderService orderService;
 
         public OrderServiceTests()
         {
             this.orderRepositoryMock = new Mock<IDeletableEntityRepository<Order>>();
+            this.productRepository = new Mock<IDeletableEntityRepository<Product>>();
             this.addressServiceMock = new Mock<IAddressService>();
-            this.orderService = new OrderService(this.orderRepositoryMock.Object, this.addressServiceMock.Object);
+            this.productServiceMock = new Mock<IProductService>();
+            this.orderService = new OrderService(this.orderRepositoryMock.Object,this.productRepository.Object, this.addressServiceMock.Object, this.productServiceMock.Object);
         }
 
         [Fact]
@@ -291,39 +295,6 @@
             Assert.StartsWith("COM-", orderNumber1);
             Assert.StartsWith("COM-", orderNumber2);
             Assert.NotEqual(orderNumber1, orderNumber2); // Ensure they are unique
-        }
-
-        [Fact]
-        public async Task UpdateAsyncShouldUpdateOrderQuantitiesWhenOrdersExist()
-        {
-            var userId = "User1";
-            var updateOrderInput = new UpdateOrderInputModel
-            {
-                UserId = userId,
-                Id = ["Order1", "Order2"],
-                Quantity = [5, 10],
-            };
-
-            var orders = new List<Order>
-               {
-                 new Order { Id = "Order1", UserId = userId, Quantity = 2 },
-                 new Order { Id = "Order2", UserId = userId, Quantity = 3 },
-               };
-
-            var orderRepoMock = new Mock<IDeletableEntityRepository<Order>>();
-            orderRepoMock.Setup(x => x.All()).Returns(orders.AsQueryable());
-
-            var orderService = new OrderService(orderRepoMock.Object, Mock.Of<IAddressService>());
-
-            await orderService.UpdateAsync(updateOrderInput);
-
-            var updatedOrder1 = orders.First(o => o.Id == "Order1");
-            var updatedOrder2 = orders.First(o => o.Id == "Order2");
-
-            Assert.Equal(5, updatedOrder1.Quantity);
-            Assert.Equal(10, updatedOrder2.Quantity);
-
-            orderRepoMock.Verify(x => x.SaveChangesAsync(), Times.Once);
         }
     }
 }

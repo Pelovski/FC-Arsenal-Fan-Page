@@ -143,7 +143,7 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    this.ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    this.ModelState.AddModelError(string.Empty, "Invalid Username or Password.");
                     return this.Page();
                 }
             }

@@ -1,7 +1,9 @@
 ﻿namespace FCArsenalFanPage.Web.Areas.Administration.Controllers
 {
     using System.Linq;
+    using System.Security.Claims;
     using System.Threading.Tasks;
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Common.Repositories;
     using FCArsenalFanPage.Data.Models;
     using FCArsenalFanPage.Services;
@@ -31,11 +33,21 @@
             this.applicationUserRepository = applicationUserRepository;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Index()
         {
-            var viewModel = this.applicationUserService.GetAllUsersWithRole()
-                .Where(x => x.Role != "Administrator");
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var viewModel = this.applicationUserService
+                .GetAllUsersWithRole()
+                .Where(x => x.UserId != userId);
+
+            if (!this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+            {
+                viewModel = viewModel
+                .Where(x => x.Role != GlobalConstants.AdministratorRoleName);
+            }
 
             return this.View(viewModel);
         }

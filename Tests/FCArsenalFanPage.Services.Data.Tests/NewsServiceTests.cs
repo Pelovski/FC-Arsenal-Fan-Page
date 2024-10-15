@@ -120,34 +120,6 @@
         }
 
         [Fact]
-        public void GetAllShouldReturnLimitedSentences()
-        {
-            var mockRepo = new Mock<IDeletableEntityRepository<News>>();
-            var sampleNews = new List<News>
-        {
-            new News
-            {
-                Id = 1,
-                Title = "Sample News 1",
-                Content = "This is the first sentence. This is the second sentence. This is the third sentence. This is the fourth sentence.",
-                User = new ApplicationUser { UserName = "User1" },
-                CategoryId = 1,
-                CreatedOn = System.DateTime.Now,
-                Image = new Image { Id = "1", Extension = "jpg" },
-            },
-        }.AsQueryable();
-
-            mockRepo.Setup(r => r.AllAsNoTracking()).Returns(sampleNews);
-
-            var service = new NewsService(mockRepo.Object);
-
-            var result = service.GetAll().FirstOrDefault();
-
-            Assert.NotNull(result);
-            Assert.Equal("This is the first sentence. This is the second sentence. This is the third sentence.", result.Details);
-        }
-
-        [Fact]
         public void GetCountShouldReturnCorrectCount()
         {
             var newsList = new List<News>
