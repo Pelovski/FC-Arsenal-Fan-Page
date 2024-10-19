@@ -520,6 +520,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "Sendgrid": {
               "target": "Package",
               "version": "[9.28.1, )"

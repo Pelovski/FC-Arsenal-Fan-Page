@@ -8,9 +8,10 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
     using System.Text;
     using System.Text.Encodings.Web;
     using System.Threading.Tasks;
+    using FCArsenalFanPage.Common;
     using FCArsenalFanPage.Data.Models;
+    using FCArsenalFanPage.Services.Messaging;
     using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Identity.UI.Services;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.AspNetCore.WebUtilities;
@@ -53,14 +54,12 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
             if (this.ModelState.IsValid)
             {
                 var user = await this.userManager.FindByEmailAsync(this.Input.Email);
-                if (user == null || !(await this.userManager.IsEmailConfirmedAsync(user)))
+                if (user == null) // || !(await this.userManager.IsEmailConfirmedAsync(user)))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     return this.RedirectToPage("./ForgotPasswordConfirmation");
                 }
 
-                // For more information on how to enable account confirmation and password reset please
-                // visit https://go.microsoft.com/fwlink/?LinkID=532713
                 var code = await this.userManager.GeneratePasswordResetTokenAsync(user);
                 code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                 var callbackUrl = this.Url.Page(
@@ -69,10 +68,14 @@ namespace FCArsenalFanPage.Web.Areas.Identity.Pages.Account
                     values: new { area = "Identity", code },
                     protocol: this.Request.Scheme);
 
+                var message = string.Format(GlobalConstants.ResetPasswordEmailMessage, HtmlEncoder.Default.Encode(callbackUrl));
+
                 await this.emailSender.SendEmailAsync(
+                    "fcarsenalfanpage14@gmail.com",
+                    "Arsenal Fan Page",
                     this.Input.Email,
                     "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    message);
 
                 return this.RedirectToPage("./ForgotPasswordConfirmation");
             }

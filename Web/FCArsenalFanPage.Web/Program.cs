@@ -35,6 +35,11 @@
 
         private static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
+            var smtpServer = configuration["SmtpServer"];
+            var smtpPort = int.Parse(configuration["SmtpPort"]);
+            var smtpUser = configuration["SmtpUser"];
+            var smtpPass = configuration["SmtpPass"];
+
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(20);
@@ -71,7 +76,6 @@
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
             // Application services
-            services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<INewsService, NewsService>();
             services.AddTransient<ICategoriesService, CategoriesService>();
             services.AddTransient<IProductService, ProductService>();
@@ -83,6 +87,9 @@
             services.AddTransient<IAddressService, AddressService>();
             services.AddTransient<IOrderStatusService, OrderStatusService>();
             services.AddTransient<IDashboardService, DashboardService>();
+
+            services.AddTransient<IEmailSender, MailKitEmailSender>(provider =>
+            new MailKitEmailSender(smtpServer, smtpPort, smtpUser, smtpPass));
 
             services.AddAuthentication().AddFacebook(opt =>
             {

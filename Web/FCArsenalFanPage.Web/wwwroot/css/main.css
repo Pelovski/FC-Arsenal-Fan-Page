@@ -3353,3 +3353,14 @@ html {
         margin-bottom: 10px; /* Space between list items */
         text-align: center; /* Center list items */
     }
+
+.alert {
+    padding: 15px; /* Намаляване на отстоянието в alert */
+    border-radius: 8px;
+}
+
+.text-primary:hover {
+    color: #0056b3; /* Промяна на цвета при задържане на мишката */
+    text-decoration: underline; /* Подчертаване при задържане на мишката */
+}
+
