@@ -1,7 +1,7 @@
 ﻿@model SingleProductViewModel
 
 @{
-	this.ViewData["Title"] = Model.Name;
+    this.ViewData["Title"] = Model.Name;
 }
 
 <div class="breadcrumb-section breadcrumb-bg">
@@ -9,90 +9,102 @@
 
 <!-- single product -->
 <div class="single-product mt-150 mb-150">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
-				<div class="single-product-img">
-					<img src="@Model.ImageUrl" alt="@Model.Name">
-				</div>
-			</div>
-			<div class="col-md-7">
-				<div class="single-product-content">
-					<h3>@Model.Name</h3>
-					<p class="single-product-pricing">$@Model.Price</p>
-					<p>@Html.Raw(Model.Description)</p>
-					<div class="single-product-form">
-						<p><strong>Categorie: </strong>@Model.ProductCategoryName</p>
-						<p><strong>In Stock: </strong>@Model.AvailableQuantity</p>	
-						<form method="post" asp-controller="Orders" asp-action="Order">
-							<div class="form-group">
-								<label asp-for="Quantity"></label>
-								<input min="0" value="1" asp-for="Quantity" class="form-control" />
-								<span asp-validation-for="Quantity" class="text-danger" id="quantity-error"></span>
-							</div>
-								<input type="hidden" asp-for="Id" />
-							<input type="hidden" asp-for="AvailableQuantity" value="@Model.AvailableQuantity"/>
-							<button class="btn product-btn" type="submit"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="single-product-img">
+                    <img src="@Model.ImageUrl" alt="@Model.Name">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="single-product-content">
+
+                    @if(this.User.IsInRole(GlobalConstants.MerchandisingSpecialistRoleName))
+                    {
+                    <!-- Buttons for Edit and Delete -->
+                    <div class="button-container text-end mb-3">
+                        <a asp-controller="Shop" asp-action="Edit" asp-route-id="@Model.Id" class="btn edit-button me-2">Edit</a>
+                        <form asp-controller="Shop" asp-action="Delete" asp-route-id="@Model.Id" method="post" class="d-inline">
+                            <button type="submit" class="btn delete-button" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
+                        </form>
+                    </div>
+                    }
+
+                    <h3>@Model.Name</h3>
+                    <p class="single-product-pricing">$@Model.Price</p>
+                    <p>@Html.Raw(Model.Description)</p>
+                    <div class="single-product-form">
+                        <p><strong>Categorie: </strong>@Model.ProductCategoryName</p>
+                        <p><strong>In Stock: </strong>@Model.AvailableQuantity</p>
+                        <form method="post" asp-controller="Orders" asp-action="Order">
+                            <div class="form-group">
+                                <label asp-for="Quantity"></label>
+                                <input min="0" value="1" asp-for="Quantity" class="form-control" />
+                                <span asp-validation-for="Quantity" class="text-danger" id="quantity-error"></span>
+                            </div>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="AvailableQuantity" value="@Model.AvailableQuantity" />
+                            <button class="btn product-btn" type="submit"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @* TODO: Implemented related products *@
 
 @* <!-- more products -->
 <div class="more-products mb-150">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 offset-lg-2 text-center">
-				<div class="section-title">
-					<h3><span class="orange-text">Related</span> Products</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-4 col-md-6 text-center">
-				<div class="single-product-item">
-					<div class="product-image">
-						<a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
-					</div>
-					<h3>Strawberry</h3>
-					<p class="product-price"><span>Per Kg</span> 85$ </p>
-					<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="section-title">
+                    <h3><span class="orange-text">Related</span> Products</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 text-center">
+                <div class="single-product-item">
+                    <div class="product-image">
+                        <a href="single-product.html"><img src="assets/img/products/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <h3>Strawberry</h3>
+                    <p class="product-price"><span>Per Kg</span> 85$ </p>
+                    <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div> *@
 <!-- end more products -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-		$(document).ready(function () {
-		$("form").submit(function (event) {
-			var quantity = parseInt($("input[name='Quantity']").val());
-			var availableQuantity = parseInt($("input[name='AvailableQuantity']").val());
-			var errorMessage = $("#quantity-error");
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+            var quantity = parseInt($("input[name='Quantity']").val());
+            var availableQuantity = parseInt($("input[name='AvailableQuantity']").val());
+            var errorMessage = $("#quantity-error");
 
-			errorMessage.text("");
+            errorMessage.text("");
 
-			if (isNaN(quantity) || isNaN(availableQuantity)) {
-				event.preventDefault();
-				errorMessage.text("Invalid quantity values.");
-				errorMessage.show();
-				return;
-			}
+            if (isNaN(quantity) || isNaN(availableQuantity)) {
+                event.preventDefault();
+                errorMessage.text("Invalid quantity values.");
+                errorMessage.show();
+                return;
+            }
 
-			if (quantity > availableQuantity) {
-				event.preventDefault();
-				errorMessage.text(`Not enough stock available. Only ${availableQuantity} left in stock.`);
-				errorMessage.show();
-			}
-		});
-	});
+            if (quantity > availableQuantity) {
+                event.preventDefault();
+                errorMessage.text(`Not enough stock available. Only ${availableQuantity} left in stock.`);
+                errorMessage.show();
+            }
+        });
+    });
 </script>

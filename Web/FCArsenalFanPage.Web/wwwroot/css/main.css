@@ -1733,7 +1733,7 @@ p.excerpt {
 }
 
 .comments-list-wrap {
-    margin: 100px 0;
+    margin: 20px 0;
 }
 
     .comments-list-wrap h3 {
@@ -3364,3 +3364,42 @@ html {
     text-decoration: underline; /* Подчертаване при задържане на мишката */
 }
 
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-bottom: 1rem; /* Space below the button container */
+}
+
+.edit-button {
+    font-size: 1.25rem; /* Font size for Edit button */
+    padding: 0.5rem 1rem; /* Increased padding for Edit button */
+    margin-left: 0.5rem; /* Space between buttons */
+    background-color: #007bff; /* Primary color for Edit button */
+    color: #ffffff; /* White text for Edit button */
+    border: none; /* Remove border */
+    transition: transform 0.2s; /* Transition for scale effect */
+}
+
+/* Delete button */
+.delete-button {
+    font-size: 1.25rem; /* Font size for Delete button */
+    padding: 0.5rem 1rem; /* Increased padding for Delete button */
+    background-color: #dc3545; /* Danger color for Delete button */
+    color: #ffffff; /* White text for Delete button */
+    border: none; /* Remove border */
+    transition: transform 0.2s; /* Transition for scale effect */
+}
+
+/* Prevent color change on hover but add scale effect */
+.edit-button:hover {
+    transform: scale(1.05); /* Slightly enlarge Edit button on hover */
+    background-color: #007bff; /* Keep the same background color on hover */
+    color: #ffffff; /* Keep the same text color on hover */
+}
+
+.delete-button:hover {
+    transform: scale(1.05); /* Slightly enlarge Delete button on hover */
+    background-color: #dc3545; /* Keep the same background color on hover */
+    color: #ffffff; /* Keep the same text color on hover */
+}
