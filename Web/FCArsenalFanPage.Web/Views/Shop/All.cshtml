@@ -73,20 +73,17 @@
 
 @section Scripts {
 		<script type="text/javascript">
-			// Автоматично скриване на съобщението след 5 секунди
 			setTimeout(function () {
 				var messageElement = document.getElementById("success-message");
 				if (messageElement) {
 					messageElement.classList.add("fade-out");
 
-					// Пълно скриване след анимацията
 					setTimeout(function () {
 						messageElement.style.display = "none";
-					}, 1000); // 1 секунда за анимация
+					}, 1000); 
 				}
-			}, 5000); // 5 секунди
+			}, 5000);
 
-			// Функция за ръчно затваряне на съобщението
 			function closeMessage() {
 				var messageElement = document.getElementById("success-message");
 				if (messageElement) {

@@ -21,6 +21,7 @@
         {
             return this.productCategoryRepository
                 .All()
+                .Where(x => x.Name != "Any")
                 .Select(x => new SelectListItem
                 {
                     Value = x.Id.ToString(),

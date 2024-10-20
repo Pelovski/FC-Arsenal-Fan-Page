@@ -15,7 +15,6 @@
                 return;
             }
 
-            await dbContext.ProductCategories.AddAsync(new ProductCategory { Name = "Any" });
             await dbContext.ProductCategories.AddAsync(new ProductCategory { Name = "Sale" });
             await dbContext.ProductCategories.AddAsync(new ProductCategory { Name = "Kit" });
             await dbContext.ProductCategories.AddAsync(new ProductCategory { Name = "Training" });

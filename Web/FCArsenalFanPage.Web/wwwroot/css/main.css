@@ -3403,3 +3403,39 @@ html {
     background-color: #dc3545; /* Keep the same background color on hover */
     color: #ffffff; /* Keep the same text color on hover */
 }
+
+
+/* Styles specific to the article action buttons */
+.custom-action-buttons {
+    margin-top: 20px;
+}
+
+.custom-edit-btn {
+    font-size: 1.25rem;
+    background-color: #007bff; /* Blue background for Edit button */
+    color: white; /* White text */
+    border: none;
+    transition: transform 0.2s ease-in-out; /* Smooth enlargement on hover */
+}
+
+.custom-delete-btn {
+    font-size: 1.25rem;
+    background-color: #dc3545; /* Red background for Delete button */
+    color: white; /* White text */
+    border: none;
+    transition: transform 0.2s ease-in-out; /* Smooth enlargement on hover */
+}
+
+    /* Prevent hover effects from changing button color */
+    .custom-edit-btn:hover,
+    .custom-delete-btn:hover {
+        background-color: #007bff; /* Keep the original blue color for Edit */
+        color: white; /* Keep white text for Edit */
+        transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
+
+    .custom-delete-btn:hover {
+        background-color: #dc3545; /* Keep the original red color for Delete */
+        color: white; /* Keep white text for Delete */
+        transform: scale(1.05); /* Slightly enlarge button on hover */
+    }
