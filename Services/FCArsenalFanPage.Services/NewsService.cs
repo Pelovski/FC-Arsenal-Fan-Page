@@ -154,5 +154,17 @@
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn.Value.ToString("dd/MM/yyyy") : string.Empty,
                 }).ToList();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
+
+            if (news != null)
+            {
+                this.newsRepository.Delete(news);
+            }
+
+            await this.newsRepository.SaveChangesAsync();
+        }
     }
 }

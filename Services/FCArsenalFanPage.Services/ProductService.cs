@@ -11,6 +11,7 @@
     using FCArsenalFanPage.Services.Mapping;
     using FCArsenalFanPage.Web.ViewModels.Administration;
     using FCArsenalFanPage.Web.ViewModels.Products;
+    using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.EntityFrameworkCore;
 
     public class ProductService : IProductService
@@ -155,6 +156,18 @@
                     ModifiedOn = x.ModifiedOn != null ? x.ModifiedOn.Value.ToString("dd/MM/yyyy") : string.Empty,
                 })
                 .ToList();
+        }
+
+        public async Task DeleteAsync(string id)
+        {
+            var product = this.productRepository.All().FirstOrDefault(x => x.Id == id);
+
+            if (product != null)
+            {
+                this.productRepository.Delete(product);
+            }
+
+            await this.productRepository.SaveChangesAsync();
         }
     }
 }

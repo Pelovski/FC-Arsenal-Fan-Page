@@ -1,7 +1,6 @@
 ﻿namespace FCArsenalFanPage.Web.Controllers
 {
     using System;
-    using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
 
@@ -82,10 +81,9 @@
 
             await this.productService.CreateAsync(input, userId, imagePath);
 
-            return this.RedirectToAction("All");
+            return this.RedirectToAction(nameof(this.All));
         }
 
-        // Edit Get
         [HttpGet]
         [Authorize(Roles = GlobalConstants.MerchandisAdministration)]
         public IActionResult Edit(string id)
@@ -96,7 +94,6 @@
             return this.View(inputModel);
         }
 
-        // Edit Post
         [HttpPost]
         [Authorize(Roles = GlobalConstants.MerchandisAdministration)]
         public async Task<IActionResult> Edit(string id, EditProductInputViewModel input)
@@ -118,6 +115,14 @@
             product.AvailableQuantity = product.Quantity;
 
             return this.View(product);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = GlobalConstants.MerchandisAdministration)]
+        public async Task<IActionResult> Delete(string id)
+        {
+            await this.productService.DeleteAsync(id);
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

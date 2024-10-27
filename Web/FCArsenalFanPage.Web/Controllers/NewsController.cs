@@ -92,8 +92,8 @@
             return this.View(inputModel);
         }
 
-        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         [HttpPost]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
         public async Task<IActionResult> Edit(int id, EditNewsInputViewModel input)
         {
 
@@ -114,6 +114,14 @@
             news.RecentPosts = this.newsService.RecentPosts(id);
 
             return this.View(news);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = GlobalConstants.NewsAdministration)]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.newsService.DeleteAsync(id);
+            return this.RedirectToAction(nameof(this.All));
         }
     }
 }

@@ -83,14 +83,7 @@
                 return this.Problem("Entity set 'ApplicationDbContext.Products'  is null.");
             }
 
-            var product = this.productRepository.All().FirstOrDefault(x => x.Id == id);
-
-            if (product != null)
-            {
-                this.productRepository.Delete(product);
-            }
-
-            await this.productRepository.SaveChangesAsync();
+            await this.productService.DeleteAsync(id);
             return this.RedirectToAction(nameof(this.Index));
         }
 

@@ -83,14 +83,7 @@
                 return this.Problem("Entity set 'ApplicationDbContext.News'  is null.");
             }
 
-            var news = this.newsRepository.All().FirstOrDefault(x => x.Id == id);
-
-            if (news != null)
-            {
-                this.newsRepository.Delete(news);
-            }
-
-            await this.newsRepository.SaveChangesAsync();
+            await this.newsService.DeleteAsync(id);
             return this.RedirectToAction(nameof(this.Index));
         }
 

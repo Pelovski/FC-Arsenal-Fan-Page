@@ -21,6 +21,8 @@
 
         IEnumerable<NewsInListViewModel> GetAll();
 
+        Task DeleteAsync(int id);
+
         T GetById<T>(int id);
 
         int GetCount();
