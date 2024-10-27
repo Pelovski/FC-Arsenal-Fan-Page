@@ -1,6 +1,6 @@
 # Arsenal Fan Page
 
-The Arsenal Fan Page is an interactive platform dedicated to fans of Arsenal Football Club, offering news, merchandise, and community engagement. The project is **deployed on Azure**, ensuring high availability and scalability. You can explore the platform [here](https://arsenalfanpage.azurewebsites.net) or use the following administrator credentials:  
+The Arsenal Fan Page is an interactive platform dedicated to fans of Arsenal Football Club, offering news, merchandise, and community engagement. The project is **deployed on Azure**, ensuring high availability and scalability. You can explore the platform [HERE](https://arsenalfanpage.azurewebsites.net) or use the following administrator credentials:  
 
 **Admin username**: `adminArsenal@fcarsenalfanpage.com`  
 **Admin password**: `Admin2024!1`
@@ -41,7 +41,8 @@ The Arsenal Fan Page is an interactive platform dedicated to fans of Arsenal Foo
 ## Technologies Used
 
 - **ASP.NET Core**: Provides a robust backend framework.
-- **SQL**: Used for managing user data, news, and products.
+- **MySQL**: Used for managing user data, news, and products.
+- **Entity Framework Core**: Utilized for efficient data access and management of user, news, and product information in the application.
 - **JavaScript, HTML, CSS**: Ensures smooth frontend interactions and design.
 - **Azure**: Deployed on Azure for scalability and reliability.
 - **Unit Testing**: Implemented to ensure the reliability and correctness of the application.
