@@ -1,8 +1,15 @@
 # Arsenal Fan Page
 
 The Arsenal Fan Page is an interactive platform dedicated to fans of Arsenal Football Club, offering news, merchandise, and community engagement. The project is **deployed on Azure**, ensuring high availability and scalability. You can explore the platform [here](https://arsenalfanpage.azurewebsites.net) or use the following administrator credentials:  
-**Username**: `adminArsenal@fcarsenalfanpage.com`  
-**Password**: `Admin2024!1`
+
+**Admin username**: `adminArsenal@fcarsenalfanpage.com`  
+**Admin password**: `Admin2024!1`
+
+**Product manager username**: `productManager@arsenalfanpage.com`  
+**Product manager password**: `ProductManager!1`
+
+**Content manager username**: `contentmanager@arsenalfanpage.com`  
+**Content manager password**: `ContentManager!1`
 
 ## Roles and Permissions
 
