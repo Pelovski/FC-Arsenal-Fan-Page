@@ -20,11 +20,11 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-start border-bottom pb-3">
                                     <div class="me-4">
-                                        <img src="@product.ImageUrl" alt="" class="avatar-lg rounded">
+                                        <a asp-controller="Shop" asp-action="SingleProduct" asp-route-id="@product.ProductId"><img src="@product.ImageUrl" alt="" class="avatar-lg rounded"></a>
                                     </div>
                                     <div class="flex-grow-1 align-self-center overflow-hidden">
                                         <div>
-                                            <h5 class="text-truncate font-size-18"><a href="#" class="text-dark">@product.ProductName</a></h5>
+                                            <h5 class="text-truncate font-size-18"><a asp-controller="Shop" asp-action="SingleProduct" asp-route-id="@product.ProductId" class="text-dark">@product.ProductName</a></h5>
                                             <p class="text-muted mb-0">
                                                 <i class="bx bxs-star text-warning"></i>
                                                 <i class="bx bxs-star text-warning"></i>

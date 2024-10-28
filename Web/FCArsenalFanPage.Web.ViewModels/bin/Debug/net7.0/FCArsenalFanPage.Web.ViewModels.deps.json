@@ -1871,7 +1871,9 @@
       },
       "FCArsenalFanPage.Web.Infrastructure/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "5.0.17"
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.2.0"
         },
         "runtime": {
           "FCArsenalFanPage.Web.Infrastructure.dll": {

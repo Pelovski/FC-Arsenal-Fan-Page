@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("68e811d1-4c6c-4128-94e8-4c8dd3a3903a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8d75f4356675cdeb409dea30295b275387178b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb40de34f65bc47f707757df4a3110b8ab7b5703")]
 [assembly: System.Reflection.AssemblyProductAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FCArsenalFanPage.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

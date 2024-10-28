@@ -4031,7 +4031,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "FCArsenalFanPage.Web.ViewModels": "1.0.0"
+          "FCArsenalFanPage.Web.ViewModels": "1.0.0",
+          "Microsoft.Extensions.Configuration.UserSecrets": "6.0.1"
         },
         "compile": {
           "bin/placeholder/FCArsenalFanPage.Services.dll": {}

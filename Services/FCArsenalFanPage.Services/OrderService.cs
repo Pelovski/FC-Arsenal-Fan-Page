@@ -102,6 +102,7 @@
                 {
                     Id = x.Id,
                     Status = x.Status,
+                    ProductId = x.ProductId,
                     ProductName = x.Product.Name,
                     Quantity = x.Quantity,
                     AvailableQuantity = x.Product.Quantity + x.Quantity,
