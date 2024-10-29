@@ -73,7 +73,7 @@
 
             if (order != null)
             {
-                this.orderRepository.Delete(order);
+                this.orderRepository.HardDelete(order);
 
                 await this.productService.UpdateProductQuantityAsync(order.ProductId, order.Quantity, true);
                 await this.orderRepository.SaveChangesAsync();

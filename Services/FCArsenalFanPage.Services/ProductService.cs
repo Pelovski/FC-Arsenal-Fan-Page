@@ -17,10 +17,14 @@
     public class ProductService : IProductService
     {
         private readonly IDeletableEntityRepository<Product> productRepository;
+        private readonly IDeletableEntityRepository<Order> orderRepository;
 
-        public ProductService(IDeletableEntityRepository<Product> productRepository)
+        public ProductService(
+            IDeletableEntityRepository<Product> productRepository,
+            IDeletableEntityRepository<Order> orderRepository)
         {
             this.productRepository = productRepository;
+            this.orderRepository = orderRepository;
         }
 
         public async Task CreateAsync(CreateProductInputModel input, string userId, string imagePath)
@@ -164,10 +168,21 @@
 
             if (product != null)
             {
+                var ordersWithCurrentProduct = this.orderRepository
+                    .All()
+                    .Where(x => x.ProductId == id)
+                    .ToList();
+
+                foreach (var order in ordersWithCurrentProduct)
+                {
+                    this.orderRepository.HardDelete(order);
+                }
+
                 this.productRepository.Delete(product);
             }
 
             await this.productRepository.SaveChangesAsync();
+            await this.orderRepository?.SaveChangesAsync();
         }
     }
 }
