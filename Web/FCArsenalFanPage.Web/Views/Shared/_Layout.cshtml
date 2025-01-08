@@ -85,6 +85,10 @@
 
                                 </li>
 
+                                <li class="navi-item">
+                                    <a asp-area="" asp-controller="Standings" asp-action="Leaderboard">Leaderboard</a>
+                                </li>
+
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) ||
                                 this.User.IsInRole(GlobalConstants.AssistantAdministrator) ||
                                 this.User.IsInRole(GlobalConstants.ContentCreaterRoleName))
