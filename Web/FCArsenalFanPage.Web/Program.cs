@@ -91,6 +91,12 @@
             services.AddTransient<IEmailSender, MailKitEmailSender>(provider =>
             new MailKitEmailSender(smtpServer, smtpPort, smtpUser, smtpPass));
 
+            services.AddHttpClient("FootballData", client =>
+            {
+                client.BaseAddress = new Uri("https://api.football-data.org/v4/");
+                client.DefaultRequestHeaders.Add("X-Auth-Token", configuration["X-Auth-Token"]);
+            });
+
             services.AddAuthentication().AddFacebook(opt =>
             {
                 opt.ClientId = configuration["Facebook:ClientId"];
