@@ -17,13 +17,15 @@
         public async Task<IActionResult> Leaderboard()
         {
             var standings = await this.premierLeagueService.GetStandingsAsync();
+
             return this.View(standings);
         }
 
         public async Task<IActionResult> UpcomingMatches()
         {
-            var data = await this.premierLeagueService.GetUpcomingMatchesAsync();
-            return this.Ok(data);
+            var matches = await this.premierLeagueService.GetUpcomingMatchesAsync();
+
+            return this.View(matches);
         }
     }
 }

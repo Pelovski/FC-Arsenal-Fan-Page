@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
     using System.Net.Http;
     using System.Text.Json;
@@ -49,34 +50,37 @@
             return standings;
         }
 
-        public async Task<TeamUpcomingMatchesViewModel> GetUpcomingMatchesAsync()
+        public async Task<List<MatchViewModel>> GetUpcomingMatchesAsync()
         {
             var response = await this.httpClient.GetAsync("competitions/2021/matches?status=SCHEDULED");
             response.EnsureSuccessStatusCode();
-            var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            var matchResponse = JsonSerializer.Deserialize<TeamUpcomingMatchesViewModel>(jsonResponse);
+            var jsonString = await response.Content.ReadAsStringAsync();
 
-            var arsenalMatches = matchResponse
-                .Matches
-                .Where(m =>
-                   m.HomeTeam.Equals("Arsenal FC", StringComparison.OrdinalIgnoreCase) ||
-                   m.AwayTeam.Equals("Arsenal FC", StringComparison.OrdinalIgnoreCase))
+            var matches = JsonDocument.Parse(jsonString)
+                .RootElement
+                .GetProperty("matches")
+                .EnumerateArray()
+                .Where(m => m.GetProperty("homeTeam").GetProperty("name").GetString() == "Arsenal FC" ||
+                            m.GetProperty("awayTeam").GetProperty("name").GetString() == "Arsenal FC")
                 .Select(m => new MatchViewModel
                 {
-                    HomeTeam = m.HomeTeam,
-                    AwayTeam = m.AwayTeam,
-                    UtcDate = m.UtcDate,
-                    HomeTeamLogo = m.HomeTeamLogo,
-                    AwayTeamLogo = m.AwayTeamLogo,
-                }).ToList();
+                    // Преобразуваме UTC датата в DateTim
+                    UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture),
+                    HomeTeam = new TeamViewModel
+                    {
+                        Name = m.GetProperty("homeTeam").GetProperty("name").GetString(),
+                        Crest = m.GetProperty("homeTeam").GetProperty("crest").GetString()
+                    },
+                    AwayTeam = new TeamViewModel
+                    {
+                        Name = m.GetProperty("awayTeam").GetProperty("name").GetString(),
+                        Crest = m.GetProperty("awayTeam").GetProperty("crest").GetString()
+                    }
+                })
+                .ToList();
 
-            var viewModel = new TeamUpcomingMatchesViewModel
-            {
-                Matches = arsenalMatches,
-            };
-
-            return viewModel;
+            return matches;
         }
     }
 }

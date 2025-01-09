@@ -1,1 +1,43 @@
-﻿
+﻿@model List<MatchViewModel>
+
+@{
+    ViewData["Title"] = "Upcoming Arsenal Matches";
+}
+
+<div class="breadcrumb-section breadcrumb-bg mb-2">
+</div>
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var match in Model)
+            {
+                <tr>
+                    <td>@match.UtcDate.ToString("dd MMM yyyy HH:mm")</td>
+                    <td>
+                        <img src="@match.HomeTeam.Crest" alt="@match.HomeTeam.Name" width="30" height="30" />
+                        @match.HomeTeam.Name
+                    </td>
+                    <td>
+                        <img src="@match.AwayTeam.Crest" alt="@match.AwayTeam.Name" width="30" height="30" />
+                        @match.AwayTeam.Name
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No upcoming matches for Arsenal.</p>
+}
