@@ -1,9 +1,9 @@
 ﻿.center-container {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     min-height: 100vh;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .premier-league-table {
@@ -11,9 +11,57 @@
     border-collapse: collapse;
     max-width: 960px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+    .premier-league-table tr td {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .premier-league-table tr:nth-child(18),
+    .premier-league-table tr:nth-child(19),
+    .premier-league-table tr:nth-child(20),
+    .premier-league-table tr:nth-child(1),
+    .premier-league-table tr:nth-child(2),
+    .premier-league-table tr:nth-child(3),
+    .premier-league-table tr:nth-child(4),
+    .premier-league-table tr:nth-child(5) {
+        position: relative;
+    }
+
+        .premier-league-table tr:nth-child(18) td:first-child::before,
+        .premier-league-table tr:nth-child(19) td:first-child::before,
+        .premier-league-table tr:nth-child(20) td:first-child::before,
+        .premier-league-table tr:nth-child(1) td.position-column::before,
+        .premier-league-table tr:nth-child(2) td.position-column::before,
+        .premier-league-table tr:nth-child(3) td.position-column::before,
+        .premier-league-table tr:nth-child(4) td.position-column::before,
+        .premier-league-table tr:nth-child(5) td:first-child::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 5px;
+            height: 90%;
+            background-color: transparent;
+        }
+
+        .premier-league-table tr:nth-child(18) td:first-child::before,
+        .premier-league-table tr:nth-child(19) td:first-child::before,
+        .premier-league-table tr:nth-child(20) td:first-child::before {
+            background-color: red;
+        }
+
+        .premier-league-table tr:nth-child(1) td.position-column::before,
+        .premier-league-table tr:nth-child(2) td.position-column::before,
+        .premier-league-table tr:nth-child(3) td.position-column::before,
+        .premier-league-table tr:nth-child(4) td.position-column::before {
+            background-color: blue;
+        }
+
+        .premier-league-table tr:nth-child(5) td:first-child::before {
+            background-color: green; 
+        }
 
 h2 {
     text-align: center;
@@ -22,7 +70,6 @@ h2 {
     margin-bottom: 20px;
     color: #333;
 }
-
 
 .premier-league-table th, .premier-league-table td {
     text-align: center;
@@ -72,3 +119,38 @@ h2 {
         width: 20%;
         height: auto;
     }
+
+.standings-legend-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.standings-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.standings-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.standings-blue {
+    background-color: blue;
+}
+
+.standings-green {
+    background-color: green;
+}
+
+.standings-red {
+    background-color: red;
+}
