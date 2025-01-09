@@ -41,6 +41,8 @@
                 Points = team.GetProperty("points").GetInt32(),
                 GoalsFor = team.GetProperty("goalsFor").GetInt32(),
                 GoalsAgainst = team.GetProperty("goalsAgainst").GetInt32(),
+                GoalsDifference = team.GetProperty("goalDifference").GetInt32(),
+                TeamLogo = team.GetProperty("team").GetProperty("crest").GetString(),
             }).ToList();
 
             return standings;

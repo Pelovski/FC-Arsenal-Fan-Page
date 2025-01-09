@@ -1,38 +1,43 @@
 ﻿@model List<TeamStandingsViewModel>
 
-<div class="breadcrumb-section breadcrumb-bg mb-2">
+<div>
+    <div class="breadcrumb-section breadcrumb-bg mb-2">
+    </div>
+
+    <h2>Premier League Standings</h2>
+
+    <div class="center-container">
+        <table class="premier-league-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Club</th>
+                    <th title="Matches Played">MP</th> 
+                    <th title="Wins">W</th> 
+                    <th title="Draws">D</th> 
+                    <th title="Losses">L</th> 
+                    <th title="Goal Difference">GD</th>
+                    <th title="Points">Pts</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var team in Model)
+                {
+                    <tr>
+                        <td class="position-column">@team.Position.</td>
+                        <td class="team-column">
+                            <img src="@team.TeamLogo" alt="Logo" />
+                            @team.TeamName
+                        </td>
+                        <td class="played-column">@team.PlayedGames</td>
+                        <td>@team.Wins</td>
+                        <td>@team.Draws</td>
+                        <td>@team.Losts</td>
+                        <td class="goals-difference-column">@team.GoalsFor:@team.GoalsAgainst (@team.GoalsDifference)</td>
+                        <td>@team.Points</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
-
-<h2>Premier League Standings</h2>
-
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Position</th>
-            <th>Team</th>
-            <th>Played</th>
-            <th>Won</th>
-            <th>Draw</th>
-            <th>Lost</th>
-            <th>Points</th>
-            <th>Goals For</th>
-            <th>Goals Against</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var team in Model)
-        {
-            <tr>
-                <td>@team.Position</td>
-                <td>@team.TeamName</td>
-                <td>@team.PlayedGames</td>
-                <td>@team.Wins</td>
-                <td>@team.Draws</td>
-                <td>@team.Losts</td>
-                <td>@team.Points</td>
-                <td>@team.GoalsFor</td>
-                <td>@team.GoalsAgainst</td>
-            </tr>
-        }
-    </tbody>
-</table>

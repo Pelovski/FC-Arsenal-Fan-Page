@@ -21,5 +21,7 @@
         public int GoalsAgainst { get; set; }
 
         public int GoalsDifference { get; set; }
+
+        public string TeamLogo { get; set; }
     }
 }
