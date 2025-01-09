@@ -20,7 +20,7 @@
             return this.View(standings);
         }
 
-        public async Task<IActionResult> GetUpcomingMatches()
+        public async Task<IActionResult> UpcomingMatches()
         {
             var data = await this.premierLeagueService.GetUpcomingMatchesAsync();
             return this.Ok(data);

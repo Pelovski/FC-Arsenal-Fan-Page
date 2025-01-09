@@ -1,5 +1,6 @@
 ﻿namespace FCArsenalFanPage.Services
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
@@ -48,11 +49,34 @@
             return standings;
         }
 
-        public async Task<string> GetUpcomingMatchesAsync()
+        public async Task<TeamUpcomingMatchesViewModel> GetUpcomingMatchesAsync()
         {
             var response = await this.httpClient.GetAsync("competitions/2021/matches?status=SCHEDULED");
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+
+            var matchResponse = JsonSerializer.Deserialize<TeamUpcomingMatchesViewModel>(jsonResponse);
+
+            var arsenalMatches = matchResponse
+                .Matches
+                .Where(m =>
+                   m.HomeTeam.Equals("Arsenal FC", StringComparison.OrdinalIgnoreCase) ||
+                   m.AwayTeam.Equals("Arsenal FC", StringComparison.OrdinalIgnoreCase))
+                .Select(m => new MatchViewModel
+                {
+                    HomeTeam = m.HomeTeam,
+                    AwayTeam = m.AwayTeam,
+                    UtcDate = m.UtcDate,
+                    HomeTeamLogo = m.HomeTeamLogo,
+                    AwayTeamLogo = m.AwayTeamLogo,
+                }).ToList();
+
+            var viewModel = new TeamUpcomingMatchesViewModel
+            {
+                Matches = arsenalMatches,
+            };
+
+            return viewModel;
         }
     }
 }
