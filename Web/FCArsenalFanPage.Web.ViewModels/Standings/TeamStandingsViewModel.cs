@@ -18,8 +18,8 @@
 
         public int GoalsFor { get; set; }
 
-        public int GoalAgainst { get; set; }
+        public int GoalsAgainst { get; set; }
 
-        public int GoalDifference { get; set; }
+        public int GoalsDifference { get; set; }
     }
 }
