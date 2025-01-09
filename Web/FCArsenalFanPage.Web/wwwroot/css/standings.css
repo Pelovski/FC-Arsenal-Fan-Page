@@ -1,31 +1,29 @@
-﻿/* Контейнер, който ще центрира съдържанието вертикално и хоризонтално */
-.center-container {
+﻿.center-container {
     display: flex;
-    justify-content: center; /* Центрира хоризонтално */
-    align-items: center; /* Центрира вертикално */
-    min-height: 100vh; /* Това осигурява, че контейнерът ще запълни цялата височина на прозореца */
-    padding: 20px; /* Отстояние отстрани */
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    padding: 20px; 
 }
 
-/* Опции за таблицата */
 .premier-league-table {
     width: 100%;
     border-collapse: collapse;
-    max-width: 960px; /* Ограничаване на широчината на таблицата */
+    max-width: 960px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавяме леко сянка за стил */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 50px;
 }
 
-/* Стилове за заглавието */
 h2 {
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Пример за хубав шрифт */
-    font-size: 2rem; /* Размер на шрифта */
-    margin-bottom: 20px; /* Отстояние от таблицата */
-    color: #333; /* Цвят на текста */
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* Добавяне на други стилове към таблицата и клетки */
+
 .premier-league-table th, .premier-league-table td {
     text-align: center;
     vertical-align: middle;
@@ -33,7 +31,6 @@ h2 {
     font-size: 14px;
 }
 
-/* Още стилове за таблицата */
 .premier-league-table th {
     background-color: #f8f9fa;
     font-weight: bold;
@@ -63,3 +60,15 @@ h2 {
 .premier-league-table .goals-difference-column {
     width: 145px;
 }
+
+.premier-league-logo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .premier-league-logo-image img {
+        width: 20%;
+        height: auto;
+    }
