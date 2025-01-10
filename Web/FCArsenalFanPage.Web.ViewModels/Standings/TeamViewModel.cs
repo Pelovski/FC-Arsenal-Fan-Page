@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
 
-        public string Crest { get; set; }
+        public string TeamLogo { get; set; }
     }
 }

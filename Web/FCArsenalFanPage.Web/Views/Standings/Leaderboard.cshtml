@@ -4,6 +4,20 @@
     <div class="breadcrumb-section breadcrumb-bg mb-2">
     </div>
 
+    <div class="internal-navigation">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" id="fixtures-link" asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Fixtures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tables-link" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Tabels</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tables" id="tables-link">Results</a>
+            </li>
+        </ul>
+    </div>
+
     <h2>Premier League Standings</h2>
 
     <div class="premier-league-logo-image"><img src="~/Images/Others/premierLion.png" alt="Logo" /></div>
@@ -43,7 +57,6 @@
         </table>
     </div>
 
-    <!-- Легенда под таблицата -->
     <div class="standings-legend-container">
         <div class="standings-legend-item">
             <span class="standings-circle standings-blue"></span> Champions League

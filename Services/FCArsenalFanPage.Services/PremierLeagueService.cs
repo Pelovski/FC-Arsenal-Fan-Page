@@ -52,35 +52,52 @@
 
         public async Task<List<MatchViewModel>> GetUpcomingMatchesAsync()
         {
-            var response = await this.httpClient.GetAsync("competitions/2021/matches?status=SCHEDULED");
-            response.EnsureSuccessStatusCode();
+            var competitions = new[] { "PL", "CL" }; // "PL" - Premier League, "CL" - Champions League
 
-            var jsonString = await response.Content.ReadAsStringAsync();
+            var tasks = competitions.Select(competition =>
+                this.httpClient.GetAsync($"competitions/{competition}/matches?status=SCHEDULED")).ToArray();
 
-            var matches = JsonDocument.Parse(jsonString)
-                .RootElement
-                .GetProperty("matches")
-                .EnumerateArray()
-                .Where(m => m.GetProperty("homeTeam").GetProperty("name").GetString() == "Arsenal FC" ||
-                            m.GetProperty("awayTeam").GetProperty("name").GetString() == "Arsenal FC")
-                .Select(m => new MatchViewModel
+            var responses = await Task.WhenAll(tasks);
+
+            var matches = new List<MatchViewModel>();
+
+            foreach (var response in responses)
+            {
+                if (response.IsSuccessStatusCode)
                 {
-                    // Преобразуваме UTC датата в DateTim
-                    UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture),
-                    HomeTeam = new TeamViewModel
-                    {
-                        Name = m.GetProperty("homeTeam").GetProperty("name").GetString(),
-                        Crest = m.GetProperty("homeTeam").GetProperty("crest").GetString()
-                    },
-                    AwayTeam = new TeamViewModel
-                    {
-                        Name = m.GetProperty("awayTeam").GetProperty("name").GetString(),
-                        Crest = m.GetProperty("awayTeam").GetProperty("crest").GetString()
-                    }
-                })
-                .ToList();
+                    var jsonString = await response.Content.ReadAsStringAsync();
 
-            return matches;
+                    var competitionMatches = JsonDocument.Parse(jsonString)
+                        .RootElement
+                        .GetProperty("matches")
+                        .EnumerateArray()
+                        .Where(m => m.GetProperty("homeTeam").GetProperty("name").GetString() == "Arsenal FC" ||
+                                    m.GetProperty("awayTeam").GetProperty("name").GetString() == "Arsenal FC")
+                        .Select(m => new MatchViewModel
+                        {
+                            UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture),
+                            HomeTeam = new TeamViewModel
+                            {
+                                Name = m.GetProperty("homeTeam").GetProperty("name").GetString(),
+                                TeamLogo = m.GetProperty("homeTeam").GetProperty("crest").GetString(),
+                            },
+                            AwayTeam = new TeamViewModel
+                            {
+                                Name = m.GetProperty("awayTeam").GetProperty("name").GetString(),
+                                TeamLogo = m.GetProperty("awayTeam").GetProperty("crest").GetString(),
+                            },
+
+                            TournamentLogo = m.GetProperty("competition").GetProperty("emblem").GetString(),
+                        });
+
+                    matches.AddRange(competitionMatches);
+                }
+            }
+
+            // Сортиране по дата на мачовете
+            var sortedMatches = matches.OrderBy(m => m.UtcDate).ToList();
+
+            return sortedMatches;
         }
     }
 }

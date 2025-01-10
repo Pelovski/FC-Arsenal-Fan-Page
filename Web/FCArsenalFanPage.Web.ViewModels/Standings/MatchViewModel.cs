@@ -9,5 +9,7 @@
         public TeamViewModel HomeTeam { get; set; }
 
         public TeamViewModel AwayTeam { get; set; }
+
+        public string TournamentLogo { get; set; }
     }
 }

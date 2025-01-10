@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arsenal FC Website | @this.ViewData["Title"] | </title>
 
-
+    <link href="https://fonts.googleapis.com/css2?family=Northbank+Forward:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="~/img/favicon.ico" asp-append-version="true">
     <!-- google font -->
@@ -86,15 +86,11 @@
 
                                 </li>
 
-                                <li class="navi-item dropdown">
-                                    <a href="#" class="dropdown-toggle" role="button">
-                                        Matches
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Leaderboard</a></li>
-                                        <li><a class="dropdown-item" asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Upcoming Matches</a></li>
-                                    </ul>
-                                </li>
+
+                               <li class="navi-item">
+                                   <a asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Matches</a>
+                                   
+                               </li>
 
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) ||
                                 this.User.IsInRole(GlobalConstants.AssistantAdministrator) ||

@@ -1,43 +1,53 @@
 ﻿@model List<MatchViewModel>
 
 @{
-    ViewData["Title"] = "Upcoming Arsenal Matches";
+    ViewData["Title"] = "Arsenal FC Match Schedule: Upcoming Games";
 }
 
-<div class="breadcrumb-section breadcrumb-bg mb-2">
+<div class="breadcrumb-section breadcrumb-bg mb-2"></div>
+
+<div class="internal-navigation">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" id="fixtures-link" asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Fixtures</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" id="tables-link" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Tabels</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#tables" id="tables-link">Results</a>
+        </li>
+    </ul>
 </div>
 
-<h1>@ViewData["Title"]</h1>
-
-@if (Model != null && Model.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Home Team</th>
-                <th>Away Team</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var match in Model)
-            {
-                <tr>
-                    <td>@match.UtcDate.ToString("dd MMM yyyy HH:mm")</td>
-                    <td>
-                        <img src="@match.HomeTeam.Crest" alt="@match.HomeTeam.Name" width="30" height="30" />
-                        @match.HomeTeam.Name
-                    </td>
-                    <td>
-                        <img src="@match.AwayTeam.Crest" alt="@match.AwayTeam.Name" width="30" height="30" />
-                        @match.AwayTeam.Name
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <p>No upcoming matches for Arsenal.</p>
-}
+<div id="fixtures">
+    <h2>Upcoming Fixtures</h2>
+    @if (Model != null && Model.Any())
+    {
+        @foreach (var match in Model)
+        {
+            <div class="match-card">
+                <div class="match-header">
+                    <span class="match-date">@match.UtcDate.ToString("ddd MMM dd")</span>
+                    <img src="@match.TournamentLogo" alt="Tournament Emblem" class="tournament-emblem">
+                </div>
+                <div class="divider"></div>
+                <div class="match-teams">
+                    <div class="team">
+                        <img src="@match.HomeTeam.TeamLogo" alt="Home Team Crest" class="team-crest">
+                        <span class="team-name">@match.HomeTeam.Name</span>
+                    </div>
+                    <div class="match-time-center">@match.UtcDate.ToString("HH:mm")</div>
+                    <div class="team">
+                        <img src="@match.AwayTeam.TeamLogo" alt="Away Team Crest" class="team-crest">
+                        <span class="team-name">@match.AwayTeam.Name</span>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No upcoming matches for Arsenal.</p>
+    }
+</div>

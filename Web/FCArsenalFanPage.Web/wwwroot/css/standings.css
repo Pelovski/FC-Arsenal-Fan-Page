@@ -154,3 +154,155 @@ h2 {
 .standings-red {
     background-color: red;
 }
+
+.match-card {
+    width: 90%; /* Увеличаване на ширината спрямо екрана */
+    max-width: 800px; /* Ограничаване на максималната ширина */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.match-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.match-date {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase; 
+}
+
+.tournament-emblem {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 15px 0;
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.team-crest {
+    width: 80px; 
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.team-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+
+.match-time-center {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #444;
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+
+/* Основна настройка за навигацията */
+.internal-navigation {
+    display: flex;
+    justify-content: center; /* Центрираме навигацията по хоризонтала */
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px; /* Добавено разстояние между навигацията и съдържанието */
+    background-color: #f7f7f7; /* Лек фон, за да изглежда отделена от съдържанието */
+    border-top: 4px solid #e60000; /* Топ бордер с червен цвят */
+    border-bottom: 2px solid #dcdcdc; /* Разделителна линия отдолу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лек сянка за издигане */
+    margin-top: 30px; /* Допълнително разстояние отгоре */
+    max-width: 800px; /* Максимална ширина за навигацията */
+    width: 100%; /* Навигацията заема 100% от ширината до максимум 800px */
+    border-radius: 8px; /* Леко заоблени ъгли */
+    margin-left: auto; /* Центрираме по хоризонтала */
+    margin-right: auto; /* Центрираме по хоризонтала */
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 40px; /* Разстояние между елементите */
+}
+
+.nav-link {
+    font-family: 'Northbank Forward', sans-serif; /* Шрифт за навигацията */
+    font-weight: 700; /* Подебел текст */
+    font-size: 20px; /* По-голям шрифт */
+    text-decoration: none;
+    color: #333; /* Цвет на текста */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #e60000; /* Червен при hover */
+        transform: scale(1.05); /* Леко уголемяване при hover */
+    }
+
+    .nav-link.active {
+        color: #e60000; /* Червен за активния елемент */
+        font-weight: 700;
+        border-bottom: 3px solid #e60000; /* Линия под активния елемент */
+        padding-bottom: 10px; /* Леко увеличено разстояние под активния елемент */
+    }
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+/* Мобилна версия */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+}
