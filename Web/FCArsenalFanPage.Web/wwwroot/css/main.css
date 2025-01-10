@@ -3441,4 +3441,75 @@ html {
     }
 
 
+/* Основни стилове за dropdown менюто */
+.navi-item .dropdown-menu {
+    background-color: #333; /* Тъмен фон за менюто */
+    border: 1px solid #444; /* Тънка граница */
+    color: #fff; /* Бял текст */
+    padding: 10px 0; /* Отстояние вътре в менюто */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Добавя леко сянка */
+}
+
+    /* Линковете вътре в dropdown менюто */
+    .navi-item .dropdown-menu li a {
+        color: #fff; /* Бял текст */
+        text-decoration: none; /* Премахва подчертаването */
+        padding: 8px 20px; /* Отстояние около текста */
+        display: block; /* Уверява се, че линковете заемат цялото пространство */
+        font-size: 14px; /* Размер на шрифта */
+        font-family: Arial, sans-serif; /* Шрифт */
+    }
+
+        /* Hover ефект за линковете */
+        .navi-item .dropdown-menu li a:hover {
+            background-color: #555; /* Светло сиво при hover */
+            color: #ee0000; /* Златист текст при hover */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Плавен преход */
+        }
+
+    /* Разделители между елементите */
+    .navi-item .dropdown-menu li {
+        border-bottom: 1px solid #ee0000; /* Разделител между елементите */
+    }
+
+        .navi-item .dropdown-menu li:last-child {
+            border-bottom: none; /* Премахва разделителя за последния елемент */
+        }
+
+/* Подобрение за мобилни устройства */
+@media (max-width: 768px) {
+    .navi-item .dropdown-menu {
+        width: 100%; /* Уверява се, че dropdown менюто е ширината на екрана */
+    }
+
+        .navi-item .dropdown-menu li a {
+            padding: 10px; /* По-големи бутони за докосване */
+        }
+}
+
+/* Анимация за показване на менюто */
+.navi-item.dropdown:hover .dropdown-menu {
+    display: block; /* Показва менюто при hover */
+    position: absolute; /* Позиционира го правилно */
+    top: 100%; /* Под линка */
+    left: 0;
+    z-index: 1000;
+}
+
+/* Скрива менюто по подразбиране */
+.navi-item .dropdown-menu {
+    display: none;
+}
+
+/* Основа за dropdown менюто */
+.navi-item.dropdown {
+    position: relative; /* Основа за абсолютното позициониране */
+}
+
+/* Анимация за плавно отваряне */
+.dropdown-menu {
+    transition: all 0.3s ease;
+}
+
+
 

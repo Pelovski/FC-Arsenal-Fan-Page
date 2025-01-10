@@ -86,8 +86,14 @@
 
                                 </li>
 
-                                <li class="navi-item">
-                                    <a asp-area="" asp-controller="Standings" asp-action="Leaderboard">Leaderboard</a>
+                                <li class="navi-item dropdown">
+                                    <a href="#" class="dropdown-toggle" role="button">
+                                        Matches
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Leaderboard</a></li>
+                                        <li><a class="dropdown-item" asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Upcoming Matches</a></li>
+                                    </ul>
                                 </li>
 
                                 @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName) ||
