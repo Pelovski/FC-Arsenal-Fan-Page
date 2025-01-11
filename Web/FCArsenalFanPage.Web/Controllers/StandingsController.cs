@@ -27,5 +27,12 @@
 
             return this.View(matches);
         }
+
+        public async Task<IActionResult> TeamResults()
+        {
+            var data = await this.premierLeagueService.GetTeamResultsAsync();
+
+            return this.Ok(data);
+        }
     }
 }

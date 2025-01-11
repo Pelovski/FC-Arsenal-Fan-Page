@@ -186,9 +186,8 @@ h2 {
 }
 
 .tournament-emblem {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
 }
 
 .divider {
@@ -235,23 +234,23 @@ h2 {
 }
 
 
-/* Основна настройка за навигацията */
+
 .internal-navigation {
     display: flex;
-    justify-content: center; /* Центрираме навигацията по хоризонтала */
+    justify-content: center; 
     align-items: center;
     padding: 15px 0;
-    margin-bottom: 30px; /* Добавено разстояние между навигацията и съдържанието */
-    background-color: #f7f7f7; /* Лек фон, за да изглежда отделена от съдържанието */
-    border-top: 4px solid #e60000; /* Топ бордер с червен цвят */
-    border-bottom: 2px solid #dcdcdc; /* Разделителна линия отдолу */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лек сянка за издигане */
-    margin-top: 30px; /* Допълнително разстояние отгоре */
-    max-width: 800px; /* Максимална ширина за навигацията */
-    width: 100%; /* Навигацията заема 100% от ширината до максимум 800px */
-    border-radius: 8px; /* Леко заоблени ъгли */
-    margin-left: auto; /* Центрираме по хоризонтала */
-    margin-right: auto; /* Центрираме по хоризонтала */
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+    border-top: 4px solid #e60000;
+    border-bottom: 2px solid #dcdcdc; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 30px; 
+    max-width: 800px; 
+    width: 100%; 
+    border-radius: 8px; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .nav {
@@ -305,4 +304,20 @@ h2 {
     .nav-link {
         font-size: 18px;
     }
+
+}
+
+.match-time-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-box {
+    padding: 5px 15px; /* Малко вътрешно отстояние */
+    background-color: #f0f0f0; /* Мек сив фон */
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 5px; /* Закръглени ъгли */
+    width: auto;
 }

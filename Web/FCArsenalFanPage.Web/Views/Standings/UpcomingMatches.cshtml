@@ -37,7 +37,9 @@
                         <img src="@match.HomeTeam.TeamLogo" alt="Home Team Crest" class="team-crest">
                         <span class="team-name">@match.HomeTeam.Name</span>
                     </div>
-                    <div class="match-time-center">@match.UtcDate.ToString("HH:mm")</div>
+                    <div class="match-time-center">
+                        <span class="time-box">@match.UtcDate.ToString("HH:mm")</span>
+                    </div>
                     <div class="team">
                         <img src="@match.AwayTeam.TeamLogo" alt="Away Team Crest" class="team-crest">
                         <span class="team-name">@match.AwayTeam.Name</span>

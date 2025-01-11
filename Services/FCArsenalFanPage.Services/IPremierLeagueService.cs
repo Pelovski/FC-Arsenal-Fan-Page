@@ -10,5 +10,7 @@
         Task<List<TeamStandingsViewModel>> GetStandingsAsync();
 
         Task<List<MatchViewModel>> GetUpcomingMatchesAsync();
+
+        Task<List<MatchResultViewModel>> GetTeamResultsAsync();
     }
 }

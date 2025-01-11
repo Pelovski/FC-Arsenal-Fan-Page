@@ -9,6 +9,7 @@
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Web.ViewModels.Standings;
+    using static System.Runtime.InteropServices.JavaScript.JSType;
 
     public class PremierLeagueService : IPremierLeagueService
     {
@@ -94,10 +95,56 @@
                 }
             }
 
-            // Сортиране по дата на мачовете
             var sortedMatches = matches.OrderBy(m => m.UtcDate).ToList();
 
             return sortedMatches;
+        }
+
+        public async Task<List<MatchResultViewModel>> GetTeamResultsAsync()
+        {
+            var endpoint = $"teams/57/matches?status=FINISHED&dateFrom=2024-08-16&dateTo=2025-08-01";
+            var response = await this.httpClient.GetAsync(endpoint);
+
+            var matches = new List<MatchResultViewModel>();
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+
+                var competitionMatches = JsonDocument
+                     .Parse(jsonString)
+                     .RootElement
+                     .GetProperty("matches")
+                     .EnumerateArray()
+                     .Select(m => new MatchResultViewModel
+                     {
+                         UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-dd", CultureInfo.InvariantCulture),
+
+                         HomeTeam = new TeamViewModel
+                         {
+                             Name = m.GetProperty("homeTeam").GetProperty("name").GetString(),
+                             TeamLogo = m.GetProperty("homeTeam").GetProperty("crest").GetString(),
+                         },
+
+                         AwayTeam = new TeamViewModel
+                         {
+                             Name = m.GetProperty("awayTeam").GetProperty("name").GetString(),
+                             TeamLogo = m.GetProperty("awayTeam").GetProperty("crest").GetString(),
+                         },
+
+                         TournamentLogo = m.GetProperty("competition").GetProperty("emblem").GetString(),
+
+                         HomeScore = m.GetProperty("score").GetProperty("fullTime").GetProperty("home").GetInt32(),
+                         AwayScore = m.GetProperty("score").GetProperty("fullTime").GetProperty("away").GetInt32(),
+                     });
+
+                if (competitionMatches.Any())
+                {
+                    matches.AddRange(competitionMatches);
+                }
+            }
+
+            return matches;
         }
     }
 }
