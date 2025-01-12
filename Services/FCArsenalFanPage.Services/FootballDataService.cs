@@ -7,7 +7,9 @@
     using System.Net.Http;
     using System.Text.Json;
     using System.Threading.Tasks;
+
     using FCArsenalFanPage.Web.ViewModels.Match;
+
     public class FootballDataService : IFootballDataService
     {
         private readonly HttpClient httpClient;
@@ -17,9 +19,23 @@
             this.httpClient = httpClientFactory.CreateClient("FootballData");
         }
 
-        public async Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync()
+        public async Task<LeaguesStandingsViewModel> GetLeaguesStandingsAsync()
         {
-            var response = await this.httpClient.GetAsync("competitions/2021/standings");
+            var premierLeagueStandings = await this.GetStandingsAsync("PL");
+            var championsLeagueStandings = await this.GetStandingsAsync("CL");
+
+            var leaguesStandings = new LeaguesStandingsViewModel
+            {
+                PremierLeague = premierLeagueStandings,
+                ChampionsLeague = championsLeagueStandings,
+            };
+
+            return leaguesStandings;
+        }
+
+        public async Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync(string competitionCode)
+        {
+            var response = await this.httpClient.GetAsync($"competitions/{competitionCode}/standings");
             response.EnsureSuccessStatusCode();
             var jsonString = await response.Content.ReadAsStringAsync();
 

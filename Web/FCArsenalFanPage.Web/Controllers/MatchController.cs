@@ -17,9 +17,9 @@
 
         public async Task<IActionResult> Leaderboard()
         {
-            var standings = await this.premierLeagueService.GetStandingsAsync();
+            var viewModel = await this.premierLeagueService.GetLeaguesStandingsAsync();
 
-            return this.View(standings);
+            return this.View(viewModel);
         }
 
         public async Task<IActionResult> UpcomingMatches()

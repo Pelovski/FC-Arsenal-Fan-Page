@@ -7,10 +7,12 @@
 
     public interface IFootballDataService
     {
-        Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync();
+        Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync(string competitionCode);
 
         Task<IEnumerable<MatchViewModel>> GetUpcomingMatchesAsync();
 
         Task<IEnumerable<MatchResultViewModel>> GetTeamResultsAsync();
+
+        Task<LeaguesStandingsViewModel> GetLeaguesStandingsAsync();
     }
 }
