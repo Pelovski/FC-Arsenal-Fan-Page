@@ -1,4 +1,4 @@
-﻿namespace FCArsenalFanPage.Web.ViewModels.Standings
+﻿namespace FCArsenalFanPage.Web.ViewModels.Match
 {
     using System;
 

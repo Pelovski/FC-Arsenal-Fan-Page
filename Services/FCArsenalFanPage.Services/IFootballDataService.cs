@@ -3,14 +3,14 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using FCArsenalFanPage.Web.ViewModels.Standings;
+    using FCArsenalFanPage.Web.ViewModels.Match;
 
     public interface IFootballDataService
     {
-        Task<List<TeamStandingsViewModel>> GetStandingsAsync();
+        Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync();
 
-        Task<List<MatchViewModel>> GetUpcomingMatchesAsync();
+        Task<IEnumerable<MatchViewModel>> GetUpcomingMatchesAsync();
 
-        Task<List<MatchResultViewModel>> GetTeamResultsAsync();
+        Task<IEnumerable<MatchResultViewModel>> GetTeamResultsAsync();
     }
 }

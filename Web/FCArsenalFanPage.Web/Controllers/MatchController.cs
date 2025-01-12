@@ -9,7 +9,8 @@
     {
         private readonly IFootballDataService premierLeagueService;
 
-        public MatchController(IFootballDataService premierLeagueService)
+        public MatchController(
+            IFootballDataService premierLeagueService)
         {
             this.premierLeagueService = premierLeagueService;
         }

@@ -7,9 +7,7 @@
     using System.Net.Http;
     using System.Text.Json;
     using System.Threading.Tasks;
-
-    using FCArsenalFanPage.Web.ViewModels.Standings;
-
+    using FCArsenalFanPage.Web.ViewModels.Match;
     public class FootballDataService : IFootballDataService
     {
         private readonly HttpClient httpClient;
@@ -19,7 +17,7 @@
             this.httpClient = httpClientFactory.CreateClient("FootballData");
         }
 
-        public async Task<List<TeamStandingsViewModel>> GetStandingsAsync()
+        public async Task<IEnumerable<TeamStandingsViewModel>> GetStandingsAsync()
         {
             var response = await this.httpClient.GetAsync("competitions/2021/standings");
             response.EnsureSuccessStatusCode();
@@ -50,7 +48,7 @@
             return standings;
         }
 
-        public async Task<List<MatchViewModel>> GetUpcomingMatchesAsync()
+        public async Task<IEnumerable<MatchViewModel>> GetUpcomingMatchesAsync()
         {
             var competitions = new[] { "PL", "CL" }; // "PL" - Premier League, "CL" - Champions League
 
@@ -99,7 +97,7 @@
             return sortedMatches;
         }
 
-        public async Task<List<MatchResultViewModel>> GetTeamResultsAsync()
+        public async Task<IEnumerable<MatchResultViewModel>> GetTeamResultsAsync()
         {
             var endpoint = $"teams/57/matches?status=FINISHED&dateFrom=2024-08-16&dateTo=2025-08-01";
             var response = await this.httpClient.GetAsync(endpoint);
