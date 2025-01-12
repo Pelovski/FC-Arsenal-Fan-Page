@@ -4,19 +4,7 @@
     <div class="breadcrumb-section breadcrumb-bg mb-2">
     </div>
 
-    <div class="internal-navigation">
-        <ul class="nav">
-            <li class="nav-item">
-                <a class="nav-link" id="fixtures-link" asp-area="" asp-controller="Match" asp-action="UpcomingMatches">Fixtures</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tables-link" asp-area="" asp-controller="Match" asp-action="Leaderboard">Tabels</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tables-link" asp-area="" asp-controller="Match" asp-action="TeamResults">Results</a>
-            </li>
-        </ul>
-    </div>
+    <partial name="_MatchesNaviPartial" />
 
     <h2>Premier League Standings</h2>
 
