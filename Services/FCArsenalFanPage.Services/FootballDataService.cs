@@ -9,13 +9,12 @@
     using System.Threading.Tasks;
 
     using FCArsenalFanPage.Web.ViewModels.Standings;
-    using static System.Runtime.InteropServices.JavaScript.JSType;
 
-    public class PremierLeagueService : IPremierLeagueService
+    public class FootballDataService : IFootballDataService
     {
         private readonly HttpClient httpClient;
 
-        public PremierLeagueService(IHttpClientFactory httpClientFactory)
+        public FootballDataService(IHttpClientFactory httpClientFactory)
         {
             this.httpClient = httpClientFactory.CreateClient("FootballData");
         }

@@ -5,7 +5,7 @@
 
     using FCArsenalFanPage.Web.ViewModels.Standings;
 
-    public interface IPremierLeagueService
+    public interface IFootballDataService
     {
         Task<List<TeamStandingsViewModel>> GetStandingsAsync();
 

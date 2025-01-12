@@ -5,11 +5,11 @@
     using FCArsenalFanPage.Services;
     using Microsoft.AspNetCore.Mvc;
 
-    public class StandingsController : BaseController
+    public class MatchController : BaseController
     {
-        private readonly IPremierLeagueService premierLeagueService;
+        private readonly IFootballDataService premierLeagueService;
 
-        public StandingsController(IPremierLeagueService premierLeagueService)
+        public MatchController(IFootballDataService premierLeagueService)
         {
             this.premierLeagueService = premierLeagueService;
         }

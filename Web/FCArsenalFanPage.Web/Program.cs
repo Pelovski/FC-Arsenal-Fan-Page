@@ -87,7 +87,7 @@
             services.AddTransient<IAddressService, AddressService>();
             services.AddTransient<IOrderStatusService, OrderStatusService>();
             services.AddTransient<IDashboardService, DashboardService>();
-            services.AddTransient<IPremierLeagueService, PremierLeagueService>();
+            services.AddTransient<IFootballDataService, FootballDataService>();
 
             services.AddTransient<IEmailSender, MailKitEmailSender>(provider =>
             new MailKitEmailSender(smtpServer, smtpPort, smtpUser, smtpPass));
