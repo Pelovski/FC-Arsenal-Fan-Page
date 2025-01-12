@@ -321,3 +321,7 @@ h2 {
     border-radius: 5px; /* Закръглени ъгли */
     width: auto;
 }
+
+.resultHeader{
+   text-align: center;
+}

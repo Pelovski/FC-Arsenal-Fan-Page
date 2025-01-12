@@ -30,9 +30,9 @@
 
         public async Task<IActionResult> TeamResults()
         {
-            var data = await this.premierLeagueService.GetTeamResultsAsync();
+            var viewModel = await this.premierLeagueService.GetTeamResultsAsync();
 
-            return this.Ok(data);
+            return this.View(viewModel);
         }
     }
 }

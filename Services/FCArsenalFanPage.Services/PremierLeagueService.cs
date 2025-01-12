@@ -118,7 +118,7 @@
                      .EnumerateArray()
                      .Select(m => new MatchResultViewModel
                      {
-                         UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-dd", CultureInfo.InvariantCulture),
+                         UtcDate = DateTime.ParseExact(m.GetProperty("utcDate").GetString(), "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture),
 
                          HomeTeam = new TeamViewModel
                          {
@@ -144,7 +144,8 @@
                 }
             }
 
-            return matches;
+            var sortedMatches = matches.OrderByDescending(m => m.UtcDate).ToList();
+            return sortedMatches;
         }
     }
 }

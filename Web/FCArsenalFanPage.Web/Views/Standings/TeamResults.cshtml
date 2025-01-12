@@ -1,4 +1,4 @@
-﻿@model List<MatchViewModel>
+﻿@model List<MatchResultViewModel>
 
 @{
     ViewData["Title"] = "Arsenal FC Match Schedule: Upcoming Games";
@@ -12,7 +12,7 @@
             <a class="nav-link" id="fixtures-link" asp-area="" asp-controller="Standings" asp-action="UpcomingMatches">Fixtures</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" id="tables-link" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Tabels</a>
+            <a class="nav-link" id="tables-link" asp-area="" asp-controller="Standings" asp-action="Leaderboard">Tabels</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="tables-link" asp-area="" asp-controller="Standings" asp-action="TeamResults">Results</a>
@@ -21,7 +21,8 @@
 </div>
 
 <div id="fixtures">
-    <h2>Upcoming Fixtures</h2>
+    <h2>Full Season Results</h2>
+    <h5 class="resultHeader">Up to @DateTime.UtcNow.Date.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture)</h5>
     @if (Model != null && Model.Any())
     {
         @foreach (var match in Model)
@@ -38,7 +39,7 @@
                         <span class="team-name">@match.HomeTeam.Name</span>
                     </div>
                     <div class="match-time-center">
-                        <span class="time-box">@match.UtcDate.ToString("HH:mm")</span>
+                        <span class="time-box">@match.HomeScore:@match.AwayScore</span>
                     </div>
                     <div class="team">
                         <img src="@match.AwayTeam.TeamLogo" alt="Away Team Crest" class="team-crest">
