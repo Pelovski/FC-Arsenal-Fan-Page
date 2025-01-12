@@ -47,13 +47,60 @@
 
     <div class="standings-legend-container">
         <div class="standings-legend-item">
-            <span class="standings-circle standings-blue"></span> Champions League
+            <span class="standings-circle premier-league standings-blue"></span> Champions League
         </div>
         <div class="standings-legend-item">
-            <span class="standings-circle standings-green"></span> Europa League
+            <span class="standings-circle premier-league standings-green"></span> Europa League
         </div>
         <div class="standings-legend-item">
-            <span class="standings-circle standings-red"></span> Relegation
+            <span class="standings-circle premier-league standings-red"></span> Relegation
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="champions-league-logo-image"><img src="~/Images/Others/championsLeagueLogo.png" alt="Logo" /></div>
+
+    <div class="center-container">
+        <table class="champions-league-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Club</th>
+                    <th title="Matches Played">MP</th>
+                    <th title="Wins">W</th>
+                    <th title="Draws">D</th>
+                    <th title="Losses">L</th>
+                    <th title="Goal Difference">GD</th>
+                    <th title="Points">Pts</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var team in Model.ChampionsLeague)
+                {
+                    <tr>
+                        <td class="position-column">@team.Position.</td>
+                        <td class="team-column">
+                            <img src="@team.TeamLogo" alt="Logo" />
+                            @team.TeamName
+                        </td>
+                        <td class="played-column">@team.PlayedGames</td>
+                        <td>@team.Wins</td>
+                        <td>@team.Draws</td>
+                        <td>@team.Losts</td>
+                        <td class="goals-difference-column">@team.GoalsFor:@team.GoalsAgainst (@team.GoalsDifference)</td>
+                        <td>@team.Points</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="standings-legend-container">
+        <div class="standings-legend-item">
+            <span class="standings-circle champions-league standings-blue"></span> Qualified for the Round of 16
+        </div>
+        <div class="standings-legend-item">
+            <span class="standings-circle champions-league standings-skyBlue"></span> Play-off for the Round of 16
         </div>
     </div>
 </div>

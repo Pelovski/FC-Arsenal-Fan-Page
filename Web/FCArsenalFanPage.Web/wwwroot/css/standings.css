@@ -6,7 +6,8 @@
     padding: 20px;
 }
 
-.premier-league-table {
+.premier-league-table,
+.champions-league-table {
     width: 100%;
     border-collapse: collapse;
     max-width: 960px;
@@ -14,29 +15,18 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-    .premier-league-table tr td {
-        border-bottom: 1px solid #ddd;
-    }
+.premier-league-table tr td
+.champions-league-table {
+    border-bottom: 1px solid #ddd;
+}
 
-    .premier-league-table tr:nth-child(18),
-    .premier-league-table tr:nth-child(19),
-    .premier-league-table tr:nth-child(20),
-    .premier-league-table tr:nth-child(1),
-    .premier-league-table tr:nth-child(2),
-    .premier-league-table tr:nth-child(3),
-    .premier-league-table tr:nth-child(4),
-    .premier-league-table tr:nth-child(5) {
+    .premier-league-table tr:nth-child(-n+5),
+    .premier-league-table tr:nth-child(n+18) {
         position: relative;
     }
 
-        .premier-league-table tr:nth-child(18) td:first-child::before,
-        .premier-league-table tr:nth-child(19) td:first-child::before,
-        .premier-league-table tr:nth-child(20) td:first-child::before,
-        .premier-league-table tr:nth-child(1) td.position-column::before,
-        .premier-league-table tr:nth-child(2) td.position-column::before,
-        .premier-league-table tr:nth-child(3) td.position-column::before,
-        .premier-league-table tr:nth-child(4) td.position-column::before,
-        .premier-league-table tr:nth-child(5) td:first-child::before {
+        .premier-league-table tr:nth-child(-n+5) td:first-child::before,
+        .premier-league-table tr:nth-child(n+18) td:first-child::before {
             content: '';
             position: absolute;
             left: 0;
@@ -46,21 +36,71 @@
             background-color: transparent;
         }
 
-        .premier-league-table tr:nth-child(18) td:first-child::before,
-        .premier-league-table tr:nth-child(19) td:first-child::before,
-        .premier-league-table tr:nth-child(20) td:first-child::before {
+        .premier-league-table tr:nth-child(n+18) td:first-child::before {
             background-color: red;
         }
 
-        .premier-league-table tr:nth-child(1) td.position-column::before,
-        .premier-league-table tr:nth-child(2) td.position-column::before,
-        .premier-league-table tr:nth-child(3) td.position-column::before,
-        .premier-league-table tr:nth-child(4) td.position-column::before {
-            background-color: blue;
-        }
+    .premier-league-table tr:nth-child(-n+4) td.position-column::before {
+        background-color: blue;
+    }
 
         .premier-league-table tr:nth-child(5) td:first-child::before {
             background-color: green; 
+        }
+
+        .premier-league-table tr:nth-child(-n+5),
+    .premier-league-table tr:nth-child(n+18) {
+        position: relative;
+    }
+
+        .premier-league-table tr:nth-child(-n+5) td:first-child::before,
+        .premier-league-table tr:nth-child(n+18) td:first-child::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 5px;
+            height: 90%;
+            background-color: transparent;
+        }
+
+       
+        .premier-league-table tr:nth-child(n+18) td:first-child::before {
+            background-color: red;
+        }
+
+  
+    .premier-league-table tr:nth-child(-n+4) td.position-column::before {
+        background-color: blue;
+    }
+
+        .premier-league-table tr:nth-child(5) td:first-child::before {
+            background-color: green; 
+        }
+
+    .champions-league-table tr:nth-child(-n+8),
+    .champions-league-table tr:nth-child(n+9):nth-child(-n+24) {
+        position: relative;
+    }
+
+        .champions-league-table tr:nth-child(-n+8) td:first-child::before,
+        .champions-league-table tr:nth-child(n+9):nth-child(-n+24) td:first-child::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 5px;
+            height: 90%;
+            background-color: transparent;
+        }
+
+        
+        .champions-league-table tr:nth-child(-n+8) td:first-child::before {
+            background-color: blue;
+        }
+
+        .champions-league-table tr:nth-child(n+9):nth-child(-n+24) td:first-child::before {
+            background-color: deepskyblue;
         }
 
 h2 {
@@ -71,60 +111,75 @@ h2 {
     color: #333;
 }
 
-.premier-league-table th, .premier-league-table td {
+.premier-league-table th, .premier-league-table td,
+.champions-league-table th, .champions-league-table td{
     text-align: center;
     vertical-align: middle;
     padding: 8px;
     font-size: 14px;
 }
 
-.premier-league-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-}
+    .premier-league-table th,
+    .champions-league-table th{
+        background-color: #f8f9fa;
+        font-weight: bold;
+    }
 
-.premier-league-table td img {
+.premier-league-table td img,
+.champions-league-table td img{
     height: 24px;
     width: 24px;
     margin-right: 5px;
 }
 
-.premier-league-table .team-column {
+.premier-league-table .team-column,
+.champions-league-table  .team-column{
     text-align: left;
     white-space: nowrap;
     padding-left: 5px;
     width: 150px;
 }
 
-.premier-league-table .position-column {
+.premier-league-table .position-column,
+.champions-league-table .position-column{
     padding-right: 5px;
 }
 
-.premier-league-table .played-column {
+.premier-league-table .played-column,
+.champions-league-table .played-column{
     padding-left: 10px;
 }
 
-.premier-league-table .goals-difference-column {
+.premier-league-table .goals-difference-column,
+.champions-league-table .goals-difference-column{
     width: 145px;
 }
 
-.premier-league-logo-image {
+.premier-league-logo-image,
+.champions-league-logo-image{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-    .premier-league-logo-image img {
+    .premier-league-logo-image img,
+    .champions-league-logo-image img{
         width: 20%;
         height: auto;
     }
+
+.champions-league-logo-image{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
 
 .standings-legend-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 10px;
+    margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
     font-size: 14px;
     margin-bottom: 40px;
@@ -143,21 +198,30 @@ h2 {
     display: inline-block;
 }
 
-.standings-blue {
+.premier-league.standings-blue {
     background-color: blue;
 }
 
-.standings-green {
+.premier-league.standings-green {
     background-color: green;
 }
 
-.standings-red {
+.premier-league.standings-red {
     background-color: red;
 }
 
+.champions-league.standings-blue {
+    background-color: blue;
+}
+
+.champions-league.standings-skyBlue {
+    background-color: deepskyblue;
+}
+
+
 .match-card {
-    width: 90%; /* Увеличаване на ширината спрямо екрана */
-    max-width: 800px; /* Ограничаване на максималната ширина */
+    width: 90%;
+    max-width: 800px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -261,35 +325,35 @@ h2 {
 }
 
 .nav-item {
-    margin-right: 40px; /* Разстояние между елементите */
+    margin-right: 40px; 
 }
 
 .nav-link {
-    font-family: 'Northbank Forward', sans-serif; /* Шрифт за навигацията */
-    font-weight: 700; /* Подебел текст */
-    font-size: 20px; /* По-голям шрифт */
+    font-family: 'Northbank Forward', sans-serif;
+    font-weight: 700; 
+    font-size: 20px; 
     text-decoration: none;
-    color: #333; /* Цвет на текста */
+    color: #333; 
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
     .nav-link:hover {
-        color: #e60000; /* Червен при hover */
-        transform: scale(1.05); /* Леко уголемяване при hover */
+        color: #e60000; 
+        transform: scale(1.05); 
     }
 
     .nav-link.active {
-        color: #e60000; /* Червен за активния елемент */
+        color: #e60000;
         font-weight: 700;
-        border-bottom: 3px solid #e60000; /* Линия под активния елемент */
-        padding-bottom: 10px; /* Леко увеличено разстояние под активния елемент */
+        border-bottom: 3px solid #e60000;
+        padding-bottom: 10px;
     }
 
 .nav-item:last-child {
     margin-right: 0;
 }
 
-/* Мобилна версия */
+
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
@@ -314,11 +378,11 @@ h2 {
 }
 
 .time-box {
-    padding: 5px 15px; /* Малко вътрешно отстояние */
-    background-color: #f0f0f0; /* Мек сив фон */
+    padding: 5px 15px; 
+    background-color: #f0f0f0; 
     font-weight: bold;
     font-size: 1.2em;
-    border-radius: 5px; /* Закръглени ъгли */
+    border-radius: 5px; 
     width: auto;
 }
 
